@@ -1,0 +1,263 @@
+nimTitle	dlsdl2	dlsdl2.html	module src/dlsdl2		0
+nim	sdl2_init	dlsdl2.html#sdl2_init	proc sdl2_init(flags = 32'u or 1048576'u): bool		58
+nim	sdl2_init_subsystem	dlsdl2.html#sdl2_init_subsystem,InitFlags	proc sdl2_init_subsystem(flags: InitFlags): bool		71
+nim	sdl2_quit	dlsdl2.html#sdl2_quit	proc sdl2_quit()		80
+nim	sdl2_quit_subsystem	dlsdl2.html#sdl2_quit_subsystem,InitFlags	proc sdl2_quit_subsystem(flags: InitFlags)		90
+nim	was_init	dlsdl2.html#was_init	proc was_init(flags = InitFlags 0): InitFlags		96
+nim	sdl2_avail	dlsdl2.html#sdl2_avail	proc sdl2_avail(flags = 32'u or 1048576'u): bool		102
+nim	audio_init	dlsdl2.html#audio_init,string	proc audio_init(driver_name: string): bool		111
+nim	audio_quit	dlsdl2.html#audio_quit	proc audio_quit()		118
+nim	close_audio	dlsdl2.html#close_audio	proc close_audio()		134
+nim	close_audio_device	dlsdl2.html#close_audio_device,AudioDeviceID	proc close_audio_device(dev: AudioDeviceID)		140
+nim	free_wav	dlsdl2.html#free_wav,ptr.UncheckedArray[byte]	proc free_wav(audio_buf: ptr UncheckedArray[byte])		150
+nim	get_audio_device_name	dlsdl2.html#get_audio_device_name,int,bool	proc get_audio_device_name(index: int; iscapture: bool): string		156
+nim	get_audio_device_spec	dlsdl2.html#get_audio_device_spec,int,bool,AudioSpec	proc get_audio_device_spec(index: int; iscapture: bool; spec: var AudioSpec): bool		162
+nim	get_audio_device_status	dlsdl2.html#get_audio_device_status,AudioDeviceID	proc get_audio_device_status(dev: AudioDeviceID): AudioStatus		170
+nim	get_audio_driver	dlsdl2.html#get_audio_driver,int	proc get_audio_driver(index: int): string		176
+nim	get_audio_status	dlsdl2.html#get_audio_status	proc get_audio_status(): AudioStatus		186
+nim	get_current_audio_driver	dlsdl2.html#get_current_audio_driver	proc get_current_audio_driver(): string		192
+nim	get_default_audio_info	dlsdl2.html#get_default_audio_info,string,AudioSpec,bool	proc get_default_audio_info(name: var string; spec: var AudioSpec; iscapture: bool): bool		198
+nim	get_num_audio_devices	dlsdl2.html#get_num_audio_devices,bool	proc get_num_audio_devices(iscapture: bool): int		211
+nim	get_num_audio_drivers	dlsdl2.html#get_num_audio_drivers	proc get_num_audio_drivers(): int		217
+nim	get_queued_audio_size	dlsdl2.html#get_queued_audio_size,AudioDeviceID	proc get_queued_audio_size(dev: AudioDeviceID): uint32		223
+nim	load_wav_rw	dlsdl2.html#load_wav_rw,RWopsPtr,bool,AudioSpec,ptr.UncheckedArray[byte],uint32	proc load_wav_rw(src: RWopsPtr; freesrc: bool; spec: var AudioSpec;\n            audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		230
+nim	mix_audio	dlsdl2.html#mix_audio,ptr.UncheckedArray[byte],,uint32,int	proc mix_audio(dst: ptr UncheckedArray[byte];\n          src: ptr byte or ptr UncheckedArray[byte]; len: uint32; volume: int)		261
+nim	open_audio	dlsdl2.html#open_audio,AudioSpec	proc open_audio(desired: var AudioSpec): bool		276
+nim	open_audio	dlsdl2.html#open_audio,AudioSpec,AudioSpec	proc open_audio(desired: AudioSpec; obtained: var AudioSpec): bool		283
+nim	open_audio_device	dlsdl2.html#open_audio_device,string,bool,AudioSpec,AudioSpec	proc open_audio_device(device: string; iscapture: bool; desired: AudioSpec;\n                  obtained: var AudioSpec; allowed_changes = AudioAllowFlags 0): AudioDeviceID		292
+nim	open_audio_device	dlsdl2.html#open_audio_device,string,bool,AudioSpec	proc open_audio_device(device: string; iscapture: bool; desired: AudioSpec;\n                  allowed_changes = AudioAllowFlags 0): AudioDeviceID		310
+nim	pause_audio	dlsdl2.html#pause_audio,bool	proc pause_audio(pause_on: bool)		326
+nim	pause_audio_device	dlsdl2.html#pause_audio_device,AudioDeviceID,bool	proc pause_audio_device(dev: AudioDeviceID; pause_on: bool)		329
+nim	queue_audio	dlsdl2.html#queue_audio,AudioDeviceID,pointer,uint32	proc queue_audio(dev: AudioDeviceID; data: pointer; len: uint32): bool		335
+nim	get_clipboard_text	dlsdl2.html#get_clipboard_text	proc get_clipboard_text(): string		358
+nim	set_clipboard_text	dlsdl2.html#set_clipboard_text,string	proc set_clipboard_text(text: string): bool		376
+nim	clear_error	dlsdl2.html#clear_error	proc clear_error()		389
+nim	get_error	dlsdl2.html#get_error	proc get_error(): string		397
+nim	set_error	dlsdl2.html#set_error,string	proc set_error(msg: string): bool		408
+nim	free_drop_event_file	dlsdl2.html#free_drop_event_file,Event	proc free_drop_event_file(event: var Event)		419
+nim	event_state	dlsdl2.html#event_state,EventType,bool	proc event_state(typ: EventType; state: bool): bool		429
+nim	flush	dlsdl2.html#flush,EventType	proc flush(typ: EventType)		442
+nim	flush_events	dlsdl2.html#flush_events,EventType,EventType	proc flush_events(min_type, max_type: EventType)		448
+nim	peep_events	dlsdl2.html#peep_events,openArray[Event],int,EventAction,EventType,EventType	proc peep_events(events: var openArray[Event]; numevents: int; action: EventAction;\n            min_type, max_type: EventType): int		458
+nim	peep_events	dlsdl2.html#peep_events,openArray[Event],EventAction,EventType,EventType	proc peep_events(events: var openArray[Event]; action: EventAction;\n            min_type, max_type: EventType): int		472
+nim	poll_event	dlsdl2.html#poll_event	proc poll_event(): bool		476
+nim	poll	dlsdl2.html#poll,Event	proc poll(event: var Event): bool		482
+nim	pump_events	dlsdl2.html#pump_events	proc pump_events()		488
+nim	push	dlsdl2.html#push,Event	proc push(event: var Event): bool		494
+nim	wait	dlsdl2.html#wait	proc wait(): bool		503
+nim	wait	dlsdl2.html#wait,Event	proc wait(event: var Event): bool		509
+nim	wait_timeout	dlsdl2.html#wait_timeout,int	proc wait_timeout(timeout: int): bool		515
+nim	wait_timeout	dlsdl2.html#wait_timeout,Event,int	proc wait_timeout(event: var Event; timeout: int): bool		521
+nim	get_hint	dlsdl2.html#get_hint,HintName	proc get_hint(name: HintName): string		555
+nim	set_hint	dlsdl2.html#set_hint,HintName,string	proc set_hint(name: HintName; value: string): bool		570
+nim	get_keyboard_focus	dlsdl2.html#get_keyboard_focus	proc get_keyboard_focus(): WindowPtr		593
+nim	log_message	dlsdl2.html#log_message,LogCategory,LogPriority,string	proc log_message(category: LogCategory; priority: LogPriority; message: string)		620
+nim	log	dlsdl2.html#log,string	proc log(message: string)		623
+nim	log_critical	dlsdl2.html#log_critical,LogCategory,string	proc log_critical(category: LogCategory; message: string)		629
+nim	log_debug	dlsdl2.html#log_debug,LogCategory,string	proc log_debug(category: LogCategory; message: string)		636
+nim	log_error	dlsdl2.html#log_error,LogCategory,string	proc log_error(category: LogCategory; message: string)		642
+nim	log_info	dlsdl2.html#log_info,LogCategory,string	proc log_info(category: LogCategory; message: string)		652
+nim	log_set_all_priority	dlsdl2.html#log_set_all_priority,LogPriority	proc log_set_all_priority(priority: LogPriority)		671
+nim	log_set_output_function	dlsdl2.html#log_set_output_function,LogOutputFunction,pointer	proc log_set_output_function(callback: LogOutputFunction; userdata: pointer = nil)		677
+nim	log_set_priority	dlsdl2.html#log_set_priority,LogCategory,LogPriority	proc log_set_priority(category: LogCategory; priority: LogPriority)		685
+nim	log_verbose	dlsdl2.html#log_verbose,LogCategory,string	proc log_verbose(category: LogCategory; message: string)		691
+nim	log_warn	dlsdl2.html#log_warn,LogCategory,string	proc log_warn(category: LogCategory; message: string)		697
+nim	show_message_box	dlsdl2.html#show_message_box,MessageBoxData,int	proc show_message_box(messageboxdata: var MessageBoxData; buttonid: var int): bool		719
+nim	show_simple_message_box	dlsdl2.html#show_simple_message_box,MessageBoxFlags,string,string,WindowPtr	proc show_simple_message_box(flags: MessageBoxFlags; title: string; message: string;\n                        window: WindowPtr = nil): bool		730
+nim	capture_mouse	dlsdl2.html#capture_mouse,bool	proc capture_mouse(enabled: bool): bool		745
+nim	create_color_cursor	dlsdl2.html#create_color_cursor,SurfacePtr,int,int	proc create_color_cursor(surface: SurfacePtr; hot_x, hot_y: int): CursorPtr		753
+nim	create_cursor	dlsdl2.html#create_cursor,openArray[byte],openArray[byte],int,int,int,int	proc create_cursor(data, mask: openArray[byte]; w, h: int; hot_x, hot_y: int): CursorPtr		761
+nim	create_system_cursor	dlsdl2.html#create_system_cursor,SystemCursor	proc create_system_cursor(id: SystemCursor)		776
+nim	free_cursor	dlsdl2.html#free_cursor,CursorPtr	proc free_cursor(cursor: CursorPtr)		781
+nim	get_cursor	dlsdl2.html#get_cursor	proc get_cursor(): CursorPtr		786
+nim	get_global_mouse_state	dlsdl2.html#get_global_mouse_state	proc get_global_mouse_state(): tuple[x, y: int, state: uint32]		794
+nim	get_mouse_focus	dlsdl2.html#get_mouse_focus	proc get_mouse_focus(): WindowPtr		808
+nim	get_mouse_state	dlsdl2.html#get_mouse_state	proc get_mouse_state(): tuple[x, y: int, state: uint32]		815
+nim	get_relative_mouse_mode	dlsdl2.html#get_relative_mouse_mode	proc get_relative_mouse_mode(): bool		823
+nim	get_relative_mouse_state	dlsdl2.html#get_relative_mouse_state	proc get_relative_mouse_state(): tuple[x, y: int, state: uint32]		829
+nim	set_cursor	dlsdl2.html#set_cursor,CursorPtr	proc set_cursor(cursor: CursorPtr)		837
+nim	set_relative_mouse_mode	dlsdl2.html#set_relative_mouse_mode,bool	proc set_relative_mouse_mode(enable: bool): bool		843
+nim	show_cursor	dlsdl2.html#show_cursor,EventState	proc show_cursor(toggle: EventState): bool		850
+nim	get_pixel_format_name	dlsdl2.html#get_pixel_format_name,PixelFormatEnum	proc get_pixel_format_name(format: PixelFormatEnum): string		869
+nim	map_rgb	dlsdl2.html#map_rgb,PixelFormat,byte,byte,byte	proc map_rgb(format: PixelFormat; r, g, b: byte): uint32		880
+nim	map_rgba	dlsdl2.html#map_rgba,PixelFormat,byte,byte,byte,byte	proc map_rgba(format: PixelFormat; r, g, b, a: byte): uint32		888
+nim	masks_to_pixel_format_enum	dlsdl2.html#masks_to_pixel_format_enum,int,uint32,uint32,uint32,uint32	proc masks_to_pixel_format_enum(bpp: int; rmask, gmask, bmask, amask: uint32): PixelFormatEnum		896
+nim	pixel_format_enum_to_masks	dlsdl2.html#pixel_format_enum_to_masks,PixelFormatEnum	proc pixel_format_enum_to_masks(format: PixelFormatEnum): tuple[bpp: int,\n    rmask, gmask, bmask, amask: uint32]		904
+nim	set_palette	dlsdl2.html#set_palette,PixelFormat,Palette	proc set_palette(format: var PixelFormat; palette: Palette): bool		924
+nim	create_renderer	dlsdl2.html#create_renderer,WindowPtr,int	proc create_renderer(window: WindowPtr; index: int; flags = RendererFlags 0): RendererPtr		960
+nim	create_renderer	dlsdl2.html#create_renderer,WindowPtr	proc create_renderer(window: WindowPtr; flags = RendererFlags 0): RendererPtr		969
+nim	create_software_renderer	dlsdl2.html#create_software_renderer,SurfacePtr	proc create_software_renderer(surface: SurfacePtr): RendererPtr		977
+nim	create_texture	dlsdl2.html#create_texture,RendererPtr,PixelFormatEnum,TextureAccess,int,int	proc create_texture(renderer: RendererPtr; format: PixelFormatEnum;\n               access: TextureAccess; width, height: int): TexturePtr		984
+nim	create_texture_from_surface	dlsdl2.html#create_texture_from_surface,RendererPtr,SurfacePtr	proc create_texture_from_surface(renderer: RendererPtr; surface: SurfacePtr): TexturePtr		994
+nim	create_window_and_renderer	dlsdl2.html#create_window_and_renderer,int,int,WindowFlags	proc create_window_and_renderer(width, height: int;\n                           window_flags: WindowFlags = WindowFlags 0): tuple[\n    window: WindowPtr, renderer: RendererPtr]		1003
+nim	destroy	dlsdl2.html#destroy,RendererPtr	proc destroy(renderer: RendererPtr)		1025
+nim	destroy	dlsdl2.html#destroy,TexturePtr	proc destroy(texture: TexturePtr)		1033
+nim	get_num_render_drivers	dlsdl2.html#get_num_render_drivers	proc get_num_render_drivers(): int		1044
+nim	get_render_draw_color	dlsdl2.html#get_render_draw_color,RendererPtr,byte,byte,byte,byte	proc get_render_draw_color(renderer: RendererPtr; r, g, b, a: var byte): bool		1054
+nim	get_render_driver_info	dlsdl2.html#get_render_driver_info,int,RendererInfo	proc get_render_driver_info(index: int; info: var RendererInfo): bool		1063
+nim	get_render_target	dlsdl2.html#get_render_target,RendererPtr	proc get_render_target(renderer: RendererPtr): TexturePtr		1070
+nim	get_renderer	dlsdl2.html#get_renderer,WindowPtr	proc get_renderer(window: WindowPtr): RendererPtr		1076
+nim	get_renderer_info	dlsdl2.html#get_renderer_info,RendererPtr,RendererInfo	proc get_renderer_info(renderer: RendererPtr; info: var RendererInfo): bool		1083
+nim	get_renderer_output_size	dlsdl2.html#get_renderer_output_size,RendererPtr,int,int	proc get_renderer_output_size(renderer: RendererPtr; w, h: var int): bool		1090
+nim	query_texture	dlsdl2.html#query_texture,TexturePtr,uint32,int,int,int	proc query_texture(texture: TexturePtr; format: var uint32; access: var int;\n              w, h: var int): bool		1108
+nim	clear	dlsdl2.html#clear,RendererPtr	proc clear(renderer: RendererPtr): bool		1123
+nim	copy	dlsdl2.html#copy,RendererPtr,TexturePtr	proc copy(renderer: RendererPtr; texture: TexturePtr): bool		1130
+nim	copy	dlsdl2.html#copy,RendererPtr,TexturePtr,Rect	proc copy(renderer: RendererPtr; texture: TexturePtr; dst: Rect): bool		1138
+nim	copy	dlsdl2.html#copy,RendererPtr,TexturePtr,int,int,int,int	proc copy(renderer: RendererPtr; texture: TexturePtr; x, y: int; w, h: int): bool		1148
+nim	copy	dlsdl2.html#copy,RendererPtr,TexturePtr,Rect,Rect	proc copy(renderer: RendererPtr; texture: TexturePtr; src, dst: Rect): bool		1161
+nim	copy_ex	dlsdl2.html#copy_ex,RendererPtr,TexturePtr,Rect,Rect,float,Point,RendererFlip	proc copy_ex(renderer: RendererPtr; texture: TexturePtr; src, dst: Rect;\n        angle: float; center: Point; flip: RendererFlip): bool		1172
+nim	draw_line	dlsdl2.html#draw_line,RendererPtr,int,int,int,int	proc draw_line(renderer: RendererPtr; x1, y1: int; x2, y2: int): bool		1194
+nim	draw_point	dlsdl2.html#draw_point,RendererPtr,int,int	proc draw_point(renderer: RendererPtr; x, y: int): bool		1207
+nim	draw_point	dlsdl2.html#draw_point,RendererPtr,float,float	proc draw_point(renderer: RendererPtr; x, y: float): bool		1214
+nim	draw_rect	dlsdl2.html#draw_rect,RendererPtr,Rect	proc draw_rect(renderer: RendererPtr; rect: Rect): bool		1226
+nim	draw_rect	dlsdl2.html#draw_rect,RendererPtr,int,int,int,int	proc draw_rect(renderer: RendererPtr; x, y: int; w, h: int): bool		1235
+nim	fill_rect	dlsdl2.html#fill_rect,RendererPtr	proc fill_rect(renderer: RendererPtr): bool		1245
+nim	fill_rect	dlsdl2.html#fill_rect,RendererPtr,Rect	proc fill_rect(renderer: RendererPtr; rect: Rect): bool		1252
+nim	fill_rect	dlsdl2.html#fill_rect,RendererPtr,int,int,int,int	proc fill_rect(renderer: RendererPtr; x, y: int; w, h: int): bool		1261
+nim	render_geometry	dlsdl2.html#render_geometry,RendererPtr,TexturePtr,openArray[Vertex],int	proc render_geometry(renderer: RendererPtr; texture: TexturePtr;\n                vertices: openArray[Vertex]; num_vertices: int = 0): bool		1272
+nim	render_geometry	dlsdl2.html#render_geometry,RendererPtr,openArray[Vertex],int	proc render_geometry(renderer: RendererPtr; vertices: openArray[Vertex];\n                num_vertices: int = 0): bool		1292
+nim	get_clip_rect	dlsdl2.html#get_clip_rect,RendererPtr,Rect	proc get_clip_rect(renderer: RendererPtr; rect: var Rect)		1306
+nim	get_logical_size	dlsdl2.html#get_logical_size,RendererPtr,int,int	proc get_logical_size(renderer: RendererPtr; w, h: var int)		1314
+nim	get_scale	dlsdl2.html#get_scale,RendererPtr,float,float	proc get_scale(renderer: RendererPtr; scale_x, scale_y: var float)		1326
+nim	get_viewport	dlsdl2.html#get_viewport,RendererPtr,Rect	proc get_viewport(renderer: RendererPtr; rect: var Rect)		1336
+nim	get_window	dlsdl2.html#get_window,RendererPtr	proc get_window(renderer: RendererPtr): WindowPtr		1342
+nim	present	dlsdl2.html#present,RendererPtr	proc present(renderer: RendererPtr)		1354
+nim	read_pixels	dlsdl2.html#read_pixels,RendererPtr,PixelFormatEnum,pointer,int	proc read_pixels(renderer: RendererPtr; format: PixelFormatEnum; pixels: pointer;\n            pitch: int): bool		1360
+nim	read_pixels	dlsdl2.html#read_pixels,RendererPtr,Rect,PixelFormatEnum,pointer,int	proc read_pixels(renderer: RendererPtr; rect: Rect; format: PixelFormatEnum;\n            pixels: pointer; pitch: int): bool		1369
+nim	set_clip_rect	dlsdl2.html#set_clip_rect,RendererPtr	proc set_clip_rect(renderer: RendererPtr): bool		1381
+nim	set_clip_rect	dlsdl2.html#set_clip_rect,RendererPtr,Rect	proc set_clip_rect(renderer: RendererPtr; rect: Rect): bool		1388
+nim	set_logical_size	dlsdl2.html#set_logical_size,RendererPtr,int,int	proc set_logical_size(renderer: RendererPtr; w, h: int): bool		1399
+nim	set_scale	dlsdl2.html#set_scale,RendererPtr,float,float	proc set_scale(renderer: RendererPtr; scale_x, scale_y: float): bool		1406
+nim	set_vsync	dlsdl2.html#set_vsync,RendererPtr,bool	proc set_vsync(renderer: RendererPtr; vsync: bool): bool		1414
+nim	set_viewport	dlsdl2.html#set_viewport,RendererPtr	proc set_viewport(renderer: RendererPtr): bool		1422
+nim	set_viewport	dlsdl2.html#set_viewport,RendererPtr,Rect	proc set_viewport(renderer: RendererPtr; rect: Rect): bool		1429
+nim	render_target_supported	dlsdl2.html#render_target_supported,RendererPtr	proc render_target_supported(renderer: RendererPtr): bool		1438
+nim	render_window_to_logical	dlsdl2.html#render_window_to_logical,RendererPtr,int,int,float,float	proc render_window_to_logical(renderer: RendererPtr; window_x, window_y: int;\n                         logical_x, logical_y: var float): bool		1446
+nim	set_draw_blend_mode	dlsdl2.html#set_draw_blend_mode,RendererPtr,BlendMode	proc set_draw_blend_mode(renderer: RendererPtr; blend_mode: BlendMode): bool		1462
+nim	set_draw_color	dlsdl2.html#set_draw_color,RendererPtr,byte,byte,byte,byte	proc set_draw_color(renderer: RendererPtr; r, g, b: byte; a: byte = 0x000000FF): bool		1469
+nim	set_target	dlsdl2.html#set_target,RendererPtr,TexturePtr	proc set_target(renderer: RendererPtr; texture: TexturePtr = nil): bool		1480
+nim	set_alpha_mod	dlsdl2.html#set_alpha_mod,TexturePtr,byte	proc set_alpha_mod(texture: TexturePtr; a: byte): bool		1487
+nim	set_blend_mode	dlsdl2.html#set_blend_mode,TexturePtr,BlendMode	proc set_blend_mode(texture: TexturePtr; blend_mode: BlendMode): bool		1494
+nim	set_color_mod	dlsdl2.html#set_color_mod,TexturePtr,byte,byte,byte	proc set_color_mod(texture: TexturePtr; r, g, b: byte): bool		1502
+nim	update	dlsdl2.html#update,TexturePtr,Rect,pointer,int	proc update(texture: TexturePtr; rect: Rect; pixels: pointer; pitch: int): bool		1518
+nim	update	dlsdl2.html#update,TexturePtr,pointer,int	proc update(texture: TexturePtr; pixels: pointer; pitch: int): bool		1529
+nim	update	dlsdl2.html#update,TexturePtr,openArray[T],int	proc update[T: SomeUnsignedInt](texture: TexturePtr; pixels: openArray[T]; pitch: int): bool		1537
+nim	rw_from_file	dlsdl2.html#rw_from_file,string,string	proc rw_from_file(file, mode: string): RWopsPtr		1556
+nim	save_bmp	dlsdl2.html#save_bmp,SurfacePtr,string	proc save_bmp(surface: SurfacePtr; file: string): bool		1563
+nim	convert_surface	dlsdl2.html#convert_surface,SurfacePtr,PixelFormat	proc convert_surface(src: SurfacePtr; fmt: PixelFormat): SurfacePtr		1589
+nim	convert_surface_format	dlsdl2.html#convert_surface_format,SurfacePtr,PixelFormatEnum	proc convert_surface_format(src: SurfacePtr; pixel_format: PixelFormatEnum): SurfacePtr		1600
+nim	create_rgb_surface	dlsdl2.html#create_rgb_surface,SurfaceFlags,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface(flags: SurfaceFlags; width, height: int; depth: int;\n                   rmask, gmask, bmask, amask: uint32): SurfacePtr		1609
+nim	create_rgb_surface	dlsdl2.html#create_rgb_surface,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface(width, height: int; depth: int;\n                   rmask, gmask, bmask, amask: uint32): SurfacePtr		1620
+nim	create_rgb_surface_from	dlsdl2.html#create_rgb_surface_from,pointer,int,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface_from(pixels: pointer; width, height, depth, pitch: int;\n                        rmask, gmask, bmask, amask: uint32): SurfacePtr		1629
+nim	create_rgb_surface_with_format	dlsdl2.html#create_rgb_surface_with_format,int,int,int,PixelFormatEnum	proc create_rgb_surface_with_format(width, height: int; depth: int;\n                               format: PixelFormatEnum): SurfacePtr		1642
+nim	fill_rect	dlsdl2.html#fill_rect,SurfacePtr,uint32	proc fill_rect(dst: SurfacePtr; color: uint32): bool		1657
+nim	fill_rect	dlsdl2.html#fill_rect,SurfacePtr,Rect,uint32	proc fill_rect(dst: SurfacePtr; rect: Rect; color: uint32): bool		1664
+nim	free_surface	dlsdl2.html#free_surface,SurfacePtr	proc free_surface(surface: SurfacePtr)		1675
+nim	load_bmp_rw	dlsdl2.html#load_bmp_rw,RWopsPtr,bool	proc load_bmp_rw(src: RWopsPtr; freesrc: bool): SurfacePtr		1693
+nim	lock	dlsdl2.html#lock,SurfacePtr	proc lock(surface: SurfacePtr): bool		1711
+nim	premultiply_alpha	dlsdl2.html#premultiply_alpha,int,int,PixelFormatEnum,pointer,int,PixelFormatEnum,pointer,int	proc premultiply_alpha(width, height: int; src_format: PixelFormatEnum; src: pointer;\n                  src_pitch: int; dst_format: PixelFormatEnum; dst: pointer;\n                  dst_pitch: int): bool		1724
+nim	set_color_key	dlsdl2.html#set_color_key,SurfacePtr,bool,uint32	proc set_color_key(surface: SurfacePtr; flag: bool; key: uint32): bool		1742
+nim	unlock	dlsdl2.html#unlock,SurfacePtr	proc unlock(surface: SurfacePtr)		1761
+nim	add_timer	dlsdl2.html#add_timer,uint32,TimerCallback,pointer	proc add_timer(interval: uint32; callback: TimerCallback; param: pointer = nil): TimerID		1788
+nim	delay	dlsdl2.html#delay,uint32	proc delay(ms: uint32)		1797
+nim	get_performance_counter	dlsdl2.html#get_performance_counter	proc get_performance_counter(): uint64		1803
+nim	get_performance_frequency	dlsdl2.html#get_performance_frequency	proc get_performance_frequency(): uint64		1809
+nim	get_ticks	dlsdl2.html#get_ticks	proc get_ticks(): uint32		1815
+nim	get_ticks64	dlsdl2.html#get_ticks64	proc get_ticks64(): uint64		1826
+nim	remove_timer	dlsdl2.html#remove_timer,TimerID	proc remove_timer(id: TimerID): bool		1832
+nim	get_revision	dlsdl2.html#get_revision	proc get_revision(): string		1849
+nim	get_version	dlsdl2.html#get_version	proc get_version(): tuple[major, minor, patch: int]		1855
+nim	create_window	dlsdl2.html#create_window,string,int,int,int,int	proc create_window(title: string; x, y, w, h: int; flags = WindowFlags 0): WindowPtr		1867
+nim	create_window	dlsdl2.html#create_window,string,int,int	proc create_window(title: string; w, h: int; flags = WindowFlags 0): WindowPtr		1877
+nim	destroy	dlsdl2.html#destroy,WindowPtr	proc destroy(window: WindowPtr)		1887
+nim	disable_screen_saver	dlsdl2.html#disable_screen_saver	proc disable_screen_saver()		1897
+nim	enable_screen_saver	dlsdl2.html#enable_screen_saver	proc enable_screen_saver()		1903
+nim	flash	dlsdl2.html#flash,WindowPtr,FlashOperation	proc flash(window: WindowPtr; operation: FlashOperation): bool		1909
+nim	get_current_display_mode	dlsdl2.html#get_current_display_mode,Natural,DisplayMode	proc get_current_display_mode(display_index: Natural; mode: var DisplayMode): bool		1936
+nim	get_current_video_driver	dlsdl2.html#get_current_video_driver	proc get_current_video_driver(): string		1944
+nim	get_desktop_display_mode	dlsdl2.html#get_desktop_display_mode,Natural,DisplayMode	proc get_desktop_display_mode(display_index: Natural; mode: var DisplayMode): bool		1950
+nim	get_display_bounds	dlsdl2.html#get_display_bounds,Natural,Rect	proc get_display_bounds(display_index: Natural; rect: var Rect): bool		1958
+nim	get_display_bounds	dlsdl2.html#get_display_bounds,Natural,int,int,int,int	proc get_display_bounds(display_index: Natural; x, y: var int; width, height: var int): bool		1967
+nim	get_display_dpi	dlsdl2.html#get_display_dpi,int,float,float,float	proc get_display_dpi(display_index: int; ddpi, hdpi, vdpi: var float): bool		1980
+nim	get_display_mode	dlsdl2.html#get_display_mode,Natural,int,DisplayMode	proc get_display_mode(display_index: Natural; mode_index: int; mode: var DisplayMode): bool		1995
+nim	get_display_name	dlsdl2.html#get_display_name,Natural	proc get_display_name(display_index: Natural): string		2004
+nim	get_display_orientation	dlsdl2.html#get_display_orientation,Natural	proc get_display_orientation(display_index: Natural): DisplayOrientation		2014
+nim	get_display_usable_bounds	dlsdl2.html#get_display_usable_bounds,Natural,Rect	proc get_display_usable_bounds(display_index: Natural; rect: var Rect): bool		2026
+nim	get_display_usable_bounds	dlsdl2.html#get_display_usable_bounds,Natural,int,int,int,int	proc get_display_usable_bounds(display_index: Natural; x, y: var int;\n                          width, height: var int): bool		2042
+nim	get_grabbed_window	dlsdl2.html#get_grabbed_window	proc get_grabbed_window(): WindowPtr		2061
+nim	get_num_display_modes	dlsdl2.html#get_num_display_modes,Natural	proc get_num_display_modes(display_index: Natural): int		2068
+nim	get_num_video_displays	dlsdl2.html#get_num_video_displays	proc get_num_video_displays(): int		2075
+nim	get_num_video_drivers	dlsdl2.html#get_num_video_drivers	proc get_num_video_drivers(): int		2082
+nim	get_video_driver	dlsdl2.html#get_video_driver,int	proc get_video_driver(index: int): string		2092
+nim	get_border_size	dlsdl2.html#get_border_size,WindowPtr,int,int,int,int	proc get_border_size(window: WindowPtr; top, left, bottom, right: var int): bool		2098
+nim	get_display_index	dlsdl2.html#get_display_index,WindowPtr	proc get_display_index(window: WindowPtr): int		2116
+nim	get_display_mode	dlsdl2.html#get_display_mode,WindowPtr,DisplayMode	proc get_display_mode(window: WindowPtr; mode: var DisplayMode): bool		2123
+nim	get_flags	dlsdl2.html#get_flags,WindowPtr	proc get_flags(window: WindowPtr): WindowFlags		2130
+nim	get_from_id	dlsdl2.html#get_from_id,uint32	proc get_from_id(id: uint32): WindowPtr		2136
+nim	get_grab	dlsdl2.html#get_grab,WindowPtr	proc get_grab(window: WindowPtr): bool		2145
+nim	get_id	dlsdl2.html#get_id,WindowPtr	proc get_id(window: WindowPtr): uint32		2153
+nim	get_keyboard_grab	dlsdl2.html#get_keyboard_grab,WindowPtr	proc get_keyboard_grab(window: WindowPtr): bool		2160
+nim	get_maximum_size	dlsdl2.html#get_maximum_size,WindowPtr	proc get_maximum_size(window: WindowPtr): tuple[w, h: int]		2167
+nim	get_minimum_size	dlsdl2.html#get_minimum_size,WindowPtr	proc get_minimum_size(window: WindowPtr): tuple[w, h: int]		2175
+nim	get_mouse_grab	dlsdl2.html#get_mouse_grab,WindowPtr	proc get_mouse_grab(window: WindowPtr): bool		2183
+nim	get_mouse_rect	dlsdl2.html#get_mouse_rect,WindowPtr	proc get_mouse_rect(window: WindowPtr): Rect		2190
+nim	get_opacity	dlsdl2.html#get_opacity,WindowPtr,float	proc get_opacity(window: WindowPtr; opacity: var float): bool		2200
+nim	get_pixel_format	dlsdl2.html#get_pixel_format,WindowPtr	proc get_pixel_format(window: WindowPtr): PixelFormatEnum		2215
+nim	get_position	dlsdl2.html#get_position,WindowPtr	proc get_position(window: WindowPtr): tuple[x, y: int]		2225
+nim	get_size	dlsdl2.html#get_size,WindowPtr	proc get_size(window: WindowPtr): tuple[w, h: int]		2233
+nim	get_size_in_pixels	dlsdl2.html#get_size_in_pixels,WindowPtr	proc get_size_in_pixels(window: WindowPtr): tuple[w, h: int]		2243
+nim	get_surface	dlsdl2.html#get_surface,WindowPtr	proc get_surface(window: WindowPtr): SurfacePtr		2253
+nim	get_title	dlsdl2.html#get_title,WindowPtr	proc get_title(window: WindowPtr): string		2260
+nim	has_surface	dlsdl2.html#has_surface,WindowPtr	proc has_surface(window: WindowPtr): bool		2266
+nim	hide	dlsdl2.html#hide,WindowPtr	proc hide(window: WindowPtr)		2273
+nim	maximize	dlsdl2.html#maximize,WindowPtr	proc maximize(window: WindowPtr)		2283
+nim	minimize	dlsdl2.html#minimize,WindowPtr	proc minimize(window: WindowPtr)		2289
+nim	`raise`	dlsdl2.html#raise,WindowPtr	proc `raise`(window: WindowPtr)		2295
+nim	restore	dlsdl2.html#restore,WindowPtr	proc restore(window: WindowPtr)		2301
+nim	set_always_on_top	dlsdl2.html#set_always_on_top,WindowPtr,bool	proc set_always_on_top(window: WindowPtr; on_top: bool): bool		2307
+nim	set_bordered	dlsdl2.html#set_bordered,WindowPtr,bool	proc set_bordered(window: WindowPtr; bordered: bool)		2321
+nim	set_display_mode	dlsdl2.html#set_display_mode,WindowPtr,DisplayMode	proc set_display_mode(window: WindowPtr; mode: DisplayMode): bool		2332
+nim	set_fullscreen	dlsdl2.html#set_fullscreen,WindowPtr	proc set_fullscreen(window: WindowPtr; flags = WindowFlags 0): bool		2341
+nim	set_grab	dlsdl2.html#set_grab,WindowPtr,bool	proc set_grab(window: WindowPtr; grabbed: bool)		2352
+nim	set_hit_test	dlsdl2.html#set_hit_test,WindowPtr,HitTest,pointer	proc set_hit_test(window: WindowPtr; callback: HitTest; callback_data: pointer): bool		2358
+nim	set_icon	dlsdl2.html#set_icon,WindowPtr,SurfacePtr	proc set_icon(window: WindowPtr; surface: SurfacePtr)		2371
+nim	set_input_focus	dlsdl2.html#set_input_focus,WindowPtr	proc set_input_focus(window: WindowPtr): bool		2377
+nim	set_keyboard_grab	dlsdl2.html#set_keyboard_grab,WindowPtr,bool	proc set_keyboard_grab(window: WindowPtr; grabbed: bool): bool		2384
+nim	set_maximum_size	dlsdl2.html#set_maximum_size,WindowPtr,int,int	proc set_maximum_size(window: WindowPtr; max_w, max_h: int)		2399
+nim	set_minimum_size	dlsdl2.html#set_minimum_size,WindowPtr,int,int	proc set_minimum_size(window: WindowPtr; min_w, min_h: int)		2405
+nim	set_modal_for	dlsdl2.html#set_modal_for,WindowPtr,WindowPtr	proc set_modal_for(modal_window, parent_window: WindowPtr): bool		2411
+nim	set_mouse_grab	dlsdl2.html#set_mouse_grab,WindowPtr,bool	proc set_mouse_grab(window: WindowPtr; grabbed: bool): bool		2420
+nim	set_mouse_rect	dlsdl2.html#set_mouse_rect,WindowPtr,Rect	proc set_mouse_rect(window: WindowPtr; rect: Rect): bool		2428
+nim	set_opacity	dlsdl2.html#set_opacity,WindowPtr,float	proc set_opacity(window: WindowPtr; opacity: float): bool		2439
+nim	set_position	dlsdl2.html#set_position,WindowPtr,int,int	proc set_position(window: WindowPtr; x, y: int)		2449
+nim	set_resizable	dlsdl2.html#set_resizable,WindowPtr,bool	proc set_resizable(window: WindowPtr; ontop: bool)		2461
+nim	set_size	dlsdl2.html#set_size,WindowPtr,int,int	proc set_size(window: WindowPtr; x, y: int)		2467
+nim	set_title	dlsdl2.html#set_title,WindowPtr,string	proc set_title(window: WindowPtr; title: string)		2473
+nim	show	dlsdl2.html#show,WindowPtr	proc show(window: WindowPtr)		2479
+nim	update_surface	dlsdl2.html#update_surface,WindowPtr	proc update_surface(window: WindowPtr): bool		2487
+nim	video_init	dlsdl2.html#video_init,string	proc video_init(driver_name: string): bool		2497
+nim	video_quit	dlsdl2.html#video_quit	proc video_quit()		2504
+nim	load_wav	dlsdl2.html#load_wav,string,AudioSpec,ptr.UncheckedArray[byte],uint32	proc load_wav(file: string; spec: var AudioSpec;\n         audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		2525
+nim	quit_requested	dlsdl2.html#quit_requested	proc quit_requested(): bool		2538
+nim	load_bmp	dlsdl2.html#load_bmp,string	proc load_bmp(file: string): SurfacePtr		2552
+nimgrp	createrenderer	dlsdl2.html#create_renderer-procs-all	proc		960
+nimgrp	setviewport	dlsdl2.html#set_viewport-procs-all	proc		1422
+nimgrp	drawpoint	dlsdl2.html#draw_point-procs-all	proc		1207
+nimgrp	getdisplaybounds	dlsdl2.html#get_display_bounds-procs-all	proc		1958
+nimgrp	update	dlsdl2.html#update-procs-all	proc		1518
+nimgrp	creatergbsurface	dlsdl2.html#create_rgb_surface-procs-all	proc		1609
+nimgrp	destroy	dlsdl2.html#destroy-procs-all	proc		1025
+nimgrp	getdisplayusablebounds	dlsdl2.html#get_display_usable_bounds-procs-all	proc		2026
+nimgrp	setcliprect	dlsdl2.html#set_clip_rect-procs-all	proc		1381
+nimgrp	openaudio	dlsdl2.html#open_audio-procs-all	proc		276
+nimgrp	createwindow	dlsdl2.html#create_window-procs-all	proc		1867
+nimgrp	wait	dlsdl2.html#wait-procs-all	proc		503
+nimgrp	copy	dlsdl2.html#copy-procs-all	proc		1130
+nimgrp	openaudiodevice	dlsdl2.html#open_audio_device-procs-all	proc		292
+nimgrp	peepevents	dlsdl2.html#peep_events-procs-all	proc		458
+nimgrp	readpixels	dlsdl2.html#read_pixels-procs-all	proc		1360
+nimgrp	rendergeometry	dlsdl2.html#render_geometry-procs-all	proc		1272
+nimgrp	drawrect	dlsdl2.html#draw_rect-procs-all	proc		1226
+nimgrp	waittimeout	dlsdl2.html#wait_timeout-procs-all	proc		515
+nimgrp	getdisplaymode	dlsdl2.html#get_display_mode-procs-all	proc		1995
+nimgrp	fillrect	dlsdl2.html#fill_rect-procs-all	proc		1245

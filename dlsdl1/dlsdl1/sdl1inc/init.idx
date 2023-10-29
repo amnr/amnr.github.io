@@ -1,0 +1,13 @@
+nimTitle	init	dlsdl1/sdl1inc/init.html	module src/dlsdl1/sdl1inc/init		0
+nim	Bool	dlsdl1/sdl1inc/init.html#Bool	type Bool		9
+nim	InitFlags	dlsdl1/sdl1inc/init.html#InitFlags	type InitFlags		12
+nim	`+`	dlsdl1/sdl1inc/init.html#+,InitFlags,InitFlags	proc `+`(x, y: InitFlags): InitFlags		15
+nim	`or`	dlsdl1/sdl1inc/init.html#or,InitFlags,InitFlags	proc `or`(x, y: InitFlags): InitFlags		17
+nim	INIT_TIMER	dlsdl1/sdl1inc/init.html#INIT_TIMER	const INIT_TIMER		20
+nim	INIT_AUDIO	dlsdl1/sdl1inc/init.html#INIT_AUDIO	const INIT_AUDIO		21
+nim	INIT_VIDEO	dlsdl1/sdl1inc/init.html#INIT_VIDEO	const INIT_VIDEO		22
+nim	INIT_CDROM	dlsdl1/sdl1inc/init.html#INIT_CDROM	const INIT_CDROM		23
+nim	INIT_JOYSTICK	dlsdl1/sdl1inc/init.html#INIT_JOYSTICK	const INIT_JOYSTICK		24
+nim	INIT_NOPARACHUTE	dlsdl1/sdl1inc/init.html#INIT_NOPARACHUTE	const INIT_NOPARACHUTE		25
+nim	INIT_EVENTTHREAD	dlsdl1/sdl1inc/init.html#INIT_EVENTTHREAD	const INIT_EVENTTHREAD		26
+nim	INIT_EVERYTHING	dlsdl1/sdl1inc/init.html#INIT_EVERYTHING	const INIT_EVERYTHING		27

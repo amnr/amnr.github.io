@@ -1,0 +1,32 @@
+nimTitle	events	dlsdl1/sdl1inc/events.html	module src/dlsdl1/sdl1inc/events		0
+nim	MouseState	dlsdl1/sdl1inc/events.html#MouseState	type MouseState		15
+nim	RELEASED	dlsdl1/sdl1inc/events.html#RELEASED	const RELEASED		19
+nim	PRESSED	dlsdl1/sdl1inc/events.html#PRESSED	const PRESSED		20
+nim	EventType	dlsdl1/sdl1inc/events.html#EventType	enum EventType		23
+nim	EventMask	dlsdl1/sdl1inc/events.html#EventMask	enum EventMask		65
+nim	ActiveEvent	dlsdl1/sdl1inc/events.html#ActiveEvent	object ActiveEvent		95
+nim	KeyboardEvent	dlsdl1/sdl1inc/events.html#KeyboardEvent	object KeyboardEvent		101
+nim	MouseMotionEvent	dlsdl1/sdl1inc/events.html#MouseMotionEvent	object MouseMotionEvent		108
+nim	MouseButtonEvent	dlsdl1/sdl1inc/events.html#MouseButtonEvent	object MouseButtonEvent		118
+nim	JoyAxisEvent	dlsdl1/sdl1inc/events.html#JoyAxisEvent	object JoyAxisEvent		127
+nim	JoyBallEvent	dlsdl1/sdl1inc/events.html#JoyBallEvent	object JoyBallEvent		134
+nim	JoyHatEvent	dlsdl1/sdl1inc/events.html#JoyHatEvent	object JoyHatEvent		142
+nim	JoyButtonEvent	dlsdl1/sdl1inc/events.html#JoyButtonEvent	object JoyButtonEvent		150
+nim	ResizeEvent	dlsdl1/sdl1inc/events.html#ResizeEvent	object ResizeEvent		157
+nim	ExposeEvent	dlsdl1/sdl1inc/events.html#ExposeEvent	object ExposeEvent		164
+nim	QuitEvent	dlsdl1/sdl1inc/events.html#QuitEvent	object QuitEvent		168
+nim	UserEvent	dlsdl1/sdl1inc/events.html#UserEvent	object UserEvent		172
+nim	SysWMmsgPtr	dlsdl1/sdl1inc/events.html#SysWMmsgPtr	type SysWMmsgPtr		181
+nim	SysWMEvent	dlsdl1/sdl1inc/events.html#SysWMEvent	object SysWMEvent		183
+nim	Event	dlsdl1/sdl1inc/events.html#Event	object Event		188
+nim	EventAction	dlsdl1/sdl1inc/events.html#EventAction	enum EventAction		206
+nim	EventState	dlsdl1/sdl1inc/events.html#EventState	type EventState		212
+nim	QUERY	dlsdl1/sdl1inc/events.html#QUERY	const QUERY		217
+nim	IGNORE	dlsdl1/sdl1inc/events.html#IGNORE	const IGNORE		218
+nim	DISABLE	dlsdl1/sdl1inc/events.html#DISABLE	const DISABLE		219
+nim	ENABLE	dlsdl1/sdl1inc/events.html#ENABLE	const ENABLE		220
+nim	EventFilter	dlsdl1/sdl1inc/events.html#EventFilter	type EventFilter		223
+nim	`$`	dlsdl1/sdl1inc/events.html#$,Event	proc `$`(event: Event): string		236
+nim	repr	dlsdl1/sdl1inc/events.html#repr,Event	proc repr(event: Event): string		237
+nim	repr	dlsdl1/sdl1inc/events.html#repr,ptr.Event	proc repr(event: ptr Event): string		239
+nimgrp	repr	dlsdl1/sdl1inc/events.html#repr-procs-all	proc		237

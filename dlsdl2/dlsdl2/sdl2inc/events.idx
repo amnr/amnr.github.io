@@ -1,0 +1,46 @@
+nimTitle	events	dlsdl2/sdl2inc/events.html	module src/dlsdl2/sdl2inc/events		0
+nim	RELEASED	dlsdl2/sdl2inc/events.html#RELEASED	const RELEASED		18
+nim	PRESSED	dlsdl2/sdl2inc/events.html#PRESSED	const PRESSED		19
+nim	EventType	dlsdl2/sdl2inc/events.html#EventType	enum EventType		22
+nim	CommonEvent	dlsdl2/sdl2inc/events.html#CommonEvent	object CommonEvent		133
+nim	DisplayEvent	dlsdl2/sdl2inc/events.html#DisplayEvent	object DisplayEvent		138
+nim	WindowEvent	dlsdl2/sdl2inc/events.html#WindowEvent	object WindowEvent		149
+nim	KeyboardEvent	dlsdl2/sdl2inc/events.html#KeyboardEvent	object KeyboardEvent		161
+nim	TextEditingEvent	dlsdl2/sdl2inc/events.html#TextEditingEvent	object TextEditingEvent		172
+nim	TextInputEvent	dlsdl2/sdl2inc/events.html#TextInputEvent	object TextInputEvent		181
+nim	MouseMotionEvent	dlsdl2/sdl2inc/events.html#MouseMotionEvent	object MouseMotionEvent		188
+nim	MouseButtonEvent	dlsdl2/sdl2inc/events.html#MouseButtonEvent	object MouseButtonEvent		200
+nim	MouseWheelEvent	dlsdl2/sdl2inc/events.html#MouseWheelEvent	object MouseWheelEvent		213
+nim	JoyAxisEvent	dlsdl2/sdl2inc/events.html#JoyAxisEvent	object JoyAxisEvent		229
+nim	JoyBallEvent	dlsdl2/sdl2inc/events.html#JoyBallEvent	object JoyBallEvent		241
+nim	JoyHatEvent	dlsdl2/sdl2inc/events.html#JoyHatEvent	object JoyHatEvent		253
+nim	JoyButtonEvent	dlsdl2/sdl2inc/events.html#JoyButtonEvent	object JoyButtonEvent		263
+nim	JoyDeviceEvent	dlsdl2/sdl2inc/events.html#JoyDeviceEvent	object JoyDeviceEvent		273
+nim	ControllerAxisEvent	dlsdl2/sdl2inc/events.html#ControllerAxisEvent	object ControllerAxisEvent		280
+nim	ControllerButtonEvent	dlsdl2/sdl2inc/events.html#ControllerButtonEvent	object ControllerButtonEvent		292
+nim	ControllerDeviceEvent	dlsdl2/sdl2inc/events.html#ControllerDeviceEvent	object ControllerDeviceEvent		302
+nim	ControllerTouchpadEvent	dlsdl2/sdl2inc/events.html#ControllerTouchpadEvent	object ControllerTouchpadEvent		312
+nim	ControllerSensorEvent	dlsdl2/sdl2inc/events.html#ControllerSensorEvent	object ControllerSensorEvent		325
+nim	AudioDeviceEvent	dlsdl2/sdl2inc/events.html#AudioDeviceEvent	object AudioDeviceEvent		333
+nim	TouchFingerEvent	dlsdl2/sdl2inc/events.html#TouchFingerEvent	object TouchFingerEvent		345
+nim	MultiGestureEvent	dlsdl2/sdl2inc/events.html#MultiGestureEvent	object MultiGestureEvent		358
+nim	DollarGestureEvent	dlsdl2/sdl2inc/events.html#DollarGestureEvent	object DollarGestureEvent		370
+nim	DropEvent	dlsdl2/sdl2inc/events.html#DropEvent	object DropEvent		381
+nim	SensorEvent	dlsdl2/sdl2inc/events.html#SensorEvent	object SensorEvent		390
+nim	QuitEvent	dlsdl2/sdl2inc/events.html#QuitEvent	object QuitEvent		399
+nim	OSEvent	dlsdl2/sdl2inc/events.html#OSEvent	object OSEvent		404
+nim	UserEvent	dlsdl2/sdl2inc/events.html#UserEvent	object UserEvent		409
+nim	SysWMmsgPtr	dlsdl2/sdl2inc/events.html#SysWMmsgPtr	type SysWMmsgPtr		420
+nim	SysWMEvent	dlsdl2/sdl2inc/events.html#SysWMEvent	object SysWMEvent		422
+nim	Event	dlsdl2/sdl2inc/events.html#Event	object Event		429
+nim	EventAction	dlsdl2/sdl2inc/events.html#EventAction	enum EventAction		474
+nim	EventFilter	dlsdl2/sdl2inc/events.html#EventFilter	type EventFilter		480
+nim	EventState	dlsdl2/sdl2inc/events.html#EventState	type EventState		485
+nim	QUERY	dlsdl2/sdl2inc/events.html#QUERY	const QUERY		489
+nim	IGNORE	dlsdl2/sdl2inc/events.html#IGNORE	const IGNORE		490
+nim	DISABLE	dlsdl2/sdl2inc/events.html#DISABLE	const DISABLE		491
+nim	ENABLE	dlsdl2/sdl2inc/events.html#ENABLE	const ENABLE		492
+nim	`$`	dlsdl2/sdl2inc/events.html#$,Event	proc `$`(event: Event): string		505
+nim	repr	dlsdl2/sdl2inc/events.html#repr,Event	proc repr(event: Event): string		506
+nim	repr	dlsdl2/sdl2inc/events.html#repr,ptr.Event	proc repr(event: ptr Event): string		508
+nimgrp	repr	dlsdl2/sdl2inc/events.html#repr-procs-all	proc		506

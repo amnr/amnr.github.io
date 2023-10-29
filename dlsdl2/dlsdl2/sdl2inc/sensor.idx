@@ -1,0 +1,5 @@
+nimTitle	sensor	dlsdl2/sdl2inc/sensor.html	module src/dlsdl2/sdl2inc/sensor		0
+nim	SensorPtr	dlsdl2/sdl2inc/sensor.html#SensorPtr	type SensorPtr		12
+nim	SensorID	dlsdl2/sdl2inc/sensor.html#SensorID	type SensorID		15
+nim	SensorType	dlsdl2/sdl2inc/sensor.html#SensorType	enum SensorType		20
+nim	STANDARD_GRAVITY	dlsdl2/sdl2inc/sensor.html#STANDARD_GRAVITY	const STANDARD_GRAVITY		28

@@ -1,0 +1,8 @@
+nimTitle	timer	dlsdl3/sdl3inc/timer.html	module src/dlsdl3/sdl3inc/timer		0
+nim	MS_PER_SECOND	dlsdl3/sdl3inc/timer.html#MS_PER_SECOND	const MS_PER_SECOND		8
+nim	US_PER_SECOND	dlsdl3/sdl3inc/timer.html#US_PER_SECOND	const US_PER_SECOND		9
+nim	NS_PER_SECOND	dlsdl3/sdl3inc/timer.html#NS_PER_SECOND	const NS_PER_SECOND		10
+nim	NS_PER_MS	dlsdl3/sdl3inc/timer.html#NS_PER_MS	const NS_PER_MS		11
+nim	NS_PER_US	dlsdl3/sdl3inc/timer.html#NS_PER_US	const NS_PER_US		12
+nim	TimerCallback	dlsdl3/sdl3inc/timer.html#TimerCallback	type TimerCallback		20
+nim	TimerID	dlsdl3/sdl3inc/timer.html#TimerID	type TimerID		23

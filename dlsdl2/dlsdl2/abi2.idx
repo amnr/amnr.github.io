@@ -1,0 +1,7 @@
+nimTitle	abi2	dlsdl2/abi2.html	module src/dlsdl2/abi2		0
+nim	Sdl2Lib	dlsdl2/abi2.html#Sdl2Lib	object Sdl2Lib		50
+nim	sdl2_is_loaded	dlsdl2/abi2.html#sdl2_is_loaded	proc sdl2_is_loaded(): bool		1600
+nim	sdl2_context	dlsdl2/abi2.html#sdl2_context	proc sdl2_context(): Sdl2Lib		1604
+nim	sdl2_dlerror	dlsdl2/abi2.html#sdl2_dlerror	proc sdl2_dlerror(): string		1609
+nim	load_sdl2_library	dlsdl2/abi2.html#load_sdl2_library	proc load_sdl2_library(): bool		1612
+nim	unload_sdl2_library	dlsdl2/abi2.html#unload_sdl2_library	proc unload_sdl2_library()		1623

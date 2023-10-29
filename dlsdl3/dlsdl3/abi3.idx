@@ -1,0 +1,7 @@
+nimTitle	abi3	dlsdl3/abi3.html	module src/dlsdl3/abi3		0
+nim	Sdl3Lib	dlsdl3/abi3.html#Sdl3Lib	object Sdl3Lib		49
+nim	sdl3_is_loaded	dlsdl3/abi3.html#sdl3_is_loaded	proc sdl3_is_loaded(): bool		1346
+nim	sdl3_context	dlsdl3/abi3.html#sdl3_context	proc sdl3_context(): Sdl3Lib		1350
+nim	sdl3_dlerror	dlsdl3/abi3.html#sdl3_dlerror	proc sdl3_dlerror(): string		1355
+nim	load_sdl3_library	dlsdl3/abi3.html#load_sdl3_library	proc load_sdl3_library(): bool		1358
+nim	unload_sdl3_library	dlsdl3/abi3.html#unload_sdl3_library	proc unload_sdl3_library()		1368

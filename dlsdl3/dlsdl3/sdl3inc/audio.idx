@@ -1,0 +1,39 @@
+nimTitle	audio	dlsdl3/sdl3inc/audio.html	module src/dlsdl3/sdl3inc/audio		0
+nim	AudioFormat	dlsdl3/sdl3inc/audio.html#AudioFormat	type AudioFormat		9
+nim	`==`	dlsdl3/sdl3inc/audio.html#==,AudioFormat,AudioFormat	proc `==`(a, b: AudioFormat): bool		12
+nim	AudioFormatFlags	dlsdl3/sdl3inc/audio.html#AudioFormatFlags	type AudioFormatFlags		15
+nim	`or`	dlsdl3/sdl3inc/audio.html#or,AudioFormatFlags,AudioFormatFlags	proc `or`(x, y: AudioFormatFlags): AudioFormatFlags		18
+nim	AUDIO_MASK_BITSIZE	dlsdl3/sdl3inc/audio.html#AUDIO_MASK_BITSIZE	const AUDIO_MASK_BITSIZE		21
+nim	AUDIO_MASK_FLOAT	dlsdl3/sdl3inc/audio.html#AUDIO_MASK_FLOAT	const AUDIO_MASK_FLOAT		22
+nim	AUDIO_MASK_ENDIAN	dlsdl3/sdl3inc/audio.html#AUDIO_MASK_ENDIAN	const AUDIO_MASK_ENDIAN		23
+nim	AUDIO_MASK_SIGNED	dlsdl3/sdl3inc/audio.html#AUDIO_MASK_SIGNED	const AUDIO_MASK_SIGNED		24
+nim	audio_bitsize	dlsdl3/sdl3inc/audio.html#audio_bitsize,uint16	proc audio_bitsize(x: uint16): uint16		26
+nim	audio_bytesize	dlsdl3/sdl3inc/audio.html#audio_bytesize,uint16	proc audio_bytesize(x: uint16): uint16		27
+nim	audio_isfloat	dlsdl3/sdl3inc/audio.html#audio_isfloat,uint16	proc audio_isfloat(x: uint16): bool		28
+nim	audio_isbigendian	dlsdl3/sdl3inc/audio.html#audio_isbigendian,uint16	proc audio_isbigendian(x: uint16): bool		29
+nim	audio_islittleendian	dlsdl3/sdl3inc/audio.html#audio_islittleendian,uint16	proc audio_islittleendian(x: uint16): bool		30
+nim	audio_issigned	dlsdl3/sdl3inc/audio.html#audio_issigned,uint16	proc audio_issigned(x: uint16): bool		31
+nim	audio_isint	dlsdl3/sdl3inc/audio.html#audio_isint,uint16	proc audio_isint(x: uint16): bool		32
+nim	audio_isunsigned	dlsdl3/sdl3inc/audio.html#audio_isunsigned,uint16	proc audio_isunsigned(x: uint16): bool		33
+nim	AUDIO_U8	dlsdl3/sdl3inc/audio.html#AUDIO_U8	const AUDIO_U8		36
+nim	AUDIO_S8	dlsdl3/sdl3inc/audio.html#AUDIO_S8	const AUDIO_S8		37
+nim	AUDIO_S16LE	dlsdl3/sdl3inc/audio.html#AUDIO_S16LE	const AUDIO_S16LE		38
+nim	AUDIO_S16BE	dlsdl3/sdl3inc/audio.html#AUDIO_S16BE	const AUDIO_S16BE		39
+nim	AUDIO_S16	dlsdl3/sdl3inc/audio.html#AUDIO_S16	const AUDIO_S16		40
+nim	AUDIO_S32LE	dlsdl3/sdl3inc/audio.html#AUDIO_S32LE	const AUDIO_S32LE		42
+nim	AUDIO_S32BE	dlsdl3/sdl3inc/audio.html#AUDIO_S32BE	const AUDIO_S32BE		43
+nim	AUDIO_S32	dlsdl3/sdl3inc/audio.html#AUDIO_S32	const AUDIO_S32		44
+nim	AUDIO_F32LE	dlsdl3/sdl3inc/audio.html#AUDIO_F32LE	const AUDIO_F32LE		46
+nim	AUDIO_F32BE	dlsdl3/sdl3inc/audio.html#AUDIO_F32BE	const AUDIO_F32BE		47
+nim	AUDIO_F32	dlsdl3/sdl3inc/audio.html#AUDIO_F32	const AUDIO_F32		48
+nim	AUDIO_S16SYS	dlsdl3/sdl3inc/audio.html#AUDIO_S16SYS	const AUDIO_S16SYS		52
+nim	AUDIO_S32SYS	dlsdl3/sdl3inc/audio.html#AUDIO_S32SYS	const AUDIO_S32SYS		53
+nim	AUDIO_F32SYS	dlsdl3/sdl3inc/audio.html#AUDIO_F32SYS	const AUDIO_F32SYS		54
+nim	AudioDeviceID	dlsdl3/sdl3inc/audio.html#AudioDeviceID	type AudioDeviceID		62
+nim	AUDIO_DEVICE_DEFAULT_OUTPUT	dlsdl3/sdl3inc/audio.html#AUDIO_DEVICE_DEFAULT_OUTPUT	const AUDIO_DEVICE_DEFAULT_OUTPUT		66
+nim	AUDIO_DEVICE_DEFAULT_CAPTURE	dlsdl3/sdl3inc/audio.html#AUDIO_DEVICE_DEFAULT_CAPTURE	const AUDIO_DEVICE_DEFAULT_CAPTURE		67
+nim	AudioSpec	dlsdl3/sdl3inc/audio.html#AudioSpec	object AudioSpec		70
+nim	audio_framesize	dlsdl3/sdl3inc/audio.html#audio_framesize,AudioSpec	proc audio_framesize(spec: AudioSpec): uint16		75
+nim	AudioStreamPtr	dlsdl3/sdl3inc/audio.html#AudioStreamPtr	type AudioStreamPtr		82
+nim	AudioStreamCallback	dlsdl3/sdl3inc/audio.html#AudioStreamCallback	type AudioStreamCallback		86
+nim	AudioPostmixCallback	dlsdl3/sdl3inc/audio.html#AudioPostmixCallback	type AudioPostmixCallback		90

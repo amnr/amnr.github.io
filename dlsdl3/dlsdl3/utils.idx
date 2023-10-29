@@ -1,0 +1,6 @@
+nimTitle	utils	dlsdl3/utils.html	module src/dlsdl3/utils		0
+nim	error	dlsdl3/utils.html#error.t,varargs[typed,]	template error(args: varargs[typed, `$`])		16
+nim	ensure_not_nil	dlsdl3/utils.html#ensure_not_nil.t,string,untyped	template ensure_not_nil(procname: string; body: untyped)		19
+nim	ensure_positive	dlsdl3/utils.html#ensure_positive.t,string,untyped	template ensure_positive(procname: string; body: untyped)		32
+nim	ensure_zero	dlsdl3/utils.html#ensure_zero.t,string,untyped	template ensure_zero(procname: string; body: untyped)		44
+nim	check_avail	dlsdl3/utils.html#check_avail.m,string,string,untyped	macro check_avail(procname: string; minver: string; return_val: untyped = bool)		52

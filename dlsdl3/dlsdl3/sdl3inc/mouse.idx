@@ -1,0 +1,15 @@
+nimTitle	mouse	dlsdl3/sdl3inc/mouse.html	module src/dlsdl3/sdl3inc/mouse		0
+nim	MouseID	dlsdl3/sdl3inc/mouse.html#MouseID	type MouseID		9
+nim	CursorPtr	dlsdl3/sdl3inc/mouse.html#CursorPtr	type CursorPtr		14
+nim	SystemCursor	dlsdl3/sdl3inc/mouse.html#SystemCursor	enum SystemCursor		17
+nim	MouseWheelDirection	dlsdl3/sdl3inc/mouse.html#MouseWheelDirection	enum MouseWheelDirection		32
+nim	BUTTON_LEFT	dlsdl3/sdl3inc/mouse.html#BUTTON_LEFT	const BUTTON_LEFT		47
+nim	BUTTON_MIDDLE	dlsdl3/sdl3inc/mouse.html#BUTTON_MIDDLE	const BUTTON_MIDDLE		48
+nim	BUTTON_RIGHT	dlsdl3/sdl3inc/mouse.html#BUTTON_RIGHT	const BUTTON_RIGHT		49
+nim	BUTTON_X1	dlsdl3/sdl3inc/mouse.html#BUTTON_X1	const BUTTON_X1		50
+nim	BUTTON_X2	dlsdl3/sdl3inc/mouse.html#BUTTON_X2	const BUTTON_X2		51
+nim	BUTTON_LMASK	dlsdl3/sdl3inc/mouse.html#BUTTON_LMASK	const BUTTON_LMASK		52
+nim	BUTTON_MMASK	dlsdl3/sdl3inc/mouse.html#BUTTON_MMASK	const BUTTON_MMASK		53
+nim	BUTTON_RMASK	dlsdl3/sdl3inc/mouse.html#BUTTON_RMASK	const BUTTON_RMASK		54
+nim	BUTTON_X1MASK	dlsdl3/sdl3inc/mouse.html#BUTTON_X1MASK	const BUTTON_X1MASK		55
+nim	BUTTON_X2MASK	dlsdl3/sdl3inc/mouse.html#BUTTON_X2MASK	const BUTTON_X2MASK		56

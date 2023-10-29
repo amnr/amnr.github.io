@@ -1,0 +1,24 @@
+nimTitle	audio	dlsdl1/sdl1inc/audio.html	module src/dlsdl1/sdl1inc/audio		0
+nim	AudioFormat	dlsdl1/sdl1inc/audio.html#AudioFormat	type AudioFormat		9
+nim	`and`	dlsdl1/sdl1inc/audio.html#and,AudioFormat,AudioFormat	proc `and`(a, b: AudioFormat): AudioFormat		12
+nim	`or`	dlsdl1/sdl1inc/audio.html#or,AudioFormat,AudioFormat	proc `or`(a, b: AudioFormat): AudioFormat		13
+nim	`==`	dlsdl1/sdl1inc/audio.html#==,AudioFormat,AudioFormat	proc `==`(a, b: AudioFormat): bool		15
+nim	AudioCallback	dlsdl1/sdl1inc/audio.html#AudioCallback	type AudioCallback		18
+nim	AudioSpec	dlsdl1/sdl1inc/audio.html#AudioSpec	object AudioSpec		22
+nim	AUDIO_U8	dlsdl1/sdl1inc/audio.html#AUDIO_U8	const AUDIO_U8		38
+nim	AUDIO_S8	dlsdl1/sdl1inc/audio.html#AUDIO_S8	const AUDIO_S8		39
+nim	AUDIO_U16LSB	dlsdl1/sdl1inc/audio.html#AUDIO_U16LSB	const AUDIO_U16LSB		40
+nim	AUDIO_S16LSB	dlsdl1/sdl1inc/audio.html#AUDIO_S16LSB	const AUDIO_S16LSB		41
+nim	AUDIO_U16MSB	dlsdl1/sdl1inc/audio.html#AUDIO_U16MSB	const AUDIO_U16MSB		42
+nim	AUDIO_S16MSB	dlsdl1/sdl1inc/audio.html#AUDIO_S16MSB	const AUDIO_S16MSB		43
+nim	AUDIO_U16	dlsdl1/sdl1inc/audio.html#AUDIO_U16	const AUDIO_U16		44
+nim	AUDIO_S16	dlsdl1/sdl1inc/audio.html#AUDIO_S16	const AUDIO_S16		45
+nim	AUDIO_U16SYS	dlsdl1/sdl1inc/audio.html#AUDIO_U16SYS	const AUDIO_U16SYS		49
+nim	AUDIO_S16SYS	dlsdl1/sdl1inc/audio.html#AUDIO_S16SYS	const AUDIO_S16SYS		50
+nim	AudioFilter	dlsdl1/sdl1inc/audio.html#AudioFilter	type AudioFilter		57
+nim	AudioCVT	dlsdl1/sdl1inc/audio.html#AudioCVT	object AudioCVT		61
+nim	AUDIO_STOPPED	dlsdl1/sdl1inc/audio.html#AUDIO_STOPPED	AudioStatus.AUDIO_STOPPED		76
+nim	AUDIO_PLAYING	dlsdl1/sdl1inc/audio.html#AUDIO_PLAYING	AudioStatus.AUDIO_PLAYING		76
+nim	AUDIO_PAUSED	dlsdl1/sdl1inc/audio.html#AUDIO_PAUSED	AudioStatus.AUDIO_PAUSED		76
+nim	AudioStatus	dlsdl1/sdl1inc/audio.html#AudioStatus	enum AudioStatus		76
+nim	MIX_MAXVOLUME	dlsdl1/sdl1inc/audio.html#MIX_MAXVOLUME	const MIX_MAXVOLUME		82

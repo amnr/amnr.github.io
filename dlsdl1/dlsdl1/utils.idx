@@ -1,0 +1,4 @@
+nimTitle	utils	dlsdl1/utils.html	module src/dlsdl1/utils		0
+nim	ensure_not_nil	dlsdl1/utils.html#ensure_not_nil.t,string,untyped	template ensure_not_nil(procname: string; body: untyped)		13
+nim	ensure_zero	dlsdl1/utils.html#ensure_zero.t,string,untyped	template ensure_zero(procname: string; body: untyped)		21
+nim	check_avail	dlsdl1/utils.html#check_avail.m,string,string	macro check_avail(procname: string; minver: string)		29

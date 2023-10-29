@@ -1,0 +1,62 @@
+nimTitle	video	dlsdl3/sdl3inc/video.html	module src/dlsdl3/sdl3inc/video		0
+nim	DisplayID	dlsdl3/sdl3inc/video.html#DisplayID	type DisplayID		11
+nim	`==`	dlsdl3/sdl3inc/video.html#==,DisplayID,DisplayID	proc `==`(a, b: DisplayID): bool		14
+nim	WindowID	dlsdl3/sdl3inc/video.html#WindowID	type WindowID		17
+nim	`==`	dlsdl3/sdl3inc/video.html#==,WindowID,WindowID	proc `==`(a, b: WindowID): bool		20
+nim	SystemTheme	dlsdl3/sdl3inc/video.html#SystemTheme	enum SystemTheme		23
+nim	DisplayMode	dlsdl3/sdl3inc/video.html#DisplayMode	object DisplayMode		29
+nim	DisplayOrientation	dlsdl3/sdl3inc/video.html#DisplayOrientation	enum DisplayOrientation		39
+nim	WindowPtr	dlsdl3/sdl3inc/video.html#WindowPtr	type WindowPtr		50
+nim	WindowFlags	dlsdl3/sdl3inc/video.html#WindowFlags	type WindowFlags		54
+nim	`and`	dlsdl3/sdl3inc/video.html#and,WindowFlags,WindowFlags	proc `and`(a, b: WindowFlags): WindowFlags		57
+nim	`or`	dlsdl3/sdl3inc/video.html#or,WindowFlags,WindowFlags	proc `or`(a, b: WindowFlags): WindowFlags		58
+nim	`==`	dlsdl3/sdl3inc/video.html#==,WindowFlags,WindowFlags	proc `==`(a, b: WindowFlags): bool		60
+nim	`==`	dlsdl3/sdl3inc/video.html#==,WindowFlags,uint32	proc `==`(a: WindowFlags; b: uint32): bool		61
+nim	WINDOW_FULLSCREEN	dlsdl3/sdl3inc/video.html#WINDOW_FULLSCREEN	const WINDOW_FULLSCREEN		64
+nim	WINDOW_OPENGL	dlsdl3/sdl3inc/video.html#WINDOW_OPENGL	const WINDOW_OPENGL		65
+nim	WINDOW_OCCLUDED	dlsdl3/sdl3inc/video.html#WINDOW_OCCLUDED	const WINDOW_OCCLUDED		66
+nim	WINDOW_HIDDEN	dlsdl3/sdl3inc/video.html#WINDOW_HIDDEN	const WINDOW_HIDDEN		67
+nim	WINDOW_BORDERLESS	dlsdl3/sdl3inc/video.html#WINDOW_BORDERLESS	const WINDOW_BORDERLESS		68
+nim	WINDOW_RESIZABLE	dlsdl3/sdl3inc/video.html#WINDOW_RESIZABLE	const WINDOW_RESIZABLE		69
+nim	WINDOW_MINIMIZED	dlsdl3/sdl3inc/video.html#WINDOW_MINIMIZED	const WINDOW_MINIMIZED		70
+nim	WINDOW_MAXIMIZED	dlsdl3/sdl3inc/video.html#WINDOW_MAXIMIZED	const WINDOW_MAXIMIZED		71
+nim	WINDOW_MOUSE_GRABBED	dlsdl3/sdl3inc/video.html#WINDOW_MOUSE_GRABBED	const WINDOW_MOUSE_GRABBED		72
+nim	WINDOW_INPUT_FOCUS	dlsdl3/sdl3inc/video.html#WINDOW_INPUT_FOCUS	const WINDOW_INPUT_FOCUS		73
+nim	WINDOW_MOUSE_FOCUS	dlsdl3/sdl3inc/video.html#WINDOW_MOUSE_FOCUS	const WINDOW_MOUSE_FOCUS		74
+nim	WINDOW_FOREIGN	dlsdl3/sdl3inc/video.html#WINDOW_FOREIGN	const WINDOW_FOREIGN		75
+nim	WINDOW_HIGH_PIXEL_DENSITY	dlsdl3/sdl3inc/video.html#WINDOW_HIGH_PIXEL_DENSITY	const WINDOW_HIGH_PIXEL_DENSITY		76
+nim	WINDOW_MOUSE_CAPTURE	dlsdl3/sdl3inc/video.html#WINDOW_MOUSE_CAPTURE	const WINDOW_MOUSE_CAPTURE		77
+nim	WINDOW_ALWAYS_ON_TOP	dlsdl3/sdl3inc/video.html#WINDOW_ALWAYS_ON_TOP	const WINDOW_ALWAYS_ON_TOP		78
+nim	WINDOW_SKIP_TASKBAR	dlsdl3/sdl3inc/video.html#WINDOW_SKIP_TASKBAR	const WINDOW_SKIP_TASKBAR		79
+nim	WINDOW_UTILITY	dlsdl3/sdl3inc/video.html#WINDOW_UTILITY	const WINDOW_UTILITY		80
+nim	WINDOW_TOOLTIP	dlsdl3/sdl3inc/video.html#WINDOW_TOOLTIP	const WINDOW_TOOLTIP		81
+nim	WINDOW_POPUP_MENU	dlsdl3/sdl3inc/video.html#WINDOW_POPUP_MENU	const WINDOW_POPUP_MENU		82
+nim	WINDOW_KEYBOARD_GRABBED	dlsdl3/sdl3inc/video.html#WINDOW_KEYBOARD_GRABBED	const WINDOW_KEYBOARD_GRABBED		83
+nim	WINDOW_VULKAN	dlsdl3/sdl3inc/video.html#WINDOW_VULKAN	const WINDOW_VULKAN		84
+nim	WINDOW_METAL	dlsdl3/sdl3inc/video.html#WINDOW_METAL	const WINDOW_METAL		85
+nim	WINDOW_TRANSPARENT	dlsdl3/sdl3inc/video.html#WINDOW_TRANSPARENT	const WINDOW_TRANSPARENT		86
+nim	WINDOW_NOT_FOCUSABLE	dlsdl3/sdl3inc/video.html#WINDOW_NOT_FOCUSABLE	const WINDOW_NOT_FOCUSABLE		87
+nim	WINDOWPOS_UNDEFINED	dlsdl3/sdl3inc/video.html#WINDOWPOS_UNDEFINED	const WINDOWPOS_UNDEFINED		100
+nim	windowpos_isundefined	dlsdl3/sdl3inc/video.html#windowpos_isundefined.t,uint32	template windowpos_isundefined(x: uint32): bool		102
+nim	windowpos_centered_display	dlsdl3/sdl3inc/video.html#windowpos_centered_display,DisplayID	proc windowpos_centered_display(x: DisplayID): uint32		107
+nim	windowpos_centered_display	dlsdl3/sdl3inc/video.html#windowpos_centered_display,uint32	proc windowpos_centered_display(x: uint32): uint32		110
+nim	WINDOWPOS_CENTERED	dlsdl3/sdl3inc/video.html#WINDOWPOS_CENTERED	const WINDOWPOS_CENTERED		113
+nim	windowpos_iscentered	dlsdl3/sdl3inc/video.html#windowpos_iscentered.t,uint32	template windowpos_iscentered(x: uint32): bool		115
+nim	FlashOperation	dlsdl3/sdl3inc/video.html#FlashOperation	enum FlashOperation		119
+nim	GLContext	dlsdl3/sdl3inc/video.html#GLContext	type GLContext		126
+nim	EGLDisplay	dlsdl3/sdl3inc/video.html#EGLDisplay	type EGLDisplay		129
+nim	EGLConfig	dlsdl3/sdl3inc/video.html#EGLConfig	type EGLConfig		130
+nim	EGLSurface	dlsdl3/sdl3inc/video.html#EGLSurface	type EGLSurface		131
+nim	EGLAttrib	dlsdl3/sdl3inc/video.html#EGLAttrib	type EGLAttrib		132
+nim	EGLint	dlsdl3/sdl3inc/video.html#EGLint	type EGLint		133
+nim	EGLAttribArrayCallback	dlsdl3/sdl3inc/video.html#EGLAttribArrayCallback	type EGLAttribArrayCallback		136
+nim	EGLIntArrayCallback	dlsdl3/sdl3inc/video.html#EGLIntArrayCallback	type EGLIntArrayCallback		137
+nim	GLattr	dlsdl3/sdl3inc/video.html#GLattr	enum GLattr		140
+nim	GLprofile	dlsdl3/sdl3inc/video.html#GLprofile	enum GLprofile		171
+nim	GLcontextFlag	dlsdl3/sdl3inc/video.html#GLcontextFlag	enum GLcontextFlag		176
+nim	GLcontextReleaseFlag	dlsdl3/sdl3inc/video.html#GLcontextReleaseFlag	enum GLcontextReleaseFlag		182
+nim	GLContextResetNotification	dlsdl3/sdl3inc/video.html#GLContextResetNotification	enum GLContextResetNotification		186
+nim	HitTestResult	dlsdl3/sdl3inc/video.html#HitTestResult	enum HitTestResult		191
+nim	HitTest	dlsdl3/sdl3inc/video.html#HitTest	type HitTest		203
+nimgrp	windowposcentereddisplay	dlsdl3/sdl3inc/video.html#windowpos_centered_display-procs-all	proc		107
+nimgrp	==	dlsdl3/sdl3inc/video.html#==-procs-all	proc		14

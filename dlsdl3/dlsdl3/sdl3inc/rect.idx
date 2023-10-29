@@ -1,0 +1,17 @@
+nimTitle	rect	dlsdl3/sdl3inc/rect.html	module src/dlsdl3/sdl3inc/rect		0
+nim	Point	dlsdl3/sdl3inc/rect.html#Point	object Point		13
+nim	FPoint	dlsdl3/sdl3inc/rect.html#FPoint	object FPoint		18
+nim	Rect	dlsdl3/sdl3inc/rect.html#Rect	object Rect		24
+nim	init	dlsdl3/sdl3inc/rect.html#init,typedesc[Rect],int,int,int,int	proc init(T: typedesc[Rect]; x, y: int; w, h: int): T:type		31
+nim	FRect	dlsdl3/sdl3inc/rect.html#FRect	object FRect		35
+nim	init	dlsdl3/sdl3inc/rect.html#init,typedesc[FRect],U,U,U,U	proc init[U: int or float](T: typedesc[FRect]; x, y: U; w, h: U): T:type		42
+nim	point_in_rect	dlsdl3/sdl3inc/rect.html#point_in_rect,Point,Rect	proc point_in_rect(p: Point; r: Rect): bool		45
+nim	rect_empty	dlsdl3/sdl3inc/rect.html#rect_empty,ptr.Rect	proc rect_empty(r: ptr Rect): bool		50
+nim	rect_empty	dlsdl3/sdl3inc/rect.html#rect_empty,Rect	proc rect_empty(r: Rect): bool		54
+nim	rect_equals	dlsdl3/sdl3inc/rect.html#rect_equals,ptr.Rect,ptr.Rect	proc rect_equals(a, b: ptr Rect): bool		58
+nim	point_in_rect_float	dlsdl3/sdl3inc/rect.html#point_in_rect_float,ptr.FPoint,ptr.FRect	proc point_in_rect_float(p: ptr FPoint; r: ptr FRect): bool		64
+nim	rect_empty_float	dlsdl3/sdl3inc/rect.html#rect_empty_float,ptr.FRect	proc rect_empty_float(r: ptr FRect): bool		68
+nim	rects_equal_epsilon	dlsdl3/sdl3inc/rect.html#rects_equal_epsilon,ptr.FRect,ptr.FRect,cfloat	proc rects_equal_epsilon(a, b: ptr FRect; epsilon: cfloat): bool		72
+nim	rects_equal_float	dlsdl3/sdl3inc/rect.html#rects_equal_float,ptr.FRect,ptr.FRect	proc rects_equal_float(a, b: ptr FRect): bool		79
+nimgrp	init	dlsdl3/sdl3inc/rect.html#init-procs-all	proc		31
+nimgrp	rectempty	dlsdl3/sdl3inc/rect.html#rect_empty-procs-all	proc		50

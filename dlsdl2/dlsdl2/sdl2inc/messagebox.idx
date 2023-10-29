@@ -1,0 +1,22 @@
+nimTitle	messagebox	dlsdl2/sdl2inc/messagebox.html	module src/dlsdl2/sdl2inc/messagebox		0
+nim	MessageBoxFlags	dlsdl2/sdl2inc/messagebox.html#MessageBoxFlags	type MessageBoxFlags		11
+nim	`+`	dlsdl2/sdl2inc/messagebox.html#+,MessageBoxFlags,MessageBoxFlags	proc `+`(a, b: MessageBoxFlags): MessageBoxFlags		13
+nim	`or`	dlsdl2/sdl2inc/messagebox.html#or,MessageBoxFlags,MessageBoxFlags	proc `or`(a, b: MessageBoxFlags): MessageBoxFlags		14
+nim	MESSAGEBOX_ERROR	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_ERROR	const MESSAGEBOX_ERROR		17
+nim	MESSAGEBOX_WARNING	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_WARNING	const MESSAGEBOX_WARNING		18
+nim	MESSAGEBOX_INFORMATION	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_INFORMATION	const MESSAGEBOX_INFORMATION		19
+nim	MESSAGEBOX_BUTTONS_LEFT_TO_RIGHT	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_BUTTONS_LEFT_TO_RIGHT	const MESSAGEBOX_BUTTONS_LEFT_TO_RIGHT		20
+nim	MESSAGEBOX_BUTTONS_RIGHT_TO_LEFT	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_BUTTONS_RIGHT_TO_LEFT	const MESSAGEBOX_BUTTONS_RIGHT_TO_LEFT		21
+nim	MessageBoxButtonFlags	dlsdl2/sdl2inc/messagebox.html#MessageBoxButtonFlags	type MessageBoxButtonFlags		24
+nim	MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT	const MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT		27
+nim	MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT	const MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT		28
+nim	MessageBoxButtonData	dlsdl2/sdl2inc/messagebox.html#MessageBoxButtonData	object MessageBoxButtonData		31
+nim	MessageBoxColor	dlsdl2/sdl2inc/messagebox.html#MessageBoxColor	object MessageBoxColor		37
+nim	MESSAGEBOX_COLOR_BACKGROUND	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_COLOR_BACKGROUND	MessageBoxColorType.MESSAGEBOX_COLOR_BACKGROUND		43
+nim	MESSAGEBOX_COLOR_TEXT	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_COLOR_TEXT	MessageBoxColorType.MESSAGEBOX_COLOR_TEXT		43
+nim	MESSAGEBOX_COLOR_BUTTON_BORDER	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_COLOR_BUTTON_BORDER	MessageBoxColorType.MESSAGEBOX_COLOR_BUTTON_BORDER		43
+nim	MESSAGEBOX_COLOR_BUTTON_BACKGROUND	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_COLOR_BUTTON_BACKGROUND	MessageBoxColorType.MESSAGEBOX_COLOR_BUTTON_BACKGROUND		43
+nim	MESSAGEBOX_COLOR_BUTTON_SELECTED	dlsdl2/sdl2inc/messagebox.html#MESSAGEBOX_COLOR_BUTTON_SELECTED	MessageBoxColorType.MESSAGEBOX_COLOR_BUTTON_SELECTED		43
+nim	MessageBoxColorType	dlsdl2/sdl2inc/messagebox.html#MessageBoxColorType	enum MessageBoxColorType		43
+nim	MessageBoxColorScheme	dlsdl2/sdl2inc/messagebox.html#MessageBoxColorScheme	object MessageBoxColorScheme		54
+nim	MessageBoxData	dlsdl2/sdl2inc/messagebox.html#MessageBoxData	object MessageBoxData		58

@@ -1,0 +1,8 @@
+nimTitle	abi1	dlsdl1/abi1.html	module src/dlsdl1/abi1		0
+nim	sdl_disable_audio	dlsdl1/abi1.html#sdl_disable_audio	const sdl_disable_audio		14
+nim	Sdl1Lib	dlsdl1/abi1.html#Sdl1Lib	object Sdl1Lib		44
+nim	sdl_is_loaded	dlsdl1/abi1.html#sdl_is_loaded	proc sdl_is_loaded(): bool		548
+nim	sdl_context	dlsdl1/abi1.html#sdl_context	proc sdl_context(): Sdl1Lib		552
+nim	sdl_dlerror	dlsdl1/abi1.html#sdl_dlerror	proc sdl_dlerror(): string		557
+nim	load_sdl_library	dlsdl1/abi1.html#load_sdl_library	proc load_sdl_library(): bool		560
+nim	unload_sdl_library	dlsdl1/abi1.html#unload_sdl_library	proc unload_sdl_library()		575

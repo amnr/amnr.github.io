@@ -1,0 +1,3 @@
+nimTitle	version	dlsdl2/sdl2inc/version.html	module src/dlsdl2/sdl2inc/version		0
+nim	Version	dlsdl2/sdl2inc/version.html#Version	object Version		9
+nim	`$`	dlsdl2/sdl2inc/version.html#$,Version	proc `$`(self: Version): string		15
