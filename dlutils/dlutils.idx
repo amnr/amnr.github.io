@@ -1,0 +1,9 @@
+nimTitle	dlutils	dlutils.html	module src/dlutils		0
+nim	unchecked	dlutils.html#unchecked.t	template unchecked()		155
+nim	dlgencalls	dlutils.html#dlgencalls.m,staticstring,staticopenArray[string],untyped	macro dlgencalls(name: static string; libpaths: static openArray[string];\n           body: untyped): untyped		470
+nim	dlgencalls	dlutils.html#dlgencalls.t,staticstring,staticstring,untyped	template dlgencalls(name: static string; libpath: static string; body: untyped): untyped		552
+heading	Usage	dlutils.html#usage	 Usage		0
+heading	Open proc	dlutils.html#usage-open-proc	  Open proc		0
+heading	Close proc	dlutils.html#usage-close-proc	  Close proc		0
+heading	Error proc	dlutils.html#usage-error-proc	  Error proc		0
+heading	Example	dlutils.html#example	 Example		0
