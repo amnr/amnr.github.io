@@ -1,0 +1,21 @@
+nimTitle	joystick	rsdl2/sdl2inc/joystick.html	module src/rsdl2/sdl2inc/joystick		0
+nim	JoystickPtr	rsdl2/sdl2inc/joystick.html#JoystickPtr	type JoystickPtr		12
+nim	JoystickGUID	rsdl2/sdl2inc/joystick.html#JoystickGUID	object JoystickGUID		15
+nim	JoystickID	rsdl2/sdl2inc/joystick.html#JoystickID	type JoystickID		19
+nim	JoystickType	rsdl2/sdl2inc/joystick.html#JoystickType	enum JoystickType		24
+nim	JoystickPowerLevel	rsdl2/sdl2inc/joystick.html#JoystickPowerLevel	enum JoystickPowerLevel		36
+nim	IPHONE_MAX_GFORCE	rsdl2/sdl2inc/joystick.html#IPHONE_MAX_GFORCE	const IPHONE_MAX_GFORCE		46
+nim	JOYSTICK_AXIS_MAX	rsdl2/sdl2inc/joystick.html#JOYSTICK_AXIS_MAX	const JOYSTICK_AXIS_MAX		47
+nim	JOYSTICK_AXIS_MIN	rsdl2/sdl2inc/joystick.html#JOYSTICK_AXIS_MIN	const JOYSTICK_AXIS_MIN		48
+nim	Hat	rsdl2/sdl2inc/joystick.html#Hat	type Hat		51
+nim	`==`	rsdl2/sdl2inc/joystick.html#==,Hat,Hat	proc `==`(a, b: Hat): bool		54
+nim	`and`	rsdl2/sdl2inc/joystick.html#and,Hat,Hat	proc `and`(a, b: Hat): Hat		55
+nim	HAT_CENTERED	rsdl2/sdl2inc/joystick.html#HAT_CENTERED	const HAT_CENTERED		59
+nim	HAT_UP	rsdl2/sdl2inc/joystick.html#HAT_UP	const HAT_UP		60
+nim	HAT_RIGHT	rsdl2/sdl2inc/joystick.html#HAT_RIGHT	const HAT_RIGHT		61
+nim	HAT_DOWN	rsdl2/sdl2inc/joystick.html#HAT_DOWN	const HAT_DOWN		62
+nim	HAT_LEFT	rsdl2/sdl2inc/joystick.html#HAT_LEFT	const HAT_LEFT		63
+nim	HAT_RIGHTUP	rsdl2/sdl2inc/joystick.html#HAT_RIGHTUP	const HAT_RIGHTUP		64
+nim	HAT_RIGHTDOWN	rsdl2/sdl2inc/joystick.html#HAT_RIGHTDOWN	const HAT_RIGHTDOWN		65
+nim	HAT_LEFTUP	rsdl2/sdl2inc/joystick.html#HAT_LEFTUP	const HAT_LEFTUP		66
+nim	HAT_LEFTDOWN	rsdl2/sdl2inc/joystick.html#HAT_LEFTDOWN	const HAT_LEFTDOWN		67

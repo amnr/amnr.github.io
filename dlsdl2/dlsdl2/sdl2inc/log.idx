@@ -1,4 +1,0 @@
-nimTitle	log	dlsdl2/sdl2inc/log.html	module src/dlsdl2/sdl2inc/log		0
-nim	LogCategory	dlsdl2/sdl2inc/log.html#LogCategory	enum LogCategory		9
-nim	LogPriority	dlsdl2/sdl2inc/log.html#LogPriority	enum LogPriority		34
-nim	LogOutputFunction	dlsdl2/sdl2inc/log.html#LogOutputFunction	type LogOutputFunction		43

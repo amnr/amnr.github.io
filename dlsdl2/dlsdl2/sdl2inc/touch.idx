@@ -1,7 +1,0 @@
-nimTitle	touch	dlsdl2/sdl2inc/touch.html	module src/dlsdl2/sdl2inc/touch		0
-nim	TouchID	dlsdl2/sdl2inc/touch.html#TouchID	type TouchID		9
-nim	FingerID	dlsdl2/sdl2inc/touch.html#FingerID	type FingerID		10
-nim	TouchDeviceType	dlsdl2/sdl2inc/touch.html#TouchDeviceType	enum TouchDeviceType		12
-nim	Finger	dlsdl2/sdl2inc/touch.html#Finger	object Finger		18
-nim	TOUCH_MOUSEID	dlsdl2/sdl2inc/touch.html#TOUCH_MOUSEID	const TOUCH_MOUSEID		25
-nim	MOUSE_TOUCHID	dlsdl2/sdl2inc/touch.html#MOUSE_TOUCHID	const MOUSE_TOUCHID		28

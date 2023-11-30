@@ -1,0 +1,7 @@
+nimTitle	touch	rsdl2/sdl2inc/touch.html	module src/rsdl2/sdl2inc/touch		0
+nim	TouchID	rsdl2/sdl2inc/touch.html#TouchID	type TouchID		9
+nim	FingerID	rsdl2/sdl2inc/touch.html#FingerID	type FingerID		10
+nim	TouchDeviceType	rsdl2/sdl2inc/touch.html#TouchDeviceType	enum TouchDeviceType		12
+nim	Finger	rsdl2/sdl2inc/touch.html#Finger	object Finger		18
+nim	TOUCH_MOUSEID	rsdl2/sdl2inc/touch.html#TOUCH_MOUSEID	const TOUCH_MOUSEID		25
+nim	MOUSE_TOUCHID	rsdl2/sdl2inc/touch.html#MOUSE_TOUCHID	const MOUSE_TOUCHID		28

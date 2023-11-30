@@ -1,9 +1,0 @@
-nimTitle	utils	dlsdl2/utils.html	module src/dlsdl2/utils		0
-nim	error	dlsdl2/utils.html#error.t,varargs[typed,]	template error(args: varargs[typed, `$`])		16
-nim	warn	dlsdl2/utils.html#warn.t,varargs[typed,]	template warn(args: varargs[typed, `$`])		19
-nim	ensure_not_nil	dlsdl2/utils.html#ensure_not_nil.t,string,untyped	template ensure_not_nil(procname: string; body: untyped)		22
-nim	ensure_natural	dlsdl2/utils.html#ensure_natural.t,string,untyped	template ensure_natural(procname: string; body: untyped)		30
-nim	ensure_positive	dlsdl2/utils.html#ensure_positive.t,string,untyped	template ensure_positive(procname: string; body: untyped)		35
-nim	ensure_true	dlsdl2/utils.html#ensure_true.t,string,untyped	template ensure_true(procname: string; body: untyped)		40
-nim	ensure_zero	dlsdl2/utils.html#ensure_zero.t,string,untyped	template ensure_zero(procname: string; body: untyped)		47
-nim	check_avail	dlsdl2/utils.html#check_avail.m,string,string	macro check_avail(procname: string; minver: string)		55

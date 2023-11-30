@@ -1,0 +1,15 @@
+nimTitle	config	rsdl2/config.html	module src/rsdl2/config		0
+nim	use_audio	rsdl2/config.html#use_audio	const use_audio		7
+nim	use_blendmode	rsdl2/config.html#use_blendmode	const use_blendmode		9
+nim	use_clipboard	rsdl2/config.html#use_clipboard	const use_clipboard		11
+nim	use_gamecontroller	rsdl2/config.html#use_gamecontroller	const use_gamecontroller		13
+nim	use_gesture	rsdl2/config.html#use_gesture	const use_gesture		15
+nim	use_haptic	rsdl2/config.html#use_haptic	const use_haptic		17
+nim	use_hints	rsdl2/config.html#use_hints	const use_hints		19
+nim	use_joystick	rsdl2/config.html#use_joystick	const use_joystick		21
+nim	use_keyboard	rsdl2/config.html#use_keyboard	const use_keyboard		23
+nim	use_messagebox	rsdl2/config.html#use_messagebox	const use_messagebox		25
+nim	use_mouse	rsdl2/config.html#use_mouse	const use_mouse		27
+nim	use_sensor	rsdl2/config.html#use_sensor	const use_sensor		29
+nim	use_shape	rsdl2/config.html#use_shape	const use_shape		31
+nim	use_touch	rsdl2/config.html#use_touch	const use_touch		33
