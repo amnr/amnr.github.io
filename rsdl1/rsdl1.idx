@@ -1,108 +1,112 @@
 nimTitle	rsdl1	rsdl1.html	module src/rsdl1		0
-nim	sdl1_free	rsdl1.html#sdl1_free,pointer	proc sdl1_free(mem: pointer)		70
-nim	init_sdl	rsdl1.html#init_sdl	proc init_sdl(flags = INIT_VIDEO): bool		76
-nim	init_sub_system	rsdl1.html#init_sub_system,InitFlags	proc init_sub_system(flags: InitFlags): bool		97
-nim	quit_sdl	rsdl1.html#quit_sdl	proc quit_sdl()		110
-nim	quit_sub_system	rsdl1.html#quit_sub_system,InitFlags	proc quit_sub_system(flags: InitFlags)		119
-nim	was_init	rsdl1.html#was_init	proc was_init(flags = INIT_NONE): InitFlags		130
-nim	sdl1_avail	rsdl1.html#sdl1_avail	proc sdl1_avail(flags = INIT_VIDEO): bool		143
-nim	audio_driver_name	rsdl1.html#audio_driver_name,int	proc audio_driver_name(maxnamelen = 64): string		154
-nim	build_audio_cvt	rsdl1.html#build_audio_cvt,ptr.AudioCVT,uint16,byte,int,uint16,byte,int	proc build_audio_cvt(cvt: ptr AudioCVT; src_format: uint16; src_channels: byte;\n                src_rate: int; dst_format: uint16; dst_channels: byte;\n                dst_rate: int): bool		165
-nim	close_audio	rsdl1.html#close_audio	proc close_audio()		173
-nim	convert_audio	rsdl1.html#convert_audio,AudioCVT	proc convert_audio(cvt: var AudioCVT): bool		177
-nim	free_wav	rsdl1.html#free_wav,ptr.UncheckedArray[byte]	proc free_wav(audio_buf: ptr UncheckedArray[byte])		182
-nim	get_audio_status	rsdl1.html#get_audio_status	proc get_audio_status(): AudioStatus		186
-nim	load_wav_rw	rsdl1.html#load_wav_rw,RWopsPtr,bool,AudioSpec,ptr.UncheckedArray[byte],uint32	proc load_wav_rw(src: RWopsPtr; freesrc: bool; spec: var AudioSpec;\n            audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		195
-nim	lock_audio	rsdl1.html#lock_audio	proc lock_audio()		215
-nim	mix_audio	rsdl1.html#mix_audio,ptr.UncheckedArray[byte],,uint32,int	proc mix_audio(dst: ptr UncheckedArray[byte];\n          src: ptr byte or ptr UncheckedArray[byte]; len: uint32; volume: int)		219
-nim	open_audio	rsdl1.html#open_audio,AudioSpec	proc open_audio(desired: var AudioSpec): bool		241
-nim	open_audio	rsdl1.html#open_audio,AudioSpec,AudioSpec	proc open_audio(desired, obtained: var AudioSpec): bool		246
-nim	pause_audio	rsdl1.html#pause_audio,bool	proc pause_audio(pause_on: bool)		251
-nim	unlock_audio	rsdl1.html#unlock_audio	proc unlock_audio()		263
-nim	clear_error	rsdl1.html#clear_error	proc clear_error()		271
-nim	get_error	rsdl1.html#get_error	proc get_error(): string		279
-nim	set_error	rsdl1.html#set_error,string	proc set_error(msg: string): bool		290
-nim	event_state	rsdl1.html#event_state,EventType,bool	proc event_state(typ: EventType; state: bool): bool		300
-nim	peep_events	rsdl1.html#peep_events,openArray[Event],int,EventAction,EventMask	proc peep_events(events: var openArray[Event]; numevents: int; action: EventAction;\n            mask: EventMask): int		313
-nim	peep_events	rsdl1.html#peep_events,openArray[Event],EventAction,EventMask	proc peep_events(events: var openArray[Event]; action: EventAction; mask: EventMask): int		324
-nim	poll_event	rsdl1.html#poll_event	proc poll_event(): bool		328
-nim	poll	rsdl1.html#poll,Event	proc poll(event: var Event): bool		334
-nim	pump_events	rsdl1.html#pump_events	proc pump_events()		340
-nim	push	rsdl1.html#push,Event	proc push(event: Event): bool		346
-nim	set_event_filter	rsdl1.html#set_event_filter,EventFilter	proc set_event_filter(filter: EventFilter)		367
-nim	wait	rsdl1.html#wait,Event	proc wait(event: var Event): bool		373
-nim	joystick_update	rsdl1.html#joystick_update	proc joystick_update()		400
-nim	num_joysticks	rsdl1.html#num_joysticks	proc num_joysticks(): int		410
-nim	get_key_name	rsdl1.html#get_key_name,Key	proc get_key_name(key: Key): string		429
-nim	get_mod_state	rsdl1.html#get_mod_state	proc get_mod_state(): Mod		438
-nim	get_mouse_state	rsdl1.html#get_mouse_state	proc get_mouse_state(): tuple[x, y: int, buttons: MouseButton]		465
-nim	get_relative_mouse_state	rsdl1.html#get_relative_mouse_state	proc get_relative_mouse_state(): tuple[x, y: int, buttons: MouseButton]		473
-nim	show_cursor	rsdl1.html#show_cursor,bool	proc show_cursor(toggle: bool): bool		483
-nim	warp_mouse	rsdl1.html#warp_mouse,uint16,uint16	proc warp_mouse(x, y: uint16)		495
-nim	rw_from_file	rsdl1.html#rw_from_file,string,string	proc rw_from_file(file, mode: string): RWopsPtr		509
-nim	add_timer	rsdl1.html#add_timer,uint32,NewTimerCallback,pointer	proc add_timer(interval: uint32; callback: NewTimerCallback; param: pointer = nil): TimerID		526
-nim	delay	rsdl1.html#delay,uint32	proc delay(ms: uint32)		560
-nim	get_ticks	rsdl1.html#get_ticks	proc get_ticks(): uint32		566
-nim	remove	rsdl1.html#remove,TimerID	proc remove(t: TimerID): bool		577
-nim	set_timer	rsdl1.html#set_timer,uint32,TimerCallback	proc set_timer(interval: uint32; callback: TimerCallback): bool		586
-nim	linked_version	rsdl1.html#linked_version	proc linked_version(): tuple[major, minor, patch: int]		626
-nim	create_rgb_surface	rsdl1.html#create_rgb_surface,SurfaceFlags,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface(flags: SurfaceFlags; width, height, depth: int;\n                   rmask, gmask, bmask, amask: uint32): SurfacePtr		640
-nim	create_rgb_surface	rsdl1.html#create_rgb_surface,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface(width, height, depth: int; rmask, gmask, bmask, amask: uint32): SurfacePtr		709
-nim	create_rgb_surface_from	rsdl1.html#create_rgb_surface_from,pointer,int,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface_from(pixels: pointer; width, height: int; depth, pitch: int;\n                        rmask, gmask, bmask, amask: uint32): SurfacePtr		717
-nim	display_format	rsdl1.html#display_format,SurfacePtr	proc display_format(surface: SurfacePtr): SurfacePtr		740
-nim	fill_rect	rsdl1.html#fill_rect,SurfacePtr,uint32	proc fill_rect(dst: SurfacePtr; color: uint32): bool		750
-nim	fill_rect	rsdl1.html#fill_rect,SurfacePtr,Rect,uint32	proc fill_rect(dst: SurfacePtr; dstrect: Rect; color: uint32): bool		757
-nim	flip	rsdl1.html#flip,SurfacePtr	proc flip(surface: SurfacePtr): bool		766
-nim	free	rsdl1.html#free,SurfacePtr	proc free(surface: SurfacePtr)		785
-nim	get_video_info	rsdl1.html#get_video_info	proc get_video_info(): ptr VideoInfo		811
-nim	get_video_surface	rsdl1.html#get_video_surface	proc get_video_surface(): SurfacePtr		825
-nim	list_modes	rsdl1.html#list_modes,PixelFormat,SurfaceFlags	proc list_modes(format: PixelFormat; flags: SurfaceFlags = SWSURFACE): seq[\n    tuple[w, h: int]]		851
-nim	list_modes	rsdl1.html#list_modes,SurfaceFlags	proc list_modes(flags: SurfaceFlags = SWSURFACE): seq[tuple[w, h: int]]		870
-nim	load_bmp_rw	rsdl1.html#load_bmp_rw,RWopsPtr,bool	proc load_bmp_rw(src: RWopsPtr; freesrc: bool): SurfacePtr		888
-nim	lock	rsdl1.html#lock,SurfacePtr	proc lock(surface: SurfacePtr): bool		907
-nim	map_rgb	rsdl1.html#map_rgb,ptr.PixelFormat,byte,byte,byte	proc map_rgb(format: ptr PixelFormat; r, g, b: byte): uint32		954
-nim	map_rgba	rsdl1.html#map_rgba,ptr.PixelFormat,byte,byte,byte,byte	proc map_rgba(format: ptr PixelFormat; r, g, b, a: byte): uint32		976
-nim	set_alpha	rsdl1.html#set_alpha,SurfacePtr,SurfaceFlags,byte	proc set_alpha(surface: SurfacePtr; flag: SurfaceFlags; alpha: byte): bool		1000
-nim	set_color_key	rsdl1.html#set_color_key,SurfacePtr,SurfaceFlags,uint32	proc set_color_key(surface: SurfacePtr; flag: SurfaceFlags; key: uint32): bool		1009
-nim	set_colors	rsdl1.html#set_colors,SurfacePtr,openArray[Color],int,int	proc set_colors(surface: SurfacePtr; colors: openArray[Color]; firstcolor: int;\n           ncolors: int): bool		1037
-nim	set_colors	rsdl1.html#set_colors,SurfacePtr,ptr.UncheckedArray[Color],int,int	proc set_colors(surface: SurfacePtr; colors: ptr UncheckedArray[Color];\n           firstcolor: int; ncolors: int): bool		1050
-nim	set_gamma	rsdl1.html#set_gamma,float,float,float	proc set_gamma(red, green, blue: float): bool		1060
-nim	set_gamma_ramp	rsdl1.html#set_gamma_ramp,array[,uint16],array[,uint16],array[,uint16]	proc set_gamma_ramp(red, green, blue: array[256, uint16]): bool		1080
-nim	set_palette	rsdl1.html#set_palette,SurfacePtr,PaletteFlags,openArray[Color],int,int	proc set_palette(surface: SurfacePtr; flags: PaletteFlags; colors: openArray[Color];\n            firstcolor: int; ncolors: int): bool		1107
-nim	set_palette	rsdl1.html#set_palette,SurfacePtr,PaletteFlags,ptr.UncheckedArray[Color],int,int	proc set_palette(surface: SurfacePtr; flags: PaletteFlags;\n            colors: ptr UncheckedArray[Color]; firstcolor: int; ncolors: int): bool		1122
-nim	set_video_mode	rsdl1.html#set_video_mode,int,int,int	proc set_video_mode(width, height: int; bpp: int; flags = SWSURFACE): SurfacePtr		1137
-nim	unlock	rsdl1.html#unlock,SurfacePtr	proc unlock(surface: SurfacePtr)		1205
-nim	update_rect	rsdl1.html#update_rect,SurfacePtr,int,int,uint,uint	proc update_rect(screen: SurfacePtr; x, y: int; w, h: uint)		1217
-nim	update_rects	rsdl1.html#update_rects,SurfacePtr,openArray[Rect]	proc update_rects(screen: SurfacePtr; rects: openArray[Rect])		1224
-nim	update_rects	rsdl1.html#update_rects,SurfacePtr,int,openArray[Rect]	proc update_rects(screen: SurfacePtr; numrects: int; rects: openArray[Rect])		1233
-nim	upper_blit	rsdl1.html#upper_blit,SurfacePtr,SurfacePtr	proc upper_blit(src, dst: SurfacePtr): bool		1243
-nim	upper_blit	rsdl1.html#upper_blit,SurfacePtr,SurfacePtr,Rect	proc upper_blit(src, dst: SurfacePtr; dstrect: Rect): bool		1251
-nim	upper_blit	rsdl1.html#upper_blit,SurfacePtr,Rect,SurfacePtr,Rect	proc upper_blit(src: SurfacePtr; srcrect: Rect; dst: SurfacePtr; dstrect: Rect): bool		1261
-nim	video_driver_name	rsdl1.html#video_driver_name	proc video_driver_name(): string		1285
-nim	video_mode_ok	rsdl1.html#video_mode_ok,int,int,int,SurfaceFlags	proc video_mode_ok(width, height: int; bpp: int; flags: SurfaceFlags): int		1299
-nim	wm_get_caption	rsdl1.html#wm_get_caption	proc wm_get_caption(): tuple[title, icon: string]		1320
-nim	wm_grab_input	rsdl1.html#wm_grab_input,GrabMode	proc wm_grab_input(mode: GrabMode): GrabMode		1329
-nim	wm_iconify_window	rsdl1.html#wm_iconify_window	proc wm_iconify_window(): bool		1335
-nim	wm_set_caption	rsdl1.html#wm_set_caption,string,string	proc wm_set_caption(title, icon: string)		1342
-nim	wm_set_icon	rsdl1.html#wm_set_icon,SurfacePtr,openArray[byte]	proc wm_set_icon(icon: SurfacePtr; mask: openArray[byte])		1350
-nim	wm_toggle_full_screen	rsdl1.html#wm_toggle_full_screen,SurfacePtr	proc wm_toggle_full_screen(surface: SurfacePtr): bool		1358
-nim	load_wav	rsdl1.html#load_wav,string,AudioSpec,ptr.UncheckedArray[byte],uint32	proc load_wav(file: string; spec: var AudioSpec;\n         audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		1374
-nim	quit_requested	rsdl1.html#quit_requested	proc quit_requested(): bool		1388
-nim	alloc_surface	rsdl1.html#alloc_surface.t,SurfaceFlags,int,int,int,uint32,uint32,uint32,uint32	template alloc_surface(flags: SurfaceFlags; width, height, depth: int;\n              rmask, gmask, bmask, amask: uint32): SurfacePtr		1401
-nim	blit_surface	rsdl1.html#blit_surface.t,SurfacePtr,SurfacePtr	template blit_surface(src, dst: SurfacePtr): bool		1408
-nim	blit_surface	rsdl1.html#blit_surface,SurfacePtr,SurfacePtr,Rect	proc blit_surface(src, dst: SurfacePtr; dstrect: Rect): bool		1415
-nim	blit_surface	rsdl1.html#blit_surface.t,SurfacePtr,Rect,SurfacePtr,Rect	template blit_surface(src: SurfacePtr; srcrect: Rect; dst: SurfacePtr; dstrect: Rect): bool		1421
-nim	load_bmp	rsdl1.html#load_bmp,string	proc load_bmp(file: string): SurfacePtr		1428
-nim	rsdl1_init	rsdl1.html#rsdl1_init	proc rsdl1_init(): bool		1440
-nim	rsdl1_fini	rsdl1.html#rsdl1_fini	proc rsdl1_fini()		1445
-nimgrp	listmodes	rsdl1.html#list_modes-procs-all	proc		851
-nimgrp	peepevents	rsdl1.html#peep_events-procs-all	proc		313
-nimgrp	upperblit	rsdl1.html#upper_blit-procs-all	proc		1243
-nimgrp	updaterects	rsdl1.html#update_rects-procs-all	proc		1224
-nimgrp	creatergbsurface	rsdl1.html#create_rgb_surface-procs-all	proc		640
-nimgrp	fillrect	rsdl1.html#fill_rect-procs-all	proc		750
-nimgrp	setpalette	rsdl1.html#set_palette-procs-all	proc		1107
-nimgrp	openaudio	rsdl1.html#open_audio-procs-all	proc		241
-nimgrp	setcolors	rsdl1.html#set_colors-procs-all	proc		1037
-nimgrp	blitsurface	rsdl1.html#blit_surface-templates-all	template		1408
+nim	sdl1_free	rsdl1.html#sdl1_free,pointer	proc sdl1_free(mem: pointer)		91
+nim	init_sdl	rsdl1.html#init_sdl	proc init_sdl(flags = INIT_VIDEO): bool		97
+nim	init_sub_system	rsdl1.html#init_sub_system,InitFlags	proc init_sub_system(flags: InitFlags): bool		118
+nim	quit_sdl	rsdl1.html#quit_sdl	proc quit_sdl()		131
+nim	quit_sub_system	rsdl1.html#quit_sub_system,InitFlags	proc quit_sub_system(flags: InitFlags)		140
+nim	was_init	rsdl1.html#was_init	proc was_init(flags = INIT_NONE): InitFlags		151
+nim	sdl1_avail	rsdl1.html#sdl1_avail	proc sdl1_avail(flags = INIT_VIDEO): bool		164
+nim	audio_driver_name	rsdl1.html#audio_driver_name,int	proc audio_driver_name(maxnamelen = 64): string		175
+nim	build_audio_cvt	rsdl1.html#build_audio_cvt,ptr.AudioCVT,uint16,byte,int,uint16,byte,int	proc build_audio_cvt(cvt: ptr AudioCVT; src_format: uint16; src_channels: byte;\n                src_rate: int; dst_format: uint16; dst_channels: byte;\n                dst_rate: int): bool		186
+nim	close_audio	rsdl1.html#close_audio	proc close_audio()		194
+nim	convert_audio	rsdl1.html#convert_audio,AudioCVT	proc convert_audio(cvt: var AudioCVT): bool		202
+nim	free_wav	rsdl1.html#free_wav,ptr.UncheckedArray[byte]	proc free_wav(audio_buf: ptr UncheckedArray[byte])		207
+nim	get_audio_status	rsdl1.html#get_audio_status	proc get_audio_status(): AudioStatus		211
+nim	load_wav_rw	rsdl1.html#load_wav_rw,RWopsPtr,bool,AudioSpec,ptr.UncheckedArray[byte],uint32	proc load_wav_rw(src: RWopsPtr; freesrc: bool; spec: var AudioSpec;\n            audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		220
+nim	lock_audio	rsdl1.html#lock_audio	proc lock_audio()		240
+nim	mix_audio	rsdl1.html#mix_audio,ptr.UncheckedArray[byte],,uint32,int	proc mix_audio(dst: ptr UncheckedArray[byte];\n          src: ptr byte or ptr UncheckedArray[byte]; len: uint32; volume: int)		244
+nim	open_audio	rsdl1.html#open_audio,AudioSpec	proc open_audio(desired: var AudioSpec): bool		266
+nim	open_audio	rsdl1.html#open_audio,AudioSpec,AudioSpec	proc open_audio(desired, obtained: var AudioSpec): bool		271
+nim	pause_audio	rsdl1.html#pause_audio,bool	proc pause_audio(pause_on: bool)		276
+nim	unlock_audio	rsdl1.html#unlock_audio	proc unlock_audio()		288
+nim	clear_error	rsdl1.html#clear_error	proc clear_error()		296
+nim	get_error	rsdl1.html#get_error	proc get_error(): string		304
+nim	set_error	rsdl1.html#set_error,string	proc set_error(msg: string)		315
+nim	event_state	rsdl1.html#event_state,EventType,bool	proc event_state(typ: EventType; state: bool): bool		325
+nim	peep_events	rsdl1.html#peep_events,openArray[Event],int,EventAction,EventMask	proc peep_events(events: var openArray[Event]; numevents: int; action: EventAction;\n            mask: EventMask): int		338
+nim	peep_events	rsdl1.html#peep_events,openArray[Event],EventAction,EventMask	proc peep_events(events: var openArray[Event]; action: EventAction; mask: EventMask): int		349
+nim	poll_event	rsdl1.html#poll_event	proc poll_event(): bool		353
+nim	poll	rsdl1.html#poll,Event	proc poll(event: var Event): bool		359
+nim	pump_events	rsdl1.html#pump_events	proc pump_events()		365
+nim	push	rsdl1.html#push,Event	proc push(event: Event): bool		371
+nim	set_event_filter	rsdl1.html#set_event_filter,EventFilter	proc set_event_filter(filter: EventFilter)		392
+nim	wait	rsdl1.html#wait,Event	proc wait(event: var Event): bool		398
+nim	joystick_update	rsdl1.html#joystick_update	proc joystick_update()		425
+nim	num_joysticks	rsdl1.html#num_joysticks	proc num_joysticks(): int		435
+nim	get_key_name	rsdl1.html#get_key_name,Key	proc get_key_name(key: Key): string		454
+nim	get_mod_state	rsdl1.html#get_mod_state	proc get_mod_state(): Mod		461
+nim	get_mouse_state	rsdl1.html#get_mouse_state	proc get_mouse_state(): tuple[x, y: int, buttons: MouseButton]		486
+nim	get_relative_mouse_state	rsdl1.html#get_relative_mouse_state	proc get_relative_mouse_state(): tuple[x, y: int, buttons: MouseButton]		492
+nim	show_cursor	rsdl1.html#show_cursor,bool	proc show_cursor(toggle: bool): bool		500
+nim	warp_mouse	rsdl1.html#warp_mouse,uint16,uint16	proc warp_mouse(x, y: uint16)		518
+nim	rw_from_file	rsdl1.html#rw_from_file,string,string	proc rw_from_file(file, mode: string): RWopsPtr		532
+nim	add_timer	rsdl1.html#add_timer,uint32,NewTimerCallback,pointer	proc add_timer(interval: uint32; callback: NewTimerCallback; param: pointer = nil): TimerID		549
+nim	delay	rsdl1.html#delay,uint32	proc delay(ms: uint32)		583
+nim	get_ticks	rsdl1.html#get_ticks	proc get_ticks(): uint32		597
+nim	remove	rsdl1.html#remove,TimerID	proc remove(t: TimerID): bool		606
+nim	set_timer	rsdl1.html#set_timer,uint32,TimerCallback	proc set_timer(interval: uint32; callback: TimerCallback): bool		615
+nim	linked_version	rsdl1.html#linked_version	proc linked_version(): tuple[major, minor, patch: int]		655
+nim	create_rgb_surface	rsdl1.html#create_rgb_surface,SurfaceFlags,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface(flags: SurfaceFlags; width, height, depth: int;\n                   rmask, gmask, bmask, amask: uint32): SurfacePtr		671
+nim	create_rgb_surface	rsdl1.html#create_rgb_surface,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface(width, height, depth: int; rmask, gmask, bmask, amask: uint32): SurfacePtr		740
+nim	create_rgb_surface_from	rsdl1.html#create_rgb_surface_from,pointer,int,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface_from(pixels: pointer; width, height: int; depth, pitch: int;\n                        rmask, gmask, bmask, amask: uint32): SurfacePtr		748
+nim	display_format	rsdl1.html#display_format,SurfacePtr	proc display_format(surface: SurfacePtr): SurfacePtr		771
+nim	fill_rect	rsdl1.html#fill_rect,SurfacePtr,uint32	proc fill_rect(dst: SurfacePtr; color: uint32): bool		781
+nim	fill_rect	rsdl1.html#fill_rect,SurfacePtr,Rect,uint32	proc fill_rect(dst: SurfacePtr; dstrect: Rect; color: uint32): bool		788
+nim	flip	rsdl1.html#flip,SurfacePtr	proc flip(surface: SurfacePtr): bool		797
+nim	free	rsdl1.html#free,SurfacePtr	proc free(surface: SurfacePtr)		816
+nim	get_video_info	rsdl1.html#get_video_info	proc get_video_info(): ptr VideoInfo		842
+nim	get_video_surface	rsdl1.html#get_video_surface	proc get_video_surface(): SurfacePtr		856
+nim	list_modes	rsdl1.html#list_modes,PixelFormat,SurfaceFlags	proc list_modes(format: PixelFormat; flags: SurfaceFlags = SWSURFACE): seq[\n    tuple[w, h: int]]		882
+nim	list_modes	rsdl1.html#list_modes,SurfaceFlags	proc list_modes(flags: SurfaceFlags = SWSURFACE): seq[tuple[w, h: int]]		901
+nim	load_bmp_rw	rsdl1.html#load_bmp_rw,RWopsPtr,bool	proc load_bmp_rw(src: RWopsPtr; freesrc: bool): SurfacePtr		919
+nim	lock	rsdl1.html#lock,SurfacePtr	proc lock(surface: SurfacePtr): bool		938
+nim	map_rgb	rsdl1.html#map_rgb,ptr.PixelFormat,byte,byte,byte	proc map_rgb(format: ptr PixelFormat; r, g, b: byte): uint32		985
+nim	map_rgba	rsdl1.html#map_rgba,ptr.PixelFormat,byte,byte,byte,byte	proc map_rgba(format: ptr PixelFormat; r, g, b, a: byte): uint32		1007
+nim	set_alpha	rsdl1.html#set_alpha,SurfacePtr,SurfaceFlags,byte	proc set_alpha(surface: SurfacePtr; flag: SurfaceFlags; alpha: byte): bool		1031
+nim	set_color_key	rsdl1.html#set_color_key,SurfacePtr,SurfaceFlags,uint32	proc set_color_key(surface: SurfacePtr; flag: SurfaceFlags; key: uint32): bool		1040
+nim	set_colors	rsdl1.html#set_colors,SurfacePtr,openArray[Color],int,int	proc set_colors(surface: SurfacePtr; colors: openArray[Color]; firstcolor: int;\n           ncolors: int): bool		1068
+nim	set_colors	rsdl1.html#set_colors,SurfacePtr,ptr.UncheckedArray[Color],int,int	proc set_colors(surface: SurfacePtr; colors: ptr UncheckedArray[Color];\n           firstcolor: int; ncolors: int): bool		1081
+nim	set_gamma	rsdl1.html#set_gamma,float,float,float	proc set_gamma(red, green, blue: float): bool		1091
+nim	set_gamma_ramp	rsdl1.html#set_gamma_ramp,array[,uint16],array[,uint16],array[,uint16]	proc set_gamma_ramp(red, green, blue: array[256, uint16]): bool		1111
+nim	set_palette	rsdl1.html#set_palette,SurfacePtr,PaletteFlags,openArray[Color],int,int	proc set_palette(surface: SurfacePtr; flags: PaletteFlags; colors: openArray[Color];\n            firstcolor: int; ncolors: int): bool		1138
+nim	set_palette	rsdl1.html#set_palette,SurfacePtr,PaletteFlags,ptr.UncheckedArray[Color],int,int	proc set_palette(surface: SurfacePtr; flags: PaletteFlags;\n            colors: ptr UncheckedArray[Color]; firstcolor: int; ncolors: int): bool		1153
+nim	set_video_mode	rsdl1.html#set_video_mode,int,int,int	proc set_video_mode(width, height: int; bpp: int; flags = SWSURFACE): SurfacePtr		1168
+nim	unlock	rsdl1.html#unlock,SurfacePtr	proc unlock(surface: SurfacePtr)		1236
+nim	update_rect	rsdl1.html#update_rect,SurfacePtr,int,int,uint,uint	proc update_rect(screen: SurfacePtr; x, y: int; w, h: uint)		1248
+nim	update_rects	rsdl1.html#update_rects,SurfacePtr,openArray[Rect]	proc update_rects(screen: SurfacePtr; rects: openArray[Rect])		1255
+nim	update_rects	rsdl1.html#update_rects,SurfacePtr,int,openArray[Rect]	proc update_rects(screen: SurfacePtr; numrects: int; rects: openArray[Rect])		1264
+nim	upper_blit	rsdl1.html#upper_blit,SurfacePtr,SurfacePtr	proc upper_blit(src, dst: SurfacePtr): bool		1274
+nim	upper_blit	rsdl1.html#upper_blit,SurfacePtr,SurfacePtr,Rect	proc upper_blit(src, dst: SurfacePtr; dstrect: Rect): bool		1279
+nim	upper_blit	rsdl1.html#upper_blit,SurfacePtr,Rect,SurfacePtr,Rect	proc upper_blit(src: SurfacePtr; srcrect: Rect; dst: SurfacePtr; dstrect: Rect): bool		1286
+nim	video_driver_name	rsdl1.html#video_driver_name	proc video_driver_name(): string		1304
+nim	video_mode_ok	rsdl1.html#video_mode_ok,int,int,int,SurfaceFlags	proc video_mode_ok(width, height: int; bpp: int; flags: SurfaceFlags): int		1318
+nim	wm_get_caption	rsdl1.html#wm_get_caption	proc wm_get_caption(): tuple[title, icon: string]		1339
+nim	wm_grab_input	rsdl1.html#wm_grab_input,GrabMode	proc wm_grab_input(mode: GrabMode): GrabMode		1349
+nim	wm_iconify_window	rsdl1.html#wm_iconify_window	proc wm_iconify_window(): bool		1362
+nim	wm_set_caption	rsdl1.html#wm_set_caption,string,string	proc wm_set_caption(title, icon: string)		1376
+nim	wm_set_icon	rsdl1.html#wm_set_icon,SurfacePtr	proc wm_set_icon(icon: SurfacePtr)		1384
+nim	wm_set_icon	rsdl1.html#wm_set_icon,SurfacePtr,openArray[byte]	proc wm_set_icon(icon: SurfacePtr; mask: openArray[byte])		1401
+nim	wm_toggle_full_screen	rsdl1.html#wm_toggle_full_screen,SurfacePtr	proc wm_toggle_full_screen(surface: SurfacePtr): bool		1419
+nim	load_wav	rsdl1.html#load_wav,string,AudioSpec,ptr.UncheckedArray[byte],uint32	proc load_wav(file: string; spec: var AudioSpec;\n         audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		1441
+nim	quit_requested	rsdl1.html#quit_requested	proc quit_requested(): bool		1451
+nim	alloc_surface	rsdl1.html#alloc_surface.t,SurfaceFlags,int,int,int,uint32,uint32,uint32,uint32	template alloc_surface(flags: SurfaceFlags; width, height, depth: int;\n              rmask, gmask, bmask, amask: uint32): SurfacePtr		1461
+nim	blit_surface	rsdl1.html#blit_surface.t,SurfacePtr,SurfacePtr	template blit_surface(src, dst: SurfacePtr): bool		1468
+nim	blit_surface	rsdl1.html#blit_surface,SurfacePtr,SurfacePtr,Rect	proc blit_surface(src, dst: SurfacePtr; dstrect: Rect): bool		1473
+nim	blit_surface	rsdl1.html#blit_surface.t,SurfacePtr,Rect,SurfacePtr,Rect	template blit_surface(src: SurfacePtr; srcrect: Rect; dst: SurfacePtr; dstrect: Rect): bool		1477
+nim	load_bmp	rsdl1.html#load_bmp,string	proc load_bmp(file: string): SurfacePtr		1482
+nim	rsdl1_open	rsdl1.html#rsdl1_open	proc rsdl1_open(): bool		1492
+nim	rsdl1_close	rsdl1.html#rsdl1_close	proc rsdl1_close()		1498
+nim	rsdl1_error	rsdl1.html#rsdl1_error	proc rsdl1_error(): string		1503
+nimgrp	listmodes	rsdl1.html#list_modes-procs-all	proc		882
+nimgrp	peepevents	rsdl1.html#peep_events-procs-all	proc		338
+nimgrp	upperblit	rsdl1.html#upper_blit-procs-all	proc		1274
+nimgrp	updaterects	rsdl1.html#update_rects-procs-all	proc		1255
+nimgrp	creatergbsurface	rsdl1.html#create_rgb_surface-procs-all	proc		671
+nimgrp	fillrect	rsdl1.html#fill_rect-procs-all	proc		781
+nimgrp	setpalette	rsdl1.html#set_palette-procs-all	proc		1138
+nimgrp	openaudio	rsdl1.html#open_audio-procs-all	proc		266
+nimgrp	wmseticon	rsdl1.html#wm_set_icon-procs-all	proc		1384
+nimgrp	setcolors	rsdl1.html#set_colors-procs-all	proc		1068
+nimgrp	blitsurface	rsdl1.html#blit_surface-templates-all	template		1468
 heading	Usage	rsdl1.html#usage	 Usage		0
+heading	Configuration	rsdl1.html#configuration	 Configuration		0

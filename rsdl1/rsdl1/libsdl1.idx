@@ -73,5 +73,7 @@ nim	SDL_WM_IconifyWindow	rsdl1/libsdl1.html#SDL_WM_IconifyWindow	var SDL_WM_Icon
 nim	SDL_WM_SetCaption	rsdl1/libsdl1.html#SDL_WM_SetCaption	var SDL_WM_SetCaption		364
 nim	SDL_WM_SetIcon	rsdl1/libsdl1.html#SDL_WM_SetIcon	var SDL_WM_SetIcon		366
 nim	SDL_WM_ToggleFullScreen	rsdl1/libsdl1.html#SDL_WM_ToggleFullScreen	var SDL_WM_ToggleFullScreen		368
-nim	open_sdl1_library	rsdl1/libsdl1.html#open_sdl1_library	proc open_sdl1_library(): bool		428
-nim	close_sdl1_library	rsdl1/libsdl1.html#close_sdl1_library	proc close_sdl1_library()		46
+nim	open_sdl1_library	rsdl1/libsdl1.html#open_sdl1_library	proc open_sdl1_library(): bool		513
+nim	close_sdl1_library	rsdl1/libsdl1.html#close_sdl1_library	proc close_sdl1_library()		525
+nim	last_sdl1_error	rsdl1/libsdl1.html#last_sdl1_error	proc last_sdl1_error(): string		532
+nim	dlerror	rsdl1/libsdl1.html#dlerror	proc dlerror(): string		46

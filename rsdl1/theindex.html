@@ -338,6 +338,10 @@
 <li><a class="reference external"
           data-doc-search-tag="rsdl1: proc display_format(surface: SurfacePtr): SurfacePtr" href="rsdl1.html#display_format%2CSurfacePtr">rsdl1: proc display_format(surface: SurfacePtr): SurfacePtr</a></li>
           </ul></dd>
+<dt><a name="dlerror" href="#dlerror"><span>dlerror:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="libsdl1: proc dlerror(): string" href="rsdl1/libsdl1.html#dlerror">libsdl1: proc dlerror(): string</a></li>
+          </ul></dd>
 <dt><a name="DOUBLEBUF" href="#DOUBLEBUF"><span>DOUBLEBUF:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="video: const DOUBLEBUF" href="rsdl1/sdl1inc/video.html#DOUBLEBUF">video: const DOUBLEBUF</a></li>
@@ -345,6 +349,10 @@
 <dt><a name="ENABLE" href="#ENABLE"><span>ENABLE:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="events: const ENABLE" href="rsdl1/sdl1inc/events.html#ENABLE">events: const ENABLE</a></li>
+          </ul></dd>
+<dt><a name="ensure_non_zero" href="#ensure_non_zero"><span>ensure_non_zero:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="utils: template ensure_non_zero(procname: string; body: untyped)" href="rsdl1/utils.html#ensure_non_zero.t%2Cstring%2Cuntyped">utils: template ensure_non_zero(procname: string; body: untyped)</a></li>
           </ul></dd>
 <dt><a name="ensure_not_nil" href="#ensure_not_nil"><span>ensure_not_nil:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -662,6 +670,10 @@
 <li><a class="reference external"
           data-doc-search-tag="keysym: const KMOD_SHIFT" href="rsdl1/sdl1inc/keysym.html#KMOD_SHIFT">keysym: const KMOD_SHIFT</a></li>
           </ul></dd>
+<dt><a name="last_sdl1_error" href="#last_sdl1_error"><span>last_sdl1_error:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="libsdl1: proc last_sdl1_error(): string" href="rsdl1/libsdl1.html#last_sdl1_error">libsdl1: proc last_sdl1_error(): string</a></li>
+          </ul></dd>
 <dt><a name="linked_version" href="#linked_version"><span>linked_version:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="rsdl1: proc linked_version(): tuple[major, minor, patch: int]" href="rsdl1.html#linked_version">rsdl1: proc linked_version(): tuple[major, minor, patch: int]</a></li>
@@ -892,13 +904,17 @@
 <li><a class="reference external"
           data-doc-search-tag="video: const RLEACCELOK" href="rsdl1/sdl1inc/video.html#RLEACCELOK">video: const RLEACCELOK</a></li>
           </ul></dd>
-<dt><a name="rsdl1_fini" href="#rsdl1_fini"><span>rsdl1_fini:</span></a></dt><dd><ul class="simple">
+<dt><a name="rsdl1_close" href="#rsdl1_close"><span>rsdl1_close:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="rsdl1: proc rsdl1_fini()" href="rsdl1.html#rsdl1_fini">rsdl1: proc rsdl1_fini()</a></li>
+          data-doc-search-tag="rsdl1: proc rsdl1_close()" href="rsdl1.html#rsdl1_close">rsdl1: proc rsdl1_close()</a></li>
           </ul></dd>
-<dt><a name="rsdl1_init" href="#rsdl1_init"><span>rsdl1_init:</span></a></dt><dd><ul class="simple">
+<dt><a name="rsdl1_error" href="#rsdl1_error"><span>rsdl1_error:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="rsdl1: proc rsdl1_init(): bool" href="rsdl1.html#rsdl1_init">rsdl1: proc rsdl1_init(): bool</a></li>
+          data-doc-search-tag="rsdl1: proc rsdl1_error(): string" href="rsdl1.html#rsdl1_error">rsdl1: proc rsdl1_error(): string</a></li>
+          </ul></dd>
+<dt><a name="rsdl1_open" href="#rsdl1_open"><span>rsdl1_open:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="rsdl1: proc rsdl1_open(): bool" href="rsdl1.html#rsdl1_open">rsdl1: proc rsdl1_open(): bool</a></li>
           </ul></dd>
 <dt><a name="rw_from_file" href="#rw_from_file"><span>rw_from_file:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2172,7 +2188,7 @@
           </ul></dd>
 <dt><a name="set_error" href="#set_error"><span>set_error:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="rsdl1: proc set_error(msg: string): bool" href="rsdl1.html#set_error%2Cstring">rsdl1: proc set_error(msg: string): bool</a></li>
+          data-doc-search-tag="rsdl1: proc set_error(msg: string)" href="rsdl1.html#set_error%2Cstring">rsdl1: proc set_error(msg: string)</a></li>
           </ul></dd>
 <dt><a name="set_event_filter" href="#set_event_filter"><span>set_event_filter:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2356,6 +2372,8 @@
           </ul></dd>
 <dt><a name="wm_set_icon" href="#wm_set_icon"><span>wm_set_icon:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
+          data-doc-search-tag="rsdl1: proc wm_set_icon(icon: SurfacePtr)" href="rsdl1.html#wm_set_icon%2CSurfacePtr">rsdl1: proc wm_set_icon(icon: SurfacePtr)</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="rsdl1: proc wm_set_icon(icon: SurfacePtr; mask: openArray[byte])" href="rsdl1.html#wm_set_icon%2CSurfacePtr%2CopenArray%5Bbyte%5D">rsdl1: proc wm_set_icon(icon: SurfacePtr; mask: openArray[byte])</a></li>
           </ul></dd>
 <dt><a name="wm_toggle_full_screen" href="#wm_toggle_full_screen"><span>wm_toggle_full_screen:</span></a></dt><dd><ul class="simple">
@@ -2366,7 +2384,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-11-30 17:10:46 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-11-30 18:28:00 UTC</small>
       </div>
     </div>
   </div>

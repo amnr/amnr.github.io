@@ -2,4 +2,5 @@ nimTitle	utils	rsdl1/utils.html	module src/rsdl1/utils		0
 nim	show_error	rsdl1/utils.html#show_error.t,varargs[typed,]	template show_error(args: varargs[typed, `$`])		10
 nim	available_since	rsdl1/utils.html#available_since.m,string,string	macro available_since(procname: string; minver: string)		13
 nim	ensure_not_nil	rsdl1/utils.html#ensure_not_nil.t,string,untyped	template ensure_not_nil(procname: string; body: untyped)		23
-nim	ensure_zero	rsdl1/utils.html#ensure_zero.t,string,untyped	template ensure_zero(procname: string; body: untyped)		31
+nim	ensure_non_zero	rsdl1/utils.html#ensure_non_zero.t,string,untyped	template ensure_non_zero(procname: string; body: untyped)		31
+nim	ensure_zero	rsdl1/utils.html#ensure_zero.t,string,untyped	template ensure_zero(procname: string; body: untyped)		39
