@@ -4,6 +4,6 @@
 
 - [dlutils](dlutils/) - Nim package for easy shared library loading.
 
-- [dlsdl1](dlsdl1/)
-- [dlsdl2](dlsdl2/)
-- [dlsdl3](dlsdl3/)
+### Library wrappers for Nim:
+
+- [rsdl1](rsdl1/) SDL 1.2

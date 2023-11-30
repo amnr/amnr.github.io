@@ -1,8 +1,0 @@
-nimTitle	active	dlsdl1/sdl1inc/active.html	module src/dlsdl1/sdl1inc/active		0
-nim	AppState	dlsdl1/sdl1inc/active.html#AppState	type AppState		9
-nim	`and`	dlsdl1/sdl1inc/active.html#and,AppState,AppState	proc `and`(a, b: AppState): AppState		12
-nim	`or`	dlsdl1/sdl1inc/active.html#or,AppState,AppState	proc `or`(a, b: AppState): AppState		13
-nim	`==`	dlsdl1/sdl1inc/active.html#==,AppState,byte	proc `==`(a: AppState; b: byte): bool		15
-nim	APPMOUSEFOCUS	dlsdl1/sdl1inc/active.html#APPMOUSEFOCUS	const APPMOUSEFOCUS		18
-nim	APPINPUTFOCUS	dlsdl1/sdl1inc/active.html#APPINPUTFOCUS	const APPINPUTFOCUS		19
-nim	APPACTIVE	dlsdl1/sdl1inc/active.html#APPACTIVE	const APPACTIVE		20

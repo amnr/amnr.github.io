@@ -1,0 +1,32 @@
+nimTitle	events	rsdl1/sdl1inc/events.html	module src/rsdl1/sdl1inc/events		0
+nim	MouseState	rsdl1/sdl1inc/events.html#MouseState	type MouseState		15
+nim	RELEASED	rsdl1/sdl1inc/events.html#RELEASED	const RELEASED		19
+nim	PRESSED	rsdl1/sdl1inc/events.html#PRESSED	const PRESSED		20
+nim	EventType	rsdl1/sdl1inc/events.html#EventType	enum EventType		23
+nim	EventMask	rsdl1/sdl1inc/events.html#EventMask	enum EventMask		65
+nim	ActiveEvent	rsdl1/sdl1inc/events.html#ActiveEvent	object ActiveEvent		95
+nim	KeyboardEvent	rsdl1/sdl1inc/events.html#KeyboardEvent	object KeyboardEvent		101
+nim	MouseMotionEvent	rsdl1/sdl1inc/events.html#MouseMotionEvent	object MouseMotionEvent		108
+nim	MouseButtonEvent	rsdl1/sdl1inc/events.html#MouseButtonEvent	object MouseButtonEvent		118
+nim	JoyAxisEvent	rsdl1/sdl1inc/events.html#JoyAxisEvent	object JoyAxisEvent		127
+nim	JoyBallEvent	rsdl1/sdl1inc/events.html#JoyBallEvent	object JoyBallEvent		134
+nim	JoyHatEvent	rsdl1/sdl1inc/events.html#JoyHatEvent	object JoyHatEvent		142
+nim	JoyButtonEvent	rsdl1/sdl1inc/events.html#JoyButtonEvent	object JoyButtonEvent		150
+nim	ResizeEvent	rsdl1/sdl1inc/events.html#ResizeEvent	object ResizeEvent		157
+nim	ExposeEvent	rsdl1/sdl1inc/events.html#ExposeEvent	object ExposeEvent		164
+nim	QuitEvent	rsdl1/sdl1inc/events.html#QuitEvent	object QuitEvent		168
+nim	UserEvent	rsdl1/sdl1inc/events.html#UserEvent	object UserEvent		172
+nim	SysWMmsgPtr	rsdl1/sdl1inc/events.html#SysWMmsgPtr	type SysWMmsgPtr		181
+nim	SysWMEvent	rsdl1/sdl1inc/events.html#SysWMEvent	object SysWMEvent		183
+nim	Event	rsdl1/sdl1inc/events.html#Event	object Event		188
+nim	EventAction	rsdl1/sdl1inc/events.html#EventAction	enum EventAction		206
+nim	EventState	rsdl1/sdl1inc/events.html#EventState	type EventState		212
+nim	QUERY	rsdl1/sdl1inc/events.html#QUERY	const QUERY		217
+nim	IGNORE	rsdl1/sdl1inc/events.html#IGNORE	const IGNORE		218
+nim	DISABLE	rsdl1/sdl1inc/events.html#DISABLE	const DISABLE		219
+nim	ENABLE	rsdl1/sdl1inc/events.html#ENABLE	const ENABLE		220
+nim	EventFilter	rsdl1/sdl1inc/events.html#EventFilter	type EventFilter		223
+nim	`$`	rsdl1/sdl1inc/events.html#$,Event	proc `$`(event: Event): string		236
+nim	repr	rsdl1/sdl1inc/events.html#repr,Event	proc repr(event: Event): string		237
+nim	repr	rsdl1/sdl1inc/events.html#repr,ptr.Event	proc repr(event: ptr Event): string		239
+nimgrp	repr	rsdl1/sdl1inc/events.html#repr-procs-all	proc		237
