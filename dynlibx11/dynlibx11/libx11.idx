@@ -1,0 +1,118 @@
+nimTitle	libx11	dynlibx11/libx11.html	module dynlibx11/libx11		0
+nim	XAllocClassHint	dynlibx11/libx11.html#XAllocClassHint	var XAllocClassHint		100
+nim	XAllocColor	dynlibx11/libx11.html#XAllocColor	var XAllocColor		102
+nim	XAllocColorCells	dynlibx11/libx11.html#XAllocColorCells	var XAllocColorCells		108
+nim	XAllocNamedColor	dynlibx11/libx11.html#XAllocNamedColor	var XAllocNamedColor		118
+nim	XAutoRepeatOff	dynlibx11/libx11.html#XAutoRepeatOff	var XAutoRepeatOff		126
+nim	XAutoRepeatOn	dynlibx11/libx11.html#XAutoRepeatOn	var XAutoRepeatOn		130
+nim	XBell	dynlibx11/libx11.html#XBell	var XBell		134
+nim	XBlackPixel	dynlibx11/libx11.html#XBlackPixel	var XBlackPixel		139
+nim	XBlackPixelOfScreen	dynlibx11/libx11.html#XBlackPixelOfScreen	var XBlackPixelOfScreen		144
+nim	XChangeProperty	dynlibx11/libx11.html#XChangeProperty	var XChangeProperty		148
+nim	XCheckMaskEvent	dynlibx11/libx11.html#XCheckMaskEvent	var XCheckMaskEvent		159
+nim	XClearWindow	dynlibx11/libx11.html#XClearWindow	var XClearWindow		165
+nim	XCloseDisplay	dynlibx11/libx11.html#XCloseDisplay	var XCloseDisplay		170
+nim	XCopyArea	dynlibx11/libx11.html#XCopyArea	var XCopyArea		174
+nim	XCreateColormap	dynlibx11/libx11.html#XCreateColormap	var XCreateColormap		187
+nim	XCreateGC	dynlibx11/libx11.html#XCreateGC	var XCreateGC		194
+nim	XCreatePixmap	dynlibx11/libx11.html#XCreatePixmap	var XCreatePixmap		201
+nim	XCreateImage	dynlibx11/libx11.html#XCreateImage	var XCreateImage		209
+nim	XCreateSimpleWindow	dynlibx11/libx11.html#XCreateSimpleWindow	var XCreateSimpleWindow		222
+nim	XCreateWindow	dynlibx11/libx11.html#XCreateWindow	var XCreateWindow		234
+nim	XDefaultColormap	dynlibx11/libx11.html#XDefaultColormap	var XDefaultColormap		249
+nim	XDefaultColormapOfScreen	dynlibx11/libx11.html#XDefaultColormapOfScreen	var XDefaultColormapOfScreen		254
+nim	XDefaultDepth	dynlibx11/libx11.html#XDefaultDepth	var XDefaultDepth		258
+nim	XDefaultDepthOfScreen	dynlibx11/libx11.html#XDefaultDepthOfScreen	var XDefaultDepthOfScreen		263
+nim	XDefaultGC	dynlibx11/libx11.html#XDefaultGC	var XDefaultGC		267
+nim	XDefaultRootWindow	dynlibx11/libx11.html#XDefaultRootWindow	var XDefaultRootWindow		272
+nim	XDefaultScreen	dynlibx11/libx11.html#XDefaultScreen	var XDefaultScreen		276
+nim	XDefaultVisual	dynlibx11/libx11.html#XDefaultVisual	var XDefaultVisual		280
+nim	XDestroyWindow	dynlibx11/libx11.html#XDestroyWindow	var XDestroyWindow		285
+nim	XDisplayHeight	dynlibx11/libx11.html#XDisplayHeight	var XDisplayHeight		290
+nim	XDisplayName	dynlibx11/libx11.html#XDisplayName	var XDisplayName		295
+nim	XDisplayWidth	dynlibx11/libx11.html#XDisplayWidth	var XDisplayWidth		297
+nim	XDrawArc	dynlibx11/libx11.html#XDrawArc	var XDrawArc		302
+nim	XDrawImageString	dynlibx11/libx11.html#XDrawImageString	var XDrawImageString		314
+nim	XDrawLine	dynlibx11/libx11.html#XDrawLine	var XDrawLine		324
+nim	XDrawPoint	dynlibx11/libx11.html#XDrawPoint	var XDrawPoint		334
+nim	XDrawRectangle	dynlibx11/libx11.html#XDrawRectangle	var XDrawRectangle		342
+nim	XDrawSegments	dynlibx11/libx11.html#XDrawSegments	var XDrawSegments		352
+nim	XDrawString	dynlibx11/libx11.html#XDrawString	var XDrawString		360
+nim	XFillArc	dynlibx11/libx11.html#XFillArc	var XFillArc		370
+nim	XFillPolygon	dynlibx11/libx11.html#XFillPolygon	var XFillPolygon		382
+nim	XFillRectangle	dynlibx11/libx11.html#XFillRectangle	var XFillRectangle		392
+nim	XFlush	dynlibx11/libx11.html#XFlush	var XFlush		402
+nim	XFree	dynlibx11/libx11.html#XFree	var XFree		406
+nim	XFreeColormap	dynlibx11/libx11.html#XFreeColormap	var XFreeColormap		410
+nim	XFreeGC	dynlibx11/libx11.html#XFreeGC	var XFreeGC		415
+nim	XFreeFont	dynlibx11/libx11.html#XFreeFont	var XFreeFont		420
+nim	XFreeFontInfo	dynlibx11/libx11.html#XFreeFontInfo	var XFreeFontInfo		425
+nim	XFreePixmap	dynlibx11/libx11.html#XFreePixmap	var XFreePixmap		431
+nim	XGetErrorDatabaseText	dynlibx11/libx11.html#XGetErrorDatabaseText	var XGetErrorDatabaseText		436
+nim	XGetErrorText	dynlibx11/libx11.html#XGetErrorText	var XGetErrorText		445
+nim	XGetGeometry	dynlibx11/libx11.html#XGetGeometry	var XGetGeometry		452
+nim	XGetWindowAttributes	dynlibx11/libx11.html#XGetWindowAttributes	var XGetWindowAttributes		464
+nim	XHeightOfScreen	dynlibx11/libx11.html#XHeightOfScreen	var XHeightOfScreen		470
+nim	XIfEvent	dynlibx11/libx11.html#XIfEvent	var XIfEvent		474
+nim	XInternAtom	dynlibx11/libx11.html#XInternAtom	var XInternAtom		481
+nim	XKeysymToKeycode	dynlibx11/libx11.html#XKeysymToKeycode	var XKeysymToKeycode		487
+nim	XLoadFont	dynlibx11/libx11.html#XLoadFont	var XLoadFont		492
+nim	XLoadQueryFont	dynlibx11/libx11.html#XLoadQueryFont	var XLoadQueryFont		497
+nim	XLookupColor	dynlibx11/libx11.html#XLookupColor	var XLookupColor		502
+nim	XMapRaised	dynlibx11/libx11.html#XMapRaised	var XMapRaised		510
+nim	XMapWindow	dynlibx11/libx11.html#XMapWindow	var XMapWindow		515
+nim	XMatchVisualInfo	dynlibx11/libx11.html#XMatchVisualInfo	var XMatchVisualInfo		520
+nim	XMoveResizeWindow	dynlibx11/libx11.html#XMoveResizeWindow	var XMoveResizeWindow		528
+nim	XMoveWindow	dynlibx11/libx11.html#XMoveWindow	var XMoveWindow		537
+nim	XNextEvent	dynlibx11/libx11.html#XNextEvent	var XNextEvent		544
+nim	XOpenDisplay	dynlibx11/libx11.html#XOpenDisplay	var XOpenDisplay		549
+nim	XParseColor	dynlibx11/libx11.html#XParseColor	var XParseColor		553
+nim	XParseGeometry	dynlibx11/libx11.html#XParseGeometry	var XParseGeometry		560
+nim	XPending	dynlibx11/libx11.html#XPending	var XPending		568
+nim	XProtocolRevision	dynlibx11/libx11.html#XProtocolRevision	var XProtocolRevision		572
+nim	XProtocolVersion	dynlibx11/libx11.html#XProtocolVersion	var XProtocolVersion		576
+nim	XPutImage	dynlibx11/libx11.html#XPutImage	var XPutImage		580
+nim	XQueryFont	dynlibx11/libx11.html#XQueryFont	var XQueryFont		593
+nim	XResizeWindow	dynlibx11/libx11.html#XResizeWindow	var XResizeWindow		598
+nim	XRootWindow	dynlibx11/libx11.html#XRootWindow	var XRootWindow		605
+nim	XRootWindowOfScreen	dynlibx11/libx11.html#XRootWindowOfScreen	var XRootWindowOfScreen		610
+nim	XScreenCount	dynlibx11/libx11.html#XScreenCount	var XScreenCount		614
+nim	XSelectInput	dynlibx11/libx11.html#XSelectInput	var XSelectInput		618
+nim	XSendEvent	dynlibx11/libx11.html#XSendEvent	var XSendEvent		624
+nim	XSetBackground	dynlibx11/libx11.html#XSetBackground	var XSetBackground		632
+nim	XSetClassHint	dynlibx11/libx11.html#XSetClassHint	var XSetClassHint		638
+nim	XSetErrorHandler	dynlibx11/libx11.html#XSetErrorHandler	var XSetErrorHandler		644
+nim	XSetForeground	dynlibx11/libx11.html#XSetForeground	var XSetForeground		648
+nim	XSetIconName	dynlibx11/libx11.html#XSetIconName	var XSetIconName		654
+nim	XSetIOErrorHandler	dynlibx11/libx11.html#XSetIOErrorHandler	var XSetIOErrorHandler		660
+nim	XSetStandardProperties	dynlibx11/libx11.html#XSetStandardProperties	var XSetStandardProperties		664
+nim	XSetWindowBorder	dynlibx11/libx11.html#XSetWindowBorder	var XSetWindowBorder		675
+nim	XSetWindowBorderWidth	dynlibx11/libx11.html#XSetWindowBorderWidth	var XSetWindowBorderWidth		681
+nim	XSetWMProtocols	dynlibx11/libx11.html#XSetWMProtocols	var XSetWMProtocols		687
+nim	XStoreName	dynlibx11/libx11.html#XStoreName	var XStoreName		694
+nim	XSync	dynlibx11/libx11.html#XSync	var XSync		700
+nim	XSynchronize	dynlibx11/libx11.html#XSynchronize	var XSynchronize		705
+nim	XUnmapWindow	dynlibx11/libx11.html#XUnmapWindow	var XUnmapWindow		710
+nim	XWhitePixel	dynlibx11/libx11.html#XWhitePixel	var XWhitePixel		715
+nim	XWhitePixelOfScreen	dynlibx11/libx11.html#XWhitePixelOfScreen	var XWhitePixelOfScreen		720
+nim	XWidthOfScreen	dynlibx11/libx11.html#XWidthOfScreen	var XWidthOfScreen		738
+nim	XAddPixel	dynlibx11/libx11.html#XAddPixel	var XAddPixel		746
+nim	XAllocSizeHints	dynlibx11/libx11.html#XAllocSizeHints	var XAllocSizeHints		751
+nim	XGetPixel	dynlibx11/libx11.html#XGetPixel	var XGetPixel		753
+nim	XDestroyImage	dynlibx11/libx11.html#XDestroyImage	var XDestroyImage		759
+nim	XPutPixel	dynlibx11/libx11.html#XPutPixel	var XPutPixel		763
+nim	XSubImage	dynlibx11/libx11.html#XSubImage	var XSubImage		770
+nim	last_x11_error	dynlibx11/libx11.html#last_x11_error	proc last_x11_error(): string		526
+nim	open_x11_library	dynlibx11/libx11.html#open_x11_library	proc open_x11_library(): bool		542
+nim	close_x11_library	dynlibx11/libx11.html#close_x11_library	proc close_x11_library()		565
+nim	dlerror	dynlibx11/libx11.html#dlerror	proc dlerror(): string		94
+nim	BlackPixel	dynlibx11/libx11.html#BlackPixel.t,Display,cint	template BlackPixel(display: Display; screen_number: cint): culong		782
+nim	DefaultDepthOfScreen	dynlibx11/libx11.html#DefaultDepthOfScreen.t,ptr.Screen	template DefaultDepthOfScreen(screen: ptr Screen): cint		785
+nim	DefaultGC	dynlibx11/libx11.html#DefaultGC.t,Display,cint	template DefaultGC(display: Display; screen_number: cint): GC		788
+nim	DefaultRootWindow	dynlibx11/libx11.html#DefaultRootWindow.t,Display	template DefaultRootWindow(display: Display): Window		791
+nim	DefaultScreen	dynlibx11/libx11.html#DefaultScreen.t,Display	template DefaultScreen(display: Display): cint		794
+nim	DefaultVisual	dynlibx11/libx11.html#DefaultVisual.t,Display,cint	template DefaultVisual(display: Display; screen_number: cint): ptr Visual		797
+nim	RootWindow	dynlibx11/libx11.html#RootWindow.t,Display,cint	template RootWindow(display: Display; screen_number: cint): Window		800
+nim	RootWindowOfScreen	dynlibx11/libx11.html#RootWindowOfScreen.t,ptr.Screen	template RootWindowOfScreen(screen: ptr Screen): Window		803
+nim	WhitePixel	dynlibx11/libx11.html#WhitePixel.t,Display,cint	template WhitePixel(display: Display; screen_number: cint): culong		806
+heading	Example usage	dynlibx11/libx11.html#example-usage	 Example usage		0

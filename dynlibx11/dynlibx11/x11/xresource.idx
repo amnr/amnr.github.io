@@ -1,0 +1,24 @@
+nimTitle	xresource	dynlibx11/x11/xresource.html	module dynlibx11/x11/xresource		0
+nim	XrmQuark	dynlibx11/x11/xresource.html#XrmQuark	type XrmQuark		13
+nim	XrmQuarkList	dynlibx11/x11/xresource.html#XrmQuarkList	type XrmQuarkList		14
+nim	NULLQUARK	dynlibx11/x11/xresource.html#NULLQUARK	const NULLQUARK		17
+nim	XrmString	dynlibx11/x11/xresource.html#XrmString	type XrmString		20
+nim	NULLSTRING	dynlibx11/x11/xresource.html#NULLSTRING	const NULLSTRING		23
+nim	XrmBinding	dynlibx11/x11/xresource.html#XrmBinding	enum XrmBinding		30
+nim	XrmBindingList	dynlibx11/x11/xresource.html#XrmBindingList	type XrmBindingList		34
+nim	XrmName	dynlibx11/x11/xresource.html#XrmName	type XrmName		41
+nim	XrmNameList	dynlibx11/x11/xresource.html#XrmNameList	type XrmNameList		42
+nim	XrmClass	dynlibx11/x11/xresource.html#XrmClass	type XrmClass		49
+nim	XrmClassList	dynlibx11/x11/xresource.html#XrmClassList	type XrmClassList		50
+nim	XrmRepresentation	dynlibx11/x11/xresource.html#XrmRepresentation	type XrmRepresentation		61
+nim	XrmValue	dynlibx11/x11/xresource.html#XrmValue	object XrmValue		67
+nim	XrmValuePtr	dynlibx11/x11/xresource.html#XrmValuePtr	type XrmValuePtr		71
+nim	XrmHashBucket	dynlibx11/x11/xresource.html#XrmHashBucket	type XrmHashBucket		78
+nim	XrmHashTable	dynlibx11/x11/xresource.html#XrmHashTable	type XrmHashTable		80
+nim	XrmDatabase	dynlibx11/x11/xresource.html#XrmDatabase	type XrmDatabase		84
+nim	XrmEnumAllLevels	dynlibx11/x11/xresource.html#XrmEnumAllLevels	const XrmEnumAllLevels		91
+nim	XrmEnumOneLevel	dynlibx11/x11/xresource.html#XrmEnumOneLevel	const XrmEnumOneLevel		92
+nim	XrmOptionKind	dynlibx11/x11/xresource.html#XrmOptionKind	enum XrmOptionKind		99
+nim	XrmOptionDescRec	dynlibx11/x11/xresource.html#XrmOptionDescRec	object XrmOptionDescRec		111
+nim	XrmOptionDescList	dynlibx11/x11/xresource.html#XrmOptionDescList	type XrmOptionDescList		118
+nim	init	dynlibx11/x11/xresource.html#init,typedesc[XrmOptionDescRec],cstring,cstring,XrmOptionKind,XPointer	proc init(T: typedesc[XrmOptionDescRec]; option: cstring; specifier: cstring;\n     arg_kind: XrmOptionKind; value: XPointer = nil): XrmOptionDescRec		120

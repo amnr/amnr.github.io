@@ -1,0 +1,56 @@
+nimTitle	dynlibx11	dynlibx11.html	module dynlibx11		0
+nim	get_error_text	#get_error_text,Display,int	proc get_error_text(display: Display; code: int): string		120
+nim	get_error_text	#get_error_text,Display,ptr.XErrorEvent	proc get_error_text(display: Display; event: ptr XErrorEvent): string		121
+nim	set_error_handler	#set_error_handler,XErrorHandler	proc set_error_handler(handler: XErrorHandler): XErrorHandler		122
+nim	set_io_error_handler	#set_io_error_handler,XIOErrorHandler	proc set_io_error_handler(handler: XIOErrorHandler): XIOErrorHandler		123
+nim	alloc_class_hint	#alloc_class_hint	proc alloc_class_hint(): ptr XClassHint		129
+nim	bell	#bell,Display,range[]	proc bell(display: Display; percent: range[-100 .. 100]): int		134
+nim	black_pixel	#black_pixel,Display,int	proc black_pixel(display: Display; screen_number: int): culong		138
+nim	close	#close,Display	proc close(display: Display): bool		142
+nim	change_property	#change_property,Display,Window,Atom,Atom,int,int,pointer,int	proc change_property(display: Display; window: Window; property, typ: Atom;\n                format: int; mode: int; data: pointer; nelements: int): bool		146
+nim	change_property	#change_property,Display,Window,Atom,Atom,int,int,string	proc change_property(display: Display; window: Window; property, typ: Atom;\n                format: int; mode: int; data: string): bool		153
+nim	create_gc	#create_gc,Display,Drawable,culong,ptr.XGCValues	proc create_gc(display: Display; drawable: Drawable; valuemask: culong;\n          values: ptr XGCValues): GC		160
+nim	create_pixmap	#create_pixmap,Display,Drawable,uint,uint,uint	proc create_pixmap(display: Display; drawable: Drawable; width, height: uint;\n              depth: uint): Pixmap		165
+nim	create_simple_window	#create_simple_window,Display,Window,int,int,uint,uint,uint,culong,culong	proc create_simple_window(display: Display; parent: Window; x, y: int;\n                     width, height: uint; border_width: uint; border: culong;\n                     background: culong): Window		171
+nim	create_window	#create_window,Display,Window,int,int,cuint,cuint,cuint,cint,cuint,ptr.Visual,culong,ptr.XSetWindowAttributes	proc create_window(display: Display; parent: Window; x, y: int; width, height: cuint;\n              border_width: cuint; depth: cint; class: cuint;\n              visual: ptr Visual; valuemask: culong;\n              attributes: ptr XSetWindowAttributes): Window		179
+nim	default_colormap	#default_colormap,Display,int	proc default_colormap(display: Display; screen_number: int): Colormap		189
+nim	default_depth	#default_depth,Display,int	proc default_depth(display: Display; screen_number: int): int		194
+nim	default_root_window	#default_root_window,Display	proc default_root_window(display: Display): Window		198
+nim	default_screen	#default_screen,Display	proc default_screen(display: Display): int		202
+nim	default_visual	#default_visual,Display,int	proc default_visual(display: Display; screen_number: int): ptr Visual		206
+nim	destroy	#destroy,Display,Window	proc destroy(display: Display; window: Window): bool		211
+nim	display_name	#display_name,string	proc display_name(display_name: string = ""): string		215
+nim	draw_line	#draw_line,Display,Drawable,GC,int,int,int,int	proc draw_line(display: Display; drawable: Drawable; gc: GC; x1, y1: int; x2, y2: int): int		219
+nim	draw_segments	#draw_segments,Display,Drawable,GC,openArray[XSegment],int	proc draw_segments(display: Display; drawable: Drawable; gc: GC;\n              segments: openArray[XSegment]; nsegments: int): int		224
+nim	draw_string	#draw_string,Display,Drawable,GC,int,int,string	proc draw_string(display: Display; drawable: Drawable; gc: GC; x, y: int; str: string): int		229
+nim	fill_rectangle	#fill_rectangle,Display,Drawable,GC,int,int,uint,uint	proc fill_rectangle(display: Display; drawable: Drawable; gc: GC; x, y: int;\n               width, height: uint): bool		237
+nim	flush	#flush,Display	proc flush(display: Display): bool		244
+nim	free	#free,ptr.XClassHint	proc free(data: ptr XClassHint): bool		249
+nim	free	#free,Display,Colormap	proc free(display: Display; colormap: Colormap): bool		254
+nim	free	#free,Display,GC	proc free(display: Display; gc: GC): bool		259
+nim	free	#free,Display,ptr.XFontStruct	proc free(display: Display; font_struct: ptr XFontStruct): bool		264
+nim	free	#free,Display,Pixmap	proc free(display: Display; pixmap: Pixmap): bool		269
+nim	get_error_database_text	#get_error_database_text,Display,cstring,cstring,cstring,ptr.char,cint	proc get_error_database_text(display: Display; name: cstring; message: cstring;\n                        default_string: cstring; buffer_return: ptr char;\n                        length: cint): bool		274
+nim	intern_atom	#intern_atom,Display,string,bool	proc intern_atom(display: Display; atom_name: string; only_if_exists: bool = false): Atom		298
+nim	load_query_font	#load_query_font,Display,string	proc load_query_font(display: Display; name: string): ptr XFontStruct		304
+nim	map	#map,Display,Window	proc map(display: Display; window: Window): bool		309
+nim	next_event	#next_event,Display,XEvent	proc next_event(display: Display; event_return: var XEvent): int		314
+nim	open_display	#open_display,string	proc open_display(display_name: string = ""): Display		320
+nim	pending	#pending,Display	proc pending(display: Display): int		341
+nim	protocol_revision	#protocol_revision,Display	proc protocol_revision(display: Display): int		346
+nim	protocol_version	#protocol_version,Display	proc protocol_version(display: Display): int		350
+nim	resize_window	#resize_window,Display,Window,uint,uint	proc resize_window(display: Display; window: Window; width, height: uint): bool		354
+nim	root_window	#root_window,Display,int	proc root_window(display: Display; screen_number: int): Window		360
+nim	select_input	#select_input,Display,Window,EventMask	proc select_input(display: Display; window: Window; event_mask: EventMask): bool		365
+nim	send_event	#send_event,Display,Window,bool,EventMask,XEvent	proc send_event(display: Display; window: Window; propagate: bool;\n           event_mask: EventMask; event_send: var XEvent): Status		379
+nim	set_class_hint	#set_class_hint,Display,Window,ptr.XClassHint	proc set_class_hint(display: Display; window: Window; class_hints: ptr XClassHint): bool		386
+nim	set_icon_name	#set_icon_name,Display,Window,string	proc set_icon_name(display: Display; window: Window; name: string): bool		391
+nim	set_wm_protocols	#set_wm_protocols,Display,Window,Atom,int	proc set_wm_protocols(display: Display; window: Window; protocols: Atom; count: int): Status		396
+nim	store_name	#store_name,Display,Window,string	proc store_name(display: Display; window: Window; name: string): bool		402
+nim	synchronize	#synchronize,Display,bool	proc synchronize(display: Display; onoff: bool): bool		407
+nim	unmap	#unmap,Display,Window	proc unmap(display: Display; window: Window): bool		412
+nim	white_pixel	#white_pixel,Display,int	proc white_pixel(display: Display; screen_number: int): culong		417
+nimgrp	geterrortext	#get_error_text-procs-all	proc		120
+nimgrp	changeproperty	#change_property-procs-all	proc		146
+nimgrp	free	#free-procs-all	proc		249
+heading	Basic usage	#basic-usage	 Basic usage		0

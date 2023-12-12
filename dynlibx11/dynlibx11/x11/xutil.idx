@@ -1,0 +1,86 @@
+nimTitle	xutil	dynlibx11/x11/xutil.html	module dynlibx11/x11/xutil		0
+nim	NoValue	dynlibx11/x11/xutil.html#NoValue	const NoValue		10
+nim	XValue	dynlibx11/x11/xutil.html#XValue	const XValue		11
+nim	YValue	dynlibx11/x11/xutil.html#YValue	const YValue		12
+nim	WidthValue	dynlibx11/x11/xutil.html#WidthValue	const WidthValue		13
+nim	HeightValue	dynlibx11/x11/xutil.html#HeightValue	const HeightValue		14
+nim	AllValues	dynlibx11/x11/xutil.html#AllValues	const AllValues		15
+nim	XNegative	dynlibx11/x11/xutil.html#XNegative	const XNegative		16
+nim	YNegative	dynlibx11/x11/xutil.html#YNegative	const YNegative		17
+nim	XSizeHints	dynlibx11/x11/xutil.html#XSizeHints	object XSizeHints		20
+nim	SizeHintsAspect	dynlibx11/x11/xutil.html#SizeHintsAspect	object SizeHintsAspect		31
+nim	SizeHintsFlags	dynlibx11/x11/xutil.html#SizeHintsFlags	type SizeHintsFlags		36
+nim	`or`	dynlibx11/x11/xutil.html#or,SizeHintsFlags,SizeHintsFlags	proc `or`(a, b: SizeHintsFlags): SizeHintsFlags		38
+nim	USPosition	dynlibx11/x11/xutil.html#USPosition	const USPosition		41
+nim	USSize	dynlibx11/x11/xutil.html#USSize	const USSize		42
+nim	PPosition	dynlibx11/x11/xutil.html#PPosition	const PPosition		43
+nim	PSize	dynlibx11/x11/xutil.html#PSize	const PSize		44
+nim	PMinSize	dynlibx11/x11/xutil.html#PMinSize	const PMinSize		45
+nim	PMaxSize	dynlibx11/x11/xutil.html#PMaxSize	const PMaxSize		46
+nim	PResizeInc	dynlibx11/x11/xutil.html#PResizeInc	const PResizeInc		47
+nim	PAspect	dynlibx11/x11/xutil.html#PAspect	const PAspect		48
+nim	PBaseSize	dynlibx11/x11/xutil.html#PBaseSize	const PBaseSize		49
+nim	PWinGravity	dynlibx11/x11/xutil.html#PWinGravity	const PWinGravity		50
+nim	PAllHints	dynlibx11/x11/xutil.html#PAllHints	const PAllHints		53
+nim	XWMHints	dynlibx11/x11/xutil.html#XWMHints	object XWMHints		57
+nim	WMHintsFlags	dynlibx11/x11/xutil.html#WMHintsFlags	type WMHintsFlags		69
+nim	`or`	dynlibx11/x11/xutil.html#or,WMHintsFlags,WMHintsFlags	proc `or`(a, b: WMHintsFlags): WMHintsFlags		71
+nim	InputHint	dynlibx11/x11/xutil.html#InputHint	const InputHint		74
+nim	StateHint	dynlibx11/x11/xutil.html#StateHint	const StateHint		75
+nim	IconPixmapHint	dynlibx11/x11/xutil.html#IconPixmapHint	const IconPixmapHint		76
+nim	IconWindowHint	dynlibx11/x11/xutil.html#IconWindowHint	const IconWindowHint		77
+nim	IconPositionHint	dynlibx11/x11/xutil.html#IconPositionHint	const IconPositionHint		78
+nim	IconMaskHint	dynlibx11/x11/xutil.html#IconMaskHint	const IconMaskHint		79
+nim	WindowGroupHint	dynlibx11/x11/xutil.html#WindowGroupHint	const WindowGroupHint		80
+nim	XUrgencyHint	dynlibx11/x11/xutil.html#XUrgencyHint	const XUrgencyHint		81
+nim	AllHints	dynlibx11/x11/xutil.html#AllHints	const AllHints		84
+nim	WithdrawnState	dynlibx11/x11/xutil.html#WithdrawnState	const WithdrawnState		89
+nim	NormalState	dynlibx11/x11/xutil.html#NormalState	const NormalState		90
+nim	IconicState	dynlibx11/x11/xutil.html#IconicState	const IconicState		91
+nim	XTextProperty	dynlibx11/x11/xutil.html#XTextProperty	object XTextProperty		94
+nim	XNoMemory	dynlibx11/x11/xutil.html#XNoMemory	const XNoMemory		103
+nim	XLocaleNotSupported	dynlibx11/x11/xutil.html#XLocaleNotSupported	const XLocaleNotSupported		104
+nim	XConverterNotFound	dynlibx11/x11/xutil.html#XConverterNotFound	const XConverterNotFound		105
+nim	XStringStyle	dynlibx11/x11/xutil.html#XStringStyle	XICCEncodingStyle.XStringStyle		108
+nim	XCompoundTextStyle	dynlibx11/x11/xutil.html#XCompoundTextStyle	XICCEncodingStyle.XCompoundTextStyle		108
+nim	XTextStyle	dynlibx11/x11/xutil.html#XTextStyle	XICCEncodingStyle.XTextStyle		108
+nim	XStdICCTextStyle	dynlibx11/x11/xutil.html#XStdICCTextStyle	XICCEncodingStyle.XStdICCTextStyle		108
+nim	XUTF8StringStyle	dynlibx11/x11/xutil.html#XUTF8StringStyle	XICCEncodingStyle.XUTF8StringStyle		108
+nim	XICCEncodingStyle	dynlibx11/x11/xutil.html#XICCEncodingStyle	enum XICCEncodingStyle		108
+nim	XIconSize	dynlibx11/x11/xutil.html#XIconSize	object XIconSize		115
+nim	XClassHint	dynlibx11/x11/xutil.html#XClassHint	object XClassHint		120
+nim	XComposeStatus	dynlibx11/x11/xutil.html#XComposeStatus	object XComposeStatus		125
+nim	IsKeypadKey	dynlibx11/x11/xutil.html#IsKeypadKey.t,KeySym	template IsKeypadKey(keysym: KeySym): bool		131
+nim	IsPrivateKeypadKey	dynlibx11/x11/xutil.html#IsPrivateKeypadKey.t	template IsPrivateKeypadKey(keysym): bool		134
+nim	IsCursorKey	dynlibx11/x11/xutil.html#IsCursorKey.t,KeySym	template IsCursorKey(keysym: KeySym): bool		137
+nim	IsPFKey	dynlibx11/x11/xutil.html#IsPFKey.t,KeySym	template IsPFKey(keysym: KeySym): bool		140
+nim	IsFunctionKey	dynlibx11/x11/xutil.html#IsFunctionKey.t,KeySym	template IsFunctionKey(keysym: KeySym): bool		143
+nim	IsMiscFunctionKey	dynlibx11/x11/xutil.html#IsMiscFunctionKey.t,KeySym	template IsMiscFunctionKey(keysym: KeySym): bool		146
+nim	IsModifierKey	dynlibx11/x11/xutil.html#IsModifierKey.t,KeySym	template IsModifierKey(keysym: KeySym): bool		149
+nim	Region	dynlibx11/x11/xutil.html#Region	type Region		155
+nim	RectangleOut	dynlibx11/x11/xutil.html#RectangleOut	const RectangleOut		160
+nim	RectangleIn	dynlibx11/x11/xutil.html#RectangleIn	const RectangleIn		161
+nim	RectanglePart	dynlibx11/x11/xutil.html#RectanglePart	const RectanglePart		162
+nim	XVisualInfo	dynlibx11/x11/xutil.html#XVisualInfo	object XVisualInfo		165
+nim	VisualNoMask	dynlibx11/x11/xutil.html#VisualNoMask	const VisualNoMask		179
+nim	VisualIDMask	dynlibx11/x11/xutil.html#VisualIDMask	const VisualIDMask		180
+nim	VisualScreenMask	dynlibx11/x11/xutil.html#VisualScreenMask	const VisualScreenMask		181
+nim	VisualDepthMask	dynlibx11/x11/xutil.html#VisualDepthMask	const VisualDepthMask		182
+nim	VisualClassMask	dynlibx11/x11/xutil.html#VisualClassMask	const VisualClassMask		183
+nim	VisualRedMaskMask	dynlibx11/x11/xutil.html#VisualRedMaskMask	const VisualRedMaskMask		184
+nim	VisualGreenMaskMask	dynlibx11/x11/xutil.html#VisualGreenMaskMask	const VisualGreenMaskMask		185
+nim	VisualBlueMaskMask	dynlibx11/x11/xutil.html#VisualBlueMaskMask	const VisualBlueMaskMask		186
+nim	VisualColormapSizeMask	dynlibx11/x11/xutil.html#VisualColormapSizeMask	const VisualColormapSizeMask		187
+nim	VisualBitsPerRGBMask	dynlibx11/x11/xutil.html#VisualBitsPerRGBMask	const VisualBitsPerRGBMask		188
+nim	VisualAllMask	dynlibx11/x11/xutil.html#VisualAllMask	const VisualAllMask		189
+nim	XStandardColormap	dynlibx11/x11/xutil.html#XStandardColormap	object XStandardColormap		192
+nim	ReleaseByFreeingColormap	dynlibx11/x11/xutil.html#ReleaseByFreeingColormap	const ReleaseByFreeingColormap		206
+nim	BitmapSuccess	dynlibx11/x11/xutil.html#BitmapSuccess	const BitmapSuccess		210
+nim	BitmapOpenFailed	dynlibx11/x11/xutil.html#BitmapOpenFailed	const BitmapOpenFailed		211
+nim	BitmapFileInvalid	dynlibx11/x11/xutil.html#BitmapFileInvalid	const BitmapFileInvalid		212
+nim	BitmapNoMemory	dynlibx11/x11/xutil.html#BitmapNoMemory	const BitmapNoMemory		213
+nim	XCSUCCESS	dynlibx11/x11/xutil.html#XCSUCCESS	const XCSUCCESS		221
+nim	XCNOMEM	dynlibx11/x11/xutil.html#XCNOMEM	const XCNOMEM		222
+nim	XCNOENT	dynlibx11/x11/xutil.html#XCNOENT	const XCNOENT		223
+nim	XContext	dynlibx11/x11/xutil.html#XContext	type XContext		226
+nimgrp	or	dynlibx11/x11/xutil.html#or-procs-all	proc		38
