@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>src/dlsdl3/sdl3inc/events</title>
+<title>dynlibsdl3/sdl3inc/events</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
@@ -20,7 +20,7 @@
 <body>
   <div class="document" id="documentId">
     <div class="container">
-      <h1 class="title">src/dlsdl3/sdl3inc/events</h1>
+      <h1 class="title">dynlibsdl3/sdl3inc/events</h1>
       <div class="row">
   <div class="three columns">
     <div class="theme-select-wrapper">
@@ -76,11 +76,11 @@
   typ*: EventType            ## `EVENT_DROP_BEGIN`, `EVENT_DROP_FILE`,
                              ## `EVENT_DROP_TEXT` or `EVENT_DROP_COMPLETE`.
   timestamp*: uint64         ## Timestamp (ns).
-  file*: cstring             ## File name. Must be freed.
-                             ## `nil` on begin/complete.
   window_id*: WindowID       ## Window ID file was dropped on (if any).
-  x*: cfloat
-  y*: cfloat">DropEvent</a></li>
+  x*: cfloat                 ## X position.
+  y*: cfloat                 ## Y position.
+  source*: cstring           ## The source app that sent this drop event, or `nil` if that isn't available.
+  dest*: cstring             ## The text for `EVENT_DROP_TEXT` and the file name for `EVENT_DROP_FILE`, `nil` for other events.">DropEvent</a></li>
 <li><a class="reference" href="#Event" title="Event {.bycopy, final, pure, union.} = object
   typ*: EventType            ## Event type.
   common*: CommonEvent       ## Common event.
@@ -88,7 +88,6 @@
   window*: WindowEvent       ## Window event.
   key*: KeyboardEvent        ## Keyboard event.
   edit*: TextEditingEvent    ## Text editing event.
-  edit_ext*: TextEditingExtEvent ## Extended text editing event.
   text*: TextInputEvent      ## Text input event.
   motion*: MouseMotionEvent  ## Mouse motion event.
   button*: MouseButtonEvent  ## Mouse button event.
@@ -107,8 +106,10 @@
   sensor*: SensorEvent       ## Sensor event.
   quit*: QuitEvent           ## Quit request event.
   user*: UserEvent           ## Custom event.
-  syswm*: SysWMEvent         ## System dependent window event.
   tfinger*: TouchFingerEvent ## Touch finger event.
+  ptip*: PenTipEvent         ## Pen tip event.
+  pmotion*: PenMotionEvent   ## Pen motion event.
+  pbutton*: PenButtonEvent   ## Pen button event.
   drop*: DropEvent           ## Drag and drop event.
   clipboard*: ClipboardEvent ## Clipboard change event.">Event</a></li>
 <li><a class="reference" href="#EventAction" title="EventAction {.size: 4.} = enum
@@ -119,7 +120,7 @@
   EVENT_WILL_ENTER_FOREGROUND, EVENT_DID_ENTER_FOREGROUND, EVENT_LOCALE_CHANGED,
   EVENT_SYSTEM_THEME_CHANGED, EVENT_DISPLAY_ORIENTATION = 337,
   EVENT_DISPLAY_ADDED, EVENT_DISPLAY_REMOVED, EVENT_DISPLAY_MOVED,
-  EVENT_DISPLAY_CONTENT_SCALE_CHANGED, EVENT_SYSWM = 513, EVENT_WINDOW_SHOWN,
+  EVENT_DISPLAY_CONTENT_SCALE_CHANGED, EVENT_WINDOW_SHOWN = 514,
   EVENT_WINDOW_HIDDEN, EVENT_WINDOW_EXPOSED, EVENT_WINDOW_MOVED,
   EVENT_WINDOW_RESIZED, EVENT_WINDOW_PIXEL_SIZE_CHANGED, EVENT_WINDOW_MINIMIZED,
   EVENT_WINDOW_MAXIMIZED, EVENT_WINDOW_RESTORED, EVENT_WINDOW_MOUSE_ENTER,
@@ -127,9 +128,9 @@
   EVENT_WINDOW_CLOSE_REQUESTED, EVENT_WINDOW_TAKE_FOCUS, EVENT_WINDOW_HIT_TEST,
   EVENT_WINDOW_ICCPROF_CHANGED, EVENT_WINDOW_DISPLAY_CHANGED,
   EVENT_WINDOW_DISPLAY_SCALE_CHANGED, EVENT_WINDOW_OCCLUDED,
-  EVENT_WINDOW_DESTROYED, EVENT_KEY_DOWN = 768, EVENT_KEY_UP,
-  EVENT_TEXT_EDITING, EVENT_TEXT_INPUT, EVENT_KEYMAP_CHANGED,
-  EVENT_TEXT_EDITING_EXT, EVENT_MOUSE_MOTION = 1024, EVENT_MOUSE_BUTTON_DOWN,
+  EVENT_WINDOW_DESTROYED, EVENT_WINDOW_PEN_ENTER, EVENT_WINDOW_PEN_LEAVE,
+  EVENT_KEY_DOWN = 768, EVENT_KEY_UP, EVENT_TEXT_EDITING, EVENT_TEXT_INPUT,
+  EVENT_KEYMAP_CHANGED, EVENT_MOUSE_MOTION = 1024, EVENT_MOUSE_BUTTON_DOWN,
   EVENT_MOUSE_BUTTON_UP, EVENT_MOUSE_WHEEL, EVENT_JOYSTICK_AXIS_MOTION = 1536,
   EVENT_JOYSTICK_HAT_MOTION = 1538, EVENT_JOYSTICK_BUTTON_DOWN,
   EVENT_JOYSTICK_BUTTON_UP, EVENT_JOYSTICK_ADDED, EVENT_JOYSTICK_REMOVED,
@@ -144,11 +145,12 @@
   EVENT_DROP_BEGIN, EVENT_DROP_COMPLETE, EVENT_DROP_POSITION,
   EVENT_AUDIO_DEVICE_ADDED = 4352, EVENT_AUDIO_DEVICE_REMOVED,
   EVENT_AUDIO_DEVICE_FORMAT_CHANGED, EVENT_SENSOR_UPDATE = 4608,
-  EVENT_RENDER_TARGETS_RESET = 8192, EVENT_RENDER_DEVICE_RESET,
-  EVENT_POLL_SENTINEL = 32512, EVENT_USER = 32768, EVENT_USER1 = 32769,
-  EVENT_USER2 = 32770, EVENT_USER3 = 32771, EVENT_USER4 = 32772,
-  EVENT_USER5 = 32773, EVENT_USER6 = 32774, EVENT_USER7 = 32775,
-  EVENT_USER8 = 32776, EVENT_LAST = 65535">EventType</a></li>
+  EVENT_PEN_DOWN = 4864, EVENT_PEN_UP, EVENT_PEN_MOTION, EVENT_PEN_BUTTON_DOWN,
+  EVENT_PEN_BUTTON_UP, EVENT_RENDER_TARGETS_RESET = 8192,
+  EVENT_RENDER_DEVICE_RESET, EVENT_POLL_SENTINEL = 32512, EVENT_USER = 32768,
+  EVENT_USER1 = 32769, EVENT_USER2 = 32770, EVENT_USER3 = 32771,
+  EVENT_USER4 = 32772, EVENT_USER5 = 32773, EVENT_USER6 = 32774,
+  EVENT_USER7 = 32775, EVENT_USER8 = 32776, EVENT_LAST = 65535">EventType</a></li>
 <li><a class="reference" href="#GamepadAxisEvent" title="GamepadAxisEvent {.final, pure.} = object
   typ*: EventType            ## `EVENT_GAMEPAD_AXIS_MOTION`.
   timestamp*: uint64         ## Timestamp (ns).
@@ -225,7 +227,7 @@
   typ*: EventType            ## `EVENT_MOUSE_BUTTON_DOWN` or `EVENT_MOUSE_BUTTON_UP`.
   timestamp*: uint64         ## Timestamp (ns).
   window_id*: WindowID       ## Window with mouse focus (if any).
-  which*: MouseID            ## Mouse instance ID or `SDL_TOUCH_MOUSEID`.
+  which*: MouseID            ## Mouse instance ID, `SDL_TOUCH_MOUSEID` or `PEN_MOUSEID`.
   button*: byte              ## Mouse button index.
   state*: byte               ## `PRESSED` or `RELEASED`.
   clicks*: byte              ## Single click (1), double click (2), etc.
@@ -235,7 +237,7 @@
   typ*: EventType            ## `EVENT_MOUSE_MOTION`.
   timestamp*: uint64         ## Timestamp (ns).
   window_id*: WindowID       ## Window with mouse focus (if any).
-  which*: MouseID            ## Mouse instance ID or `TOUCH_MOUSEID`.
+  which*: MouseID            ## Mouse instance ID, `TOUCH_MOUSEID` or `PEN_MOUSEID`.
   state*: uint32             ## Button state.
   x*: cfloat                 ## X position.
   y*: cfloat                 ## Y position.
@@ -245,7 +247,7 @@
   typ*: EventType            ## `EVENT_MOUSE_WHEEL`.
   timestamp*: uint64         ## Timestamp (ns).
   window_id*: WindowID       ## Window with mouse focus (if any).
-  which*: MouseID            ## Mouse instance ID or `SDL_TOUCH_MOUSEID`.
+  which*: MouseID            ## Mouse instance ID, `SDL_TOUCH_MOUSEID` or `PEN_MOUSEID`.
   x*: cfloat                 ## Horizontal scroll amount. Positive to the
                              ## right. Negative to the left.
   y*: cfloat                 ## Vertical scroll amount. Positive to the
@@ -253,9 +255,43 @@
   direction*: uint32         ## Direction (`MOUSEWHEEL_*`).
   mouse_x*: cfloat           ## X position.
   mouse_y*: cfloat           ## Y position.">MouseWheelEvent</a></li>
-<li><a class="reference" href="#OSEvent" title="OSEvent {.final, pure.} = object
-  typ*: EventType            ## EVENT_QUIT.
-  timestamp*: uint64         ## Timestamp (ns).">OSEvent</a></li>
+<li><a class="reference" href="#PenButtonEvent" title="PenButtonEvent {.final, pure.} = object
+  typ*: EventType            ## `EVENT_PEN_BUTTON_DOWN` or `EVENT_PEN_BUTTON_UP`.
+  timestamp*: uint64         ## Timestamp (ns).
+  window_id*: WindowID       ## The window with pen focus, if any.
+  which*: PenID              ## The pen instance id.
+  button*: byte              ## The pen button index (1 represents the pen tip for compatibility with mouse events).
+  state*: byte               ## `PRESSED` or `RELEASED`.
+  pen_state*: uint16 ## Pen button masks (where SDL_BUTTON(1) is the first button, SDL_BUTTON(2) is the second button etc.),
+                     ## `PEN_DOWN_MASK` is set if the pen is touching the surface, and
+                     ## `PEN_ERASER_MASK` is set if the pen is (used as) an eraser.
+  x*: cfloat                 ## X position.
+  y*: cfloat                 ## Y position.
+  axes*: array[PEN_NUM_AXES, cfloat] ## Pen axes such as pressure and tilt (ordered as per `PenAxis`).">PenButtonEvent</a></li>
+<li><a class="reference" href="#PenMotionEvent" title="PenMotionEvent {.final, pure.} = object
+  typ*: EventType            ## `EVENT_PEN_MOTION`.
+  timestamp*: uint64         ## Timestamp (ns).
+  window_id*: WindowID       ## The window with pen focus, if any.
+  which*: PenID              ## The pen instance id.
+  pen_state*: uint16 ## Pen button masks (where SDL_BUTTON(1) is the first button, SDL_BUTTON(2) is the second button etc.),
+                     ## `PEN_DOWN_MASK` is set if the pen is touching the surface, and
+                     ## `PEN_ERASER_MASK` is set if the pen is (used as) an eraser.
+  x*: cfloat                 ## X position.
+  y*: cfloat                 ## Y position.
+  axes*: array[PEN_NUM_AXES, cfloat] ## Pen axes such as pressure and tilt (ordered as per `PenAxis`).">PenMotionEvent</a></li>
+<li><a class="reference" href="#PenTipEvent" title="PenTipEvent {.final, pure.} = object
+  typ*: EventType            ## `EVENT_PEN_DOWN` or ``SDL_EVENT_PEN_UP`.
+  timestamp*: uint64         ## Timestamp (ns).
+  window_id*: WindowID       ## The window with pen focus, if any.
+  which*: PenID              ## The pen instance id.
+  tip*: byte                 ## `PEN_TIP_INK` when using a regular pen tip, or `PEN_TIP_ERASER` if the pen is being used as an eraser (e.g., flipped to use the eraser tip).
+  state*: byte               ## `PRESSED` on `EVENT_PEN_DOWN` and `RELEASED` on `EVENT_PEN_UP`.
+  pen_state*: uint16 ## Pen button masks (where SDL_BUTTON(1) is the first button, SDL_BUTTON(2) is the second button etc.),
+                     ## `PEN_DOWN_MASK` is set if the pen is touching the surface, and
+                     ## `PEN_ERASER_MASK` is set if the pen is (used as) an eraser.
+  x*: cfloat                 ## X position.
+  y*: cfloat                 ## Y position.
+  axes*: array[PEN_NUM_AXES, cfloat] ## Pen axes such as pressure and tilt (ordered as per `PenAxis`).">PenTipEvent</a></li>
 <li><a class="reference" href="#QuitEvent" title="QuitEvent {.final, pure.} = object
   typ*: EventType            ## `EVENT_QUIT`.
   timestamp*: uint64         ## Timestamp (ns).">QuitEvent</a></li>
@@ -267,35 +303,23 @@
                              ## Query additional values with
                              ## `sensor_get_data()`.
   sensor_timestamp*: uint64">SensorEvent</a></li>
-<li><a class="reference" href="#SysWMEvent" title="SysWMEvent {.final, pure.} = object
-  typ*: EventType            ## `EVENT_SYSWM`.
-  timestamp*: uint32         ## Timestamp (ns).
-  msg*: SysWMmsgPtr          ## Driver dependent data.">SysWMEvent</a></li>
-<li><a class="reference" href="#SysWMmsgPtr" title="SysWMmsgPtr = ptr SysWMmsg">SysWMmsgPtr</a></li>
 <li><a class="reference" href="#TextEditingEvent" title="TextEditingEvent {.final, pure.} = object
   typ*: EventType            ## `EVENT_TEXT_EDITING`.
   timestamp*: uint64         ## Timestamp (ns).
   window_id*: WindowID       ## Window with keyboard focus (if any).
-  text*: array[TEXTEDITINGEVENT_TEXT_SIZE, char] ## The editing text.
+  text*: cstring             ## The editing text.
   start*: int32              ## Selected editing text start cursor.
   length*: int32             ## Selected editing text length.">TextEditingEvent</a></li>
-<li><a class="reference" href="#TextEditingExtEvent" title="TextEditingExtEvent {.final, pure.} = object
-  typ*: EventType            ## `EVENT_TEXT_EDITING_EXT`.
-  timestamp*: uint64         ## Timestamp (ns).
-  window_id*: WindowID       ## Window with keyboard focus (if any).
-  text*: cstring             ## The editing text. Must be freed.
-  start*: int32              ## Selected editing text start cursor.
-  length*: int32             ## Selected editing text length.">TextEditingExtEvent</a></li>
 <li><a class="reference" href="#TextInputEvent" title="TextInputEvent {.final, pure.} = object
   typ*: EventType            ## `EVENT_TEXT_INPUT`.
   timestamp*: uint64         ## Timestamp (ns).
   window_id*: WindowID       ## Window with keyboard focus (if any).
-  text*: array[TEXTINPUTEVENT_TEXT_SIZE, char] ## The input text.">TextInputEvent</a></li>
+  text*: cstring             ## The input text.">TextInputEvent</a></li>
 <li><a class="reference" href="#TouchFingerEvent" title="TouchFingerEvent {.final, pure.} = object
   typ*: EventType            ## `EVENT_FINGER_MOTION`, `EVENT_FINGER_DOWN` or `EVENT_FINGER_UP`.
   timestamp*: uint64         ## Timestamp (ns).
-  touchId*: TouchID          ## Touch ID.
-  fingerId*: FingerID
+  touch_id*: TouchID         ## Touch ID.
+  finger_id*: FingerID
   x*: cfloat                 ## Normalized, range 0 - 1.
   y*: cfloat                 ## Normalized, range 0 - 1.
   dx*: cfloat                ## Normalized, range -1 - 1.
@@ -358,7 +382,7 @@
     <div class="section" id="6">
   <h1><a class="toc-backref" href="#6">Imports</a></h1>
   <dl class="item">
-    <a class="reference external" href="audio.html">audio</a>, <a class="reference external" href="joystick.html">joystick</a>, <a class="reference external" href="keyboard.html">keyboard</a>, <a class="reference external" href="mouse.html">mouse</a>, <a class="reference external" href="sensor.html">sensor</a>, <a class="reference external" href="touch.html">touch</a>, <a class="reference external" href="video.html">video</a>
+    <a class="reference external" href="audio.html">audio</a>, <a class="reference external" href="joystick.html">joystick</a>, <a class="reference external" href="keyboard.html">keyboard</a>, <a class="reference external" href="mouse.html">mouse</a>, <a class="reference external" href="pen.html">pen</a>, <a class="reference external" href="sensor.html">sensor</a>, <a class="reference external" href="touch.html">touch</a>, <a class="reference external" href="video.html">video</a>
   </dl>
 </div>
 <div class="section" id="7">
@@ -419,15 +443,17 @@
   <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_DROP_BEGIN`, `EVENT_DROP_FILE`,</span>
                              <span class="Comment">## `EVENT_DROP_TEXT` or `EVENT_DROP_COMPLETE`.</span>
   <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>         <span class="Comment">## Timestamp (ns).</span>
-  <span class="Identifier">file</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>             <span class="Comment">## File name. Must be freed.</span>
-                             <span class="Comment">## `nil` on begin/complete.</span>
   <span class="Identifier">window_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="video.html#WindowID"><span class="Identifier">WindowID</span></a>       <span class="Comment">## Window ID file was dropped on (if any).</span>
-  <span class="Identifier">x</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>
-  <span class="Identifier">y</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>
-</pre></dt>
+  <span class="Identifier">x</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## X position.</span>
+  <span class="Identifier">y</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## Y position.</span>
+  <span class="Identifier">source</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>           <span class="Comment">## The source app that sent this drop event, or `nil` if that isn't available.</span>
+  <span class="Identifier">dest</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>             <span class="Comment">## The text for `EVENT_DROP_TEXT` and the file name for `EVENT_DROP_FILE`, `nil` for other events.</span>
+  </pre></dt>
   <dd>
     
-    An event used to request a file open by the system. Enabled by default.
+    An event used to drop text or request a file open by the system.<div class="admonition admonition-info"><span class="admonition-info-text"><b>Note:</b></span>
+This event should be cleaned up with <tt class="docutils literal"><span class="pre"><span class="Identifier">cleanup_event</span><span class="Punctuation">(</span><span class="Punctuation">)</span></span></tt> after processing.</div>
+
     
   </dd>
 </div>
@@ -439,7 +465,6 @@
   <span class="Identifier">window</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#WindowEvent"><span class="Identifier">WindowEvent</span></a>       <span class="Comment">## Window event.</span>
   <span class="Identifier">key</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#KeyboardEvent"><span class="Identifier">KeyboardEvent</span></a>        <span class="Comment">## Keyboard event.</span>
   <span class="Identifier">edit</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#TextEditingEvent"><span class="Identifier">TextEditingEvent</span></a>    <span class="Comment">## Text editing event.</span>
-  <span class="Identifier">edit_ext</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#TextEditingExtEvent"><span class="Identifier">TextEditingExtEvent</span></a> <span class="Comment">## Extended text editing event.</span>
   <span class="Identifier">text</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#TextInputEvent"><span class="Identifier">TextInputEvent</span></a>      <span class="Comment">## Text input event.</span>
   <span class="Identifier">motion</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#MouseMotionEvent"><span class="Identifier">MouseMotionEvent</span></a>  <span class="Comment">## Mouse motion event.</span>
   <span class="Identifier">button</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#MouseButtonEvent"><span class="Identifier">MouseButtonEvent</span></a>  <span class="Comment">## Mouse button event.</span>
@@ -458,8 +483,10 @@
   <span class="Identifier">sensor</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#SensorEvent"><span class="Identifier">SensorEvent</span></a>       <span class="Comment">## Sensor event.</span>
   <span class="Identifier">quit</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#QuitEvent"><span class="Identifier">QuitEvent</span></a>           <span class="Comment">## Quit request event.</span>
   <span class="Identifier">user</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#UserEvent"><span class="Identifier">UserEvent</span></a>           <span class="Comment">## Custom event.</span>
-  <span class="Identifier">syswm</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#SysWMEvent"><span class="Identifier">SysWMEvent</span></a>         <span class="Comment">## System dependent window event.</span>
   <span class="Identifier">tfinger</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#TouchFingerEvent"><span class="Identifier">TouchFingerEvent</span></a> <span class="Comment">## Touch finger event.</span>
+  <span class="Identifier">ptip</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#PenTipEvent"><span class="Identifier">PenTipEvent</span></a>         <span class="Comment">## Pen tip event.</span>
+  <span class="Identifier">pmotion</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#PenMotionEvent"><span class="Identifier">PenMotionEvent</span></a>   <span class="Comment">## Pen motion event.</span>
+  <span class="Identifier">pbutton</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#PenButtonEvent"><span class="Identifier">PenButtonEvent</span></a>   <span class="Comment">## Pen button event.</span>
   <span class="Identifier">drop</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#DropEvent"><span class="Identifier">DropEvent</span></a>           <span class="Comment">## Drag and drop event.</span>
   <span class="Identifier">clipboard</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#ClipboardEvent"><span class="Identifier">ClipboardEvent</span></a> <span class="Comment">## Clipboard change event.</span>
   </pre></dt>
@@ -485,7 +512,7 @@
   <span class="Identifier">EVENT_WILL_ENTER_FOREGROUND</span><span class="Other">,</span> <span class="Identifier">EVENT_DID_ENTER_FOREGROUND</span><span class="Other">,</span> <span class="Identifier">EVENT_LOCALE_CHANGED</span><span class="Other">,</span>
   <span class="Identifier">EVENT_SYSTEM_THEME_CHANGED</span><span class="Other">,</span> <span class="Identifier">EVENT_DISPLAY_ORIENTATION</span> <span class="Other">=</span> <span class="DecNumber">337</span><span class="Other">,</span>
   <span class="Identifier">EVENT_DISPLAY_ADDED</span><span class="Other">,</span> <span class="Identifier">EVENT_DISPLAY_REMOVED</span><span class="Other">,</span> <span class="Identifier">EVENT_DISPLAY_MOVED</span><span class="Other">,</span>
-  <span class="Identifier">EVENT_DISPLAY_CONTENT_SCALE_CHANGED</span><span class="Other">,</span> <span class="Identifier">EVENT_SYSWM</span> <span class="Other">=</span> <span class="DecNumber">513</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_SHOWN</span><span class="Other">,</span>
+  <span class="Identifier">EVENT_DISPLAY_CONTENT_SCALE_CHANGED</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_SHOWN</span> <span class="Other">=</span> <span class="DecNumber">514</span><span class="Other">,</span>
   <span class="Identifier">EVENT_WINDOW_HIDDEN</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_EXPOSED</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_MOVED</span><span class="Other">,</span>
   <span class="Identifier">EVENT_WINDOW_RESIZED</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_PIXEL_SIZE_CHANGED</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_MINIMIZED</span><span class="Other">,</span>
   <span class="Identifier">EVENT_WINDOW_MAXIMIZED</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_RESTORED</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_MOUSE_ENTER</span><span class="Other">,</span>
@@ -493,9 +520,9 @@
   <span class="Identifier">EVENT_WINDOW_CLOSE_REQUESTED</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_TAKE_FOCUS</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_HIT_TEST</span><span class="Other">,</span>
   <span class="Identifier">EVENT_WINDOW_ICCPROF_CHANGED</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_DISPLAY_CHANGED</span><span class="Other">,</span>
   <span class="Identifier">EVENT_WINDOW_DISPLAY_SCALE_CHANGED</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_OCCLUDED</span><span class="Other">,</span>
-  <span class="Identifier">EVENT_WINDOW_DESTROYED</span><span class="Other">,</span> <span class="Identifier">EVENT_KEY_DOWN</span> <span class="Other">=</span> <span class="DecNumber">768</span><span class="Other">,</span> <span class="Identifier">EVENT_KEY_UP</span><span class="Other">,</span>
-  <span class="Identifier">EVENT_TEXT_EDITING</span><span class="Other">,</span> <span class="Identifier">EVENT_TEXT_INPUT</span><span class="Other">,</span> <span class="Identifier">EVENT_KEYMAP_CHANGED</span><span class="Other">,</span>
-  <span class="Identifier">EVENT_TEXT_EDITING_EXT</span><span class="Other">,</span> <span class="Identifier">EVENT_MOUSE_MOTION</span> <span class="Other">=</span> <span class="DecNumber">1024</span><span class="Other">,</span> <span class="Identifier">EVENT_MOUSE_BUTTON_DOWN</span><span class="Other">,</span>
+  <span class="Identifier">EVENT_WINDOW_DESTROYED</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_PEN_ENTER</span><span class="Other">,</span> <span class="Identifier">EVENT_WINDOW_PEN_LEAVE</span><span class="Other">,</span>
+  <span class="Identifier">EVENT_KEY_DOWN</span> <span class="Other">=</span> <span class="DecNumber">768</span><span class="Other">,</span> <span class="Identifier">EVENT_KEY_UP</span><span class="Other">,</span> <span class="Identifier">EVENT_TEXT_EDITING</span><span class="Other">,</span> <span class="Identifier">EVENT_TEXT_INPUT</span><span class="Other">,</span>
+  <span class="Identifier">EVENT_KEYMAP_CHANGED</span><span class="Other">,</span> <span class="Identifier">EVENT_MOUSE_MOTION</span> <span class="Other">=</span> <span class="DecNumber">1024</span><span class="Other">,</span> <span class="Identifier">EVENT_MOUSE_BUTTON_DOWN</span><span class="Other">,</span>
   <span class="Identifier">EVENT_MOUSE_BUTTON_UP</span><span class="Other">,</span> <span class="Identifier">EVENT_MOUSE_WHEEL</span><span class="Other">,</span> <span class="Identifier">EVENT_JOYSTICK_AXIS_MOTION</span> <span class="Other">=</span> <span class="DecNumber">1536</span><span class="Other">,</span>
   <span class="Identifier">EVENT_JOYSTICK_HAT_MOTION</span> <span class="Other">=</span> <span class="DecNumber">1538</span><span class="Other">,</span> <span class="Identifier">EVENT_JOYSTICK_BUTTON_DOWN</span><span class="Other">,</span>
   <span class="Identifier">EVENT_JOYSTICK_BUTTON_UP</span><span class="Other">,</span> <span class="Identifier">EVENT_JOYSTICK_ADDED</span><span class="Other">,</span> <span class="Identifier">EVENT_JOYSTICK_REMOVED</span><span class="Other">,</span>
@@ -510,11 +537,12 @@
   <span class="Identifier">EVENT_DROP_BEGIN</span><span class="Other">,</span> <span class="Identifier">EVENT_DROP_COMPLETE</span><span class="Other">,</span> <span class="Identifier">EVENT_DROP_POSITION</span><span class="Other">,</span>
   <span class="Identifier">EVENT_AUDIO_DEVICE_ADDED</span> <span class="Other">=</span> <span class="DecNumber">4352</span><span class="Other">,</span> <span class="Identifier">EVENT_AUDIO_DEVICE_REMOVED</span><span class="Other">,</span>
   <span class="Identifier">EVENT_AUDIO_DEVICE_FORMAT_CHANGED</span><span class="Other">,</span> <span class="Identifier">EVENT_SENSOR_UPDATE</span> <span class="Other">=</span> <span class="DecNumber">4608</span><span class="Other">,</span>
-  <span class="Identifier">EVENT_RENDER_TARGETS_RESET</span> <span class="Other">=</span> <span class="DecNumber">8192</span><span class="Other">,</span> <span class="Identifier">EVENT_RENDER_DEVICE_RESET</span><span class="Other">,</span>
-  <span class="Identifier">EVENT_POLL_SENTINEL</span> <span class="Other">=</span> <span class="DecNumber">32512</span><span class="Other">,</span> <span class="Identifier">EVENT_USER</span> <span class="Other">=</span> <span class="DecNumber">32768</span><span class="Other">,</span> <span class="Identifier">EVENT_USER1</span> <span class="Other">=</span> <span class="DecNumber">32769</span><span class="Other">,</span>
-  <span class="Identifier">EVENT_USER2</span> <span class="Other">=</span> <span class="DecNumber">32770</span><span class="Other">,</span> <span class="Identifier">EVENT_USER3</span> <span class="Other">=</span> <span class="DecNumber">32771</span><span class="Other">,</span> <span class="Identifier">EVENT_USER4</span> <span class="Other">=</span> <span class="DecNumber">32772</span><span class="Other">,</span>
-  <span class="Identifier">EVENT_USER5</span> <span class="Other">=</span> <span class="DecNumber">32773</span><span class="Other">,</span> <span class="Identifier">EVENT_USER6</span> <span class="Other">=</span> <span class="DecNumber">32774</span><span class="Other">,</span> <span class="Identifier">EVENT_USER7</span> <span class="Other">=</span> <span class="DecNumber">32775</span><span class="Other">,</span>
-  <span class="Identifier">EVENT_USER8</span> <span class="Other">=</span> <span class="DecNumber">32776</span><span class="Other">,</span> <span class="Identifier">EVENT_LAST</span> <span class="Other">=</span> <span class="DecNumber">65535</span></pre></dt>
+  <span class="Identifier">EVENT_PEN_DOWN</span> <span class="Other">=</span> <span class="DecNumber">4864</span><span class="Other">,</span> <span class="Identifier">EVENT_PEN_UP</span><span class="Other">,</span> <span class="Identifier">EVENT_PEN_MOTION</span><span class="Other">,</span> <span class="Identifier">EVENT_PEN_BUTTON_DOWN</span><span class="Other">,</span>
+  <span class="Identifier">EVENT_PEN_BUTTON_UP</span><span class="Other">,</span> <span class="Identifier">EVENT_RENDER_TARGETS_RESET</span> <span class="Other">=</span> <span class="DecNumber">8192</span><span class="Other">,</span>
+  <span class="Identifier">EVENT_RENDER_DEVICE_RESET</span><span class="Other">,</span> <span class="Identifier">EVENT_POLL_SENTINEL</span> <span class="Other">=</span> <span class="DecNumber">32512</span><span class="Other">,</span> <span class="Identifier">EVENT_USER</span> <span class="Other">=</span> <span class="DecNumber">32768</span><span class="Other">,</span>
+  <span class="Identifier">EVENT_USER1</span> <span class="Other">=</span> <span class="DecNumber">32769</span><span class="Other">,</span> <span class="Identifier">EVENT_USER2</span> <span class="Other">=</span> <span class="DecNumber">32770</span><span class="Other">,</span> <span class="Identifier">EVENT_USER3</span> <span class="Other">=</span> <span class="DecNumber">32771</span><span class="Other">,</span>
+  <span class="Identifier">EVENT_USER4</span> <span class="Other">=</span> <span class="DecNumber">32772</span><span class="Other">,</span> <span class="Identifier">EVENT_USER5</span> <span class="Other">=</span> <span class="DecNumber">32773</span><span class="Other">,</span> <span class="Identifier">EVENT_USER6</span> <span class="Other">=</span> <span class="DecNumber">32774</span><span class="Other">,</span>
+  <span class="Identifier">EVENT_USER7</span> <span class="Other">=</span> <span class="DecNumber">32775</span><span class="Other">,</span> <span class="Identifier">EVENT_USER8</span> <span class="Other">=</span> <span class="DecNumber">32776</span><span class="Other">,</span> <span class="Identifier">EVENT_LAST</span> <span class="Other">=</span> <span class="DecNumber">65535</span></pre></dt>
   <dd>
     
     Event types.
@@ -686,7 +714,7 @@
   <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_MOUSE_BUTTON_DOWN` or `EVENT_MOUSE_BUTTON_UP`.</span>
   <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>         <span class="Comment">## Timestamp (ns).</span>
   <span class="Identifier">window_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="video.html#WindowID"><span class="Identifier">WindowID</span></a>       <span class="Comment">## Window with mouse focus (if any).</span>
-  <span class="Identifier">which</span><span class="Operator">*</span><span class="Other">:</span> <a href="mouse.html#MouseID"><span class="Identifier">MouseID</span></a>            <span class="Comment">## Mouse instance ID or `SDL_TOUCH_MOUSEID`.</span>
+  <span class="Identifier">which</span><span class="Operator">*</span><span class="Other">:</span> <a href="mouse.html#MouseID"><span class="Identifier">MouseID</span></a>            <span class="Comment">## Mouse instance ID, `SDL_TOUCH_MOUSEID` or `PEN_MOUSEID`.</span>
   <span class="Identifier">button</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">byte</span>              <span class="Comment">## Mouse button index.</span>
   <span class="Identifier">state</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">byte</span>               <span class="Comment">## `PRESSED` or `RELEASED`.</span>
   <span class="Identifier">clicks</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">byte</span>              <span class="Comment">## Single click (1), double click (2), etc.</span>
@@ -704,7 +732,7 @@
   <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_MOUSE_MOTION`.</span>
   <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>         <span class="Comment">## Timestamp (ns).</span>
   <span class="Identifier">window_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="video.html#WindowID"><span class="Identifier">WindowID</span></a>       <span class="Comment">## Window with mouse focus (if any).</span>
-  <span class="Identifier">which</span><span class="Operator">*</span><span class="Other">:</span> <a href="mouse.html#MouseID"><span class="Identifier">MouseID</span></a>            <span class="Comment">## Mouse instance ID or `TOUCH_MOUSEID`.</span>
+  <span class="Identifier">which</span><span class="Operator">*</span><span class="Other">:</span> <a href="mouse.html#MouseID"><span class="Identifier">MouseID</span></a>            <span class="Comment">## Mouse instance ID, `TOUCH_MOUSEID` or `PEN_MOUSEID`.</span>
   <span class="Identifier">state</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint32</span>             <span class="Comment">## Button state.</span>
   <span class="Identifier">x</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## X position.</span>
   <span class="Identifier">y</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## Y position.</span>
@@ -722,7 +750,7 @@
   <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_MOUSE_WHEEL`.</span>
   <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>         <span class="Comment">## Timestamp (ns).</span>
   <span class="Identifier">window_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="video.html#WindowID"><span class="Identifier">WindowID</span></a>       <span class="Comment">## Window with mouse focus (if any).</span>
-  <span class="Identifier">which</span><span class="Operator">*</span><span class="Other">:</span> <a href="mouse.html#MouseID"><span class="Identifier">MouseID</span></a>            <span class="Comment">## Mouse instance ID or `SDL_TOUCH_MOUSEID`.</span>
+  <span class="Identifier">which</span><span class="Operator">*</span><span class="Other">:</span> <a href="mouse.html#MouseID"><span class="Identifier">MouseID</span></a>            <span class="Comment">## Mouse instance ID, `SDL_TOUCH_MOUSEID` or `PEN_MOUSEID`.</span>
   <span class="Identifier">x</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## Horizontal scroll amount. Positive to the</span>
                              <span class="Comment">## right. Negative to the left.</span>
   <span class="Identifier">y</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## Vertical scroll amount. Positive to the</span>
@@ -737,14 +765,64 @@
     
   </dd>
 </div>
-<div id="OSEvent">
-  <dt><pre><a href="events.html#OSEvent"><span class="Identifier">OSEvent</span></a> {.<span class="Identifier">final</span><span class="Other">,</span> <span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## EVENT_QUIT.</span>
+<div id="PenButtonEvent">
+  <dt><pre><a href="events.html#PenButtonEvent"><span class="Identifier">PenButtonEvent</span></a> {.<span class="Identifier">final</span><span class="Other">,</span> <span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
+  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_PEN_BUTTON_DOWN` or `EVENT_PEN_BUTTON_UP`.</span>
   <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>         <span class="Comment">## Timestamp (ns).</span>
+  <span class="Identifier">window_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="video.html#WindowID"><span class="Identifier">WindowID</span></a>       <span class="Comment">## The window with pen focus, if any.</span>
+  <span class="Identifier">which</span><span class="Operator">*</span><span class="Other">:</span> <a href="pen.html#PenID"><span class="Identifier">PenID</span></a>              <span class="Comment">## The pen instance id.</span>
+  <span class="Identifier">button</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">byte</span>              <span class="Comment">## The pen button index (1 represents the pen tip for compatibility with mouse events).</span>
+  <span class="Identifier">state</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">byte</span>               <span class="Comment">## `PRESSED` or `RELEASED`.</span>
+  <span class="Identifier">pen_state</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint16</span> <span class="Comment">## Pen button masks (where SDL_BUTTON(1) is the first button, SDL_BUTTON(2) is the second button etc.),</span>
+                     <span class="Comment">## `PEN_DOWN_MASK` is set if the pen is touching the surface, and</span>
+                     <span class="Comment">## `PEN_ERASER_MASK` is set if the pen is (used as) an eraser.</span>
+  <span class="Identifier">x</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## X position.</span>
+  <span class="Identifier">y</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## Y position.</span>
+  <span class="Identifier">axes</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="Identifier">PEN_NUM_AXES</span><span class="Other">,</span> <span class="Identifier">cfloat</span><span class="Other">]</span> <span class="Comment">## Pen axes such as pressure and tilt (ordered as per `PenAxis`).</span>
   </pre></dt>
   <dd>
     
-    OS Specific event.
+    Pressure-sensitive pen button event structure.
+    
+  </dd>
+</div>
+<div id="PenMotionEvent">
+  <dt><pre><a href="events.html#PenMotionEvent"><span class="Identifier">PenMotionEvent</span></a> {.<span class="Identifier">final</span><span class="Other">,</span> <span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
+  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_PEN_MOTION`.</span>
+  <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>         <span class="Comment">## Timestamp (ns).</span>
+  <span class="Identifier">window_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="video.html#WindowID"><span class="Identifier">WindowID</span></a>       <span class="Comment">## The window with pen focus, if any.</span>
+  <span class="Identifier">which</span><span class="Operator">*</span><span class="Other">:</span> <a href="pen.html#PenID"><span class="Identifier">PenID</span></a>              <span class="Comment">## The pen instance id.</span>
+  <span class="Identifier">pen_state</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint16</span> <span class="Comment">## Pen button masks (where SDL_BUTTON(1) is the first button, SDL_BUTTON(2) is the second button etc.),</span>
+                     <span class="Comment">## `PEN_DOWN_MASK` is set if the pen is touching the surface, and</span>
+                     <span class="Comment">## `PEN_ERASER_MASK` is set if the pen is (used as) an eraser.</span>
+  <span class="Identifier">x</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## X position.</span>
+  <span class="Identifier">y</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## Y position.</span>
+  <span class="Identifier">axes</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="Identifier">PEN_NUM_AXES</span><span class="Other">,</span> <span class="Identifier">cfloat</span><span class="Other">]</span> <span class="Comment">## Pen axes such as pressure and tilt (ordered as per `PenAxis`).</span>
+  </pre></dt>
+  <dd>
+    
+    Pressure-sensitive pen motion / pressure / angle event structure.
+    
+  </dd>
+</div>
+<div id="PenTipEvent">
+  <dt><pre><a href="events.html#PenTipEvent"><span class="Identifier">PenTipEvent</span></a> {.<span class="Identifier">final</span><span class="Other">,</span> <span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
+  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_PEN_DOWN` or ``SDL_EVENT_PEN_UP`.</span>
+  <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>         <span class="Comment">## Timestamp (ns).</span>
+  <span class="Identifier">window_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="video.html#WindowID"><span class="Identifier">WindowID</span></a>       <span class="Comment">## The window with pen focus, if any.</span>
+  <span class="Identifier">which</span><span class="Operator">*</span><span class="Other">:</span> <a href="pen.html#PenID"><span class="Identifier">PenID</span></a>              <span class="Comment">## The pen instance id.</span>
+  <span class="Identifier">tip</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">byte</span>                 <span class="Comment">## `PEN_TIP_INK` when using a regular pen tip, or `PEN_TIP_ERASER` if the pen is being used as an eraser (e.g., flipped to use the eraser tip).</span>
+  <span class="Identifier">state</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">byte</span>               <span class="Comment">## `PRESSED` on `EVENT_PEN_DOWN` and `RELEASED` on `EVENT_PEN_UP`.</span>
+  <span class="Identifier">pen_state</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint16</span> <span class="Comment">## Pen button masks (where SDL_BUTTON(1) is the first button, SDL_BUTTON(2) is the second button etc.),</span>
+                     <span class="Comment">## `PEN_DOWN_MASK` is set if the pen is touching the surface, and</span>
+                     <span class="Comment">## `PEN_ERASER_MASK` is set if the pen is (used as) an eraser.</span>
+  <span class="Identifier">x</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## X position.</span>
+  <span class="Identifier">y</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## Y position.</span>
+  <span class="Identifier">axes</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="Identifier">PEN_NUM_AXES</span><span class="Other">,</span> <span class="Identifier">cfloat</span><span class="Other">]</span> <span class="Comment">## Pen axes such as pressure and tilt (ordered as per `PenAxis`).</span>
+  </pre></dt>
+  <dd>
+    
+    Pressure-sensitive pen touched or stopped touching surface.
     
   </dd>
 </div>
@@ -775,53 +853,20 @@
     
   </dd>
 </div>
-<div id="SysWMEvent">
-  <dt><pre><a href="events.html#SysWMEvent"><span class="Identifier">SysWMEvent</span></a> {.<span class="Identifier">final</span><span class="Other">,</span> <span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_SYSWM`.</span>
-  <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint32</span>         <span class="Comment">## Timestamp (ns).</span>
-  <span class="Identifier">msg</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#SysWMmsgPtr"><span class="Identifier">SysWMmsgPtr</span></a>          <span class="Comment">## Driver dependent data.</span>
-  </pre></dt>
-  <dd>
-    
-    A video driver dependent system event. Disabled by default.
-    
-  </dd>
-</div>
-<div id="SysWMmsgPtr">
-  <dt><pre><a href="events.html#SysWMmsgPtr"><span class="Identifier">SysWMmsgPtr</span></a> <span class="Other">=</span> <span class="Keyword">ptr</span> <span class="Identifier">SysWMmsg</span></pre></dt>
-  <dd>
-    
-    
-    
-  </dd>
-</div>
 <div id="TextEditingEvent">
   <dt><pre><a href="events.html#TextEditingEvent"><span class="Identifier">TextEditingEvent</span></a> {.<span class="Identifier">final</span><span class="Other">,</span> <span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_TEXT_EDITING`.</span>
   <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>         <span class="Comment">## Timestamp (ns).</span>
   <span class="Identifier">window_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="video.html#WindowID"><span class="Identifier">WindowID</span></a>       <span class="Comment">## Window with keyboard focus (if any).</span>
-  <span class="Identifier">text</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="Identifier">TEXTEDITINGEVENT_TEXT_SIZE</span><span class="Other">,</span> <span class="Identifier">char</span><span class="Other">]</span> <span class="Comment">## The editing text.</span>
+  <span class="Identifier">text</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>             <span class="Comment">## The editing text.</span>
   <span class="Identifier">start</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">int32</span>              <span class="Comment">## Selected editing text start cursor.</span>
   <span class="Identifier">length</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">int32</span>             <span class="Comment">## Selected editing text length.</span>
   </pre></dt>
   <dd>
     
-    Keyboard text editing event.
-    
-  </dd>
-</div>
-<div id="TextEditingExtEvent">
-  <dt><pre><a href="events.html#TextEditingExtEvent"><span class="Identifier">TextEditingExtEvent</span></a> {.<span class="Identifier">final</span><span class="Other">,</span> <span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_TEXT_EDITING_EXT`.</span>
-  <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>         <span class="Comment">## Timestamp (ns).</span>
-  <span class="Identifier">window_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="video.html#WindowID"><span class="Identifier">WindowID</span></a>       <span class="Comment">## Window with keyboard focus (if any).</span>
-  <span class="Identifier">text</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>             <span class="Comment">## The editing text. Must be freed.</span>
-  <span class="Identifier">start</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">int32</span>              <span class="Comment">## Selected editing text start cursor.</span>
-  <span class="Identifier">length</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">int32</span>             <span class="Comment">## Selected editing text length.</span>
-  </pre></dt>
-  <dd>
-    
-    Extended keyboard text editing event.
+    Keyboard text editing event.<div class="admonition admonition-info"><span class="admonition-info-text"><b>Note:</b></span>
+This event should be cleaned up with <tt class="docutils literal"><span class="pre"><span class="Identifier">cleanup_event</span><span class="Punctuation">(</span><span class="Punctuation">)</span></span></tt> after processing.</div>
+
     
   </dd>
 </div>
@@ -830,11 +875,13 @@
   <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_TEXT_INPUT`.</span>
   <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>         <span class="Comment">## Timestamp (ns).</span>
   <span class="Identifier">window_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="video.html#WindowID"><span class="Identifier">WindowID</span></a>       <span class="Comment">## Window with keyboard focus (if any).</span>
-  <span class="Identifier">text</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="Identifier">TEXTINPUTEVENT_TEXT_SIZE</span><span class="Other">,</span> <span class="Identifier">char</span><span class="Other">]</span> <span class="Comment">## The input text.</span>
+  <span class="Identifier">text</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>             <span class="Comment">## The input text.</span>
   </pre></dt>
   <dd>
     
-    Keyboard text input event.
+    Keyboard text input event.<div class="admonition admonition-info"><span class="admonition-info-text"><b>Note:</b></span>
+This event should be cleaned up with <tt class="docutils literal"><span class="pre"><span class="Identifier">cleanup_event</span><span class="Punctuation">(</span><span class="Punctuation">)</span></span></tt> after processing.</div>
+
     
   </dd>
 </div>
@@ -842,8 +889,8 @@
   <dt><pre><a href="events.html#TouchFingerEvent"><span class="Identifier">TouchFingerEvent</span></a> {.<span class="Identifier">final</span><span class="Other">,</span> <span class="Identifier">pure</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="events.html#EventType"><span class="Identifier">EventType</span></a>            <span class="Comment">## `EVENT_FINGER_MOTION`, `EVENT_FINGER_DOWN` or `EVENT_FINGER_UP`.</span>
   <span class="Identifier">timestamp</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">uint64</span>         <span class="Comment">## Timestamp (ns).</span>
-  <span class="Identifier">touchId</span><span class="Operator">*</span><span class="Other">:</span> <a href="touch.html#TouchID"><span class="Identifier">TouchID</span></a>          <span class="Comment">## Touch ID.</span>
-  <span class="Identifier">fingerId</span><span class="Operator">*</span><span class="Other">:</span> <a href="touch.html#FingerID"><span class="Identifier">FingerID</span></a>
+  <span class="Identifier">touch_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="touch.html#TouchID"><span class="Identifier">TouchID</span></a>         <span class="Comment">## Touch ID.</span>
+  <span class="Identifier">finger_id</span><span class="Operator">*</span><span class="Other">:</span> <a href="touch.html#FingerID"><span class="Identifier">FingerID</span></a>
   <span class="Identifier">x</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## Normalized, range 0 - 1.</span>
   <span class="Identifier">y</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                 <span class="Comment">## Normalized, range 0 - 1.</span>
   <span class="Identifier">dx</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cfloat</span>                <span class="Comment">## Normalized, range -1 - 1.</span>
@@ -955,7 +1002,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-10-29 19:19:21 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-12-13 21:23:01 UTC</small>
       </div>
     </div>
   </div>

@@ -1,2 +1,3 @@
-nimTitle	properties	dlsdl3/sdl3inc/properties.html	module src/dlsdl3/sdl3inc/properties		0
-nim	PropertiesID	dlsdl3/sdl3inc/properties.html#PropertiesID	type PropertiesID		7
+nimTitle	properties	dynlibsdl3/sdl3inc/properties.html	module dynlibsdl3/sdl3inc/properties		0
+nim	PropertiesID	dynlibsdl3/sdl3inc/properties.html#PropertiesID	type PropertiesID		7
+nim	PropertyType	dynlibsdl3/sdl3inc/properties.html#PropertyType	enum PropertyType		10

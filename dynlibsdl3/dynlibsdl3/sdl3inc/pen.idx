@@ -1,0 +1,11 @@
+nimTitle	pen	dynlibsdl3/sdl3inc/pen.html	module dynlibsdl3/sdl3inc/pen		0
+nim	PenID	dynlibsdl3/sdl3inc/pen.html#PenID	type PenID		7
+nim	PEN_INVALID	dynlibsdl3/sdl3inc/pen.html#PEN_INVALID	const PEN_INVALID		11
+nim	PEN_MOUSEID	dynlibsdl3/sdl3inc/pen.html#PEN_MOUSEID	const PEN_MOUSEID		13
+nim	PEN_INFO_UNKNOWN	dynlibsdl3/sdl3inc/pen.html#PEN_INFO_UNKNOWN	const PEN_INFO_UNKNOWN		16
+nim	PenAxis	dynlibsdl3/sdl3inc/pen.html#PenAxis	enum PenAxis		20
+nim	PEN_NUM_AXES	dynlibsdl3/sdl3inc/pen.html#PEN_NUM_AXES	const PEN_NUM_AXES		32
+nim	PEN_AXIS_LAST	dynlibsdl3/sdl3inc/pen.html#PEN_AXIS_LAST	const PEN_AXIS_LAST		35
+nim	PenSubtype	dynlibsdl3/sdl3inc/pen.html#PenSubtype	enum PenSubtype		66
+nim	PEN_TYPE_LAST	dynlibsdl3/sdl3inc/pen.html#PEN_TYPE_LAST	const PEN_TYPE_LAST		77
+nim	PenCapabilityInfo	dynlibsdl3/sdl3inc/pen.html#PenCapabilityInfo	object PenCapabilityInfo		80

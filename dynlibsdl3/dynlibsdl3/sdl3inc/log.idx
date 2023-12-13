@@ -1,4 +1,4 @@
-nimTitle	log	dlsdl3/sdl3inc/log.html	module src/dlsdl3/sdl3inc/log		0
-nim	LogCategory	dlsdl3/sdl3inc/log.html#LogCategory	enum LogCategory		9
-nim	LogPriority	dlsdl3/sdl3inc/log.html#LogPriority	enum LogPriority		34
-nim	LogOutputFunction	dlsdl3/sdl3inc/log.html#LogOutputFunction	type LogOutputFunction		43
+nimTitle	log	dynlibsdl3/sdl3inc/log.html	module dynlibsdl3/sdl3inc/log		0
+nim	LogCategory	dynlibsdl3/sdl3inc/log.html#LogCategory	enum LogCategory		9
+nim	LogPriority	dynlibsdl3/sdl3inc/log.html#LogPriority	enum LogPriority		34
+nim	LogOutputFunction	dynlibsdl3/sdl3inc/log.html#LogOutputFunction	type LogOutputFunction		43

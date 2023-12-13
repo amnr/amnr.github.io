@@ -8,5 +8,6 @@
 
 - [dynlibx11](dynlibx11/) - X11 client library
 
-- [rsdl1](rsdl1/) - SDL 1.2
-- [rsdl2](rsdl2/) - SDL 2.0
+- [dynlibsdl1](dynlibsdl1/) - SDL 1.2
+- [dynlibsdl2](dynlibsdl2/) - SDL 2.0
+- [dynlibsdl2](dynlibsdl2/) - SDL 3.0

@@ -1,5 +1,5 @@
-nimTitle	sensor	dlsdl3/sdl3inc/sensor.html	module src/dlsdl3/sdl3inc/sensor		0
-nim	SensorPtr	dlsdl3/sdl3inc/sensor.html#SensorPtr	type SensorPtr		12
-nim	SensorID	dlsdl3/sdl3inc/sensor.html#SensorID	type SensorID		15
-nim	SensorType	dlsdl3/sdl3inc/sensor.html#SensorType	enum SensorType		20
-nim	STANDARD_GRAVITY	dlsdl3/sdl3inc/sensor.html#STANDARD_GRAVITY	const STANDARD_GRAVITY		32
+nimTitle	sensor	dynlibsdl3/sdl3inc/sensor.html	module dynlibsdl3/sdl3inc/sensor		0
+nim	SensorPtr	dynlibsdl3/sdl3inc/sensor.html#SensorPtr	type SensorPtr		12
+nim	SensorID	dynlibsdl3/sdl3inc/sensor.html#SensorID	type SensorID		15
+nim	SensorType	dynlibsdl3/sdl3inc/sensor.html#SensorType	enum SensorType		20
+nim	STANDARD_GRAVITY	dynlibsdl3/sdl3inc/sensor.html#STANDARD_GRAVITY	const STANDARD_GRAVITY		32

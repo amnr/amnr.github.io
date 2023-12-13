@@ -1,11 +1,11 @@
-nimTitle	blendmode	dlsdl3/sdl3inc/blendmode.html	module src/dlsdl3/sdl3inc/blendmode		0
-nim	BlendMode	dlsdl3/sdl3inc/blendmode.html#BlendMode	type BlendMode		7
-nim	`or`	dlsdl3/sdl3inc/blendmode.html#or,BlendMode,BlendMode	proc `or`(a, b: BlendMode): BlendMode		10
-nim	BLENDMODE_NONE	dlsdl3/sdl3inc/blendmode.html#BLENDMODE_NONE	const BLENDMODE_NONE		13
-nim	BLENDMODE_BLEND	dlsdl3/sdl3inc/blendmode.html#BLENDMODE_BLEND	const BLENDMODE_BLEND		14
-nim	BLENDMODE_ADD	dlsdl3/sdl3inc/blendmode.html#BLENDMODE_ADD	const BLENDMODE_ADD		15
-nim	BLENDMODE_MOD	dlsdl3/sdl3inc/blendmode.html#BLENDMODE_MOD	const BLENDMODE_MOD		16
-nim	BLENDMODE_MUL	dlsdl3/sdl3inc/blendmode.html#BLENDMODE_MUL	const BLENDMODE_MUL		17
-nim	BLENDMODE_INVALID	dlsdl3/sdl3inc/blendmode.html#BLENDMODE_INVALID	const BLENDMODE_INVALID		18
-nim	BlendOperation	dlsdl3/sdl3inc/blendmode.html#BlendOperation	enum BlendOperation		21
-nim	BlendFactor	dlsdl3/sdl3inc/blendmode.html#BlendFactor	enum BlendFactor		30
+nimTitle	blendmode	dynlibsdl3/sdl3inc/blendmode.html	module dynlibsdl3/sdl3inc/blendmode		0
+nim	BlendMode	dynlibsdl3/sdl3inc/blendmode.html#BlendMode	type BlendMode		7
+nim	`or`	dynlibsdl3/sdl3inc/blendmode.html#or,BlendMode,BlendMode	proc `or`(a, b: BlendMode): BlendMode		10
+nim	BLENDMODE_NONE	dynlibsdl3/sdl3inc/blendmode.html#BLENDMODE_NONE	const BLENDMODE_NONE		13
+nim	BLENDMODE_BLEND	dynlibsdl3/sdl3inc/blendmode.html#BLENDMODE_BLEND	const BLENDMODE_BLEND		14
+nim	BLENDMODE_ADD	dynlibsdl3/sdl3inc/blendmode.html#BLENDMODE_ADD	const BLENDMODE_ADD		15
+nim	BLENDMODE_MOD	dynlibsdl3/sdl3inc/blendmode.html#BLENDMODE_MOD	const BLENDMODE_MOD		16
+nim	BLENDMODE_MUL	dynlibsdl3/sdl3inc/blendmode.html#BLENDMODE_MUL	const BLENDMODE_MUL		17
+nim	BLENDMODE_INVALID	dynlibsdl3/sdl3inc/blendmode.html#BLENDMODE_INVALID	const BLENDMODE_INVALID		18
+nim	BlendOperation	dynlibsdl3/sdl3inc/blendmode.html#BlendOperation	enum BlendOperation		21
+nim	BlendFactor	dynlibsdl3/sdl3inc/blendmode.html#BlendFactor	enum BlendFactor		30

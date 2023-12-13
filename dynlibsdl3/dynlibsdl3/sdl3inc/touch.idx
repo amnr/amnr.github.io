@@ -1,7 +1,7 @@
-nimTitle	touch	dlsdl3/sdl3inc/touch.html	module src/dlsdl3/sdl3inc/touch		0
-nim	TouchID	dlsdl3/sdl3inc/touch.html#TouchID	type TouchID		9
-nim	FingerID	dlsdl3/sdl3inc/touch.html#FingerID	type FingerID		10
-nim	TouchDeviceType	dlsdl3/sdl3inc/touch.html#TouchDeviceType	enum TouchDeviceType		12
-nim	Finger	dlsdl3/sdl3inc/touch.html#Finger	object Finger		18
-nim	TOUCH_MOUSEID	dlsdl3/sdl3inc/touch.html#TOUCH_MOUSEID	const TOUCH_MOUSEID		25
-nim	MOUSE_TOUCHID	dlsdl3/sdl3inc/touch.html#MOUSE_TOUCHID	const MOUSE_TOUCHID		28
+nimTitle	touch	dynlibsdl3/sdl3inc/touch.html	module dynlibsdl3/sdl3inc/touch		0
+nim	TouchID	dynlibsdl3/sdl3inc/touch.html#TouchID	type TouchID		9
+nim	FingerID	dynlibsdl3/sdl3inc/touch.html#FingerID	type FingerID		10
+nim	TouchDeviceType	dynlibsdl3/sdl3inc/touch.html#TouchDeviceType	enum TouchDeviceType		12
+nim	Finger	dynlibsdl3/sdl3inc/touch.html#Finger	object Finger		18
+nim	TOUCH_MOUSEID	dynlibsdl3/sdl3inc/touch.html#TOUCH_MOUSEID	const TOUCH_MOUSEID		25
+nim	MOUSE_TOUCHID	dynlibsdl3/sdl3inc/touch.html#MOUSE_TOUCHID	const MOUSE_TOUCHID		28

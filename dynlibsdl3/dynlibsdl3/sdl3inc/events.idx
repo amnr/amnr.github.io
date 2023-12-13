@@ -1,40 +1,39 @@
-nimTitle	events	dlsdl3/sdl3inc/events.html	module src/dlsdl3/sdl3inc/events		0
-nim	RELEASED	dlsdl3/sdl3inc/events.html#RELEASED	const RELEASED		18
-nim	PRESSED	dlsdl3/sdl3inc/events.html#PRESSED	const PRESSED		19
-nim	EventType	dlsdl3/sdl3inc/events.html#EventType	enum EventType		22
-nim	CommonEvent	dlsdl3/sdl3inc/events.html#CommonEvent	object CommonEvent		156
-nim	DisplayEvent	dlsdl3/sdl3inc/events.html#DisplayEvent	object DisplayEvent		161
-nim	WindowEvent	dlsdl3/sdl3inc/events.html#WindowEvent	object WindowEvent		168
-nim	KeyboardEvent	dlsdl3/sdl3inc/events.html#KeyboardEvent	object KeyboardEvent		176
-nim	TextEditingEvent	dlsdl3/sdl3inc/events.html#TextEditingEvent	object TextEditingEvent		191
-nim	TextEditingExtEvent	dlsdl3/sdl3inc/events.html#TextEditingExtEvent	object TextEditingExtEvent		200
-nim	TextInputEvent	dlsdl3/sdl3inc/events.html#TextInputEvent	object TextInputEvent		213
-nim	MouseMotionEvent	dlsdl3/sdl3inc/events.html#MouseMotionEvent	object MouseMotionEvent		220
-nim	MouseButtonEvent	dlsdl3/sdl3inc/events.html#MouseButtonEvent	object MouseButtonEvent		232
-nim	MouseWheelEvent	dlsdl3/sdl3inc/events.html#MouseWheelEvent	object MouseWheelEvent		245
-nim	JoyAxisEvent	dlsdl3/sdl3inc/events.html#JoyAxisEvent	object JoyAxisEvent		259
-nim	JoyHatEvent	dlsdl3/sdl3inc/events.html#JoyHatEvent	object JoyHatEvent		271
-nim	JoyButtonEvent	dlsdl3/sdl3inc/events.html#JoyButtonEvent	object JoyButtonEvent		281
-nim	JoyDeviceEvent	dlsdl3/sdl3inc/events.html#JoyDeviceEvent	object JoyDeviceEvent		291
-nim	JoyBatteryEvent	dlsdl3/sdl3inc/events.html#JoyBatteryEvent	object JoyBatteryEvent		297
-nim	GamepadAxisEvent	dlsdl3/sdl3inc/events.html#GamepadAxisEvent	object GamepadAxisEvent		304
-nim	GamepadButtonEvent	dlsdl3/sdl3inc/events.html#GamepadButtonEvent	object GamepadButtonEvent		316
-nim	GamepadDeviceEvent	dlsdl3/sdl3inc/events.html#GamepadDeviceEvent	object GamepadDeviceEvent		326
-nim	GamepadTouchpadEvent	dlsdl3/sdl3inc/events.html#GamepadTouchpadEvent	object GamepadTouchpadEvent		336
-nim	GamepadSensorEvent	dlsdl3/sdl3inc/events.html#GamepadSensorEvent	object GamepadSensorEvent		349
-nim	AudioDeviceEvent	dlsdl3/sdl3inc/events.html#AudioDeviceEvent	object AudioDeviceEvent		358
-nim	TouchFingerEvent	dlsdl3/sdl3inc/events.html#TouchFingerEvent	object TouchFingerEvent		370
-nim	DropEvent	dlsdl3/sdl3inc/events.html#DropEvent	object DropEvent		383
-nim	ClipboardEvent	dlsdl3/sdl3inc/events.html#ClipboardEvent	object ClipboardEvent		394
-nim	SensorEvent	dlsdl3/sdl3inc/events.html#SensorEvent	object SensorEvent		399
-nim	QuitEvent	dlsdl3/sdl3inc/events.html#QuitEvent	object QuitEvent		409
-nim	OSEvent	dlsdl3/sdl3inc/events.html#OSEvent	object OSEvent		414
-nim	UserEvent	dlsdl3/sdl3inc/events.html#UserEvent	object UserEvent		419
-nim	SysWMmsgPtr	dlsdl3/sdl3inc/events.html#SysWMmsgPtr	type SysWMmsgPtr		430
-nim	SysWMEvent	dlsdl3/sdl3inc/events.html#SysWMEvent	object SysWMEvent		432
-nim	Event	dlsdl3/sdl3inc/events.html#Event	object Event		439
-nim	EventAction	dlsdl3/sdl3inc/events.html#EventAction	enum EventAction		479
-nim	`$`	dlsdl3/sdl3inc/events.html#$,Event	proc `$`(event: Event): string		495
-nim	repr	dlsdl3/sdl3inc/events.html#repr,Event	proc repr(event: Event): string		496
-nim	repr	dlsdl3/sdl3inc/events.html#repr,ptr.Event	proc repr(event: ptr Event): string		498
-nimgrp	repr	dlsdl3/sdl3inc/events.html#repr-procs-all	proc		496
+nimTitle	events	dynlibsdl3/sdl3inc/events.html	module dynlibsdl3/sdl3inc/events		0
+nim	RELEASED	dynlibsdl3/sdl3inc/events.html#RELEASED	const RELEASED		19
+nim	PRESSED	dynlibsdl3/sdl3inc/events.html#PRESSED	const PRESSED		20
+nim	EventType	dynlibsdl3/sdl3inc/events.html#EventType	enum EventType		23
+nim	CommonEvent	dynlibsdl3/sdl3inc/events.html#CommonEvent	object CommonEvent		165
+nim	DisplayEvent	dynlibsdl3/sdl3inc/events.html#DisplayEvent	object DisplayEvent		170
+nim	WindowEvent	dynlibsdl3/sdl3inc/events.html#WindowEvent	object WindowEvent		177
+nim	KeyboardEvent	dynlibsdl3/sdl3inc/events.html#KeyboardEvent	object KeyboardEvent		185
+nim	TextEditingEvent	dynlibsdl3/sdl3inc/events.html#TextEditingEvent	object TextEditingEvent		200
+nim	TextInputEvent	dynlibsdl3/sdl3inc/events.html#TextInputEvent	object TextInputEvent		215
+nim	MouseMotionEvent	dynlibsdl3/sdl3inc/events.html#MouseMotionEvent	object MouseMotionEvent		224
+nim	MouseButtonEvent	dynlibsdl3/sdl3inc/events.html#MouseButtonEvent	object MouseButtonEvent		236
+nim	MouseWheelEvent	dynlibsdl3/sdl3inc/events.html#MouseWheelEvent	object MouseWheelEvent		249
+nim	JoyAxisEvent	dynlibsdl3/sdl3inc/events.html#JoyAxisEvent	object JoyAxisEvent		263
+nim	JoyHatEvent	dynlibsdl3/sdl3inc/events.html#JoyHatEvent	object JoyHatEvent		275
+nim	JoyButtonEvent	dynlibsdl3/sdl3inc/events.html#JoyButtonEvent	object JoyButtonEvent		285
+nim	JoyDeviceEvent	dynlibsdl3/sdl3inc/events.html#JoyDeviceEvent	object JoyDeviceEvent		295
+nim	JoyBatteryEvent	dynlibsdl3/sdl3inc/events.html#JoyBatteryEvent	object JoyBatteryEvent		301
+nim	GamepadAxisEvent	dynlibsdl3/sdl3inc/events.html#GamepadAxisEvent	object GamepadAxisEvent		308
+nim	GamepadButtonEvent	dynlibsdl3/sdl3inc/events.html#GamepadButtonEvent	object GamepadButtonEvent		320
+nim	GamepadDeviceEvent	dynlibsdl3/sdl3inc/events.html#GamepadDeviceEvent	object GamepadDeviceEvent		330
+nim	GamepadTouchpadEvent	dynlibsdl3/sdl3inc/events.html#GamepadTouchpadEvent	object GamepadTouchpadEvent		340
+nim	GamepadSensorEvent	dynlibsdl3/sdl3inc/events.html#GamepadSensorEvent	object GamepadSensorEvent		353
+nim	AudioDeviceEvent	dynlibsdl3/sdl3inc/events.html#AudioDeviceEvent	object AudioDeviceEvent		362
+nim	TouchFingerEvent	dynlibsdl3/sdl3inc/events.html#TouchFingerEvent	object TouchFingerEvent		374
+nim	PenTipEvent	dynlibsdl3/sdl3inc/events.html#PenTipEvent	object PenTipEvent		391
+nim	PenMotionEvent	dynlibsdl3/sdl3inc/events.html#PenMotionEvent	object PenMotionEvent		406
+nim	PenButtonEvent	dynlibsdl3/sdl3inc/events.html#PenButtonEvent	object PenButtonEvent		421
+nim	DropEvent	dynlibsdl3/sdl3inc/events.html#DropEvent	object DropEvent		436
+nim	ClipboardEvent	dynlibsdl3/sdl3inc/events.html#ClipboardEvent	object ClipboardEvent		449
+nim	SensorEvent	dynlibsdl3/sdl3inc/events.html#SensorEvent	object SensorEvent		454
+nim	QuitEvent	dynlibsdl3/sdl3inc/events.html#QuitEvent	object QuitEvent		464
+nim	UserEvent	dynlibsdl3/sdl3inc/events.html#UserEvent	object UserEvent		469
+nim	Event	dynlibsdl3/sdl3inc/events.html#Event	object Event		479
+nim	EventAction	dynlibsdl3/sdl3inc/events.html#EventAction	enum EventAction		520
+nim	`$`	dynlibsdl3/sdl3inc/events.html#$,Event	proc `$`(event: Event): string		536
+nim	repr	dynlibsdl3/sdl3inc/events.html#repr,Event	proc repr(event: Event): string		537
+nim	repr	dynlibsdl3/sdl3inc/events.html#repr,ptr.Event	proc repr(event: ptr Event): string		539
+nimgrp	repr	dynlibsdl3/sdl3inc/events.html#repr-procs-all	proc		537

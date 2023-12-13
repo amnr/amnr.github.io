@@ -1,8 +1,12 @@
-nimTitle	timer	dlsdl3/sdl3inc/timer.html	module src/dlsdl3/sdl3inc/timer		0
-nim	MS_PER_SECOND	dlsdl3/sdl3inc/timer.html#MS_PER_SECOND	const MS_PER_SECOND		8
-nim	US_PER_SECOND	dlsdl3/sdl3inc/timer.html#US_PER_SECOND	const US_PER_SECOND		9
-nim	NS_PER_SECOND	dlsdl3/sdl3inc/timer.html#NS_PER_SECOND	const NS_PER_SECOND		10
-nim	NS_PER_MS	dlsdl3/sdl3inc/timer.html#NS_PER_MS	const NS_PER_MS		11
-nim	NS_PER_US	dlsdl3/sdl3inc/timer.html#NS_PER_US	const NS_PER_US		12
-nim	TimerCallback	dlsdl3/sdl3inc/timer.html#TimerCallback	type TimerCallback		20
-nim	TimerID	dlsdl3/sdl3inc/timer.html#TimerID	type TimerID		23
+nimTitle	timer	dynlibsdl3/sdl3inc/timer.html	module dynlibsdl3/sdl3inc/timer		0
+nim	MS_PER_SECOND	dynlibsdl3/sdl3inc/timer.html#MS_PER_SECOND	const MS_PER_SECOND		8
+nim	US_PER_SECOND	dynlibsdl3/sdl3inc/timer.html#US_PER_SECOND	const US_PER_SECOND		9
+nim	NS_PER_SECOND	dynlibsdl3/sdl3inc/timer.html#NS_PER_SECOND	const NS_PER_SECOND		10
+nim	NS_PER_MS	dynlibsdl3/sdl3inc/timer.html#NS_PER_MS	const NS_PER_MS		11
+nim	NS_PER_US	dynlibsdl3/sdl3inc/timer.html#NS_PER_US	const NS_PER_US		12
+nim	ms_to_ns	dynlibsdl3/sdl3inc/timer.html#ms_to_ns,T	proc ms_to_ns[T: SomeInteger](ms: T): uint64		14
+nim	ns_to_ms	dynlibsdl3/sdl3inc/timer.html#ns_to_ms,T	proc ns_to_ms[T: SomeInteger](ns: T): T		17
+nim	us_to_ns	dynlibsdl3/sdl3inc/timer.html#us_to_ns,T	proc us_to_ns[T: SomeInteger](us: T): uint64		20
+nim	ns_to_us	dynlibsdl3/sdl3inc/timer.html#ns_to_us,T	proc ns_to_us[T: SomeInteger](ns: T): T		23
+nim	TimerCallback	dynlibsdl3/sdl3inc/timer.html#TimerCallback	type TimerCallback		27
+nim	TimerID	dynlibsdl3/sdl3inc/timer.html#TimerID	type TimerID		30

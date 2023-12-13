@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>src/dlsdl3/sdl3inc/audio</title>
+<title>dynlibsdl3/sdl3inc/audio</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
@@ -20,7 +20,7 @@
 <body>
   <div class="document" id="documentId">
     <div class="container">
-      <h1 class="title">src/dlsdl3/sdl3inc/audio</h1>
+      <h1 class="title">dynlibsdl3/sdl3inc/audio</h1>
       <div class="row">
   <div class="three columns">
     <div class="theme-select-wrapper">
@@ -55,7 +55,7 @@
 <li><a class="reference" href="#AudioFormat" title="AudioFormat = distinct uint16">AudioFormat</a></li>
 <li><a class="reference" href="#AudioFormatFlags" title="AudioFormatFlags = distinct cint">AudioFormatFlags</a></li>
 <li><a class="reference" href="#AudioPostmixCallback" title="AudioPostmixCallback = proc (userdata: pointer; spec: ptr AudioSpec;
-                             buffer: ptr cfloat; buflen: cint) {.cdecl,
+                             buffer: ptr cfloat; buflen: cint) {.cdecl, gcsafe,
     raises: [].}">AudioPostmixCallback</a></li>
 <li><a class="reference" href="#AudioSpec" title="AudioSpec {.final, pure.} = object
   format*: AudioFormat       ## Audio data format.
@@ -63,7 +63,7 @@
   freq*: cint                ## Sample rate (sample frames per second).">AudioSpec</a></li>
 <li><a class="reference" href="#AudioStreamCallback" title="AudioStreamCallback = proc (userdata: pointer; stream: AudioStreamPtr;
                             additional_amount: cint; total_amount: cint) {.
-    cdecl, raises: [].}">AudioStreamCallback</a></li>
+    cdecl, gcsafe, raises: [].}">AudioStreamCallback</a></li>
 <li><a class="reference" href="#AudioStreamPtr" title="AudioStreamPtr = ptr AudioStream">AudioStreamPtr</a></li>
 
     </ul>
@@ -187,8 +187,8 @@
 </div>
 <div id="AudioPostmixCallback">
   <dt><pre><a href="audio.html#AudioPostmixCallback"><span class="Identifier">AudioPostmixCallback</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">userdata</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">spec</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="audio.html#AudioSpec"><span class="Identifier">AudioSpec</span></a><span class="Other">;</span>
-                             <span class="Identifier">buffer</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cfloat</span><span class="Other">;</span> <span class="Identifier">buflen</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+                             <span class="Identifier">buffer</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cfloat</span><span class="Other">;</span> <span class="Identifier">buflen</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
@@ -210,7 +210,7 @@
 <div id="AudioStreamCallback">
   <dt><pre><a href="audio.html#AudioStreamCallback"><span class="Identifier">AudioStreamCallback</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">userdata</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">stream</span><span class="Other">:</span> <a href="audio.html#AudioStreamPtr"><span class="Identifier">AudioStreamPtr</span></a><span class="Other">;</span>
                             <span class="Identifier">additional_amount</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">total_amount</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
-    <span class="Identifier">cdecl</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">cdecl</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
@@ -535,7 +535,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-10-29 19:19:21 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-12-13 21:23:01 UTC</small>
       </div>
     </div>
   </div>
