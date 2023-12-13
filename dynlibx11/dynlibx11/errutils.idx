@@ -1,6 +1,6 @@
 nimTitle	errutils	dynlibx11/errutils.html	module dynlibx11/errutils		0
-nim	xerror	dynlibx11/errutils.html#xerror.t,varargs[typed,]	template xerror(args: varargs[typed, `$`])		25
-nim	xwarn	dynlibx11/errutils.html#xwarn.t,varargs[typed,]	template xwarn(args: varargs[typed, `$`])		28
-nim	ensure_no_error	dynlibx11/errutils.html#ensure_no_error.t,string,untyped	template ensure_no_error(procname: string; body: untyped)		33
-nim	ensure_non_zero	dynlibx11/errutils.html#ensure_non_zero.t,string,untyped	template ensure_non_zero(procname: string; body: untyped)		48
-nim	ensure_not_nil	dynlibx11/errutils.html#ensure_not_nil.t,string,untyped	template ensure_not_nil(procname: string; body: untyped)		56
+nim	xerror	dynlibx11/errutils.html#xerror.t,varargs[typed,]	template xerror(args: varargs[typed, `$`])		27
+nim	xwarn	dynlibx11/errutils.html#xwarn.t,varargs[typed,]	template xwarn(args: varargs[typed, `$`])		30
+nim	ensure_no_error	dynlibx11/errutils.html#ensure_no_error.t,string,untyped	template ensure_no_error(procname: string; body: untyped)		44
+nim	ensure_status_ok	dynlibx11/errutils.html#ensure_status_ok.t,string,untyped	template ensure_status_ok(procname: string; body: untyped)		58
+nim	ensure_not_nil	dynlibx11/errutils.html#ensure_not_nil.t,string,untyped	template ensure_not_nil(procname: string; body: untyped)		82

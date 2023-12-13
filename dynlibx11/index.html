@@ -60,6 +60,10 @@
   <li><a class="reference" href="#alloc_class_hint" title="alloc_class_hint(): ptr XClassHint">alloc_class_hint(): ptr XClassHint</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">alloc_color
+  <li><a class="reference" href="#alloc_color%2CDisplay%2CColormap%2CXColor" title="alloc_color(display: Display; colormap: Colormap; screen_in_out: var XColor): bool">alloc_color(display: Display; colormap: Colormap; screen_in_out: var XColor): bool</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">auto_repeat
   <li><a class="reference" href="#auto_repeat%2CDisplay%2Cbool" title="auto_repeat(display: Display; on: bool): bool">auto_repeat(display: Display; on: bool): bool</a></li>
 
@@ -71,6 +75,10 @@
 <ul class="simple nested-toc-section">black_pixel
   <li><a class="reference" href="#black_pixel%2CDisplay%2Cint" title="black_pixel(display: Display; screen_number: int): culong">black_pixel(display: Display; screen_number: int): culong</a></li>
 <li><a class="reference" href="#black_pixel%2Cptr.Screen" title="black_pixel(screen: ptr Screen): culong">black_pixel(screen: ptr Screen): culong</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">black_pixel_of_screen
+  <li><a class="reference" href="#black_pixel_of_screen%2Cptr.Screen" title="black_pixel_of_screen(screen: ptr Screen): culong">black_pixel_of_screen(screen: ptr Screen): culong</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">change_property
@@ -157,17 +165,21 @@
 
 </ul>
 <ul class="simple nested-toc-section">draw_line
-  <li><a class="reference" href="#draw_line%2CDisplay%2CDrawable%2CGC%2Cint%2Cint%2Cint%2Cint" title="draw_line(display: Display; drawable: Drawable; gc: GC; x1, y1: int; x2, y2: int): int">draw_line(display: Display; drawable: Drawable; gc: GC; x1, y1: int; x2, y2: int): int</a></li>
+  <li><a class="reference" href="#draw_line%2CDisplay%2CDrawable%2CGC%2Cint%2Cint%2Cint%2Cint" title="draw_line(display: Display; drawable: Drawable; gc: GC; x1, y1: int; x2, y2: int): bool">draw_line(display: Display; drawable: Drawable; gc: GC; x1, y1: int; x2, y2: int): bool</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">draw_point
+  <li><a class="reference" href="#draw_point%2CDisplay%2CDrawable%2CGC%2Cint%2Cint" title="draw_point(display: Display; drawable: Drawable; gc: GC; x: int; y: int): bool">draw_point(display: Display; drawable: Drawable; gc: GC; x: int; y: int): bool</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">draw_segments
   <li><a class="reference" href="#draw_segments%2CDisplay%2CDrawable%2CGC%2CopenArray%5BXSegment%5D%2Cint" title="draw_segments(display: Display; drawable: Drawable; gc: GC;
-              segments: openArray[XSegment]; nsegments: int): int">draw_segments(display: Display; drawable: Drawable; gc: GC;
-              segments: openArray[XSegment]; nsegments: int): int</a></li>
+              segments: openArray[XSegment]; nsegments: int): bool">draw_segments(display: Display; drawable: Drawable; gc: GC;
+              segments: openArray[XSegment]; nsegments: int): bool</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">draw_string
-  <li><a class="reference" href="#draw_string%2CDisplay%2CDrawable%2CGC%2Cint%2Cint%2Cstring" title="draw_string(display: Display; drawable: Drawable; gc: GC; x, y: int; str: string): int">draw_string(display: Display; drawable: Drawable; gc: GC; x, y: int; str: string): int</a></li>
+  <li><a class="reference" href="#draw_string%2CDisplay%2CDrawable%2CGC%2Cint%2Cint%2Cstring" title="draw_string(display: Display; drawable: Drawable; gc: GC; x, y: int; str: string): bool">draw_string(display: Display; drawable: Drawable; gc: GC; x, y: int; str: string): bool</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">fill_rectangle
@@ -201,8 +213,20 @@
 <li><a class="reference" href="#get_error_text%2CDisplay%2Cptr.XErrorEvent" title="get_error_text(display: Display; event: ptr XErrorEvent): string">get_error_text(display: Display; event: ptr XErrorEvent): string</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">height
+  <li><a class="reference" href="#height%2Cptr.Screen" title="height(screen: ptr Screen): int">height(screen: ptr Screen): int</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">height_of_screen
+  <li><a class="reference" href="#height_of_screen%2Cptr.Screen" title="height_of_screen(screen: ptr Screen): int">height_of_screen(screen: ptr Screen): int</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">intern_atom
   <li><a class="reference" href="#intern_atom%2CDisplay%2Cstring%2Cbool" title="intern_atom(display: Display; atom_name: string; only_if_exists: bool = false): Atom">intern_atom(display: Display; atom_name: string; only_if_exists: bool = false): Atom</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">keysym_to_keycode
+  <li><a class="reference" href="#keysym_to_keycode%2CDisplay%2CKeySym" title="keysym_to_keycode(display: Display; keysym: KeySym): KeyCode">keysym_to_keycode(display: Display; keysym: KeySym): KeyCode</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">load_query_font
@@ -211,6 +235,10 @@
 </ul>
 <ul class="simple nested-toc-section">map
   <li><a class="reference" href="#map%2CDisplay%2CWindow" title="map(display: Display; window: Window): bool">map(display: Display; window: Window): bool</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">map_raised
+  <li><a class="reference" href="#map_raised%2CDisplay%2CWindow" title="map_raised(display: Display; window: Window): bool">map_raised(display: Display; window: Window): bool</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">next_event
@@ -247,8 +275,12 @@
 </ul>
 <ul class="simple nested-toc-section">send_event
   <li><a class="reference" href="#send_event%2CDisplay%2CWindow%2Cbool%2CEventMask%2CXEvent" title="send_event(display: Display; window: Window; propagate: bool;
-           event_mask: EventMask; event_send: var XEvent): Status">send_event(display: Display; window: Window; propagate: bool;
-           event_mask: EventMask; event_send: var XEvent): Status</a></li>
+           event_mask: EventMask; event_send: var XEvent): bool">send_event(display: Display; window: Window; propagate: bool;
+           event_mask: EventMask; event_send: var XEvent): bool</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">set_background
+  <li><a class="reference" href="#set_background%2CDisplay%2CGC%2Cculong" title="set_background(display: Display; gc: GC; background: culong): bool">set_background(display: Display; gc: GC; background: culong): bool</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">set_class_hint
@@ -259,6 +291,10 @@
   <li><a class="reference" href="#set_error_handler%2CXErrorHandler" title="set_error_handler(handler: XErrorHandler): XErrorHandler">set_error_handler(handler: XErrorHandler): XErrorHandler</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">set_foreground
+  <li><a class="reference" href="#set_foreground%2CDisplay%2CGC%2Cculong" title="set_foreground(display: Display; gc: GC; foreground: culong): bool">set_foreground(display: Display; gc: GC; foreground: culong): bool</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">set_icon_name
   <li><a class="reference" href="#set_icon_name%2CDisplay%2CWindow%2Cstring" title="set_icon_name(display: Display; window: Window; name: string): bool">set_icon_name(display: Display; window: Window; name: string): bool</a></li>
 
@@ -267,8 +303,16 @@
   <li><a class="reference" href="#set_io_error_handler%2CXIOErrorHandler" title="set_io_error_handler(handler: XIOErrorHandler): XIOErrorHandler">set_io_error_handler(handler: XIOErrorHandler): XIOErrorHandler</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">set_window_border
+  <li><a class="reference" href="#set_window_border%2CDisplay%2CWindow%2Cculong" title="set_window_border(display: Display; window: Window; border_pixel: culong): bool">set_window_border(display: Display; window: Window; border_pixel: culong): bool</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">set_window_border_width
+  <li><a class="reference" href="#set_window_border_width%2CDisplay%2CWindow%2Cuint" title="set_window_border_width(display: Display; window: Window; width: uint): bool">set_window_border_width(display: Display; window: Window; width: uint): bool</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">set_wm_protocols
-  <li><a class="reference" href="#set_wm_protocols%2CDisplay%2CWindow%2CAtom%2Cint" title="set_wm_protocols(display: Display; window: Window; protocols: Atom; count: int): Status">set_wm_protocols(display: Display; window: Window; protocols: Atom; count: int): Status</a></li>
+  <li><a class="reference" href="#set_wm_protocols%2CDisplay%2CWindow%2CAtom%2Cint" title="set_wm_protocols(display: Display; window: Window; protocols: Atom; count: int): bool">set_wm_protocols(display: Display; window: Window; protocols: Atom; count: int): bool</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">store_name
@@ -289,6 +333,19 @@
 </ul>
 <ul class="simple nested-toc-section">white_pixel
   <li><a class="reference" href="#white_pixel%2CDisplay%2Cint" title="white_pixel(display: Display; screen_number: int): culong">white_pixel(display: Display; screen_number: int): culong</a></li>
+<li><a class="reference" href="#white_pixel%2Cptr.Screen" title="white_pixel(screen: ptr Screen): culong">white_pixel(screen: ptr Screen): culong</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">white_pixel_of_screen
+  <li><a class="reference" href="#white_pixel_of_screen%2Cptr.Screen" title="white_pixel_of_screen(screen: ptr Screen): culong">white_pixel_of_screen(screen: ptr Screen): culong</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">width
+  <li><a class="reference" href="#width%2Cptr.Screen" title="width(screen: ptr Screen): int">width(screen: ptr Screen): int</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">width_of_screen
+  <li><a class="reference" href="#width_of_screen%2Cptr.Screen" title="width_of_screen(screen: ptr Screen): int">width_of_screen(screen: ptr Screen): int</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">x11_available
@@ -394,6 +451,18 @@
 </div>
 
 </div>
+<div id="alloc_color-procs-all">
+  <div id="alloc_color,Display,Colormap,XColor">
+  <dt><pre><span class="Keyword">proc</span> <a href="#alloc_color%2CDisplay%2CColormap%2CXColor"><span class="Identifier">alloc_color</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">colormap</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Colormap"><span class="Identifier">Colormap</span></a><span class="Other">;</span> <span class="Identifier">screen_in_out</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="dynlibx11/x11/xlib.html#XColor"><span class="Identifier">XColor</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XAllocColor</span></span></tt>.
+    
+  </dd>
+</div>
+
+</div>
 <div id="auto_repeat-procs-all">
   <div id="auto_repeat,Display,bool">
   <dt><pre><span class="Keyword">proc</span> <a href="#auto_repeat%2CDisplay%2Cbool"><span class="Identifier">auto_repeat</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">on</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
@@ -434,6 +503,18 @@
   <dd>
     
     <tt class="docutils literal"><span class="pre"><span class="Identifier">XBlackPixelOfScreen</span></span></tt>.
+    
+  </dd>
+</div>
+
+</div>
+<div id="black_pixel_of_screen-procs-all">
+  <div id="black_pixel_of_screen,ptr.Screen">
+  <dt><pre><span class="Keyword">proc</span> <a href="#black_pixel_of_screen%2Cptr.Screen"><span class="Identifier">black_pixel_of_screen</span></a><span class="Other">(</span><span class="Identifier">screen</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="dynlibx11/x11/xlib.html#Screen"><span class="Identifier">Screen</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">culong</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Alias of <tt class="docutils literal"><span class="pre"><span class="Identifier">XBlackPixelOfScreen</span></span></tt>.
     
   </dd>
 </div>
@@ -642,7 +723,20 @@
 <div id="draw_line-procs-all">
   <div id="draw_line,Display,Drawable,GC,int,int,int,int">
   <dt><pre><span class="Keyword">proc</span> <a href="#draw_line%2CDisplay%2CDrawable%2CGC%2Cint%2Cint%2Cint%2Cint"><span class="Identifier">draw_line</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">drawable</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Drawable"><span class="Identifier">Drawable</span></a><span class="Other">;</span> <span class="Identifier">gc</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#GC"><span class="Identifier">GC</span></a><span class="Other">;</span> <span class="Identifier">x1</span><span class="Other">,</span> <span class="Identifier">y1</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">;</span>
-               <span class="Identifier">x2</span><span class="Other">,</span> <span class="Identifier">y2</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+               <span class="Identifier">x2</span><span class="Other">,</span> <span class="Identifier">y2</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
+                                    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XDrawLine</span></span></tt>.
+    
+  </dd>
+</div>
+
+</div>
+<div id="draw_point-procs-all">
+  <div id="draw_point,Display,Drawable,GC,int,int">
+  <dt><pre><span class="Keyword">proc</span> <a href="#draw_point%2CDisplay%2CDrawable%2CGC%2Cint%2Cint"><span class="Identifier">draw_point</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">drawable</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Drawable"><span class="Identifier">Drawable</span></a><span class="Other">;</span> <span class="Identifier">gc</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#GC"><span class="Identifier">GC</span></a><span class="Other">;</span> <span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">;</span> <span class="Identifier">y</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
@@ -654,11 +748,11 @@
 <div id="draw_segments-procs-all">
   <div id="draw_segments,Display,Drawable,GC,openArray[XSegment],int">
   <dt><pre><span class="Keyword">proc</span> <a href="#draw_segments%2CDisplay%2CDrawable%2CGC%2CopenArray%5BXSegment%5D%2Cint"><span class="Identifier">draw_segments</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">drawable</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Drawable"><span class="Identifier">Drawable</span></a><span class="Other">;</span> <span class="Identifier">gc</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#GC"><span class="Identifier">GC</span></a><span class="Other">;</span>
-                   <span class="Identifier">segments</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><a href="dynlibx11/x11/xlib.html#XSegment"><span class="Identifier">XSegment</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">nsegments</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+                   <span class="Identifier">segments</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><a href="dynlibx11/x11/xlib.html#XSegment"><span class="Identifier">XSegment</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">nsegments</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XDrawSegments</span></span></tt>
     
   </dd>
 </div>
@@ -667,10 +761,11 @@
 <div id="draw_string-procs-all">
   <div id="draw_string,Display,Drawable,GC,int,int,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#draw_string%2CDisplay%2CDrawable%2CGC%2Cint%2Cint%2Cstring"><span class="Identifier">draw_string</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">drawable</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Drawable"><span class="Identifier">Drawable</span></a><span class="Other">;</span> <span class="Identifier">gc</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#GC"><span class="Identifier">GC</span></a><span class="Other">;</span> <span class="Identifier">x</span><span class="Other">,</span> <span class="Identifier">y</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">;</span>
-                 <span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+                 <span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
+                                      <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XDrawString</span></span></tt>.
     
   </dd>
 </div>
@@ -679,8 +774,8 @@
 <div id="fill_rectangle-procs-all">
   <div id="fill_rectangle,Display,Drawable,GC,int,int,uint,uint">
   <dt><pre><span class="Keyword">proc</span> <a href="#fill_rectangle%2CDisplay%2CDrawable%2CGC%2Cint%2Cint%2Cuint%2Cuint"><span class="Identifier">fill_rectangle</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">drawable</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Drawable"><span class="Identifier">Drawable</span></a><span class="Other">;</span> <span class="Identifier">gc</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#GC"><span class="Identifier">GC</span></a><span class="Other">;</span> <span class="Identifier">x</span><span class="Other">,</span> <span class="Identifier">y</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">;</span>
-                    <span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">height</span><span class="Other">:</span> <span class="Identifier">uint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+                    <span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">height</span><span class="Other">:</span> <span class="Identifier">uint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <tt class="docutils literal"><span class="pre"><span class="Identifier">XFillRectangle</span></span></tt>.
@@ -691,7 +786,8 @@
 </div>
 <div id="flush-procs-all">
   <div id="flush,Display">
-  <dt><pre><span class="Keyword">proc</span> <a href="#flush%2CDisplay"><span class="Identifier">flush</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#flush%2CDisplay"><span class="Identifier">flush</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <tt class="docutils literal"><span class="pre"><span class="Identifier">XFlush</span></span></tt>.
@@ -702,8 +798,8 @@
 </div>
 <div id="free-procs-all">
   <div id="free,ptr.XClassHint">
-  <dt><pre><span class="Keyword">proc</span> <a href="#free%2Cptr.XClassHint"><span class="Identifier">free</span></a><span class="Other">(</span><span class="Identifier">data</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="dynlibx11/x11/xutil.html#XClassHint"><span class="Identifier">XClassHint</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
-                                        <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#free%2Cptr.XClassHint"><span class="Identifier">free</span></a><span class="Other">(</span><span class="Identifier">data</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="dynlibx11/x11/xutil.html#XClassHint"><span class="Identifier">XClassHint</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <tt class="docutils literal"><span class="pre"><span class="Identifier">XFree</span></span></tt>.
@@ -711,7 +807,7 @@
   </dd>
 </div>
 <div id="free,Display,Colormap">
-  <dt><pre><span class="Keyword">proc</span> <a href="#free%2CDisplay%2CColormap"><span class="Identifier">free</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">colormap</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Colormap"><span class="Identifier">Colormap</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#free%2CDisplay%2CColormap"><span class="Identifier">free</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">colormap</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Colormap"><span class="Identifier">Colormap</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -720,8 +816,8 @@
   </dd>
 </div>
 <div id="free,Display,ptr.XFontStruct">
-  <dt><pre><span class="Keyword">proc</span> <a href="#free%2CDisplay%2Cptr.XFontStruct"><span class="Identifier">free</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">font_struct</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="dynlibx11/x11/xlib.html#XFontStruct"><span class="Identifier">XFontStruct</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#free%2CDisplay%2Cptr.XFontStruct"><span class="Identifier">free</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">font_struct</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="dynlibx11/x11/xlib.html#XFontStruct"><span class="Identifier">XFontStruct</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">discardable</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <tt class="docutils literal"><span class="pre"><span class="Identifier">XFreeFont</span></span></tt>.
@@ -729,8 +825,8 @@
   </dd>
 </div>
 <div id="free,Display,GC">
-  <dt><pre><span class="Keyword">proc</span> <a href="#free%2CDisplay%2CGC"><span class="Identifier">free</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">gc</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#GC"><span class="Identifier">GC</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#free%2CDisplay%2CGC"><span class="Identifier">free</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">gc</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#GC"><span class="Identifier">GC</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <tt class="docutils literal"><span class="pre"><span class="Identifier">XFreeGC</span></span></tt>.
@@ -783,6 +879,30 @@
 </div>
 
 </div>
+<div id="height-procs-all">
+  <div id="height,ptr.Screen">
+  <dt><pre><span class="Keyword">proc</span> <a href="#height%2Cptr.Screen"><span class="Identifier">height</span></a><span class="Other">(</span><span class="Identifier">screen</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="dynlibx11/x11/xlib.html#Screen"><span class="Identifier">Screen</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
+                                       <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="height_of_screen-procs-all">
+  <div id="height_of_screen,ptr.Screen">
+  <dt><pre><span class="Keyword">proc</span> <a href="#height_of_screen%2Cptr.Screen"><span class="Identifier">height_of_screen</span></a><span class="Other">(</span><span class="Identifier">screen</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="dynlibx11/x11/xlib.html#Screen"><span class="Identifier">Screen</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="intern_atom-procs-all">
   <div id="intern_atom,Display,string,bool">
   <dt><pre><span class="Keyword">proc</span> <a href="#intern_atom%2CDisplay%2Cstring%2Cbool"><span class="Identifier">intern_atom</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">atom_name</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span>
@@ -791,6 +911,18 @@
   <dd>
     
     <tt class="docutils literal"><span class="pre"><span class="Identifier">XInternAtom</span></span></tt>.
+    
+  </dd>
+</div>
+
+</div>
+<div id="keysym_to_keycode-procs-all">
+  <div id="keysym_to_keycode,Display,KeySym">
+  <dt><pre><span class="Keyword">proc</span> <a href="#keysym_to_keycode%2CDisplay%2CKeySym"><span class="Identifier">keysym_to_keycode</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">keysym</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#KeySym"><span class="Identifier">KeySym</span></a><span class="Other">)</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#KeyCode"><span class="Identifier">KeyCode</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XKeysymToKeycode</span></span></tt>.
     
   </dd>
 </div>
@@ -815,6 +947,18 @@
   <dd>
     
     <tt class="docutils literal"><span class="pre"><span class="Identifier">XMapWindow</span></span></tt>.
+    
+  </dd>
+</div>
+
+</div>
+<div id="map_raised-procs-all">
+  <div id="map_raised,Display,Window">
+  <dt><pre><span class="Keyword">proc</span> <a href="#map_raised%2CDisplay%2CWindow"><span class="Identifier">map_raised</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">window</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Window"><span class="Identifier">Window</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">discardable</span><span class="Other">,</span>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XMapRaised</span></span></tt>.
     
   </dd>
 </div>
@@ -922,11 +1066,23 @@ This proc sets own error and IO error handlers before connecting.</div>
 <div id="send_event-procs-all">
   <div id="send_event,Display,Window,bool,EventMask,XEvent">
   <dt><pre><span class="Keyword">proc</span> <a href="#send_event%2CDisplay%2CWindow%2Cbool%2CEventMask%2CXEvent"><span class="Identifier">send_event</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">window</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Window"><span class="Identifier">Window</span></a><span class="Other">;</span> <span class="Identifier">propagate</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">;</span>
-                <span class="Identifier">event_mask</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#EventMask"><span class="Identifier">EventMask</span></a><span class="Other">;</span> <span class="Identifier">event_send</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="dynlibx11/x11/xlib.html#XEvent"><span class="Identifier">XEvent</span></a><span class="Other">)</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Status"><span class="Identifier">Status</span></a> {.
+                <span class="Identifier">event_mask</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#EventMask"><span class="Identifier">EventMask</span></a><span class="Other">;</span> <span class="Identifier">event_send</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="dynlibx11/x11/xlib.html#XEvent"><span class="Identifier">XEvent</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <tt class="docutils literal"><span class="pre"><span class="Identifier">XSendEvent</span></span></tt>.
+    
+  </dd>
+</div>
+
+</div>
+<div id="set_background-procs-all">
+  <div id="set_background,Display,GC,culong">
+  <dt><pre><span class="Keyword">proc</span> <a href="#set_background%2CDisplay%2CGC%2Cculong"><span class="Identifier">set_background</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">gc</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#GC"><span class="Identifier">GC</span></a><span class="Other">;</span> <span class="Identifier">background</span><span class="Other">:</span> <span class="Identifier">culong</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XSetBackground</span></span></tt>.
     
   </dd>
 </div>
@@ -957,6 +1113,18 @@ This proc sets own error and IO error handlers before connecting.</div>
 </div>
 
 </div>
+<div id="set_foreground-procs-all">
+  <div id="set_foreground,Display,GC,culong">
+  <dt><pre><span class="Keyword">proc</span> <a href="#set_foreground%2CDisplay%2CGC%2Cculong"><span class="Identifier">set_foreground</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">gc</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#GC"><span class="Identifier">GC</span></a><span class="Other">;</span> <span class="Identifier">foreground</span><span class="Other">:</span> <span class="Identifier">culong</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XSetForeground</span></span></tt>.
+    
+  </dd>
+</div>
+
+</div>
 <div id="set_icon_name-procs-all">
   <div id="set_icon_name,Display,Window,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#set_icon_name%2CDisplay%2CWindow%2Cstring"><span class="Identifier">set_icon_name</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">window</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Window"><span class="Identifier">Window</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
@@ -981,11 +1149,35 @@ This proc sets own error and IO error handlers before connecting.</div>
 </div>
 
 </div>
+<div id="set_window_border-procs-all">
+  <div id="set_window_border,Display,Window,culong">
+  <dt><pre><span class="Keyword">proc</span> <a href="#set_window_border%2CDisplay%2CWindow%2Cculong"><span class="Identifier">set_window_border</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">window</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Window"><span class="Identifier">Window</span></a><span class="Other">;</span> <span class="Identifier">border_pixel</span><span class="Other">:</span> <span class="Identifier">culong</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XSetWindowBorder</span></span></tt>
+    
+  </dd>
+</div>
+
+</div>
+<div id="set_window_border_width-procs-all">
+  <div id="set_window_border_width,Display,Window,uint">
+  <dt><pre><span class="Keyword">proc</span> <a href="#set_window_border_width%2CDisplay%2CWindow%2Cuint"><span class="Identifier">set_window_border_width</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">window</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Window"><span class="Identifier">Window</span></a><span class="Other">;</span> <span class="Identifier">width</span><span class="Other">:</span> <span class="Identifier">uint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XSetWindowBorderWidth</span></span></tt>.
+    
+  </dd>
+</div>
+
+</div>
 <div id="set_wm_protocols-procs-all">
   <div id="set_wm_protocols,Display,Window,Atom,int">
   <dt><pre><span class="Keyword">proc</span> <a href="#set_wm_protocols%2CDisplay%2CWindow%2CAtom%2Cint"><span class="Identifier">set_wm_protocols</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">window</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Window"><span class="Identifier">Window</span></a><span class="Other">;</span> <span class="Identifier">protocols</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Atom"><span class="Identifier">Atom</span></a><span class="Other">;</span>
-                      <span class="Identifier">count</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Status"><span class="Identifier">Status</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+                      <span class="Identifier">count</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <tt class="docutils literal"><span class="pre"><span class="Identifier">XSetWMProtocols</span></span></tt>.
@@ -997,7 +1189,7 @@ This proc sets own error and IO error handlers before connecting.</div>
 <div id="store_name-procs-all">
   <div id="store_name,Display,Window,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#store_name%2CDisplay%2CWindow%2Cstring"><span class="Identifier">store_name</span></a><span class="Other">(</span><span class="Identifier">display</span><span class="Other">:</span> <a href="dynlibx11/x11/xlib.html#Display"><span class="Identifier">Display</span></a><span class="Other">;</span> <span class="Identifier">window</span><span class="Other">:</span> <a href="dynlibx11/x11/xinc.html#Window"><span class="Identifier">Window</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span class="Identifier">discardable</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <tt class="docutils literal"><span class="pre"><span class="Identifier">XStoreName</span></span></tt>.
@@ -1052,6 +1244,51 @@ This proc sets own error and IO error handlers before connecting.</div>
     
   </dd>
 </div>
+<div id="white_pixel,ptr.Screen">
+  <dt><pre><span class="Keyword">proc</span> <a href="#white_pixel%2Cptr.Screen"><span class="Identifier">white_pixel</span></a><span class="Other">(</span><span class="Identifier">screen</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="dynlibx11/x11/xlib.html#Screen"><span class="Identifier">Screen</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">culong</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XWhitePixelOfScreen</span></span></tt>.
+    
+  </dd>
+</div>
+
+</div>
+<div id="white_pixel_of_screen-procs-all">
+  <div id="white_pixel_of_screen,ptr.Screen">
+  <dt><pre><span class="Keyword">proc</span> <a href="#white_pixel_of_screen%2Cptr.Screen"><span class="Identifier">white_pixel_of_screen</span></a><span class="Other">(</span><span class="Identifier">screen</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="dynlibx11/x11/xlib.html#Screen"><span class="Identifier">Screen</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">culong</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Alias of <tt class="docutils literal"><span class="pre"><span class="Identifier">white_pixel</span></span></tt>.
+    
+  </dd>
+</div>
+
+</div>
+<div id="width-procs-all">
+  <div id="width,ptr.Screen">
+  <dt><pre><span class="Keyword">proc</span> <a href="#width%2Cptr.Screen"><span class="Identifier">width</span></a><span class="Other">(</span><span class="Identifier">screen</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="dynlibx11/x11/xlib.html#Screen"><span class="Identifier">Screen</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
+                                      <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="width_of_screen-procs-all">
+  <div id="width_of_screen,ptr.Screen">
+  <dt><pre><span class="Keyword">proc</span> <a href="#width_of_screen%2Cptr.Screen"><span class="Identifier">width_of_screen</span></a><span class="Other">(</span><span class="Identifier">screen</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="dynlibx11/x11/xlib.html#Screen"><span class="Identifier">Screen</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
 
 </div>
 <div id="x11_available-procs-all">
@@ -1094,7 +1331,7 @@ This proc sets own error and IO error handlers before connecting.</div>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-12-13 14:13:04 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-12-13 20:32:56 UTC</small>
       </div>
     </div>
   </div>
