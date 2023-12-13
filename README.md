@@ -1,4 +1,4 @@
-# amnr.github.io
+# Amun's Projects
 
 ## Projects
 

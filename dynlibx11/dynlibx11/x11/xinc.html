@@ -54,6 +54,7 @@
       <li><a class="reference" href="#Atom" title="Atom = distinct culong">Atom</a></li>
 <li><a class="reference" href="#ButtonMask" title="ButtonMask = KeyMask">ButtonMask</a></li>
 <li><a class="reference" href="#Colormap" title="Colormap = distinct XID">Colormap</a></li>
+<li><a class="reference" href="#ConfigureWindowMask" title="ConfigureWindowMask = distinct culong">ConfigureWindowMask</a></li>
 <li><a class="reference" href="#Cursor" title="Cursor = distinct XID">Cursor</a></li>
 <li><a class="reference" href="#Drawable" title="Drawable = distinct XID">Drawable</a></li>
 <li><a class="reference" href="#EventMask" title="EventMask = distinct clong">EventMask</a></li>
@@ -67,6 +68,9 @@
 <li><a class="reference" href="#Time" title="Time = distinct culong">Time</a></li>
 <li><a class="reference" href="#VisualID" title="VisualID = distinct culong">VisualID</a></li>
 <li><a class="reference" href="#Window" title="Window = distinct XID">Window</a></li>
+<li><a class="reference" href="#WindowAttributeMask" title="WindowAttributeMask = distinct culong">WindowAttributeMask</a></li>
+<li><a class="reference" href="#WindowClass" title="WindowClass {.size: 4.} = enum
+  CopyFromParent = 0, InputOutput = 1, InputOnly = 2">WindowClass</a></li>
 <li><a class="reference" href="#XID" title="XID = distinct culong">XID</a></li>
 
     </ul>
@@ -155,32 +159,31 @@
 <li><a class="reference" href="#Convex" title="Convex = 2">Convex</a></li>
 <li><a class="reference" href="#CoordModeOrigin" title="CoordModeOrigin = 0">CoordModeOrigin</a></li>
 <li><a class="reference" href="#CoordModePrevious" title="CoordModePrevious = 1">CoordModePrevious</a></li>
-<li><a class="reference" href="#CopyFromParent" title="CopyFromParent = 0">CopyFromParent</a></li>
 <li><a class="reference" href="#CreateNotify" title="CreateNotify = 16">CreateNotify</a></li>
 <li><a class="reference" href="#CurrentTime" title="CurrentTime = 0">CurrentTime</a></li>
 <li><a class="reference" href="#CursorShape" title="CursorShape = 0">CursorShape</a></li>
-<li><a class="reference" href="#CWBackingPixel" title="CWBackingPixel = 256">CWBackingPixel</a></li>
-<li><a class="reference" href="#CWBackingPlanes" title="CWBackingPlanes = 128">CWBackingPlanes</a></li>
-<li><a class="reference" href="#CWBackingStore" title="CWBackingStore = 64">CWBackingStore</a></li>
-<li><a class="reference" href="#CWBackPixel" title="CWBackPixel = 2">CWBackPixel</a></li>
-<li><a class="reference" href="#CWBackPixmap" title="CWBackPixmap = 1">CWBackPixmap</a></li>
-<li><a class="reference" href="#CWBitGravity" title="CWBitGravity = 16">CWBitGravity</a></li>
-<li><a class="reference" href="#CWBorderPixel" title="CWBorderPixel = 8">CWBorderPixel</a></li>
-<li><a class="reference" href="#CWBorderPixmap" title="CWBorderPixmap = 4">CWBorderPixmap</a></li>
-<li><a class="reference" href="#CWBorderWidth" title="CWBorderWidth = 16">CWBorderWidth</a></li>
-<li><a class="reference" href="#CWColormap" title="CWColormap = 8192">CWColormap</a></li>
-<li><a class="reference" href="#CWCursor" title="CWCursor = 16384">CWCursor</a></li>
-<li><a class="reference" href="#CWDontPropagate" title="CWDontPropagate = 4096">CWDontPropagate</a></li>
-<li><a class="reference" href="#CWEventMask" title="CWEventMask = 2048">CWEventMask</a></li>
-<li><a class="reference" href="#CWHeight" title="CWHeight = 8">CWHeight</a></li>
-<li><a class="reference" href="#CWOverrideRedirect" title="CWOverrideRedirect = 512">CWOverrideRedirect</a></li>
-<li><a class="reference" href="#CWSaveUnder" title="CWSaveUnder = 1024">CWSaveUnder</a></li>
-<li><a class="reference" href="#CWSibling" title="CWSibling = 32">CWSibling</a></li>
-<li><a class="reference" href="#CWStackMode" title="CWStackMode = 64">CWStackMode</a></li>
-<li><a class="reference" href="#CWWidth" title="CWWidth = 4">CWWidth</a></li>
-<li><a class="reference" href="#CWWinGravity" title="CWWinGravity = 32">CWWinGravity</a></li>
-<li><a class="reference" href="#CWX" title="CWX = 1">CWX</a></li>
-<li><a class="reference" href="#CWY" title="CWY = 2">CWY</a></li>
+<li><a class="reference" href="#CWBackingPixel" title="CWBackingPixel = 256'u">CWBackingPixel</a></li>
+<li><a class="reference" href="#CWBackingPlanes" title="CWBackingPlanes = 128'u">CWBackingPlanes</a></li>
+<li><a class="reference" href="#CWBackingStore" title="CWBackingStore = 64'u">CWBackingStore</a></li>
+<li><a class="reference" href="#CWBackPixel" title="CWBackPixel = 2'u">CWBackPixel</a></li>
+<li><a class="reference" href="#CWBackPixmap" title="CWBackPixmap = 1'u">CWBackPixmap</a></li>
+<li><a class="reference" href="#CWBitGravity" title="CWBitGravity = 16'u">CWBitGravity</a></li>
+<li><a class="reference" href="#CWBorderPixel" title="CWBorderPixel = 8'u">CWBorderPixel</a></li>
+<li><a class="reference" href="#CWBorderPixmap" title="CWBorderPixmap = 4'u">CWBorderPixmap</a></li>
+<li><a class="reference" href="#CWBorderWidth" title="CWBorderWidth = 16'u">CWBorderWidth</a></li>
+<li><a class="reference" href="#CWColormap" title="CWColormap = 8192'u">CWColormap</a></li>
+<li><a class="reference" href="#CWCursor" title="CWCursor = 16384'u">CWCursor</a></li>
+<li><a class="reference" href="#CWDontPropagate" title="CWDontPropagate = 4096'u">CWDontPropagate</a></li>
+<li><a class="reference" href="#CWEventMask" title="CWEventMask = 2048'u">CWEventMask</a></li>
+<li><a class="reference" href="#CWHeight" title="CWHeight = 8'u">CWHeight</a></li>
+<li><a class="reference" href="#CWOverrideRedirect" title="CWOverrideRedirect = 512'u">CWOverrideRedirect</a></li>
+<li><a class="reference" href="#CWSaveUnder" title="CWSaveUnder = 1024'u">CWSaveUnder</a></li>
+<li><a class="reference" href="#CWSibling" title="CWSibling = 32'u">CWSibling</a></li>
+<li><a class="reference" href="#CWStackMode" title="CWStackMode = 64'u">CWStackMode</a></li>
+<li><a class="reference" href="#CWWidth" title="CWWidth = 4'u">CWWidth</a></li>
+<li><a class="reference" href="#CWWinGravity" title="CWWinGravity = 32'u">CWWinGravity</a></li>
+<li><a class="reference" href="#CWX" title="CWX = 1'u">CWX</a></li>
+<li><a class="reference" href="#CWY" title="CWY = 2'u">CWY</a></li>
 <li><a class="reference" href="#DefaultBlanking" title="DefaultBlanking = 2">DefaultBlanking</a></li>
 <li><a class="reference" href="#DefaultExposures" title="DefaultExposures = 2">DefaultExposures</a></li>
 <li><a class="reference" href="#DestroyAll" title="DestroyAll = 0">DestroyAll</a></li>
@@ -189,11 +192,11 @@
 <li><a class="reference" href="#DisableAccess" title="DisableAccess = 0">DisableAccess</a></li>
 <li><a class="reference" href="#DisableScreenInterval" title="DisableScreenInterval = 0">DisableScreenInterval</a></li>
 <li><a class="reference" href="#DisableScreenSaver" title="DisableScreenSaver = 0">DisableScreenSaver</a></li>
-<li><a class="reference" href="#DoBlue" title="DoBlue = 4">DoBlue</a></li>
-<li><a class="reference" href="#DoGreen" title="DoGreen = 2">DoGreen</a></li>
+<li><a class="reference" href="#DoBlue" title="DoBlue = 4'u">DoBlue</a></li>
+<li><a class="reference" href="#DoGreen" title="DoGreen = 2'u">DoGreen</a></li>
 <li><a class="reference" href="#DontAllowExposures" title="DontAllowExposures = 0">DontAllowExposures</a></li>
 <li><a class="reference" href="#DontPreferBlanking" title="DontPreferBlanking = 0">DontPreferBlanking</a></li>
-<li><a class="reference" href="#DoRed" title="DoRed = 1">DoRed</a></li>
+<li><a class="reference" href="#DoRed" title="DoRed = 1'u">DoRed</a></li>
 <li><a class="reference" href="#EastGravity" title="EastGravity = 6">EastGravity</a></li>
 <li><a class="reference" href="#EnableAccess" title="EnableAccess = 1">EnableAccess</a></li>
 <li><a class="reference" href="#EnterNotify" title="EnterNotify = 7">EnterNotify</a></li>
@@ -271,8 +274,6 @@
 <li><a class="reference" href="#HostInsert" title="HostInsert = 0">HostInsert</a></li>
 <li><a class="reference" href="#IncludeInferiors" title="IncludeInferiors = 1">IncludeInferiors</a></li>
 <li><a class="reference" href="#InputFocus" title="InputFocus = 1">InputFocus</a></li>
-<li><a class="reference" href="#InputOnly" title="InputOnly = 2">InputOnly</a></li>
-<li><a class="reference" href="#InputOutput" title="InputOutput = 1">InputOutput</a></li>
 <li><a class="reference" href="#IsUnmapped" title="IsUnmapped = 0">IsUnmapped</a></li>
 <li><a class="reference" href="#IsUnviewable" title="IsUnviewable = 1">IsUnviewable</a></li>
 <li><a class="reference" href="#IsViewable" title="IsViewable = 2">IsViewable</a></li>
@@ -374,9 +375,9 @@
 <li><a class="reference" href="#ResizeRequest" title="ResizeRequest = 25">ResizeRequest</a></li>
 <li><a class="reference" href="#RetainPermanent" title="RetainPermanent = 1">RetainPermanent</a></li>
 <li><a class="reference" href="#RetainTemporary" title="RetainTemporary = 2">RetainTemporary</a></li>
-<li><a class="reference" href="#RevertToNone" title="RevertToNone = 0">RevertToNone</a></li>
-<li><a class="reference" href="#RevertToParent" title="RevertToParent = 2">RevertToParent</a></li>
-<li><a class="reference" href="#RevertToPointerRoot" title="RevertToPointerRoot = 1">RevertToPointerRoot</a></li>
+<li><a class="reference" href="#RevertToNone" title="RevertToNone = 0'i32">RevertToNone</a></li>
+<li><a class="reference" href="#RevertToParent" title="RevertToParent = 2'i32">RevertToParent</a></li>
+<li><a class="reference" href="#RevertToPointerRoot" title="RevertToPointerRoot = 1'i32">RevertToPointerRoot</a></li>
 <li><a class="reference" href="#ScreenSaverActive" title="ScreenSaverActive = 1">ScreenSaverActive</a></li>
 <li><a class="reference" href="#ScreenSaverReset" title="ScreenSaverReset = 0">ScreenSaverReset</a></li>
 <li><a class="reference" href="#SelectionClear" title="SelectionClear = 29">SelectionClear</a></li>
@@ -431,14 +432,17 @@
       <ul class="simple nested-toc-section">==
   <li><a class="reference" href="#%3D%3D%2CAtom%2CAtom" title="`==`(a, b: Atom): bool">`==`(a, b: Atom): bool</a></li>
 <li><a class="reference" href="#%3D%3D%2CEventMask%2CEventMask" title="`==`(a, b: EventMask): bool">`==`(a, b: EventMask): bool</a></li>
+<li><a class="reference" href="#%3D%3D%2CKeyMask%2CKeyMask" title="`==`(a, b: KeyMask): bool">`==`(a, b: KeyMask): bool</a></li>
 <li><a class="reference" href="#%3D%3D%2CPixmap%2CPixmap" title="`==`(a, b: Pixmap): bool">`==`(a, b: Pixmap): bool</a></li>
 <li><a class="reference" href="#%3D%3D%2CWindow%2CWindow" title="`==`(a, b: Window): bool">`==`(a, b: Window): bool</a></li>
 <li><a class="reference" href="#%3D%3D%2CXID%2CXID" title="`==`(a, b: XID): bool">`==`(a, b: XID): bool</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">or
-  <li><a class="reference" href="#or%2CEventMask%2CEventMask" title="`or`(a, b: EventMask): EventMask">`or`(a, b: EventMask): EventMask</a></li>
+  <li><a class="reference" href="#or%2CConfigureWindowMask%2CConfigureWindowMask" title="`or`(a, b: ConfigureWindowMask): ConfigureWindowMask">`or`(a, b: ConfigureWindowMask): ConfigureWindowMask</a></li>
+<li><a class="reference" href="#or%2CEventMask%2CEventMask" title="`or`(a, b: EventMask): EventMask">`or`(a, b: EventMask): EventMask</a></li>
 <li><a class="reference" href="#or%2CKeyMask%2CKeyMask" title="`or`(a, b: KeyMask): KeyMask">`or`(a, b: KeyMask): KeyMask</a></li>
+<li><a class="reference" href="#or%2CWindowAttributeMask%2CWindowAttributeMask" title="`or`(a, b: WindowAttributeMask): WindowAttributeMask">`or`(a, b: WindowAttributeMask): WindowAttributeMask</a></li>
 
 </ul>
 
@@ -453,7 +457,7 @@
     
     <div id="tocRoot"></div>
     
-    <p class="module-desc">X.Input Event Masks. Used as event-mask window attribute and as arguments to Grab requests. Not to be confused with event names.</p>
+    <p class="module-desc">X.</p>
     <div class="section" id="7">
   <h1><a class="toc-backref" href="#7">Types</a></h1>
   <dl class="item">
@@ -478,6 +482,14 @@
   <dd>
     
     
+    
+  </dd>
+</div>
+<div id="ConfigureWindowMask">
+  <dt><pre><a href="xinc.html#ConfigureWindowMask"><span class="Identifier">ConfigureWindowMask</span></a> <span class="Other">=</span> <span class="Keyword">distinct</span> <span class="Identifier">culong</span></pre></dt>
+  <dd>
+    
+    Mask for <tt class="docutils literal"><span class="pre"><span class="Identifier">XConfigureWindow</span></span></tt>. Nim specific, not present in C API.
     
   </dd>
 </div>
@@ -534,7 +546,7 @@
   <dd>
     
     <p>Key mask.</p>
-<p>Used in <tt class="docutils literal"><span class="pre"><span class="Identifier">state</span></span></tt> field in <tt class="docutils literal"><span class="pre"><span class="Identifier">XKeyEvent</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">XButtonEvent</span></span></tt>. USer in <tt class="docutils literal"><span class="pre"><span class="Identifier">GrabButton</span></span></tt>, <tt class="docutils literal"><span class="pre"><span class="Identifier">GrabKey</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">QueryPointer</span></span></tt>.</p>
+<p>Used in <tt class="docutils literal"><span class="pre"><span class="Identifier">state</span></span></tt> field in <tt class="docutils literal"><span class="pre"><span class="Identifier">XKeyEvent</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">XButtonEvent</span></span></tt>. USed in <tt class="docutils literal"><span class="pre"><span class="Identifier">XGrabButton</span></span></tt>, <tt class="docutils literal"><span class="pre"><span class="Identifier">XGrabKey</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">XQueryPointer</span></span></tt>.</p>
 
     
   </dd>
@@ -584,6 +596,23 @@
   <dd>
     
     
+    
+  </dd>
+</div>
+<div id="WindowAttributeMask">
+  <dt><pre><a href="xinc.html#WindowAttributeMask"><span class="Identifier">WindowAttributeMask</span></a> <span class="Other">=</span> <span class="Keyword">distinct</span> <span class="Identifier">culong</span></pre></dt>
+  <dd>
+    
+    Window attribute mask for <tt class="docutils literal"><span class="pre"><span class="Identifier">XCreateWindow</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">XChangeWindowAttributes</span></span></tt>. Nim specific, not present in C API.
+    
+  </dd>
+</div>
+<div id="WindowClass">
+  <dt><pre><a href="xinc.html#WindowClass"><span class="Identifier">WindowClass</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <span class="Identifier">CopyFromParent</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">InputOutput</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">InputOnly</span> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dd>
+    
+    Window classes for <tt class="docutils literal"><span class="pre"><span class="Identifier">XCreateWindow</span></span></tt>. Nim specific, not present in C API.
     
   </dd>
 </div>
@@ -637,7 +666,7 @@
   <dt><pre><a href="xinc.html#AllTemporary"><span class="Identifier">AllTemporary</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
-    Special <tt class="docutils literal"><span class="pre"><span class="Identifier">Resource</span></span></tt> ID passed to <tt class="docutils literal"><span class="pre"><span class="Identifier">KillClient</span></span></tt>.
+    Special <tt class="docutils literal"><span class="pre"><span class="Identifier">Resource</span></span></tt> ID passed to <tt class="docutils literal"><span class="pre"><span class="Identifier">XKillClient</span></span></tt>.
     
   </dd>
 </div>
@@ -661,7 +690,7 @@
   <dt><pre><a href="xinc.html#AnyButton"><span class="Identifier">AnyButton</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
-    Special <tt class="docutils literal"><span class="pre"><span class="Identifier">Button</span></span></tt> Code, passed to <tt class="docutils literal"><span class="pre"><span class="Identifier">GrabButton</span></span></tt>.
+    Special <tt class="docutils literal"><span class="pre"><span class="Identifier">Button</span></span></tt> Code, passed to <tt class="docutils literal"><span class="pre"><span class="Identifier">XGrabButton</span></span></tt>.
     
   </dd>
 </div>
@@ -669,7 +698,7 @@
   <dt><pre><a href="xinc.html#AnyKey"><span class="Identifier">AnyKey</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
-    Special <tt class="docutils literal"><span class="pre"><span class="Identifier">Key</span></span></tt> Code, passed to <tt class="docutils literal"><span class="pre"><span class="Identifier">GrabKey</span></span></tt>.
+    Special <tt class="docutils literal"><span class="pre"><span class="Identifier">Key</span></span></tt> Code, passed to <tt class="docutils literal"><span class="pre"><span class="Identifier">XGrabKey</span></span></tt>.
     
   </dd>
 </div>
@@ -677,7 +706,7 @@
   <dt><pre><a href="xinc.html#AnyModifier"><span class="Identifier">AnyModifier</span></a> <span class="Other">=</span> <span class="DecNumber">32768'u</span></pre></dt>
   <dd>
     
-    <tt class="docutils literal"><span class="pre"><span class="Identifier">GrabButton</span></span></tt>, <tt class="docutils literal"><span class="pre"><span class="Identifier">GrabKey</span></span></tt>.
+    <tt class="docutils literal"><span class="pre"><span class="Identifier">XGrabButton</span></span></tt>, <tt class="docutils literal"><span class="pre"><span class="Identifier">XGrabKey</span></span></tt>.
     
   </dd>
 </div>
@@ -685,7 +714,7 @@
   <dt><pre><a href="xinc.html#AnyPropertyType"><span class="Identifier">AnyPropertyType</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
-    Special <tt class="docutils literal"><span class="pre"><span class="Identifier">Atom</span><span class="Punctuation">,</span> <span class="Identifier">passed</span> <span class="Identifier">to</span> <span class="Punctuation">`</span><span class="Identifier">GetProperty</span></span></tt>.
+    Special <tt class="docutils literal"><span class="pre"><span class="Identifier">Atom</span></span></tt>, passed to <tt class="docutils literal"><span class="pre"><span class="Identifier">XGetProperty</span></span></tt>.
     
   </dd>
 </div>
@@ -1233,14 +1262,6 @@
     
   </dd>
 </div>
-<div id="CopyFromParent">
-  <dt><pre><a href="xinc.html#CopyFromParent"><span class="Identifier">CopyFromParent</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
-  <dd>
-    
-    Border pixmap in <tt class="docutils literal"><span class="pre"><span class="Identifier">CreateWindow</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">ChangeWindowAttributes</span></span></tt> special <tt class="docutils literal"><span class="pre"><span class="Identifier">VisualID</span></span></tt> and special window class passed to <tt class="docutils literal"><span class="pre"><span class="Identifier">CreateWindow</span></span></tt>.
-    
-  </dd>
-</div>
 <div id="CreateNotify">
   <dt><pre><a href="xinc.html#CreateNotify"><span class="Identifier">CreateNotify</span></a> <span class="Other">=</span> <span class="DecNumber">16</span></pre></dt>
   <dd>
@@ -1266,7 +1287,7 @@
   </dd>
 </div>
 <div id="CWBackingPixel">
-  <dt><pre><a href="xinc.html#CWBackingPixel"><span class="Identifier">CWBackingPixel</span></a> <span class="Other">=</span> <span class="DecNumber">256</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWBackingPixel"><span class="Identifier">CWBackingPixel</span></a> <span class="Other">=</span> <span class="DecNumber">256'u</span></pre></dt>
   <dd>
     
     
@@ -1274,7 +1295,7 @@
   </dd>
 </div>
 <div id="CWBackingPlanes">
-  <dt><pre><a href="xinc.html#CWBackingPlanes"><span class="Identifier">CWBackingPlanes</span></a> <span class="Other">=</span> <span class="DecNumber">128</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWBackingPlanes"><span class="Identifier">CWBackingPlanes</span></a> <span class="Other">=</span> <span class="DecNumber">128'u</span></pre></dt>
   <dd>
     
     
@@ -1282,7 +1303,7 @@
   </dd>
 </div>
 <div id="CWBackingStore">
-  <dt><pre><a href="xinc.html#CWBackingStore"><span class="Identifier">CWBackingStore</span></a> <span class="Other">=</span> <span class="DecNumber">64</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWBackingStore"><span class="Identifier">CWBackingStore</span></a> <span class="Other">=</span> <span class="DecNumber">64'u</span></pre></dt>
   <dd>
     
     
@@ -1290,7 +1311,7 @@
   </dd>
 </div>
 <div id="CWBackPixel">
-  <dt><pre><a href="xinc.html#CWBackPixel"><span class="Identifier">CWBackPixel</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWBackPixel"><span class="Identifier">CWBackPixel</span></a> <span class="Other">=</span> <span class="DecNumber">2'u</span></pre></dt>
   <dd>
     
     
@@ -1298,7 +1319,7 @@
   </dd>
 </div>
 <div id="CWBackPixmap">
-  <dt><pre><a href="xinc.html#CWBackPixmap"><span class="Identifier">CWBackPixmap</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWBackPixmap"><span class="Identifier">CWBackPixmap</span></a> <span class="Other">=</span> <span class="DecNumber">1'u</span></pre></dt>
   <dd>
     
     
@@ -1306,7 +1327,7 @@
   </dd>
 </div>
 <div id="CWBitGravity">
-  <dt><pre><a href="xinc.html#CWBitGravity"><span class="Identifier">CWBitGravity</span></a> <span class="Other">=</span> <span class="DecNumber">16</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWBitGravity"><span class="Identifier">CWBitGravity</span></a> <span class="Other">=</span> <span class="DecNumber">16'u</span></pre></dt>
   <dd>
     
     
@@ -1314,7 +1335,7 @@
   </dd>
 </div>
 <div id="CWBorderPixel">
-  <dt><pre><a href="xinc.html#CWBorderPixel"><span class="Identifier">CWBorderPixel</span></a> <span class="Other">=</span> <span class="DecNumber">8</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWBorderPixel"><span class="Identifier">CWBorderPixel</span></a> <span class="Other">=</span> <span class="DecNumber">8'u</span></pre></dt>
   <dd>
     
     
@@ -1322,7 +1343,7 @@
   </dd>
 </div>
 <div id="CWBorderPixmap">
-  <dt><pre><a href="xinc.html#CWBorderPixmap"><span class="Identifier">CWBorderPixmap</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWBorderPixmap"><span class="Identifier">CWBorderPixmap</span></a> <span class="Other">=</span> <span class="DecNumber">4'u</span></pre></dt>
   <dd>
     
     
@@ -1330,7 +1351,7 @@
   </dd>
 </div>
 <div id="CWBorderWidth">
-  <dt><pre><a href="xinc.html#CWBorderWidth"><span class="Identifier">CWBorderWidth</span></a> <span class="Other">=</span> <span class="DecNumber">16</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWBorderWidth"><span class="Identifier">CWBorderWidth</span></a> <span class="Other">=</span> <span class="DecNumber">16'u</span></pre></dt>
   <dd>
     
     
@@ -1338,7 +1359,7 @@
   </dd>
 </div>
 <div id="CWColormap">
-  <dt><pre><a href="xinc.html#CWColormap"><span class="Identifier">CWColormap</span></a> <span class="Other">=</span> <span class="DecNumber">8192</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWColormap"><span class="Identifier">CWColormap</span></a> <span class="Other">=</span> <span class="DecNumber">8192'u</span></pre></dt>
   <dd>
     
     
@@ -1346,7 +1367,7 @@
   </dd>
 </div>
 <div id="CWCursor">
-  <dt><pre><a href="xinc.html#CWCursor"><span class="Identifier">CWCursor</span></a> <span class="Other">=</span> <span class="DecNumber">16384</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWCursor"><span class="Identifier">CWCursor</span></a> <span class="Other">=</span> <span class="DecNumber">16384'u</span></pre></dt>
   <dd>
     
     
@@ -1354,7 +1375,7 @@
   </dd>
 </div>
 <div id="CWDontPropagate">
-  <dt><pre><a href="xinc.html#CWDontPropagate"><span class="Identifier">CWDontPropagate</span></a> <span class="Other">=</span> <span class="DecNumber">4096</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWDontPropagate"><span class="Identifier">CWDontPropagate</span></a> <span class="Other">=</span> <span class="DecNumber">4096'u</span></pre></dt>
   <dd>
     
     
@@ -1362,7 +1383,7 @@
   </dd>
 </div>
 <div id="CWEventMask">
-  <dt><pre><a href="xinc.html#CWEventMask"><span class="Identifier">CWEventMask</span></a> <span class="Other">=</span> <span class="DecNumber">2048</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWEventMask"><span class="Identifier">CWEventMask</span></a> <span class="Other">=</span> <span class="DecNumber">2048'u</span></pre></dt>
   <dd>
     
     
@@ -1370,7 +1391,7 @@
   </dd>
 </div>
 <div id="CWHeight">
-  <dt><pre><a href="xinc.html#CWHeight"><span class="Identifier">CWHeight</span></a> <span class="Other">=</span> <span class="DecNumber">8</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWHeight"><span class="Identifier">CWHeight</span></a> <span class="Other">=</span> <span class="DecNumber">8'u</span></pre></dt>
   <dd>
     
     
@@ -1378,7 +1399,7 @@
   </dd>
 </div>
 <div id="CWOverrideRedirect">
-  <dt><pre><a href="xinc.html#CWOverrideRedirect"><span class="Identifier">CWOverrideRedirect</span></a> <span class="Other">=</span> <span class="DecNumber">512</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWOverrideRedirect"><span class="Identifier">CWOverrideRedirect</span></a> <span class="Other">=</span> <span class="DecNumber">512'u</span></pre></dt>
   <dd>
     
     
@@ -1386,7 +1407,7 @@
   </dd>
 </div>
 <div id="CWSaveUnder">
-  <dt><pre><a href="xinc.html#CWSaveUnder"><span class="Identifier">CWSaveUnder</span></a> <span class="Other">=</span> <span class="DecNumber">1024</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWSaveUnder"><span class="Identifier">CWSaveUnder</span></a> <span class="Other">=</span> <span class="DecNumber">1024'u</span></pre></dt>
   <dd>
     
     
@@ -1394,7 +1415,7 @@
   </dd>
 </div>
 <div id="CWSibling">
-  <dt><pre><a href="xinc.html#CWSibling"><span class="Identifier">CWSibling</span></a> <span class="Other">=</span> <span class="DecNumber">32</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWSibling"><span class="Identifier">CWSibling</span></a> <span class="Other">=</span> <span class="DecNumber">32'u</span></pre></dt>
   <dd>
     
     
@@ -1402,7 +1423,7 @@
   </dd>
 </div>
 <div id="CWStackMode">
-  <dt><pre><a href="xinc.html#CWStackMode"><span class="Identifier">CWStackMode</span></a> <span class="Other">=</span> <span class="DecNumber">64</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWStackMode"><span class="Identifier">CWStackMode</span></a> <span class="Other">=</span> <span class="DecNumber">64'u</span></pre></dt>
   <dd>
     
     
@@ -1410,7 +1431,7 @@
   </dd>
 </div>
 <div id="CWWidth">
-  <dt><pre><a href="xinc.html#CWWidth"><span class="Identifier">CWWidth</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWWidth"><span class="Identifier">CWWidth</span></a> <span class="Other">=</span> <span class="DecNumber">4'u</span></pre></dt>
   <dd>
     
     
@@ -1418,7 +1439,7 @@
   </dd>
 </div>
 <div id="CWWinGravity">
-  <dt><pre><a href="xinc.html#CWWinGravity"><span class="Identifier">CWWinGravity</span></a> <span class="Other">=</span> <span class="DecNumber">32</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWWinGravity"><span class="Identifier">CWWinGravity</span></a> <span class="Other">=</span> <span class="DecNumber">32'u</span></pre></dt>
   <dd>
     
     
@@ -1426,7 +1447,7 @@
   </dd>
 </div>
 <div id="CWX">
-  <dt><pre><a href="xinc.html#CWX"><span class="Identifier">CWX</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWX"><span class="Identifier">CWX</span></a> <span class="Other">=</span> <span class="DecNumber">1'u</span></pre></dt>
   <dd>
     
     
@@ -1434,7 +1455,7 @@
   </dd>
 </div>
 <div id="CWY">
-  <dt><pre><a href="xinc.html#CWY"><span class="Identifier">CWY</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="xinc.html#CWY"><span class="Identifier">CWY</span></a> <span class="Other">=</span> <span class="DecNumber">2'u</span></pre></dt>
   <dd>
     
     
@@ -1506,7 +1527,7 @@
   </dd>
 </div>
 <div id="DoBlue">
-  <dt><pre><a href="xinc.html#DoBlue"><span class="Identifier">DoBlue</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
+  <dt><pre><a href="xinc.html#DoBlue"><span class="Identifier">DoBlue</span></a> <span class="Other">=</span> <span class="DecNumber">4'u</span></pre></dt>
   <dd>
     
     
@@ -1514,7 +1535,7 @@
   </dd>
 </div>
 <div id="DoGreen">
-  <dt><pre><a href="xinc.html#DoGreen"><span class="Identifier">DoGreen</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="xinc.html#DoGreen"><span class="Identifier">DoGreen</span></a> <span class="Other">=</span> <span class="DecNumber">2'u</span></pre></dt>
   <dd>
     
     
@@ -1538,7 +1559,7 @@
   </dd>
 </div>
 <div id="DoRed">
-  <dt><pre><a href="xinc.html#DoRed"><span class="Identifier">DoRed</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="xinc.html#DoRed"><span class="Identifier">DoRed</span></a> <span class="Other">=</span> <span class="DecNumber">1'u</span></pre></dt>
   <dd>
     
     
@@ -2157,23 +2178,7 @@
   <dt><pre><a href="xinc.html#InputFocus"><span class="Identifier">InputFocus</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
-    Destination window in <tt class="docutils literal"><span class="pre"><span class="Identifier">SendEvent</span></span></tt>.
-    
-  </dd>
-</div>
-<div id="InputOnly">
-  <dt><pre><a href="xinc.html#InputOnly"><span class="Identifier">InputOnly</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
-  <dd>
-    
-    
-    
-  </dd>
-</div>
-<div id="InputOutput">
-  <dt><pre><a href="xinc.html#InputOutput"><span class="Identifier">InputOutput</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
-  <dd>
-    
-    
+    Destination window in <tt class="docutils literal"><span class="pre"><span class="Identifier">XSendEvent</span></span></tt>.
     
   </dd>
 </div>
@@ -2797,7 +2802,7 @@
   <dt><pre><a href="xinc.html#ParentRelative"><span class="Identifier">ParentRelative</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
-    Background pixmap in <tt class="docutils literal"><span class="pre"><span class="Identifier">CreateWindow</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">ChangeWindowAttributes</span></span></tt>.
+    Background pixmap in <tt class="docutils literal"><span class="pre"><span class="Identifier">XCreateWindow</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">XChangeWindowAttributes</span></span></tt>.
     
   </dd>
 </div>
@@ -2837,7 +2842,7 @@
   <dt><pre><a href="xinc.html#PointerRoot"><span class="Identifier">PointerRoot</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
-    Focus window in <tt class="docutils literal"><span class="pre"><span class="Identifier">SetInputFocus</span></span></tt>.
+    Focus window in <tt class="docutils literal"><span class="pre"><span class="Identifier">XSetInputFocus</span></span></tt>.
     
   </dd>
 </div>
@@ -2845,7 +2850,7 @@
   <dt><pre><a href="xinc.html#PointerWindow"><span class="Identifier">PointerWindow</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
-    Destination window in <tt class="docutils literal"><span class="pre"><span class="Identifier">SendEvent</span></span></tt>.
+    Destination window in <tt class="docutils literal"><span class="pre"><span class="Identifier">XSendEvent</span></span></tt>.
     
   </dd>
 </div>
@@ -2986,7 +2991,7 @@
   </dd>
 </div>
 <div id="RevertToNone">
-  <dt><pre><a href="xinc.html#RevertToNone"><span class="Identifier">RevertToNone</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="xinc.html#RevertToNone"><span class="Identifier">RevertToNone</span></a> <span class="Other">=</span> <span class="DecNumber">0'i32</span></pre></dt>
   <dd>
     
     
@@ -2994,7 +2999,7 @@
   </dd>
 </div>
 <div id="RevertToParent">
-  <dt><pre><a href="xinc.html#RevertToParent"><span class="Identifier">RevertToParent</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="xinc.html#RevertToParent"><span class="Identifier">RevertToParent</span></a> <span class="Other">=</span> <span class="DecNumber">2'i32</span></pre></dt>
   <dd>
     
     
@@ -3002,7 +3007,7 @@
   </dd>
 </div>
 <div id="RevertToPointerRoot">
-  <dt><pre><a href="xinc.html#RevertToPointerRoot"><span class="Identifier">RevertToPointerRoot</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="xinc.html#RevertToPointerRoot"><span class="Identifier">RevertToPointerRoot</span></a> <span class="Other">=</span> <span class="DecNumber">1'i32</span></pre></dt>
   <dd>
     
     
@@ -3376,6 +3381,14 @@
     
   </dd>
 </div>
+<div id="==,KeyMask,KeyMask">
+  <dt><pre><span class="Keyword">proc</span> <a href="#%3D%3D%2CKeyMask%2CKeyMask"><span class="Identifier">`==`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="xinc.html#KeyMask"><span class="Identifier">KeyMask</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">borrow</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
 <div id="==,Pixmap,Pixmap">
   <dt><pre><span class="Keyword">proc</span> <a href="#%3D%3D%2CPixmap%2CPixmap"><span class="Identifier">`==`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="xinc.html#Pixmap"><span class="Identifier">Pixmap</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span class="Identifier">borrow</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -3403,7 +3416,16 @@
 
 </div>
 <div id="or-procs-all">
-  <div id="or,EventMask,EventMask">
+  <div id="or,ConfigureWindowMask,ConfigureWindowMask">
+  <dt><pre><span class="Keyword">func</span> <a href="#or%2CConfigureWindowMask%2CConfigureWindowMask"><span class="Identifier">`or`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="xinc.html#ConfigureWindowMask"><span class="Identifier">ConfigureWindowMask</span></a><span class="Other">)</span><span class="Other">:</span> <a href="xinc.html#ConfigureWindowMask"><span class="Identifier">ConfigureWindowMask</span></a> {.<span class="Identifier">borrow</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+<div id="or,EventMask,EventMask">
   <dt><pre><span class="Keyword">proc</span> <a href="#or%2CEventMask%2CEventMask"><span class="Identifier">`or`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="xinc.html#EventMask"><span class="Identifier">EventMask</span></a><span class="Other">)</span><span class="Other">:</span> <a href="xinc.html#EventMask"><span class="Identifier">EventMask</span></a> {.<span class="Identifier">borrow</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
                                         <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -3414,6 +3436,15 @@
 </div>
 <div id="or,KeyMask,KeyMask">
   <dt><pre><span class="Keyword">proc</span> <a href="#or%2CKeyMask%2CKeyMask"><span class="Identifier">`or`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="xinc.html#KeyMask"><span class="Identifier">KeyMask</span></a><span class="Other">)</span><span class="Other">:</span> <a href="xinc.html#KeyMask"><span class="Identifier">KeyMask</span></a> {.<span class="Identifier">borrow</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+<div id="or,WindowAttributeMask,WindowAttributeMask">
+  <dt><pre><span class="Keyword">func</span> <a href="#or%2CWindowAttributeMask%2CWindowAttributeMask"><span class="Identifier">`or`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="xinc.html#WindowAttributeMask"><span class="Identifier">WindowAttributeMask</span></a><span class="Other">)</span><span class="Other">:</span> <a href="xinc.html#WindowAttributeMask"><span class="Identifier">WindowAttributeMask</span></a> {.<span class="Identifier">borrow</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
@@ -3432,7 +3463,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2023-12-12 17:47:00 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-12-13 14:13:03 UTC</small>
       </div>
     </div>
   </div>
