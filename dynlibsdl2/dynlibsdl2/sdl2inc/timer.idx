@@ -1,0 +1,4 @@
+nimTitle	timer	dynlibsdl2/sdl2inc/timer.html	module dynlibsdl2/sdl2inc/timer		0
+nim	ticks_passed	dynlibsdl2/sdl2inc/timer.html#ticks_passed,uint32,uint32	proc ticks_passed(a, b: uint32): bool		6
+nim	TimerCallback	dynlibsdl2/sdl2inc/timer.html#TimerCallback	type TimerCallback		11
+nim	TimerID	dynlibsdl2/sdl2inc/timer.html#TimerID	type TimerID		15

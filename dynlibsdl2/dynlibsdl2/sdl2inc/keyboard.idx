@@ -1,0 +1,2 @@
+nimTitle	keyboard	dynlibsdl2/sdl2inc/keyboard.html	module dynlibsdl2/sdl2inc/keyboard		0
+nim	Keysym	dynlibsdl2/sdl2inc/keyboard.html#Keysym	object Keysym		12

@@ -1,0 +1,17 @@
+nimTitle	init	dynlibsdl2/sdl2inc/init.html	module dynlibsdl2/sdl2inc/init		0
+nim	SdlBool	dynlibsdl2/sdl2inc/init.html#SdlBool	type SdlBool		9
+nim	InitFlags	dynlibsdl2/sdl2inc/init.html#InitFlags	type InitFlags		12
+nim	`and`	dynlibsdl2/sdl2inc/init.html#and,InitFlags,InitFlags	proc `and`(a, b: InitFlags): InitFlags		15
+nim	`or`	dynlibsdl2/sdl2inc/init.html#or,InitFlags,InitFlags	proc `or`(a, b: InitFlags): InitFlags		16
+nim	`==`	dynlibsdl2/sdl2inc/init.html#==,InitFlags,uint32	proc `==`(a: InitFlags; b: uint32): bool		18
+nim	INIT_NONE	dynlibsdl2/sdl2inc/init.html#INIT_NONE	const INIT_NONE		21
+nim	INIT_TIMER	dynlibsdl2/sdl2inc/init.html#INIT_TIMER	const INIT_TIMER		22
+nim	INIT_AUDIO	dynlibsdl2/sdl2inc/init.html#INIT_AUDIO	const INIT_AUDIO		23
+nim	INIT_VIDEO	dynlibsdl2/sdl2inc/init.html#INIT_VIDEO	const INIT_VIDEO		24
+nim	INIT_JOYSTICK	dynlibsdl2/sdl2inc/init.html#INIT_JOYSTICK	const INIT_JOYSTICK		25
+nim	INIT_HAPTIC	dynlibsdl2/sdl2inc/init.html#INIT_HAPTIC	const INIT_HAPTIC		26
+nim	INIT_GAMECONTROLLER	dynlibsdl2/sdl2inc/init.html#INIT_GAMECONTROLLER	const INIT_GAMECONTROLLER		27
+nim	INIT_EVENTS	dynlibsdl2/sdl2inc/init.html#INIT_EVENTS	const INIT_EVENTS		28
+nim	INIT_SENSOR	dynlibsdl2/sdl2inc/init.html#INIT_SENSOR	const INIT_SENSOR		29
+nim	INIT_NOPARACHUTE	dynlibsdl2/sdl2inc/init.html#INIT_NOPARACHUTE	const INIT_NOPARACHUTE		30
+nim	INIT_EVERYTHING	dynlibsdl2/sdl2inc/init.html#INIT_EVERYTHING	const INIT_EVERYTHING		33

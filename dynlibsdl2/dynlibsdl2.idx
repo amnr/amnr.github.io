@@ -1,0 +1,275 @@
+nimTitle	dynlibsdl2	dynlibsdl2.html	module dynlibsdl2		0
+nim	init_sdl2	#init_sdl2,InitFlags	proc init_sdl2(flags: InitFlags = 32'u or 1048576'u): bool		131
+nim	init_sub_system	#init_sub_system,InitFlags	proc init_sub_system(flags: InitFlags): bool		138
+nim	quit_sdl2	#quit_sdl2	proc quit_sdl2()		155
+nim	quit_sub_system	#quit_sub_system,InitFlags	proc quit_sub_system(flags: InitFlags)		175
+nim	was_init	#was_init,InitFlags	proc was_init(flags: InitFlags = INIT_NONE): InitFlags		194
+nim	audio_init	#audio_init,string	proc audio_init(driver_name: string): bool		216
+nim	audio_quit	#audio_quit	proc audio_quit()		223
+nim	close_audio	#close_audio	proc close_audio()		239
+nim	close_audio_device	#close_audio_device,AudioDeviceID	proc close_audio_device(dev: AudioDeviceID)		245
+nim	free_wav	#free_wav,ptr.UncheckedArray[byte]	proc free_wav(audio_buf: ptr UncheckedArray[byte])		255
+nim	get_audio_device_name	#get_audio_device_name,int,bool	proc get_audio_device_name(index: int; iscapture: bool): string		261
+nim	get_audio_device_spec	#get_audio_device_spec,int,bool,AudioSpec	proc get_audio_device_spec(index: int; iscapture: bool; spec: var AudioSpec): bool		267
+nim	get_audio_device_status	#get_audio_device_status,AudioDeviceID	proc get_audio_device_status(dev: AudioDeviceID): AudioStatus		275
+nim	get_audio_driver	#get_audio_driver,int	proc get_audio_driver(index: int): string		281
+nim	get_audio_status	#get_audio_status	proc get_audio_status(): AudioStatus		291
+nim	get_current_audio_driver	#get_current_audio_driver	proc get_current_audio_driver(): string		297
+nim	get_default_audio_info	#get_default_audio_info,string,AudioSpec,bool	proc get_default_audio_info(name: var string; spec: var AudioSpec; iscapture: bool): bool		303
+nim	get_num_audio_devices	#get_num_audio_devices,bool	proc get_num_audio_devices(iscapture: bool): int		316
+nim	get_num_audio_drivers	#get_num_audio_drivers	proc get_num_audio_drivers(): int		322
+nim	get_queued_audio_size	#get_queued_audio_size,AudioDeviceID	proc get_queued_audio_size(dev: AudioDeviceID): uint32		328
+nim	load_wav_rw	#load_wav_rw,RWopsPtr,bool,AudioSpec,ptr.UncheckedArray[byte],uint32	proc load_wav_rw(src: RWopsPtr; freesrc: bool; spec: var AudioSpec;\n            audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		335
+nim	mix_audio	#mix_audio,ptr.UncheckedArray[byte],,uint32,int	proc mix_audio(dst: ptr UncheckedArray[byte];\n          src: ptr byte or ptr UncheckedArray[byte]; len: uint32; volume: int)		366
+nim	open_audio	#open_audio,AudioSpec	proc open_audio(desired: var AudioSpec): bool		381
+nim	open_audio	#open_audio,AudioSpec,AudioSpec	proc open_audio(desired: AudioSpec; obtained: var AudioSpec): bool		388
+nim	open_audio_device	#open_audio_device,string,bool,AudioSpec,AudioSpec	proc open_audio_device(device: string; iscapture: bool; desired: AudioSpec;\n                  obtained: var AudioSpec; allowed_changes = AudioAllowFlags 0): AudioDeviceID		397
+nim	open_audio_device	#open_audio_device,string,bool,AudioSpec	proc open_audio_device(device: string; iscapture: bool; desired: AudioSpec;\n                  allowed_changes = AudioAllowFlags 0): AudioDeviceID		415
+nim	pause_audio	#pause_audio,bool	proc pause_audio(pause_on: bool)		431
+nim	pause_audio_device	#pause_audio_device,AudioDeviceID,bool	proc pause_audio_device(dev: AudioDeviceID; pause_on: bool)		434
+nim	queue_audio	#queue_audio,AudioDeviceID,pointer,uint32	proc queue_audio(dev: AudioDeviceID; data: pointer; len: uint32): bool		440
+nim	get_clipboard_text	#get_clipboard_text	proc get_clipboard_text(): string		466
+nim	set_clipboard_text	#set_clipboard_text,string	proc set_clipboard_text(text: string): bool		484
+nim	clear_error	#clear_error	proc clear_error()		497
+nim	get_error	#get_error	proc get_error(): string		505
+nim	set_error	#set_error,string	proc set_error(msg: string): bool		517
+nim	free_drop_event_file	#free_drop_event_file,Event	proc free_drop_event_file(event: var Event)		528
+nim	event_state	#event_state,EventType,bool	proc event_state(typ: EventType; state: bool): bool		538
+nim	flush	#flush,EventType	proc flush(typ: EventType)		551
+nim	flush_events	#flush_events,EventType,EventType	proc flush_events(min_type, max_type: EventType)		557
+nim	peep_events	#peep_events,openArray[Event],int,EventAction,EventType,EventType	proc peep_events(events: var openArray[Event]; numevents: int; action: EventAction;\n            min_type, max_type: EventType): int		567
+nim	peep_events	#peep_events,openArray[Event],EventAction,EventType,EventType	proc peep_events(events: var openArray[Event]; action: EventAction;\n            min_type, max_type: EventType): int		581
+nim	poll_event	#poll_event	proc poll_event(): bool		585
+nim	poll	#poll,Event	proc poll(event: var Event): bool		591
+nim	pump_events	#pump_events	proc pump_events()		597
+nim	push	#push,Event	proc push(event: var Event): bool		603
+nim	wait	#wait	proc wait(): bool		612
+nim	wait	#wait,Event	proc wait(event: var Event): bool		618
+nim	wait_timeout	#wait_timeout,int	proc wait_timeout(timeout: int): bool		624
+nim	wait_timeout	#wait_timeout,Event,int	proc wait_timeout(event: var Event; timeout: int): bool		630
+nim	get_hint	#get_hint,HintName	proc get_hint(name: HintName): string		727
+nim	set_hint	#set_hint,HintName,string	proc set_hint(name: HintName; value: string): bool		742
+nim	joystick_update	#joystick_update	proc joystick_update()		756
+nim	num_joysticks	#num_joysticks	proc num_joysticks(): int		769
+nim	get_keyboard_focus	#get_keyboard_focus	proc get_keyboard_focus(): WindowPtr		849
+nim	log_message	#log_message,LogCategory,LogPriority,string	proc log_message(category: LogCategory; priority: LogPriority; message: string)		876
+nim	log	#log,string	proc log(message: string)		879
+nim	log_critical	#log_critical,LogCategory,string	proc log_critical(category: LogCategory; message: string)		885
+nim	log_debug	#log_debug,LogCategory,string	proc log_debug(category: LogCategory; message: string)		892
+nim	log_error	#log_error,LogCategory,string	proc log_error(category: LogCategory; message: string)		898
+nim	log_info	#log_info,LogCategory,string	proc log_info(category: LogCategory; message: string)		908
+nim	log_set_all_priority	#log_set_all_priority,LogPriority	proc log_set_all_priority(priority: LogPriority)		927
+nim	log_set_output_function	#log_set_output_function,LogOutputFunction,pointer	proc log_set_output_function(callback: LogOutputFunction; userdata: pointer = nil)		933
+nim	log_set_priority	#log_set_priority,LogCategory,LogPriority	proc log_set_priority(category: LogCategory; priority: LogPriority)		941
+nim	log_verbose	#log_verbose,LogCategory,string	proc log_verbose(category: LogCategory; message: string)		947
+nim	log_warn	#log_warn,LogCategory,string	proc log_warn(category: LogCategory; message: string)		953
+nim	show_message_box	#show_message_box,MessageBoxData,int	proc show_message_box(messageboxdata: var MessageBoxData; buttonid: var int): bool		977
+nim	show_simple_message_box	#show_simple_message_box,MessageBoxFlags,string,string,WindowPtr	proc show_simple_message_box(flags: MessageBoxFlags; title: string; message: string;\n                        window: WindowPtr = nil): bool		988
+nim	capture_mouse	#capture_mouse,bool	proc capture_mouse(enabled: bool): bool		1005
+nim	create_color_cursor	#create_color_cursor,SurfacePtr,int,int	proc create_color_cursor(surface: SurfacePtr; hot_x, hot_y: int): CursorPtr		1013
+nim	create_cursor	#create_cursor,openArray[byte],openArray[byte],int,int,int,int	proc create_cursor(data, mask: openArray[byte]; w, h: int; hot_x, hot_y: int): CursorPtr		1021
+nim	create_system_cursor	#create_system_cursor,SystemCursor	proc create_system_cursor(id: SystemCursor)		1036
+nim	free_cursor	#free_cursor,CursorPtr	proc free_cursor(cursor: CursorPtr)		1041
+nim	get_cursor	#get_cursor	proc get_cursor(): CursorPtr		1046
+nim	get_global_mouse_state	#get_global_mouse_state	proc get_global_mouse_state(): tuple[x, y: int, state: uint32]		1054
+nim	get_mouse_focus	#get_mouse_focus	proc get_mouse_focus(): WindowPtr		1068
+nim	get_mouse_state	#get_mouse_state	proc get_mouse_state(): tuple[x, y: int, state: uint32]		1075
+nim	get_relative_mouse_mode	#get_relative_mouse_mode	proc get_relative_mouse_mode(): bool		1083
+nim	get_relative_mouse_state	#get_relative_mouse_state	proc get_relative_mouse_state(): tuple[x, y: int, state: uint32]		1089
+nim	set_cursor	#set_cursor,CursorPtr	proc set_cursor(cursor: CursorPtr)		1097
+nim	set_relative_mouse_mode	#set_relative_mouse_mode,bool	proc set_relative_mouse_mode(enable: bool): bool		1103
+nim	show_cursor	#show_cursor,EventState	proc show_cursor(toggle: EventState): bool		1110
+nim	get_pixel_format_name	#get_pixel_format_name,PixelFormatEnum	proc get_pixel_format_name(format: PixelFormatEnum): string		1129
+nim	map_rgb	#map_rgb,PixelFormat,byte,byte,byte	proc map_rgb(format: PixelFormat; r, g, b: byte): uint32		1140
+nim	map_rgba	#map_rgba,PixelFormat,byte,byte,byte,byte	proc map_rgba(format: PixelFormat; r, g, b, a: byte): uint32		1148
+nim	masks_to_pixel_format_enum	#masks_to_pixel_format_enum,int,uint32,uint32,uint32,uint32	proc masks_to_pixel_format_enum(bpp: int; rmask, gmask, bmask, amask: uint32): PixelFormatEnum		1156
+nim	pixel_format_enum_to_masks	#pixel_format_enum_to_masks,PixelFormatEnum	proc pixel_format_enum_to_masks(format: PixelFormatEnum): tuple[bpp: int,\n    rmask, gmask, bmask, amask: uint32]		1164
+nim	set_palette	#set_palette,PixelFormat,Palette	proc set_palette(format: var PixelFormat; palette: Palette): bool		1184
+nim	create_renderer	#create_renderer,WindowPtr,int	proc create_renderer(window: WindowPtr; index: int; flags = RendererFlags 0): RendererPtr		1220
+nim	create_renderer	#create_renderer,WindowPtr	proc create_renderer(window: WindowPtr; flags = RendererFlags 0): RendererPtr		1229
+nim	create_software_renderer	#create_software_renderer,SurfacePtr	proc create_software_renderer(surface: SurfacePtr): RendererPtr		1237
+nim	create_texture	#create_texture,RendererPtr,PixelFormatEnum,TextureAccess,int,int	proc create_texture(renderer: RendererPtr; format: PixelFormatEnum;\n               access: TextureAccess; width, height: int): TexturePtr		1244
+nim	create_texture_from_surface	#create_texture_from_surface,RendererPtr,SurfacePtr	proc create_texture_from_surface(renderer: RendererPtr; surface: SurfacePtr): TexturePtr		1254
+nim	create_window_and_renderer	#create_window_and_renderer,int,int,WindowFlags	proc create_window_and_renderer(width, height: int;\n                           window_flags: WindowFlags = WindowFlags 0): tuple[\n    window: WindowPtr, renderer: RendererPtr]		1263
+nim	destroy	#destroy,RendererPtr	proc destroy(renderer: RendererPtr)		1285
+nim	destroy	#destroy,TexturePtr	proc destroy(texture: TexturePtr)		1293
+nim	get_num_render_drivers	#get_num_render_drivers	proc get_num_render_drivers(): int		1304
+nim	get_render_draw_color	#get_render_draw_color,RendererPtr,byte,byte,byte,byte	proc get_render_draw_color(renderer: RendererPtr; r, g, b, a: var byte): bool		1314
+nim	get_render_driver_info	#get_render_driver_info,int,RendererInfo	proc get_render_driver_info(index: int; info: var RendererInfo): bool		1323
+nim	get_render_target	#get_render_target,RendererPtr	proc get_render_target(renderer: RendererPtr): TexturePtr		1330
+nim	get_renderer	#get_renderer,WindowPtr	proc get_renderer(window: WindowPtr): RendererPtr		1336
+nim	get_renderer_info	#get_renderer_info,RendererPtr,RendererInfo	proc get_renderer_info(renderer: RendererPtr; info: var RendererInfo): bool		1343
+nim	get_renderer_output_size	#get_renderer_output_size,RendererPtr,int,int	proc get_renderer_output_size(renderer: RendererPtr; w, h: var int): bool		1350
+nim	query_texture	#query_texture,TexturePtr,uint32,int,int,int	proc query_texture(texture: TexturePtr; format: var uint32; access: var int;\n              w, h: var int): bool		1368
+nim	clear	#clear,RendererPtr	proc clear(renderer: RendererPtr): bool		1383
+nim	copy	#copy,RendererPtr,TexturePtr	proc copy(renderer: RendererPtr; texture: TexturePtr): bool		1390
+nim	copy	#copy,RendererPtr,TexturePtr,Rect	proc copy(renderer: RendererPtr; texture: TexturePtr; dst: Rect): bool		1398
+nim	copy	#copy,RendererPtr,TexturePtr,int,int,int,int	proc copy(renderer: RendererPtr; texture: TexturePtr; x, y: int; w, h: int): bool		1408
+nim	copy	#copy,RendererPtr,TexturePtr,Rect,Rect	proc copy(renderer: RendererPtr; texture: TexturePtr; src, dst: Rect): bool		1421
+nim	copy_ex	#copy_ex,RendererPtr,TexturePtr,Rect,Rect,float,Point,RendererFlip	proc copy_ex(renderer: RendererPtr; texture: TexturePtr; src, dst: Rect;\n        angle: float; center: Point; flip: RendererFlip): bool		1432
+nim	draw_line	#draw_line,RendererPtr,int,int,int,int	proc draw_line(renderer: RendererPtr; x1, y1: int; x2, y2: int): bool		1454
+nim	draw_point	#draw_point,RendererPtr,int,int	proc draw_point(renderer: RendererPtr; x, y: int): bool		1467
+nim	draw_point	#draw_point,RendererPtr,float,float	proc draw_point(renderer: RendererPtr; x, y: float): bool		1474
+nim	draw_rect	#draw_rect,RendererPtr,Rect	proc draw_rect(renderer: RendererPtr; rect: Rect): bool		1487
+nim	draw_rect	#draw_rect,RendererPtr,int,int,int,int	proc draw_rect(renderer: RendererPtr; x, y: int; w, h: int): bool		1496
+nim	fill_rect	#fill_rect,RendererPtr	proc fill_rect(renderer: RendererPtr): bool		1506
+nim	fill_rect	#fill_rect,RendererPtr,Rect	proc fill_rect(renderer: RendererPtr; rect: Rect): bool		1513
+nim	fill_rect	#fill_rect,RendererPtr,int,int,int,int	proc fill_rect(renderer: RendererPtr; x, y: int; w, h: int): bool		1522
+nim	render_geometry	#render_geometry,RendererPtr,TexturePtr,openArray[Vertex],int	proc render_geometry(renderer: RendererPtr; texture: TexturePtr;\n                vertices: openArray[Vertex]; num_vertices: int = 0): bool		1533
+nim	render_geometry	#render_geometry,RendererPtr,openArray[Vertex],int	proc render_geometry(renderer: RendererPtr; vertices: openArray[Vertex];\n                num_vertices: int = 0): bool		1553
+nim	get_clip_rect	#get_clip_rect,RendererPtr,Rect	proc get_clip_rect(renderer: RendererPtr; rect: var Rect)		1567
+nim	get_logical_size	#get_logical_size,RendererPtr,int,int	proc get_logical_size(renderer: RendererPtr; w, h: var int)		1575
+nim	get_scale	#get_scale,RendererPtr,float,float	proc get_scale(renderer: RendererPtr; scale_x, scale_y: var float)		1587
+nim	get_viewport	#get_viewport,RendererPtr,Rect	proc get_viewport(renderer: RendererPtr; rect: var Rect)		1597
+nim	get_window	#get_window,RendererPtr	proc get_window(renderer: RendererPtr): WindowPtr		1603
+nim	present	#present,RendererPtr	proc present(renderer: RendererPtr)		1615
+nim	read_pixels	#read_pixels,RendererPtr,PixelFormatEnum,pointer,int	proc read_pixels(renderer: RendererPtr; format: PixelFormatEnum; pixels: pointer;\n            pitch: int): bool		1621
+nim	read_pixels	#read_pixels,RendererPtr,Rect,PixelFormatEnum,pointer,int	proc read_pixels(renderer: RendererPtr; rect: Rect; format: PixelFormatEnum;\n            pixels: pointer; pitch: int): bool		1630
+nim	set_clip_rect	#set_clip_rect,RendererPtr	proc set_clip_rect(renderer: RendererPtr): bool		1642
+nim	set_clip_rect	#set_clip_rect,RendererPtr,Rect	proc set_clip_rect(renderer: RendererPtr; rect: Rect): bool		1649
+nim	set_logical_size	#set_logical_size,RendererPtr,int,int	proc set_logical_size(renderer: RendererPtr; w, h: int): bool		1660
+nim	set_scale	#set_scale,RendererPtr,float,float	proc set_scale(renderer: RendererPtr; scale_x, scale_y: float): bool		1667
+nim	set_vsync	#set_vsync,RendererPtr,bool	proc set_vsync(renderer: RendererPtr; vsync: bool): bool		1675
+nim	set_viewport	#set_viewport,RendererPtr	proc set_viewport(renderer: RendererPtr): bool		1683
+nim	set_viewport	#set_viewport,RendererPtr,Rect	proc set_viewport(renderer: RendererPtr; rect: Rect): bool		1690
+nim	render_target_supported	#render_target_supported,RendererPtr	proc render_target_supported(renderer: RendererPtr): bool		1699
+nim	render_window_to_logical	#render_window_to_logical,RendererPtr,int,int,float,float	proc render_window_to_logical(renderer: RendererPtr; window_x, window_y: int;\n                         logical_x, logical_y: var float): bool		1707
+nim	set_draw_blend_mode	#set_draw_blend_mode,RendererPtr,BlendMode	proc set_draw_blend_mode(renderer: RendererPtr; blend_mode: BlendMode): bool		1723
+nim	set_draw_color	#set_draw_color,RendererPtr,byte,byte,byte,byte	proc set_draw_color(renderer: RendererPtr; r, g, b: byte; a: byte = 0x000000FF): bool		1730
+nim	set_target	#set_target,RendererPtr,TexturePtr	proc set_target(renderer: RendererPtr; texture: TexturePtr = nil): bool		1741
+nim	set_alpha_mod	#set_alpha_mod,TexturePtr,byte	proc set_alpha_mod(texture: TexturePtr; a: byte): bool		1748
+nim	set_blend_mode	#set_blend_mode,TexturePtr,BlendMode	proc set_blend_mode(texture: TexturePtr; blend_mode: BlendMode): bool		1755
+nim	set_color_mod	#set_color_mod,TexturePtr,byte,byte,byte	proc set_color_mod(texture: TexturePtr; r, g, b: byte): bool		1763
+nim	update	#update,TexturePtr,Rect,pointer,int	proc update(texture: TexturePtr; rect: Rect; pixels: pointer; pitch: int): bool		1779
+nim	update	#update,TexturePtr,pointer,int	proc update(texture: TexturePtr; pixels: pointer; pitch: int): bool		1790
+nim	update	#update,TexturePtr,openArray[T],int	proc update[T: SomeUnsignedInt](texture: TexturePtr; pixels: openArray[T]; pitch: int): bool		1798
+nim	rw_from_file	#rw_from_file,string,string	proc rw_from_file(file, mode: string): RWopsPtr		1817
+nim	save_bmp	#save_bmp,SurfacePtr,string	proc save_bmp(surface: SurfacePtr; file: string): bool		1824
+nim	convert_surface	#convert_surface,SurfacePtr,PixelFormat	proc convert_surface(src: SurfacePtr; fmt: PixelFormat): SurfacePtr		1850
+nim	convert_surface_format	#convert_surface_format,SurfacePtr,PixelFormatEnum	proc convert_surface_format(src: SurfacePtr; pixel_format: PixelFormatEnum): SurfacePtr		1861
+nim	create_rgb_surface	#create_rgb_surface,SurfaceFlags,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface(flags: SurfaceFlags; width, height: int; depth: int;\n                   rmask, gmask, bmask, amask: uint32): SurfacePtr		1870
+nim	create_rgb_surface	#create_rgb_surface,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface(width, height: int; depth: int;\n                   rmask, gmask, bmask, amask: uint32): SurfacePtr		1881
+nim	create_rgb_surface_from	#create_rgb_surface_from,pointer,int,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface_from(pixels: pointer; width, height, depth, pitch: int;\n                        rmask, gmask, bmask, amask: uint32): SurfacePtr		1890
+nim	create_rgb_surface_with_format	#create_rgb_surface_with_format,int,int,int,PixelFormatEnum	proc create_rgb_surface_with_format(width, height: int; depth: int;\n                               format: PixelFormatEnum): SurfacePtr		1903
+nim	fill_rect	#fill_rect,SurfacePtr,uint32	proc fill_rect(dst: SurfacePtr; color: uint32): bool		1918
+nim	fill_rect	#fill_rect,SurfacePtr,Rect,uint32	proc fill_rect(dst: SurfacePtr; rect: Rect; color: uint32): bool		1925
+nim	free_surface	#free_surface,SurfacePtr	proc free_surface(surface: SurfacePtr)		1936
+nim	load_bmp_rw	#load_bmp_rw,RWopsPtr,bool	proc load_bmp_rw(src: RWopsPtr; freesrc: bool): SurfacePtr		1954
+nim	lock	#lock,SurfacePtr	proc lock(surface: SurfacePtr): bool		1972
+nim	premultiply_alpha	#premultiply_alpha,int,int,PixelFormatEnum,pointer,int,PixelFormatEnum,pointer,int	proc premultiply_alpha(width, height: int; src_format: PixelFormatEnum; src: pointer;\n                  src_pitch: int; dst_format: PixelFormatEnum; dst: pointer;\n                  dst_pitch: int): bool		1985
+nim	set_color_key	#set_color_key,SurfacePtr,bool,uint32	proc set_color_key(surface: SurfacePtr; flag: bool; key: uint32): bool		2003
+nim	unlock	#unlock,SurfacePtr	proc unlock(surface: SurfacePtr)		2022
+nim	add_timer	#add_timer,uint32,TimerCallback,pointer	proc add_timer(interval: uint32; callback: TimerCallback; param: pointer = nil): TimerID		2049
+nim	delay	#delay,uint32	proc delay(ms: uint32)		2058
+nim	get_performance_counter	#get_performance_counter	proc get_performance_counter(): uint64		2064
+nim	get_performance_frequency	#get_performance_frequency	proc get_performance_frequency(): uint64		2070
+nim	get_ticks	#get_ticks	proc get_ticks(): uint32		2076
+nim	get_ticks64	#get_ticks64	proc get_ticks64(): uint64		2093
+nim	remove_timer	#remove_timer,TimerID	proc remove_timer(id: TimerID): bool		2117
+nim	get_num_touch_devices	#get_num_touch_devices	proc get_num_touch_devices(): int		2130
+nim	get_num_touch_fingers	#get_num_touch_fingers,TouchID	proc get_num_touch_fingers(touch_id: TouchID): int		2137
+nim	get_touch_device	#get_touch_device,int	proc get_touch_device(index: int): TouchID		2145
+nim	get_touch_device_type	#get_touch_device_type,TouchID	proc get_touch_device_type(touch_id: TouchID): TouchDeviceType		2153
+nim	get_touch_finger	#get_touch_finger,TouchID,int	proc get_touch_finger(touch_id: TouchID; index: int): ptr Finger		2165
+nim	get_touch_name	#get_touch_name,int	proc get_touch_name(index: int): string		2173
+nim	get_revision	#get_revision	proc get_revision(): string		2189
+nim	get_version	#get_version	proc get_version(): tuple[major, minor, patch: int]		2197
+nim	create_window	#create_window,string,int,int,int,int	proc create_window(title: string; x, y, w, h: int; flags = WindowFlags 0): WindowPtr		2211
+nim	create_window	#create_window,string,int,int	proc create_window(title: string; w, h: int; flags = WindowFlags 0): WindowPtr		2223
+nim	destroy	#destroy,WindowPtr	proc destroy(window: WindowPtr)		2235
+nim	disable_screen_saver	#disable_screen_saver	proc disable_screen_saver()		2245
+nim	enable_screen_saver	#enable_screen_saver	proc enable_screen_saver()		2253
+nim	flash	#flash,WindowPtr,FlashOperation	proc flash(window: WindowPtr; operation: FlashOperation): bool		2261
+nim	get_current_display_mode	#get_current_display_mode,Natural,DisplayMode	proc get_current_display_mode(display_index: Natural; mode: var DisplayMode): bool		2292
+nim	get_current_video_driver	#get_current_video_driver	proc get_current_video_driver(): string		2305
+nim	get_desktop_display_mode	#get_desktop_display_mode,Natural,DisplayMode	proc get_desktop_display_mode(display_index: Natural; mode: var DisplayMode): bool		2316
+nim	get_display_bounds	#get_display_bounds,Natural,Rect	proc get_display_bounds(display_index: Natural; rect: var Rect): bool		2326
+nim	get_display_bounds	#get_display_bounds,Natural,int,int,int,int	proc get_display_bounds(display_index: Natural; x, y: var int; width, height: var int): bool		2335
+nim	get_display_dpi	#get_display_dpi,int,float,float,float	proc get_display_dpi(display_index: int; ddpi, hdpi, vdpi: var float): bool		2348
+nim	get_display_mode	#get_display_mode,Natural,int,DisplayMode	proc get_display_mode(display_index: Natural; mode_index: int; mode: var DisplayMode): bool		2367
+nim	get_display_name	#get_display_name,Natural	proc get_display_name(display_index: Natural): string		2378
+nim	get_display_orientation	#get_display_orientation,Natural	proc get_display_orientation(display_index: Natural): DisplayOrientation		2390
+nim	get_display_usable_bounds	#get_display_usable_bounds,Natural,Rect	proc get_display_usable_bounds(display_index: Natural; rect: var Rect): bool		2406
+nim	get_display_usable_bounds	#get_display_usable_bounds,Natural,int,int,int,int	proc get_display_usable_bounds(display_index: Natural; x, y: var int;\n                          width, height: var int): bool		2422
+nim	get_grabbed_window	#get_grabbed_window	proc get_grabbed_window(): WindowPtr		2442
+nim	get_num_display_modes	#get_num_display_modes,Natural	proc get_num_display_modes(display_index: Natural): int		2451
+nim	get_num_video_displays	#get_num_video_displays	proc get_num_video_displays(): int		2460
+nim	get_num_video_drivers	#get_num_video_drivers	proc get_num_video_drivers(): int		2469
+nim	get_video_driver	#get_video_driver,int	proc get_video_driver(index: int): string		2481
+nim	get_border_size	#get_border_size,WindowPtr,int,int,int,int	proc get_border_size(window: WindowPtr; top, left, bottom, right: var int): bool		2489
+nim	get_display_index	#get_display_index,WindowPtr	proc get_display_index(window: WindowPtr): int		2511
+nim	get_display_mode	#get_display_mode,WindowPtr,DisplayMode	proc get_display_mode(window: WindowPtr; mode: var DisplayMode): bool		2520
+nim	get_flags	#get_flags,WindowPtr	proc get_flags(window: WindowPtr): WindowFlags		2529
+nim	get_from_id	#get_from_id,uint32	proc get_from_id(id: uint32): WindowPtr		2537
+nim	get_grab	#get_grab,WindowPtr	proc get_grab(window: WindowPtr): bool		2548
+nim	get_id	#get_id,WindowPtr	proc get_id(window: WindowPtr): uint32		2558
+nim	get_keyboard_grab	#get_keyboard_grab,WindowPtr	proc get_keyboard_grab(window: WindowPtr): bool		2567
+nim	get_maximum_size	#get_maximum_size,WindowPtr	proc get_maximum_size(window: WindowPtr): tuple[w, h: int]		2578
+nim	get_minimum_size	#get_minimum_size,WindowPtr	proc get_minimum_size(window: WindowPtr): tuple[w, h: int]		2588
+nim	get_mouse_grab	#get_mouse_grab,WindowPtr	proc get_mouse_grab(window: WindowPtr): bool		2598
+nim	get_mouse_rect	#get_mouse_rect,WindowPtr	proc get_mouse_rect(window: WindowPtr): Rect		2609
+nim	get_opacity	#get_opacity,WindowPtr,float	proc get_opacity(window: WindowPtr; opacity: var float): bool		2623
+nim	get_pixel_format	#get_pixel_format,WindowPtr	proc get_pixel_format(window: WindowPtr): PixelFormatEnum		2642
+nim	get_position	#get_position,WindowPtr	proc get_position(window: WindowPtr): tuple[x, y: int]		2654
+nim	get_size	#get_size,WindowPtr	proc get_size(window: WindowPtr): tuple[w, h: int]		2664
+nim	get_size_in_pixels	#get_size_in_pixels,WindowPtr	proc get_size_in_pixels(window: WindowPtr): tuple[w, h: int]		2674
+nim	get_surface	#get_surface,WindowPtr	proc get_surface(window: WindowPtr): SurfacePtr		2688
+nim	get_title	#get_title,WindowPtr	proc get_title(window: WindowPtr): string		2697
+nim	has_surface	#has_surface,WindowPtr	proc has_surface(window: WindowPtr): bool		2709
+nim	hide	#hide,WindowPtr	proc hide(window: WindowPtr)		2720
+nim	maximize	#maximize,WindowPtr	proc maximize(window: WindowPtr)		2731
+nim	minimize	#minimize,WindowPtr	proc minimize(window: WindowPtr)		2739
+nim	`raise`	#raise,WindowPtr	proc `raise`(window: WindowPtr)		2747
+nim	restore	#restore,WindowPtr	proc restore(window: WindowPtr)		2755
+nim	set_always_on_top	#set_always_on_top,WindowPtr,bool	proc set_always_on_top(window: WindowPtr; on_top: bool): bool		2763
+nim	set_bordered	#set_bordered,WindowPtr,bool	proc set_bordered(window: WindowPtr; bordered: bool)		2777
+nim	set_display_mode	#set_display_mode,WindowPtr,DisplayMode	proc set_display_mode(window: WindowPtr; mode: DisplayMode): bool		2788
+nim	set_fullscreen	#set_fullscreen,WindowPtr	proc set_fullscreen(window: WindowPtr; flags = WindowFlags 0): bool		2799
+nim	set_grab	#set_grab,WindowPtr,bool	proc set_grab(window: WindowPtr; grabbed: bool)		2812
+nim	set_hit_test	#set_hit_test,WindowPtr,HitTest,pointer	proc set_hit_test(window: WindowPtr; callback: HitTest; callback_data: pointer): bool		2820
+nim	set_icon	#set_icon,WindowPtr,SurfacePtr	proc set_icon(window: WindowPtr; surface: SurfacePtr)		2834
+nim	set_input_focus	#set_input_focus,WindowPtr	proc set_input_focus(window: WindowPtr): bool		2842
+nim	set_keyboard_grab	#set_keyboard_grab,WindowPtr,bool	proc set_keyboard_grab(window: WindowPtr; grabbed: bool): bool		2851
+nim	set_maximum_size	#set_maximum_size,WindowPtr,int,int	proc set_maximum_size(window: WindowPtr; max_w, max_h: int)		2863
+nim	set_minimum_size	#set_minimum_size,WindowPtr,int,int	proc set_minimum_size(window: WindowPtr; min_w, min_h: int)		2871
+nim	set_modal_for	#set_modal_for,WindowPtr,WindowPtr	proc set_modal_for(modal_window, parent_window: WindowPtr): bool		2879
+nim	set_mouse_grab	#set_mouse_grab,WindowPtr,bool	proc set_mouse_grab(window: WindowPtr; grabbed: bool): bool		2892
+nim	set_mouse_rect	#set_mouse_rect,WindowPtr,Rect	proc set_mouse_rect(window: WindowPtr; rect: Rect): bool		2904
+nim	set_opacity	#set_opacity,WindowPtr,float	proc set_opacity(window: WindowPtr; opacity: float): bool		2918
+nim	set_position	#set_position,WindowPtr,int,int	proc set_position(window: WindowPtr; x, y: int)		2930
+nim	set_resizable	#set_resizable,WindowPtr,bool	proc set_resizable(window: WindowPtr; ontop: bool): bool		2942
+nim	set_size	#set_size,WindowPtr,int,int	proc set_size(window: WindowPtr; x, y: int)		2954
+nim	set_title	#set_title,WindowPtr,string	proc set_title(window: WindowPtr; title: string)		2962
+nim	show	#show,WindowPtr	proc show(window: WindowPtr)		2974
+nim	update_surface	#update_surface,WindowPtr	proc update_surface(window: WindowPtr): bool		2983
+nim	video_init	#video_init,string	proc video_init(driver_name: string): bool		2995
+nim	video_quit	#video_quit	proc video_quit()		3004
+nim	load_wav	#load_wav,string,AudioSpec,ptr.UncheckedArray[byte],uint32	proc load_wav(file: string; spec: var AudioSpec;\n         audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		3029
+nim	quit_requested	#quit_requested	proc quit_requested(): bool		3042
+nim	load_bmp	#load_bmp,string	proc load_bmp(file: string): SurfacePtr		3056
+nim	dynlibsdl2_open	#dynlibsdl2_open	proc dynlibsdl2_open(): bool		3066
+nim	dynlibsdl2_close	#dynlibsdl2_close	proc dynlibsdl2_close()		3075
+nim	dynlibsdl2_error	#dynlibsdl2_error	proc dynlibsdl2_error(): string		3079
+nimgrp	createrenderer	#create_renderer-procs-all	proc		1220
+nimgrp	setviewport	#set_viewport-procs-all	proc		1683
+nimgrp	drawpoint	#draw_point-procs-all	proc		1467
+nimgrp	getdisplaybounds	#get_display_bounds-procs-all	proc		2326
+nimgrp	update	#update-procs-all	proc		1779
+nimgrp	creatergbsurface	#create_rgb_surface-procs-all	proc		1870
+nimgrp	destroy	#destroy-procs-all	proc		1285
+nimgrp	getdisplayusablebounds	#get_display_usable_bounds-procs-all	proc		2406
+nimgrp	setcliprect	#set_clip_rect-procs-all	proc		1642
+nimgrp	openaudio	#open_audio-procs-all	proc		381
+nimgrp	createwindow	#create_window-procs-all	proc		2211
+nimgrp	wait	#wait-procs-all	proc		612
+nimgrp	copy	#copy-procs-all	proc		1390
+nimgrp	openaudiodevice	#open_audio_device-procs-all	proc		397
+nimgrp	peepevents	#peep_events-procs-all	proc		567
+nimgrp	readpixels	#read_pixels-procs-all	proc		1621
+nimgrp	rendergeometry	#render_geometry-procs-all	proc		1533
+nimgrp	drawrect	#draw_rect-procs-all	proc		1487
+nimgrp	waittimeout	#wait_timeout-procs-all	proc		624
+nimgrp	getdisplaymode	#get_display_mode-procs-all	proc		2367
+nimgrp	fillrect	#fill_rect-procs-all	proc		1506
+heading	Usage	#usage	 Usage		0
+heading	Configuration	#configuration	 Configuration		0

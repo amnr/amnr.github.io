@@ -1,0 +1,8 @@
+nimTitle	utils	dynlibsdl2/utils.html	module dynlibsdl2/utils		0
+nim	show_error	dynlibsdl2/utils.html#show_error.t,varargs[typed,]	template show_error(args: varargs[typed, `$`])		10
+nim	show_warn	dynlibsdl2/utils.html#show_warn.t,varargs[typed,]	template show_warn(args: varargs[typed, `$`])		13
+nim	available_since	dynlibsdl2/utils.html#available_since.m,string,string	macro available_since(procname: string; minver: string)		16
+nim	ensure_natural	dynlibsdl2/utils.html#ensure_natural.t,string,untyped	template ensure_natural(procname: string; body: untyped)		26
+nim	ensure_not_nil	dynlibsdl2/utils.html#ensure_not_nil.t,string,untyped	template ensure_not_nil(procname: string; body: untyped)		31
+nim	ensure_positive	dynlibsdl2/utils.html#ensure_positive.t,string,untyped	template ensure_positive(procname: string; body: untyped)		39
+nim	ensure_zero	dynlibsdl2/utils.html#ensure_zero.t,string,untyped	template ensure_zero(procname: string; body: untyped)		44

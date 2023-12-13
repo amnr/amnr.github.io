@@ -1,0 +1,46 @@
+nimTitle	video	dynlibsdl1/sdl1inc/video.html	module dynlibsdl1/sdl1inc/video		0
+nim	ALPHA_OPAQUE	dynlibsdl1/sdl1inc/video.html#ALPHA_OPAQUE	const ALPHA_OPAQUE		10
+nim	ALPHA_TRANSPARENT	dynlibsdl1/sdl1inc/video.html#ALPHA_TRANSPARENT	const ALPHA_TRANSPARENT		11
+nim	Rect	dynlibsdl1/sdl1inc/video.html#Rect	object Rect		14
+nim	init	dynlibsdl1/sdl1inc/video.html#init,typedesc[Rect],int16,int16,uint16,uint16	proc init(T: typedesc[Rect]; x, y: int16; w, h: uint16): T:type		21
+nim	Color	dynlibsdl1/sdl1inc/video.html#Color	object Color		26
+nim	init	dynlibsdl1/sdl1inc/video.html#init,typedesc[Color],byte,byte,byte	proc init(T: typedesc[Color]; r, g, b: byte): T:type		33
+nim	Palette	dynlibsdl1/sdl1inc/video.html#Palette	object Palette		38
+nim	PixelFormat	dynlibsdl1/sdl1inc/video.html#PixelFormat	object PixelFormat		43
+nim	Surface	dynlibsdl1/sdl1inc/video.html#Surface	object Surface		63
+nim	SurfacePtr	dynlibsdl1/sdl1inc/video.html#SurfacePtr	type SurfacePtr		79
+nim	SurfaceFlags	dynlibsdl1/sdl1inc/video.html#SurfaceFlags	type SurfaceFlags		82
+nim	pixels16	dynlibsdl1/sdl1inc/video.html#pixels16,SurfacePtr	proc pixels16(self: SurfacePtr): ptr UncheckedArray[uint16]		85
+nim	pixels32	dynlibsdl1/sdl1inc/video.html#pixels32,SurfacePtr	proc pixels32(self: SurfacePtr): ptr UncheckedArray[uint32]		89
+nim	`+`	dynlibsdl1/sdl1inc/video.html#+,SurfaceFlags,SurfaceFlags	proc `+`(x, y: SurfaceFlags): SurfaceFlags		93
+nim	`+=`	dynlibsdl1/sdl1inc/video.html#+=,SurfaceFlags,SurfaceFlags	proc `+=`(x: var SurfaceFlags; y: SurfaceFlags)		94
+nim	`==`	dynlibsdl1/sdl1inc/video.html#==,SurfaceFlags,SurfaceFlags	proc `==`(x, y: SurfaceFlags): bool		95
+nim	`==`	dynlibsdl1/sdl1inc/video.html#==,SurfaceFlags,uint32	proc `==`(x: SurfaceFlags; y: uint32): bool		98
+nim	`and`	dynlibsdl1/sdl1inc/video.html#and,SurfaceFlags,SurfaceFlags	proc `and`(x, y: SurfaceFlags): SurfaceFlags		100
+nim	`or`	dynlibsdl1/sdl1inc/video.html#or,SurfaceFlags,SurfaceFlags	proc `or`(x, y: SurfaceFlags): SurfaceFlags		101
+nim	`xor`	dynlibsdl1/sdl1inc/video.html#xor,SurfaceFlags,SurfaceFlags	proc `xor`(x, y: SurfaceFlags): SurfaceFlags		102
+nim	SWSURFACE	dynlibsdl1/sdl1inc/video.html#SWSURFACE	const SWSURFACE		106
+nim	HWSURFACE	dynlibsdl1/sdl1inc/video.html#HWSURFACE	const HWSURFACE		107
+nim	ASYNCBLIT	dynlibsdl1/sdl1inc/video.html#ASYNCBLIT	const ASYNCBLIT		108
+nim	ANYFORMAT	dynlibsdl1/sdl1inc/video.html#ANYFORMAT	const ANYFORMAT		111
+nim	HWPALETTE	dynlibsdl1/sdl1inc/video.html#HWPALETTE	const HWPALETTE		112
+nim	DOUBLEBUF	dynlibsdl1/sdl1inc/video.html#DOUBLEBUF	const DOUBLEBUF		113
+nim	FULLSCREEN	dynlibsdl1/sdl1inc/video.html#FULLSCREEN	const FULLSCREEN		114
+nim	OPENGL	dynlibsdl1/sdl1inc/video.html#OPENGL	const OPENGL		115
+nim	OPENGLBLIT	dynlibsdl1/sdl1inc/video.html#OPENGLBLIT	const OPENGLBLIT		116
+nim	RESIZABLE	dynlibsdl1/sdl1inc/video.html#RESIZABLE	const RESIZABLE		118
+nim	NOFRAME	dynlibsdl1/sdl1inc/video.html#NOFRAME	const NOFRAME		119
+nim	HWACCEL	dynlibsdl1/sdl1inc/video.html#HWACCEL	const HWACCEL		122
+nim	SRCCOLORKEY	dynlibsdl1/sdl1inc/video.html#SRCCOLORKEY	const SRCCOLORKEY		123
+nim	RLEACCELOK	dynlibsdl1/sdl1inc/video.html#RLEACCELOK	const RLEACCELOK		124
+nim	RLEACCEL	dynlibsdl1/sdl1inc/video.html#RLEACCEL	const RLEACCEL		125
+nim	SRCALPHA	dynlibsdl1/sdl1inc/video.html#SRCALPHA	const SRCALPHA		126
+nim	PREALLOC	dynlibsdl1/sdl1inc/video.html#PREALLOC	const PREALLOC		127
+nim	mustlock	dynlibsdl1/sdl1inc/video.html#mustlock,ptr.Surface	proc mustlock(self: ptr Surface): bool		129
+nim	VideoInfo	dynlibsdl1/sdl1inc/video.html#VideoInfo	object VideoInfo		134
+nim	PaletteFlags	dynlibsdl1/sdl1inc/video.html#PaletteFlags	type PaletteFlags		154
+nim	LOGPAL	dynlibsdl1/sdl1inc/video.html#LOGPAL	const LOGPAL		158
+nim	PHYSPAL	dynlibsdl1/sdl1inc/video.html#PHYSPAL	const PHYSPAL		159
+nim	GrabMode	dynlibsdl1/sdl1inc/video.html#GrabMode	enum GrabMode		162
+nimgrp	init	dynlibsdl1/sdl1inc/video.html#init-procs-all	proc		21
+nimgrp	==	dynlibsdl1/sdl1inc/video.html#==-procs-all	proc		95

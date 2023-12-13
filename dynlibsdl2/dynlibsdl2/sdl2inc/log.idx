@@ -1,0 +1,4 @@
+nimTitle	log	dynlibsdl2/sdl2inc/log.html	module dynlibsdl2/sdl2inc/log		0
+nim	LogCategory	dynlibsdl2/sdl2inc/log.html#LogCategory	enum LogCategory		9
+nim	LogPriority	dynlibsdl2/sdl2inc/log.html#LogPriority	enum LogPriority		34
+nim	LogOutputFunction	dynlibsdl2/sdl2inc/log.html#LogOutputFunction	type LogOutputFunction		43

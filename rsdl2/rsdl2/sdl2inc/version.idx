@@ -1,3 +1,0 @@
-nimTitle	version	rsdl2/sdl2inc/version.html	module src/rsdl2/sdl2inc/version		0
-nim	Version	rsdl2/sdl2inc/version.html#Version	object Version		9
-nim	`$`	rsdl2/sdl2inc/version.html#$,Version	proc `$`(self: Version): string		15

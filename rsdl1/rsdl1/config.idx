@@ -1,6 +1,0 @@
-nimTitle	config	rsdl1/config.html	module src/rsdl1/config		0
-nim	use_audio	rsdl1/config.html#use_audio	const use_audio		7
-nim	use_clipboard	rsdl1/config.html#use_clipboard	const use_clipboard		10
-nim	use_joystick	rsdl1/config.html#use_joystick	const use_joystick		13
-nim	use_keyboard	rsdl1/config.html#use_keyboard	const use_keyboard		16
-nim	use_mouse	rsdl1/config.html#use_mouse	const use_mouse		19

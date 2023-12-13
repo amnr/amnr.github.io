@@ -1,0 +1,111 @@
+nimTitle	dynlibsdl1	dynlibsdl1.html	module dynlibsdl1		0
+nim	sdl1_free	#sdl1_free,pointer	proc sdl1_free(mem: pointer)		90
+nim	init_sdl	#init_sdl	proc init_sdl(flags = INIT_VIDEO): bool		96
+nim	init_sub_system	#init_sub_system,InitFlags	proc init_sub_system(flags: InitFlags): bool		117
+nim	quit_sdl	#quit_sdl	proc quit_sdl()		130
+nim	quit_sub_system	#quit_sub_system,InitFlags	proc quit_sub_system(flags: InitFlags)		139
+nim	was_init	#was_init	proc was_init(flags = INIT_NONE): InitFlags		150
+nim	audio_driver_name	#audio_driver_name,int	proc audio_driver_name(maxnamelen = 64): string		169
+nim	build_audio_cvt	#build_audio_cvt,ptr.AudioCVT,uint16,byte,int,uint16,byte,int	proc build_audio_cvt(cvt: ptr AudioCVT; src_format: uint16; src_channels: byte;\n                src_rate: int; dst_format: uint16; dst_channels: byte;\n                dst_rate: int): bool		180
+nim	close_audio	#close_audio	proc close_audio()		188
+nim	convert_audio	#convert_audio,AudioCVT	proc convert_audio(cvt: var AudioCVT): bool		196
+nim	free_wav	#free_wav,ptr.UncheckedArray[byte]	proc free_wav(audio_buf: ptr UncheckedArray[byte])		201
+nim	get_audio_status	#get_audio_status	proc get_audio_status(): AudioStatus		205
+nim	load_wav_rw	#load_wav_rw,RWopsPtr,bool,AudioSpec,ptr.UncheckedArray[byte],uint32	proc load_wav_rw(src: RWopsPtr; freesrc: bool; spec: var AudioSpec;\n            audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		214
+nim	lock_audio	#lock_audio	proc lock_audio()		234
+nim	mix_audio	#mix_audio,ptr.UncheckedArray[byte],,uint32,int	proc mix_audio(dst: ptr UncheckedArray[byte];\n          src: ptr byte or ptr UncheckedArray[byte]; len: uint32; volume: int)		238
+nim	open_audio	#open_audio,AudioSpec	proc open_audio(desired: var AudioSpec): bool		260
+nim	open_audio	#open_audio,AudioSpec,AudioSpec	proc open_audio(desired, obtained: var AudioSpec): bool		265
+nim	pause_audio	#pause_audio,bool	proc pause_audio(pause_on: bool)		270
+nim	unlock_audio	#unlock_audio	proc unlock_audio()		282
+nim	clear_error	#clear_error	proc clear_error()		290
+nim	get_error	#get_error	proc get_error(): string		298
+nim	set_error	#set_error,string	proc set_error(msg: string)		309
+nim	event_state	#event_state,EventType,bool	proc event_state(typ: EventType; state: bool): bool		319
+nim	peep_events	#peep_events,openArray[Event],int,EventAction,EventMask	proc peep_events(events: var openArray[Event]; numevents: int; action: EventAction;\n            mask: EventMask): int		332
+nim	peep_events	#peep_events,openArray[Event],EventAction,EventMask	proc peep_events(events: var openArray[Event]; action: EventAction; mask: EventMask): int		340
+nim	poll_event	#poll_event	proc poll_event(): bool		344
+nim	poll	#poll,Event	proc poll(event: var Event): bool		348
+nim	pump_events	#pump_events	proc pump_events()		352
+nim	push	#push,Event	proc push(event: Event): bool		356
+nim	set_event_filter	#set_event_filter,EventFilter	proc set_event_filter(filter: EventFilter)		377
+nim	wait	#wait,Event	proc wait(event: var Event): bool		381
+nim	joystick_update	#joystick_update	proc joystick_update()		406
+nim	num_joysticks	#num_joysticks	proc num_joysticks(): int		416
+nim	get_key_name	#get_key_name,Key	proc get_key_name(key: Key): string		435
+nim	get_mod_state	#get_mod_state	proc get_mod_state(): Mod		442
+nim	get_mouse_state	#get_mouse_state	proc get_mouse_state(): tuple[x, y: int, buttons: MouseButton]		467
+nim	get_relative_mouse_state	#get_relative_mouse_state	proc get_relative_mouse_state(): tuple[x, y: int, buttons: MouseButton]		473
+nim	show_cursor	#show_cursor,bool	proc show_cursor(toggle: bool): bool		481
+nim	warp_mouse	#warp_mouse,uint16,uint16	proc warp_mouse(x, y: uint16)		499
+nim	rw_from_file	#rw_from_file,string,string	proc rw_from_file(file, mode: string): RWopsPtr		513
+nim	add_timer	#add_timer,uint32,NewTimerCallback,pointer	proc add_timer(interval: uint32; callback: NewTimerCallback; param: pointer = nil): TimerID		528
+nim	delay	#delay,uint32	proc delay(ms: uint32)		562
+nim	get_ticks	#get_ticks	proc get_ticks(): uint32		576
+nim	remove	#remove,TimerID	proc remove(t: TimerID): bool		585
+nim	set_timer	#set_timer,uint32,TimerCallback	proc set_timer(interval: uint32; callback: TimerCallback): bool		594
+nim	linked_version	#linked_version	proc linked_version(): tuple[major, minor, patch: int]		634
+nim	create_rgb_surface	#create_rgb_surface,SurfaceFlags,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface(flags: SurfaceFlags; width, height, depth: int;\n                   rmask, gmask, bmask, amask: uint32): SurfacePtr		650
+nim	create_rgb_surface	#create_rgb_surface,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface(width, height, depth: int; rmask, gmask, bmask, amask: uint32): SurfacePtr		719
+nim	create_rgb_surface_from	#create_rgb_surface_from,pointer,int,int,int,int,uint32,uint32,uint32,uint32	proc create_rgb_surface_from(pixels: pointer; width, height: int; depth, pitch: int;\n                        rmask, gmask, bmask, amask: uint32): SurfacePtr		727
+nim	display_format	#display_format,SurfacePtr	proc display_format(surface: SurfacePtr): SurfacePtr		750
+nim	fill_rect	#fill_rect,SurfacePtr,uint32	proc fill_rect(dst: SurfacePtr; color: uint32): bool		758
+nim	fill_rect	#fill_rect,SurfacePtr,Rect,uint32	proc fill_rect(dst: SurfacePtr; dstrect: Rect; color: uint32): bool		763
+nim	flip	#flip,SurfacePtr	proc flip(surface: SurfacePtr): bool		770
+nim	free	#free,SurfacePtr	proc free(surface: SurfacePtr)		789
+nim	get_video_info	#get_video_info	proc get_video_info(): ptr VideoInfo		815
+nim	get_video_surface	#get_video_surface	proc get_video_surface(): SurfacePtr		829
+nim	list_modes	#list_modes,PixelFormat,SurfaceFlags	proc list_modes(format: PixelFormat; flags: SurfaceFlags = SWSURFACE): seq[\n    tuple[w, h: int]]		855
+nim	list_modes	#list_modes,SurfaceFlags	proc list_modes(flags: SurfaceFlags = SWSURFACE): seq[tuple[w, h: int]]		874
+nim	load_bmp_rw	#load_bmp_rw,RWopsPtr,bool	proc load_bmp_rw(src: RWopsPtr; freesrc: bool): SurfacePtr		892
+nim	lock	#lock,SurfacePtr	proc lock(surface: SurfacePtr): bool		909
+nim	map_rgb	#map_rgb,ptr.PixelFormat,byte,byte,byte	proc map_rgb(format: ptr PixelFormat; r, g, b: byte): uint32		956
+nim	map_rgba	#map_rgba,ptr.PixelFormat,byte,byte,byte,byte	proc map_rgba(format: ptr PixelFormat; r, g, b, a: byte): uint32		978
+nim	set_alpha	#set_alpha,SurfacePtr,SurfaceFlags,byte	proc set_alpha(surface: SurfacePtr; flag: SurfaceFlags; alpha: byte): bool		1002
+nim	set_color_key	#set_color_key,SurfacePtr,SurfaceFlags,uint32	proc set_color_key(surface: SurfacePtr; flag: SurfaceFlags; key: uint32): bool		1009
+nim	set_colors	#set_colors,SurfacePtr,openArray[Color],int,int	proc set_colors(surface: SurfacePtr; colors: openArray[Color]; firstcolor: int;\n           ncolors: int): bool		1037
+nim	set_colors	#set_colors,SurfacePtr,ptr.UncheckedArray[Color],int,int	proc set_colors(surface: SurfacePtr; colors: ptr UncheckedArray[Color];\n           firstcolor: int; ncolors: int): bool		1046
+nim	set_gamma	#set_gamma,float,float,float	proc set_gamma(red, green, blue: float): bool		1052
+nim	set_gamma_ramp	#set_gamma_ramp,array[,uint16],array[,uint16],array[,uint16]	proc set_gamma_ramp(red, green, blue: array[256, uint16]): bool		1072
+nim	set_palette	#set_palette,SurfacePtr,PaletteFlags,openArray[Color],int,int	proc set_palette(surface: SurfacePtr; flags: PaletteFlags; colors: openArray[Color];\n            firstcolor: int; ncolors: int): bool		1099
+nim	set_palette	#set_palette,SurfacePtr,PaletteFlags,ptr.UncheckedArray[Color],int,int	proc set_palette(surface: SurfacePtr; flags: PaletteFlags;\n            colors: ptr UncheckedArray[Color]; firstcolor: int; ncolors: int): bool		1111
+nim	set_video_mode	#set_video_mode,int,int,int	proc set_video_mode(width, height: int; bpp: int; flags = SWSURFACE): SurfacePtr		1126
+nim	unlock	#unlock,SurfacePtr	proc unlock(surface: SurfacePtr)		1194
+nim	update_rect	#update_rect,SurfacePtr,int,int,uint,uint	proc update_rect(screen: SurfacePtr; x, y: int; w, h: uint)		1206
+nim	update_rects	#update_rects,SurfacePtr,openArray[Rect]	proc update_rects(screen: SurfacePtr; rects: openArray[Rect])		1210
+nim	update_rects	#update_rects,SurfacePtr,int,openArray[Rect]	proc update_rects(screen: SurfacePtr; numrects: int; rects: openArray[Rect])		1217
+nim	upper_blit	#upper_blit,SurfacePtr,SurfacePtr	proc upper_blit(src, dst: SurfacePtr): bool		1225
+nim	upper_blit	#upper_blit,SurfacePtr,SurfacePtr,Rect	proc upper_blit(src, dst: SurfacePtr; dstrect: Rect): bool		1230
+nim	upper_blit	#upper_blit,SurfacePtr,Rect,SurfacePtr,Rect	proc upper_blit(src: SurfacePtr; srcrect: Rect; dst: SurfacePtr; dstrect: Rect): bool		1237
+nim	video_driver_name	#video_driver_name	proc video_driver_name(): string		1255
+nim	video_mode_ok	#video_mode_ok,int,int,int,SurfaceFlags	proc video_mode_ok(width, height: int; bpp: int; flags: SurfaceFlags = SWSURFACE): int		1269
+nim	wm_get_caption	#wm_get_caption	proc wm_get_caption(): tuple[title, icon: string]		1290
+nim	wm_grab_input	#wm_grab_input,GrabMode	proc wm_grab_input(mode: GrabMode): GrabMode		1300
+nim	wm_iconify_window	#wm_iconify_window	proc wm_iconify_window(): bool		1313
+nim	wm_set_caption	#wm_set_caption,string,string	proc wm_set_caption(title, icon: string)		1327
+nim	wm_set_icon	#wm_set_icon,SurfacePtr	proc wm_set_icon(icon: SurfacePtr)		1335
+nim	wm_set_icon	#wm_set_icon,SurfacePtr,openArray[byte]	proc wm_set_icon(icon: SurfacePtr; mask: openArray[byte])		1352
+nim	wm_toggle_full_screen	#wm_toggle_full_screen,SurfacePtr	proc wm_toggle_full_screen(surface: SurfacePtr): bool		1370
+nim	load_wav	#load_wav,string,AudioSpec,ptr.UncheckedArray[byte],uint32	proc load_wav(file: string; spec: var AudioSpec;\n         audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		1392
+nim	quit_requested	#quit_requested	proc quit_requested(): bool		1402
+nim	alloc_surface	#alloc_surface.t,SurfaceFlags,int,int,int,uint32,uint32,uint32,uint32	template alloc_surface(flags: SurfaceFlags; width, height, depth: int;\n              rmask, gmask, bmask, amask: uint32): SurfacePtr		1412
+nim	blit_surface	#blit_surface.t,SurfacePtr,SurfacePtr	template blit_surface(src, dst: SurfacePtr): bool		1419
+nim	blit_surface	#blit_surface,SurfacePtr,SurfacePtr,Rect	proc blit_surface(src, dst: SurfacePtr; dstrect: Rect): bool		1424
+nim	blit_surface	#blit_surface.t,SurfacePtr,Rect,SurfacePtr,Rect	template blit_surface(src: SurfacePtr; srcrect: Rect; dst: SurfacePtr; dstrect: Rect): bool		1428
+nim	load_bmp	#load_bmp,string	proc load_bmp(file: string): SurfacePtr		1433
+nim	dynlibsdl1_open	#dynlibsdl1_open	proc dynlibsdl1_open(): bool		1443
+nim	dynlibsdl1_close	#dynlibsdl1_close	proc dynlibsdl1_close()		1452
+nim	dynlibsdl1_error	#dynlibsdl1_error	proc dynlibsdl1_error(): string		1457
+nimgrp	listmodes	#list_modes-procs-all	proc		855
+nimgrp	peepevents	#peep_events-procs-all	proc		332
+nimgrp	upperblit	#upper_blit-procs-all	proc		1225
+nimgrp	updaterects	#update_rects-procs-all	proc		1210
+nimgrp	creatergbsurface	#create_rgb_surface-procs-all	proc		650
+nimgrp	fillrect	#fill_rect-procs-all	proc		758
+nimgrp	setpalette	#set_palette-procs-all	proc		1099
+nimgrp	openaudio	#open_audio-procs-all	proc		260
+nimgrp	wmseticon	#wm_set_icon-procs-all	proc		1335
+nimgrp	setcolors	#set_colors-procs-all	proc		1037
+nimgrp	blitsurface	#blit_surface-templates-all	template		1419
+heading	Usage	#usage	 Usage		0
+heading	Configuration	#configuration	 Configuration		0
