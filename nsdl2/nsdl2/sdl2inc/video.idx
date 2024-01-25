@@ -1,0 +1,51 @@
+nimTitle	video	nsdl2/sdl2inc/video.html	module nsdl2/sdl2inc/video		0
+nim	DisplayMode	nsdl2/sdl2inc/video.html#DisplayMode	object DisplayMode		12
+nim	Window	nsdl2/sdl2inc/video.html#Window	type Window		20
+nim	WindowFlags	nsdl2/sdl2inc/video.html#WindowFlags	type WindowFlags		24
+nim	`and`	nsdl2/sdl2inc/video.html#and,WindowFlags,WindowFlags	proc `and`(a, b: WindowFlags): WindowFlags		27
+nim	`or`	nsdl2/sdl2inc/video.html#or,WindowFlags,WindowFlags	proc `or`(a, b: WindowFlags): WindowFlags		28
+nim	`==`	nsdl2/sdl2inc/video.html#==,WindowFlags,WindowFlags	proc `==`(a, b: WindowFlags): bool		30
+nim	`==`	nsdl2/sdl2inc/video.html#==,WindowFlags,uint32	proc `==`(a: WindowFlags; b: uint32): bool		31
+nim	`+=`	nsdl2/sdl2inc/video.html#+=,WindowFlags,WindowFlags	proc `+=`(x: var WindowFlags; y: WindowFlags)		33
+nim	WINDOW_FULLSCREEN	nsdl2/sdl2inc/video.html#WINDOW_FULLSCREEN	const WINDOW_FULLSCREEN		36
+nim	WINDOW_OPENGL	nsdl2/sdl2inc/video.html#WINDOW_OPENGL	const WINDOW_OPENGL		37
+nim	WINDOW_SHOWN	nsdl2/sdl2inc/video.html#WINDOW_SHOWN	const WINDOW_SHOWN		38
+nim	WINDOW_HIDDEN	nsdl2/sdl2inc/video.html#WINDOW_HIDDEN	const WINDOW_HIDDEN		39
+nim	WINDOW_BORDERLESS	nsdl2/sdl2inc/video.html#WINDOW_BORDERLESS	const WINDOW_BORDERLESS		40
+nim	WINDOW_RESIZABLE	nsdl2/sdl2inc/video.html#WINDOW_RESIZABLE	const WINDOW_RESIZABLE		41
+nim	WINDOW_MINIMIZED	nsdl2/sdl2inc/video.html#WINDOW_MINIMIZED	const WINDOW_MINIMIZED		42
+nim	WINDOW_MAXIMIZED	nsdl2/sdl2inc/video.html#WINDOW_MAXIMIZED	const WINDOW_MAXIMIZED		43
+nim	WINDOW_MOUSE_GRABBED	nsdl2/sdl2inc/video.html#WINDOW_MOUSE_GRABBED	const WINDOW_MOUSE_GRABBED		44
+nim	WINDOW_INPUT_FOCUS	nsdl2/sdl2inc/video.html#WINDOW_INPUT_FOCUS	const WINDOW_INPUT_FOCUS		45
+nim	WINDOW_MOUSE_FOCUS	nsdl2/sdl2inc/video.html#WINDOW_MOUSE_FOCUS	const WINDOW_MOUSE_FOCUS		46
+nim	WINDOW_FOREIGN	nsdl2/sdl2inc/video.html#WINDOW_FOREIGN	const WINDOW_FOREIGN		47
+nim	WINDOW_ALLOW_HIGHDPI	nsdl2/sdl2inc/video.html#WINDOW_ALLOW_HIGHDPI	const WINDOW_ALLOW_HIGHDPI		48
+nim	WINDOW_MOUSE_CAPTURE	nsdl2/sdl2inc/video.html#WINDOW_MOUSE_CAPTURE	const WINDOW_MOUSE_CAPTURE		49
+nim	WINDOW_ALWAYS_ON_TOP	nsdl2/sdl2inc/video.html#WINDOW_ALWAYS_ON_TOP	const WINDOW_ALWAYS_ON_TOP		50
+nim	WINDOW_SKIP_TASKBAR	nsdl2/sdl2inc/video.html#WINDOW_SKIP_TASKBAR	const WINDOW_SKIP_TASKBAR		51
+nim	WINDOW_UTILITY	nsdl2/sdl2inc/video.html#WINDOW_UTILITY	const WINDOW_UTILITY		52
+nim	WINDOW_TOOLTIP	nsdl2/sdl2inc/video.html#WINDOW_TOOLTIP	const WINDOW_TOOLTIP		53
+nim	WINDOW_POPUP_MENU	nsdl2/sdl2inc/video.html#WINDOW_POPUP_MENU	const WINDOW_POPUP_MENU		54
+nim	WINDOW_KEYBOARD_GRABBED	nsdl2/sdl2inc/video.html#WINDOW_KEYBOARD_GRABBED	const WINDOW_KEYBOARD_GRABBED		55
+nim	WINDOW_VULKAN	nsdl2/sdl2inc/video.html#WINDOW_VULKAN	const WINDOW_VULKAN		56
+nim	WINDOW_METAL	nsdl2/sdl2inc/video.html#WINDOW_METAL	const WINDOW_METAL		57
+nim	WINDOW_FULLSCREEN_DESKTOP	nsdl2/sdl2inc/video.html#WINDOW_FULLSCREEN_DESKTOP	const WINDOW_FULLSCREEN_DESKTOP		59
+nim	WINDOW_INPUT_GRABBED	nsdl2/sdl2inc/video.html#WINDOW_INPUT_GRABBED	const WINDOW_INPUT_GRABBED		60
+nim	windowpos_undefined_display	nsdl2/sdl2inc/video.html#windowpos_undefined_display,int	proc windowpos_undefined_display(x: int): int		66
+nim	windowpos_centered_display	nsdl2/sdl2inc/video.html#windowpos_centered_display,int	proc windowpos_centered_display(x: int): int		69
+nim	WINDOWPOS_UNDEFINED	nsdl2/sdl2inc/video.html#WINDOWPOS_UNDEFINED	const WINDOWPOS_UNDEFINED		73
+nim	WINDOWPOS_CENTERED	nsdl2/sdl2inc/video.html#WINDOWPOS_CENTERED	const WINDOWPOS_CENTERED		74
+nim	windowpos_isundefined	nsdl2/sdl2inc/video.html#windowpos_isundefined,int	proc windowpos_isundefined(x: int): bool		76
+nim	windowpos_iscentered	nsdl2/sdl2inc/video.html#windowpos_iscentered,int	proc windowpos_iscentered(x: int): bool		79
+nim	WindowEventID	nsdl2/sdl2inc/video.html#WindowEventID	enum WindowEventID		83
+nim	DisplayEventID	nsdl2/sdl2inc/video.html#DisplayEventID	enum DisplayEventID		105
+nim	DisplayOrientation	nsdl2/sdl2inc/video.html#DisplayOrientation	enum DisplayOrientation		113
+nim	FlashOperation	nsdl2/sdl2inc/video.html#FlashOperation	enum FlashOperation		121
+nim	GLattr	nsdl2/sdl2inc/video.html#GLattr	enum GLattr		127
+nim	GLprofile	nsdl2/sdl2inc/video.html#GLprofile	enum GLprofile		158
+nim	GLcontextFlag	nsdl2/sdl2inc/video.html#GLcontextFlag	enum GLcontextFlag		163
+nim	GLcontextReleaseFlag	nsdl2/sdl2inc/video.html#GLcontextReleaseFlag	enum GLcontextReleaseFlag		169
+nim	GLContextResetNotification	nsdl2/sdl2inc/video.html#GLContextResetNotification	enum GLContextResetNotification		173
+nim	HitTestResult	nsdl2/sdl2inc/video.html#HitTestResult	enum HitTestResult		178
+nim	HitTest	nsdl2/sdl2inc/video.html#HitTest	type HitTest		191
+nimgrp	==	nsdl2/sdl2inc/video.html#==-procs-all	proc		30

@@ -1,3 +1,0 @@
-nimTitle	version	dynlibsdl2/sdl2inc/version.html	module dynlibsdl2/sdl2inc/version		0
-nim	Version	dynlibsdl2/sdl2inc/version.html#Version	object Version		9
-nim	`$`	dynlibsdl2/sdl2inc/version.html#$,Version	proc `$`(self: Version): string		15

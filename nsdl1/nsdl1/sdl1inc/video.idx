@@ -1,0 +1,45 @@
+nimTitle	video	nsdl1/sdl1inc/video.html	module nsdl1/sdl1inc/video		0
+nim	ALPHA_OPAQUE	nsdl1/sdl1inc/video.html#ALPHA_OPAQUE	const ALPHA_OPAQUE		13
+nim	ALPHA_TRANSPARENT	nsdl1/sdl1inc/video.html#ALPHA_TRANSPARENT	const ALPHA_TRANSPARENT		14
+nim	Rect	nsdl1/sdl1inc/video.html#Rect	object Rect		17
+nim	init	nsdl1/sdl1inc/video.html#init,typedesc[Rect],int16,int16,uint16,uint16	proc init(T: typedesc[Rect]; x, y: int16; w, h: uint16): T:type		24
+nim	Color	nsdl1/sdl1inc/video.html#Color	object Color		29
+nim	init	nsdl1/sdl1inc/video.html#init,typedesc[Color],byte,byte,byte	proc init(T: typedesc[Color]; r, g, b: byte): T:type		36
+nim	Palette	nsdl1/sdl1inc/video.html#Palette	object Palette		41
+nim	PixelFormat	nsdl1/sdl1inc/video.html#PixelFormat	object PixelFormat		46
+nim	Surface	nsdl1/sdl1inc/video.html#Surface	object Surface		66
+nim	SurfaceFlags	nsdl1/sdl1inc/video.html#SurfaceFlags	type SurfaceFlags		82
+nim	pixels16	nsdl1/sdl1inc/video.html#pixels16,ptr.Surface	proc pixels16(self: ptr Surface): ptr UncheckedArray[uint16]		85
+nim	pixels32	nsdl1/sdl1inc/video.html#pixels32,ptr.Surface	proc pixels32(self: ptr Surface): ptr UncheckedArray[uint32]		89
+nim	`+`	nsdl1/sdl1inc/video.html#+,SurfaceFlags,SurfaceFlags	proc `+`(x, y: SurfaceFlags): SurfaceFlags		93
+nim	`+=`	nsdl1/sdl1inc/video.html#+=,SurfaceFlags,SurfaceFlags	proc `+=`(x: var SurfaceFlags; y: SurfaceFlags)		94
+nim	`==`	nsdl1/sdl1inc/video.html#==,SurfaceFlags,SurfaceFlags	proc `==`(x, y: SurfaceFlags): bool		95
+nim	`==`	nsdl1/sdl1inc/video.html#==,SurfaceFlags,uint32	proc `==`(x: SurfaceFlags; y: uint32): bool		98
+nim	`and`	nsdl1/sdl1inc/video.html#and,SurfaceFlags,SurfaceFlags	proc `and`(x, y: SurfaceFlags): SurfaceFlags		100
+nim	`or`	nsdl1/sdl1inc/video.html#or,SurfaceFlags,SurfaceFlags	proc `or`(x, y: SurfaceFlags): SurfaceFlags		101
+nim	`xor`	nsdl1/sdl1inc/video.html#xor,SurfaceFlags,SurfaceFlags	proc `xor`(x, y: SurfaceFlags): SurfaceFlags		102
+nim	SWSURFACE	nsdl1/sdl1inc/video.html#SWSURFACE	const SWSURFACE		106
+nim	HWSURFACE	nsdl1/sdl1inc/video.html#HWSURFACE	const HWSURFACE		107
+nim	ASYNCBLIT	nsdl1/sdl1inc/video.html#ASYNCBLIT	const ASYNCBLIT		108
+nim	ANYFORMAT	nsdl1/sdl1inc/video.html#ANYFORMAT	const ANYFORMAT		111
+nim	HWPALETTE	nsdl1/sdl1inc/video.html#HWPALETTE	const HWPALETTE		112
+nim	DOUBLEBUF	nsdl1/sdl1inc/video.html#DOUBLEBUF	const DOUBLEBUF		113
+nim	FULLSCREEN	nsdl1/sdl1inc/video.html#FULLSCREEN	const FULLSCREEN		114
+nim	OPENGL	nsdl1/sdl1inc/video.html#OPENGL	const OPENGL		115
+nim	OPENGLBLIT	nsdl1/sdl1inc/video.html#OPENGLBLIT	const OPENGLBLIT		116
+nim	RESIZABLE	nsdl1/sdl1inc/video.html#RESIZABLE	const RESIZABLE		118
+nim	NOFRAME	nsdl1/sdl1inc/video.html#NOFRAME	const NOFRAME		119
+nim	HWACCEL	nsdl1/sdl1inc/video.html#HWACCEL	const HWACCEL		122
+nim	SRCCOLORKEY	nsdl1/sdl1inc/video.html#SRCCOLORKEY	const SRCCOLORKEY		123
+nim	RLEACCELOK	nsdl1/sdl1inc/video.html#RLEACCELOK	const RLEACCELOK		124
+nim	RLEACCEL	nsdl1/sdl1inc/video.html#RLEACCEL	const RLEACCEL		125
+nim	SRCALPHA	nsdl1/sdl1inc/video.html#SRCALPHA	const SRCALPHA		126
+nim	PREALLOC	nsdl1/sdl1inc/video.html#PREALLOC	const PREALLOC		127
+nim	MUSTLOCK	nsdl1/sdl1inc/video.html#MUSTLOCK,ptr.Surface	proc MUSTLOCK(self: ptr Surface): bool		129
+nim	VideoInfo	nsdl1/sdl1inc/video.html#VideoInfo	object VideoInfo		134
+nim	PaletteFlags	nsdl1/sdl1inc/video.html#PaletteFlags	type PaletteFlags		154
+nim	LOGPAL	nsdl1/sdl1inc/video.html#LOGPAL	const LOGPAL		158
+nim	PHYSPAL	nsdl1/sdl1inc/video.html#PHYSPAL	const PHYSPAL		159
+nim	GrabMode	nsdl1/sdl1inc/video.html#GrabMode	enum GrabMode		162
+nimgrp	init	nsdl1/sdl1inc/video.html#init-procs-all	proc		24
+nimgrp	==	nsdl1/sdl1inc/video.html#==-procs-all	proc		95

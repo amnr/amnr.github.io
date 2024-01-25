@@ -1,0 +1,32 @@
+nimTitle	pixels	nsdl3/sdl3inc/pixels.html	module nsdl3/sdl3inc/pixels		0
+nim	ALPHA_OPAQUE	nsdl3/sdl3inc/pixels.html#ALPHA_OPAQUE	const ALPHA_OPAQUE		10
+nim	ALPHA_TRANSPARENT	nsdl3/sdl3inc/pixels.html#ALPHA_TRANSPARENT	const ALPHA_TRANSPARENT		11
+nim	PixelType	nsdl3/sdl3inc/pixels.html#PixelType	enum PixelType		14
+nim	BitmapOrder	nsdl3/sdl3inc/pixels.html#BitmapOrder	enum BitmapOrder		30
+nim	PackedOrder	nsdl3/sdl3inc/pixels.html#PackedOrder	enum PackedOrder		36
+nim	ArrayOrder	nsdl3/sdl3inc/pixels.html#ArrayOrder	enum ArrayOrder		48
+nim	PackedLayout	nsdl3/sdl3inc/pixels.html#PackedLayout	enum PackedLayout		56
+nim	PixelFormatEnum	nsdl3/sdl3inc/pixels.html#PixelFormatEnum	enum PixelFormatEnum		83
+nim	PIXELFORMAT_RGB444	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_RGB444	const PIXELFORMAT_RGB444		133
+nim	PIXELFORMAT_BGR444	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_BGR444	const PIXELFORMAT_BGR444		134
+nim	PIXELFORMAT_RGB555	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_RGB555	const PIXELFORMAT_RGB555		135
+nim	PIXELFORMAT_BGR555	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_BGR555	const PIXELFORMAT_BGR555		136
+nim	PIXELFORMAT_RGBA32	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_RGBA32	const PIXELFORMAT_RGBA32		150
+nim	PIXELFORMAT_ARGB32	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_ARGB32	const PIXELFORMAT_ARGB32		151
+nim	PIXELFORMAT_BGRA32	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_BGRA32	const PIXELFORMAT_BGRA32		152
+nim	PIXELFORMAT_ABGR32	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_ABGR32	const PIXELFORMAT_ABGR32		153
+nim	PIXELFORMAT_RGBX32	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_RGBX32	const PIXELFORMAT_RGBX32		154
+nim	PIXELFORMAT_XRGB32	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_XRGB32	const PIXELFORMAT_XRGB32		155
+nim	PIXELFORMAT_BGRX32	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_BGRX32	const PIXELFORMAT_BGRX32		156
+nim	PIXELFORMAT_XBGR32	nsdl3/sdl3inc/pixels.html#PIXELFORMAT_XBGR32	const PIXELFORMAT_XBGR32		157
+nim	bits_per_pixel	nsdl3/sdl3inc/pixels.html#bits_per_pixel,PixelFormatEnum	proc bits_per_pixel(format: PixelFormatEnum): int		170
+nim	bytes_per_pixel	nsdl3/sdl3inc/pixels.html#bytes_per_pixel,PixelFormatEnum	proc bytes_per_pixel(format: PixelFormatEnum): int		185
+nim	is_indexed	nsdl3/sdl3inc/pixels.html#is_indexed,PixelFormatEnum	proc is_indexed(format: PixelFormatEnum): bool		195
+nim	is_packed	nsdl3/sdl3inc/pixels.html#is_packed,PixelFormatEnum	proc is_packed(format: PixelFormatEnum): bool		203
+nim	is_array	nsdl3/sdl3inc/pixels.html#is_array,PixelFormatEnum	proc is_array(format: PixelFormatEnum): bool		210
+nim	is_alpha	nsdl3/sdl3inc/pixels.html#is_alpha,PixelFormatEnum	proc is_alpha(format: PixelFormatEnum): bool		219
+nim	is_10bit	nsdl3/sdl3inc/pixels.html#is_10bit,PixelFormatEnum	proc is_10bit(format: PixelFormatEnum): bool		227
+nim	Color	nsdl3/sdl3inc/pixels.html#Color	object Color		232
+nim	init	nsdl3/sdl3inc/pixels.html#init,typedesc[Color],byte,byte,byte,byte	proc init(T: typedesc[Color]; r, g, b: byte; a: byte = 0x000000FF): T:type		239
+nim	Palette	nsdl3/sdl3inc/pixels.html#Palette	object Palette		243
+nim	PixelFormat	nsdl3/sdl3inc/pixels.html#PixelFormat	object PixelFormat		249

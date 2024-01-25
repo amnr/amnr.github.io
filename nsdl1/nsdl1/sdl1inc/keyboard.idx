@@ -1,0 +1,5 @@
+nimTitle	keyboard	nsdl1/sdl1inc/keyboard.html	module nsdl1/sdl1inc/keyboard		0
+nim	Keysym	nsdl1/sdl1inc/keyboard.html#Keysym	object Keysym		11
+nim	DEFAULT_REPEAT_DELAY	nsdl1/sdl1inc/keyboard.html#DEFAULT_REPEAT_DELAY	const DEFAULT_REPEAT_DELAY		30
+nim	DEFAULT_REPEAT_INTERVAL	nsdl1/sdl1inc/keyboard.html#DEFAULT_REPEAT_INTERVAL	const DEFAULT_REPEAT_INTERVAL		31
+nim	ALL_HOTKEYS	nsdl1/sdl1inc/keyboard.html#ALL_HOTKEYS	const ALL_HOTKEYS		33

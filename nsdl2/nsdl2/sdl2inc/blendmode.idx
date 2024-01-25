@@ -1,0 +1,11 @@
+nimTitle	blendmode	nsdl2/sdl2inc/blendmode.html	module nsdl2/sdl2inc/blendmode		0
+nim	BlendMode	nsdl2/sdl2inc/blendmode.html#BlendMode	type BlendMode		9
+nim	`or`	nsdl2/sdl2inc/blendmode.html#or,BlendMode,BlendMode	proc `or`(a, b: BlendMode): BlendMode		12
+nim	BLENDMODE_NONE	nsdl2/sdl2inc/blendmode.html#BLENDMODE_NONE	const BLENDMODE_NONE		15
+nim	BLENDMODE_BLEND	nsdl2/sdl2inc/blendmode.html#BLENDMODE_BLEND	const BLENDMODE_BLEND		16
+nim	BLENDMODE_ADD	nsdl2/sdl2inc/blendmode.html#BLENDMODE_ADD	const BLENDMODE_ADD		17
+nim	BLENDMODE_MOD	nsdl2/sdl2inc/blendmode.html#BLENDMODE_MOD	const BLENDMODE_MOD		18
+nim	BLENDMODE_MUL	nsdl2/sdl2inc/blendmode.html#BLENDMODE_MUL	const BLENDMODE_MUL		19
+nim	BLENDMODE_INVALID	nsdl2/sdl2inc/blendmode.html#BLENDMODE_INVALID	const BLENDMODE_INVALID		20
+nim	BlendOperation	nsdl2/sdl2inc/blendmode.html#BlendOperation	enum BlendOperation		23
+nim	BlendFactor	nsdl2/sdl2inc/blendmode.html#BlendFactor	enum BlendFactor		32

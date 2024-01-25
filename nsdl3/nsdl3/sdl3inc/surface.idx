@@ -1,0 +1,19 @@
+nimTitle	surface	nsdl3/sdl3inc/surface.html	module nsdl3/sdl3inc/surface		0
+nim	SurfaceFlags	nsdl3/sdl3inc/surface.html#SurfaceFlags	type SurfaceFlags		13
+nim	`or`	nsdl3/sdl3inc/surface.html#or,SurfaceFlags,SurfaceFlags	proc `or`(a, b: SurfaceFlags): SurfaceFlags		17
+nim	`==`	nsdl3/sdl3inc/surface.html#==,SurfaceFlags,uint32	proc `==`(a: SurfaceFlags; b: uint32): bool		19
+nim	SWSURFACE	nsdl3/sdl3inc/surface.html#SWSURFACE	const SWSURFACE		22
+nim	PREALLOC	nsdl3/sdl3inc/surface.html#PREALLOC	const PREALLOC		23
+nim	RLEACCEL	nsdl3/sdl3inc/surface.html#RLEACCEL	const RLEACCEL		24
+nim	DONTFREE	nsdl3/sdl3inc/surface.html#DONTFREE	const DONTFREE		25
+nim	SIMD_ALIGNED	nsdl3/sdl3inc/surface.html#SIMD_ALIGNED	const SIMD_ALIGNED		26
+nim	SURFACE_USES_PROPERTIES	nsdl3/sdl3inc/surface.html#SURFACE_USES_PROPERTIES	const SURFACE_USES_PROPERTIES		27
+nim	BlitMap	nsdl3/sdl3inc/surface.html#BlitMap	object BlitMap		32
+nim	ScaleMode	nsdl3/sdl3inc/surface.html#ScaleMode	enum ScaleMode		35
+nim	FlipMode	nsdl3/sdl3inc/surface.html#FlipMode	enum FlipMode		41
+nim	Surface	nsdl3/sdl3inc/surface.html#Surface	object Surface		48
+nim	SurfacePtr	nsdl3/sdl3inc/surface.html#SurfacePtr	type SurfacePtr		80
+nim	pixels16	nsdl3/sdl3inc/surface.html#pixels16,ptr.Surface	proc pixels16(self: ptr Surface): ptr UncheckedArray[uint16]		83
+nim	pixels32	nsdl3/sdl3inc/surface.html#pixels32,ptr.Surface	proc pixels32(self: ptr Surface): ptr UncheckedArray[uint32]		87
+nim	mustlock	nsdl3/sdl3inc/surface.html#mustlock,ptr.Surface	proc mustlock(self: ptr Surface): bool		91
+nim	YuvConversionMode	nsdl3/sdl3inc/surface.html#YuvConversionMode	enum YuvConversionMode		98

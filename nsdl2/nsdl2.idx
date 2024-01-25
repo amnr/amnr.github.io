@@ -1,0 +1,293 @@
+nimTitle	nsdl2	nsdl2.html	module nsdl2		0
+nim	Init	#Init,InitFlags	proc Init(flags: InitFlags = 32'u or 1048576'u): bool		136
+nim	InitSubSystem	#InitSubSystem,InitFlags	proc InitSubSystem(flags: InitFlags): bool		144
+nim	Quit	#Quit	proc Quit()		161
+nim	QuitSubSystem	#QuitSubSystem,InitFlags	proc QuitSubSystem(flags: InitFlags)		181
+nim	WasInit	#WasInit,InitFlags	proc WasInit(flags: InitFlags = INIT_NONE): InitFlags		200
+nim	AudioInit	#AudioInit,string	proc AudioInit(driver_name: string): bool		222
+nim	AudioQuit	#AudioQuit	proc AudioQuit()		229
+nim	CloseAudio	#CloseAudio	proc CloseAudio()		245
+nim	CloseAudioDevice	#CloseAudioDevice,AudioDeviceID	proc CloseAudioDevice(dev: AudioDeviceID)		251
+nim	FreeWAV	#FreeWAV,ptr.UncheckedArray[byte]	proc FreeWAV(audio_buf: ptr UncheckedArray[byte])		261
+nim	GetAudioDeviceName	#GetAudioDeviceName,int,bool	proc GetAudioDeviceName(index: int; iscapture: bool): string		267
+nim	GetAudioDeviceSpec	#GetAudioDeviceSpec,int,bool,AudioSpec	proc GetAudioDeviceSpec(index: int; iscapture: bool; spec: var AudioSpec): bool		273
+nim	GetAudioDeviceStatus	#GetAudioDeviceStatus,AudioDeviceID	proc GetAudioDeviceStatus(dev: AudioDeviceID): AudioStatus		281
+nim	GetAudioDriver	#GetAudioDriver,int	proc GetAudioDriver(index: int): string		287
+nim	GetAudioStatus	#GetAudioStatus	proc GetAudioStatus(): AudioStatus		297
+nim	GetCurrentAudioDriver	#GetCurrentAudioDriver	proc GetCurrentAudioDriver(): string		303
+nim	GetDefaultAudioInfo	#GetDefaultAudioInfo,string,AudioSpec,bool	proc GetDefaultAudioInfo(name: var string; spec: var AudioSpec; iscapture: bool): bool		309
+nim	GetNumAudioDevices	#GetNumAudioDevices,bool	proc GetNumAudioDevices(iscapture: bool): int		322
+nim	GetNumAudioDrivers	#GetNumAudioDrivers	proc GetNumAudioDrivers(): int		328
+nim	GetQueuedAudioSize	#GetQueuedAudioSize,AudioDeviceID	proc GetQueuedAudioSize(dev: AudioDeviceID): uint32		334
+nim	LoadWAV_RW	#LoadWAV_RW,RWops,bool,AudioSpec,ptr.UncheckedArray[byte],uint32	proc LoadWAV_RW(src: RWops; freesrc: bool; spec: var AudioSpec;\n           audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		341
+nim	MixAudio	#MixAudio,ptr.UncheckedArray[byte],,uint32,int	proc MixAudio(dst: ptr UncheckedArray[byte];\n         src: ptr byte or ptr UncheckedArray[byte]; len: uint32; volume: int)		371
+nim	OpenAudio	#OpenAudio,AudioSpec	proc OpenAudio(desired: var AudioSpec): bool		386
+nim	OpenAudio	#OpenAudio,AudioSpec,AudioSpec	proc OpenAudio(desired: AudioSpec; obtained: var AudioSpec): bool		393
+nim	OpenAudioDevice	#OpenAudioDevice,string,bool,AudioSpec,AudioSpec	proc OpenAudioDevice(device: string; iscapture: bool; desired: AudioSpec;\n                obtained: var AudioSpec; allowed_changes = AudioAllowFlags 0): AudioDeviceID		402
+nim	OpenAudioDevice	#OpenAudioDevice,string,bool,AudioSpec	proc OpenAudioDevice(device: string; iscapture: bool; desired: AudioSpec;\n                allowed_changes = AudioAllowFlags 0): AudioDeviceID		420
+nim	PauseAudio	#PauseAudio,bool	proc PauseAudio(pause_on: bool)		436
+nim	PauseAudioDevice	#PauseAudioDevice,AudioDeviceID,bool	proc PauseAudioDevice(dev: AudioDeviceID; pause_on: bool)		439
+nim	QueueAudio	#QueueAudio,AudioDeviceID,pointer,uint32	proc QueueAudio(dev: AudioDeviceID; data: pointer; len: uint32): bool		445
+nim	GetClipboardText	#GetClipboardText	proc GetClipboardText(): string		471
+nim	SetClipboardText	#SetClipboardText,string	proc SetClipboardText(text: string): bool		489
+nim	ClearError	#ClearError	proc ClearError()		502
+nim	GetError	#GetError	proc GetError(): string		510
+nim	SetError	#SetError,string	proc SetError(msg: string): bool		519
+nim	free_drop_event_file	#free_drop_event_file,Event	proc free_drop_event_file(event: var Event)		530
+nim	EventState	#EventState,EventType,bool	proc EventState(typ: EventType; state: bool): bool		540
+nim	FlushEvent	#FlushEvent,EventType	proc FlushEvent(typ: EventType)		553
+nim	FlushEvents	#FlushEvents,EventType,EventType	proc FlushEvents(min_type, max_type: EventType)		559
+nim	PeepEvents	#PeepEvents,openArray[Event],int,EventAction,EventType,EventType	proc PeepEvents(events: var openArray[Event]; numevents: int; action: EventAction;\n           min_type: EventType; max_type: EventType): int		569
+nim	PeepEvents	#PeepEvents,openArray[Event],EventAction,EventType,EventType	proc PeepEvents(events: var openArray[Event]; action: EventAction;\n           min_type: EventType; max_type: EventType): int		583
+nim	PollEvent	#PollEvent	proc PollEvent(): bool		587
+nim	PollEvent	#PollEvent,Event	proc PollEvent(event: var Event): bool		593
+nim	PumpEvents	#PumpEvents	proc PumpEvents()		599
+nim	PushEvent	#PushEvent,Event	proc PushEvent(event: var Event): bool		605
+nim	WaitEvent	#WaitEvent	proc WaitEvent(): bool		614
+nim	WaitEvent	#WaitEvent,Event	proc WaitEvent(event: var Event): bool		620
+nim	WaitEventTimeout	#WaitEventTimeout,int	proc WaitEventTimeout(timeout: int): bool		626
+nim	WaitEventTimeout	#WaitEventTimeout,Event,int	proc WaitEventTimeout(event: var Event; timeout: int): bool		632
+nim	GetHint	#GetHint,HintName	proc GetHint(name: HintName): string		729
+nim	SetHint	#SetHint,HintName,string	proc SetHint(name: HintName; value: string): bool		744
+nim	JoystickClose	#JoystickClose,Joystick	proc JoystickClose(joystick: Joystick)		758
+nim	JoystickGetGUID	#JoystickGetGUID,Joystick	proc JoystickGetGUID(joystick: Joystick): JoystickGUID		767
+nim	JoystickGetGUIDString	#JoystickGetGUIDString,JoystickGUID	proc JoystickGetGUIDString(guid: JoystickGUID): string		773
+nim	JoystickGetGUIDString	#JoystickGetGUIDString,Joystick	proc JoystickGetGUIDString(joystick: Joystick): string		781
+nim	JoystickGetDeviceProduct	#JoystickGetDeviceProduct,cint	proc JoystickGetDeviceProduct(device_index: cint): uint16		784
+nim	JoystickGetDeviceVendor	#JoystickGetDeviceVendor,cint	proc JoystickGetDeviceVendor(device_index: cint): uint16		799
+nim	JoystickGetProduct	#JoystickGetProduct,Joystick	proc JoystickGetProduct(joystick: Joystick): uint16		813
+nim	JoystickGetSerial	#JoystickGetSerial,Joystick	proc JoystickGetSerial(joystick: Joystick): string		825
+nim	JoystickGetType	#JoystickGetType,Joystick	proc JoystickGetType(joystick: Joystick): JoystickType		837
+nim	JoystickGetVendor	#JoystickGetVendor,Joystick	proc JoystickGetVendor(joystick: Joystick): uint16		850
+nim	JoystickHasLED	#JoystickHasLED,Joystick	proc JoystickHasLED(joystick: Joystick): bool		861
+nim	JoystickHasRumble	#JoystickHasRumble,Joystick	proc JoystickHasRumble(joystick: Joystick): bool		873
+nim	JoystickHasRumbleTriggers	#JoystickHasRumbleTriggers,Joystick	proc JoystickHasRumbleTriggers(joystick: Joystick): bool		885
+nim	JoystickName	#JoystickName,Joystick	proc JoystickName(joystick: Joystick): string		897
+nim	JoystickNumAxes	#JoystickNumAxes,Joystick	proc JoystickNumAxes(joystick: Joystick): int		909
+nim	JoystickNumBalls	#JoystickNumBalls,Joystick	proc JoystickNumBalls(joystick: Joystick): int		922
+nim	JoystickNumButtons	#JoystickNumButtons,Joystick	proc JoystickNumButtons(joystick: Joystick): int		935
+nim	JoystickNumHats	#JoystickNumHats,Joystick	proc JoystickNumHats(joystick: Joystick): int		948
+nim	JoystickOpen	#JoystickOpen,int	proc JoystickOpen(device_index: int): Joystick		960
+nim	JoystickPath	#JoystickPath,Joystick	proc JoystickPath(joystick: Joystick): string		971
+nim	JoystickUpdate	#JoystickUpdate	proc JoystickUpdate()		986
+nim	NumJoysticks	#NumJoysticks	proc NumJoysticks(): int		999
+nim	GetKeyboardFocus	#GetKeyboardFocus	proc GetKeyboardFocus(): Window		1063
+nim	LogMessage	#LogMessage,LogCategory,LogPriority,string	proc LogMessage(category: LogCategory; priority: LogPriority; message: string)		1090
+nim	Log	#Log,string	proc Log(message: string)		1092
+nim	LogCritical	#LogCritical,LogCategory,string	proc LogCritical(category: LogCategory; message: string)		1098
+nim	LogDebug	#LogDebug,LogCategory,string	proc LogDebug(category: LogCategory; message: string)		1104
+nim	LogError	#LogError,LogCategory,string	proc LogError(category: LogCategory; message: string)		1110
+nim	LogInfo	#LogInfo,LogCategory,string	proc LogInfo(category: LogCategory; message: string)		1120
+nim	LogSetAllPriority	#LogSetAllPriority,LogPriority	proc LogSetAllPriority(priority: LogPriority)		1139
+nim	LogSetOutputFunction	#LogSetOutputFunction,LogOutputFunction,pointer	proc LogSetOutputFunction(callback: LogOutputFunction; userdata: pointer = nil)		1145
+nim	LogSetPriority	#LogSetPriority,LogCategory,LogPriority	proc LogSetPriority(category: LogCategory; priority: LogPriority)		1153
+nim	LogVerbose	#LogVerbose,LogCategory,string	proc LogVerbose(category: LogCategory; message: string)		1159
+nim	LogWarn	#LogWarn,LogCategory,string	proc LogWarn(category: LogCategory; message: string)		1165
+nim	ShowMessageBo	#ShowMessageBo,MessageBoxData,int	proc ShowMessageBo(messageboxdata: var MessageBoxData; buttonid: var int): bool		1189
+nim	ShowSimpleMessageBox	#ShowSimpleMessageBox,MessageBoxFlags,string,string,Window	proc ShowSimpleMessageBox(flags: MessageBoxFlags; title: string; message: string;\n                     window: Window = nil): bool		1200
+nim	CaptureMouse	#CaptureMouse,bool	proc CaptureMouse(enabled: bool): bool		1217
+nim	CreateColorCursor	#CreateColorCursor,SurfacePtr,int,int	proc CreateColorCursor(surface: SurfacePtr; hot_x, hot_y: int): CursorPtr		1225
+nim	CreateCursor	#CreateCursor,openArray[byte],openArray[byte],int,int,int,int	proc CreateCursor(data: openArray[byte]; mask: openArray[byte]; w: int; h: int;\n             hot_x: int; hot_y: int): CursorPtr		1233
+nim	CreateSystemCursor	#CreateSystemCursor,SystemCursor	proc CreateSystemCursor(id: SystemCursor)		1248
+nim	FreeCursor	#FreeCursor,CursorPtr	proc FreeCursor(cursor: CursorPtr)		1253
+nim	GetCursor	#GetCursor	proc GetCursor(): CursorPtr		1258
+nim	GetGlobalMouseState	#GetGlobalMouseState	proc GetGlobalMouseState(): tuple[x, y: int, state: uint32]		1266
+nim	GetMouseFocus	#GetMouseFocus	proc GetMouseFocus(): Window		1280
+nim	GetMouseState	#GetMouseState	proc GetMouseState(): tuple[x, y: int, state: uint32]		1287
+nim	GetRelativeMouseMode	#GetRelativeMouseMode	proc GetRelativeMouseMode(): bool		1295
+nim	GetRelativeMouseState	#GetRelativeMouseState	proc GetRelativeMouseState(): tuple[x, y: int, state: uint32]		1301
+nim	SetCursor	#SetCursor,CursorPtr	proc SetCursor(cursor: CursorPtr)		1309
+nim	SetRelativeMouseMode	#SetRelativeMouseMode,bool	proc SetRelativeMouseMode(enable: bool): bool		1315
+nim	ShowCursor	#ShowCursor,EventState	proc ShowCursor(toggle: EventState): bool		1322
+nim	GetPixelFormatName	#GetPixelFormatName,PixelFormatEnum	proc GetPixelFormatName(format: PixelFormatEnum): string		1341
+nim	MapRGB	#MapRGB,PixelFormat,byte,byte,byte	proc MapRGB(format: PixelFormat; r: byte; g: byte; b: byte): uint32		1352
+nim	MapRGBA	#MapRGBA,PixelFormat,byte,byte,byte,byte	proc MapRGBA(format: PixelFormat; r: byte; g: byte; b: byte; a: byte): uint32		1360
+nim	MasksToPixelFormatEnum	#MasksToPixelFormatEnum,int,uint32,uint32,uint32,uint32	proc MasksToPixelFormatEnum(bpp: int; rmask: uint32; gmask: uint32; bmask: uint32;\n                       amask: uint32): PixelFormatEnum		1369
+nim	PixelFormatEnumToMasks	#PixelFormatEnumToMasks,PixelFormatEnum	proc PixelFormatEnumToMasks(format: PixelFormatEnum): tuple[bpp: int,\n    rmask, gmask, bmask, amask: uint32]		1377
+nim	SetPixelFormatPalette	#SetPixelFormatPalette,PixelFormat,Palette	proc SetPixelFormatPalette(format: var PixelFormat; palette: Palette): bool		1396
+nim	CreateRenderer	#CreateRenderer,Window,int	proc CreateRenderer(window: Window; index: int; flags = RendererFlags 0): Renderer		1432
+nim	CreateRenderer	#CreateRenderer,Window	proc CreateRenderer(window: Window; flags = RendererFlags 0): Renderer		1441
+nim	CreateSoftwareRenderer	#CreateSoftwareRenderer,SurfacePtr	proc CreateSoftwareRenderer(surface: SurfacePtr): Renderer		1449
+nim	CreateTexture	#CreateTexture,Renderer,PixelFormatEnum,TextureAccess,int,int	proc CreateTexture(renderer: Renderer; format: PixelFormatEnum;\n              access: TextureAccess; width, height: int): Texture		1456
+nim	CreateTextureFromSurface	#CreateTextureFromSurface,Renderer,SurfacePtr	proc CreateTextureFromSurface(renderer: Renderer; surface: SurfacePtr): Texture		1466
+nim	CreateWindowAndRenderer	#CreateWindowAndRenderer,int,int,WindowFlags	proc CreateWindowAndRenderer(width: int; height: int;\n                        window_flags: WindowFlags = WindowFlags 0): tuple[\n    window: Window, renderer: Renderer]		1475
+nim	DestroyRenderer	#DestroyRenderer,Renderer	proc DestroyRenderer(renderer: Renderer)		1497
+nim	DestroyTexture	#DestroyTexture,Texture	proc DestroyTexture(texture: Texture)		1505
+nim	GetNumRenderDrivers	#GetNumRenderDrivers	proc GetNumRenderDrivers(): int		1516
+nim	GetRenderDrawColor	#GetRenderDrawColor,Renderer,byte,byte,byte,byte	proc GetRenderDrawColor(renderer: Renderer; r: var byte; g: var byte; b: var byte;\n                   a: var byte): bool		1526
+nim	GetRenderDriverInfo	#GetRenderDriverInfo,int,RendererInfo	proc GetRenderDriverInfo(index: int; info: var RendererInfo): bool		1535
+nim	GetRenderTarget	#GetRenderTarget,Renderer	proc GetRenderTarget(renderer: Renderer): Texture		1542
+nim	GetRenderer	#GetRenderer,Window	proc GetRenderer(window: Window): Renderer		1548
+nim	GetRendererInfo	#GetRendererInfo,Renderer,RendererInfo	proc GetRendererInfo(renderer: Renderer; info: var RendererInfo): bool		1555
+nim	GetRendererOutputSize	#GetRendererOutputSize,Renderer,int,int	proc GetRendererOutputSize(renderer: Renderer; w: var int; h: var int): bool		1562
+nim	QueryTexture	#QueryTexture,Texture,uint32,int,int,int	proc QueryTexture(texture: Texture; format: var uint32; access: var int; w: var int;\n             h: var int): bool		1580
+nim	RenderClear	#RenderClear,Renderer	proc RenderClear(renderer: Renderer): bool		1595
+nim	RenderCopy	#RenderCopy,Renderer,Texture	proc RenderCopy(renderer: Renderer; texture: Texture): bool		1602
+nim	RenderCopy	#RenderCopy,Renderer,Texture,Rect	proc RenderCopy(renderer: Renderer; texture: Texture; dst: Rect): bool		1610
+nim	RenderCopy	#RenderCopy,Renderer,Texture,int,int,int,int	proc RenderCopy(renderer: Renderer; texture: Texture; x: int; y: int; w: int; h: int): bool		1620
+nim	RenderCopy	#RenderCopy,Renderer,Texture,Rect,Rect	proc RenderCopy(renderer: Renderer; texture: Texture; src: Rect; dst: Rect): bool		1633
+nim	RenderCopyEx	#RenderCopyEx,Renderer,Texture,Rect,Rect,float,Point,RendererFlip	proc RenderCopyEx(renderer: Renderer; texture: Texture; src: Rect; dst: Rect;\n             angle: float; center: Point; flip: RendererFlip): bool		1645
+nim	RenderDrawLine	#RenderDrawLine,Renderer,int,int,int,int	proc RenderDrawLine(renderer: Renderer; x1: int; y1: int; x2: int; y2: int): bool		1667
+nim	RenderDrawPoint	#RenderDrawPoint,Renderer,int,int	proc RenderDrawPoint(renderer: Renderer; x: int; y: int): bool		1680
+nim	RenderDrawPointF	#RenderDrawPointF,Renderer,float,float	proc RenderDrawPointF(renderer: Renderer; x: float; y: float): bool		1687
+nim	RenderDrawRect	#RenderDrawRect,Renderer,Rect	proc RenderDrawRect(renderer: Renderer; rect: Rect): bool		1700
+nim	RenderDrawRect	#RenderDrawRect,Renderer,int,int,int,int	proc RenderDrawRect(renderer: Renderer; x: int; y: int; w: int; h: int): bool		1709
+nim	RenderFillRect	#RenderFillRect,Renderer	proc RenderFillRect(renderer: Renderer): bool		1720
+nim	RenderFillRect	#RenderFillRect,Renderer,Rect	proc RenderFillRect(renderer: Renderer; rect: Rect): bool		1727
+nim	RenderFillRect	#RenderFillRect,Renderer,int,int,int,int	proc RenderFillRect(renderer: Renderer; x, y: int; w, h: int): bool		1736
+nim	RenderGeometry	#RenderGeometry,Renderer,Texture,openArray[Vertex],int	proc RenderGeometry(renderer: Renderer; texture: Texture;\n               vertices: openArray[Vertex]; num_vertices: int = 0): bool		1748
+nim	RenderGeometry	#RenderGeometry,Renderer,openArray[Vertex],int	proc RenderGeometry(renderer: Renderer; vertices: openArray[Vertex];\n               num_vertices: int = 0): bool		1768
+nim	RenderGetClipRect	#RenderGetClipRect,Renderer,Rect	proc RenderGetClipRect(renderer: Renderer; rect: var Rect)		1782
+nim	RenderGetLogicalSize	#RenderGetLogicalSize,Renderer,int,int	proc RenderGetLogicalSize(renderer: Renderer; w: var int; h: var int)		1790
+nim	RenderGetScale	#RenderGetScale,Renderer,float,float	proc RenderGetScale(renderer: Renderer; scale_x, scale_y: var float)		1802
+nim	RenderGetViewport	#RenderGetViewport,Renderer,Rect	proc RenderGetViewport(renderer: Renderer; rect: var Rect)		1812
+nim	RenderGetWindow	#RenderGetWindow,Renderer	proc RenderGetWindow(renderer: Renderer): Window		1818
+nim	RenderPresent	#RenderPresent,Renderer	proc RenderPresent(renderer: Renderer)		1830
+nim	RenderReadPixels	#RenderReadPixels,Renderer,PixelFormatEnum,pointer,int	proc RenderReadPixels(renderer: Renderer; format: PixelFormatEnum; pixels: pointer;\n                 pitch: int): bool		1836
+nim	RenderReadPixels	#RenderReadPixels,Renderer,Rect,PixelFormatEnum,pointer,int	proc RenderReadPixels(renderer: Renderer; rect: Rect; format: PixelFormatEnum;\n                 pixels: pointer; pitch: int): bool		1845
+nim	RenderSetClipRect	#RenderSetClipRect,Renderer	proc RenderSetClipRect(renderer: Renderer): bool		1856
+nim	RenderSetClipRect	#RenderSetClipRect,Renderer,Rect	proc RenderSetClipRect(renderer: Renderer; rect: Rect): bool		1863
+nim	RenderSetLogicalSize	#RenderSetLogicalSize,Renderer,int,int	proc RenderSetLogicalSize(renderer: Renderer; w: int; h: int): bool		1874
+nim	RenderSetScale	#RenderSetScale,Renderer,float,float	proc RenderSetScale(renderer: Renderer; scale_x: float; scale_y: float): bool		1881
+nim	RenderSetVSync	#RenderSetVSync,Renderer,bool	proc RenderSetVSync(renderer: Renderer; vsync: bool): bool		1890
+nim	RenderSetViewport	#RenderSetViewport,Renderer	proc RenderSetViewport(renderer: Renderer): bool		1898
+nim	RenderSetViewport	#RenderSetViewport,Renderer,Rect	proc RenderSetViewport(renderer: Renderer; rect: Rect): bool		1905
+nim	RenderTargetSupported	#RenderTargetSupported,Renderer	proc RenderTargetSupported(renderer: Renderer): bool		1914
+nim	RenderWindowToLogical	#RenderWindowToLogical,Renderer,int,int,float,float	proc RenderWindowToLogical(renderer: Renderer; window_x: int; window_y: int;\n                      logical_x: var float; logical_y: var float): bool		1922
+nim	SetRenderDrawBlendMode	#SetRenderDrawBlendMode,Renderer,BlendMode	proc SetRenderDrawBlendMode(renderer: Renderer; blend_mode: BlendMode): bool		1938
+nim	SetRenderDrawColor	#SetRenderDrawColor,Renderer,byte,byte,byte,byte	proc SetRenderDrawColor(renderer: Renderer; r: byte; g: byte; b: byte;\n                   a: byte = 0x000000FF): bool		1945
+nim	SetRenderTarget	#SetRenderTarget,Renderer,Texture	proc SetRenderTarget(renderer: Renderer; texture: Texture = nil): bool		1956
+nim	SetTextureAlphaMod	#SetTextureAlphaMod,Texture,byte	proc SetTextureAlphaMod(texture: Texture; a: byte): bool		1963
+nim	SetTextureBlendMode	#SetTextureBlendMode,Texture,BlendMode	proc SetTextureBlendMode(texture: Texture; blend_mode: BlendMode): bool		1970
+nim	SetTextureColorMod	#SetTextureColorMod,Texture,byte,byte,byte	proc SetTextureColorMod(texture: Texture; r: byte; g: byte; b: byte): bool		1978
+nim	UpdateTexture	#UpdateTexture,Texture,Rect,pointer,int	proc UpdateTexture(texture: Texture; rect: Rect; pixels: pointer; pitch: int): bool		1994
+nim	UpdateTexture	#UpdateTexture,Texture,pointer,int	proc UpdateTexture(texture: Texture; pixels: pointer; pitch: int): bool		2005
+nim	UpdateTexture	#UpdateTexture,Texture,openArray[T],int	proc UpdateTexture[T: SomeUnsignedInt](texture: Texture; pixels: openArray[T];\n                                  pitch: int): bool		2013
+nim	RWFromFile	#RWFromFile,string,string	proc RWFromFile(file, mode: string): RWops		2032
+nim	SaveBMP	#SaveBMP,SurfacePtr,string	proc SaveBMP(surface: SurfacePtr; file: string): bool		2039
+nim	ConvertSurface	#ConvertSurface,SurfacePtr,PixelFormat	proc ConvertSurface(src: SurfacePtr; fmt: PixelFormat): SurfacePtr		2065
+nim	ConvertSurfaceFormat	#ConvertSurfaceFormat,SurfacePtr,PixelFormatEnum	proc ConvertSurfaceFormat(src: SurfacePtr; pixel_format: PixelFormatEnum): SurfacePtr		2076
+nim	CreateRGBSurface	#CreateRGBSurface,SurfaceFlags,int,int,int,uint32,uint32,uint32,uint32	proc CreateRGBSurface(flags: SurfaceFlags; width: int; height: int; depth: int;\n                 rmask: uint32; gmask: uint32; bmask: uint32; amask: uint32): SurfacePtr		2085
+nim	CreateRGBSurface	#CreateRGBSurface,int,int,int,uint32,uint32,uint32,uint32	proc CreateRGBSurface(width: int; height: int; depth: int; rmask: uint32;\n                 gmask: uint32; bmask: uint32; amask: uint32): SurfacePtr		2097
+nim	CreateRGBSurfaceFrom	#CreateRGBSurfaceFrom,pointer,int,int,int,int,uint32,uint32,uint32,uint32	proc CreateRGBSurfaceFrom(pixels: pointer; width: int; height: int; depth: int;\n                     pitch: int; rmask: uint32; gmask: uint32; bmask: uint32;\n                     amask: uint32): SurfacePtr		2107
+nim	CreateRGBSurfaceWithFormat	#CreateRGBSurfaceWithFormat,int,int,int,PixelFormatEnum	proc CreateRGBSurfaceWithFormat(width: int; height: int; depth: int;\n                           format: PixelFormatEnum): SurfacePtr		2121
+nim	FillRect	#FillRect,SurfacePtr,uint32	proc FillRect(dst: SurfacePtr; color: uint32): bool		2136
+nim	FillRect	#FillRect,SurfacePtr,Rect,uint32	proc FillRect(dst: SurfacePtr; rect: Rect; color: uint32): bool		2143
+nim	FreeSurface	#FreeSurface,SurfacePtr	proc FreeSurface(surface: SurfacePtr)		2154
+nim	LoadBMP_RW	#LoadBMP_RW,RWops,bool	proc LoadBMP_RW(src: RWops; freesrc: bool): SurfacePtr		2172
+nim	LockSurface	#LockSurface,SurfacePtr	proc LockSurface(surface: SurfacePtr): bool		2190
+nim	PremultiplyAlpha	#PremultiplyAlpha,int,int,PixelFormatEnum,pointer,int,PixelFormatEnum,pointer,int	proc PremultiplyAlpha(width: int; height: int; src_format: PixelFormatEnum;\n                 src: pointer; src_pitch: int; dst_format: PixelFormatEnum;\n                 dst: pointer; dst_pitch: int): bool		2203
+nim	SetColorKey	#SetColorKey,SurfacePtr,bool,uint32	proc SetColorKey(surface: SurfacePtr; flag: bool; key: uint32): bool		2220
+nim	UnlockSurface	#UnlockSurface,SurfacePtr	proc UnlockSurface(surface: SurfacePtr)		2238
+nim	AddTimer	#AddTimer,uint32,TimerCallback,pointer	proc AddTimer(interval: uint32; callback: TimerCallback; param: pointer = nil): TimerID		2265
+nim	Delay	#Delay,uint32	proc Delay(ms: uint32)		2274
+nim	GetPerformanceCounter	#GetPerformanceCounter	proc GetPerformanceCounter(): uint64		2280
+nim	GetPerformanceFrequency	#GetPerformanceFrequency	proc GetPerformanceFrequency(): uint64		2286
+nim	GetTicks	#GetTicks	proc GetTicks(): uint32		2292
+nim	GetTicks64	#GetTicks64	proc GetTicks64(): uint64		2309
+nim	RemoveTimer	#RemoveTimer,TimerID	proc RemoveTimer(id: TimerID): bool		2333
+nim	GetNumTouchDevices	#GetNumTouchDevices	proc GetNumTouchDevices(): int		2346
+nim	GetNumTouchFingers	#GetNumTouchFingers,TouchID	proc GetNumTouchFingers(touch_id: TouchID): int		2353
+nim	GetTouchDevice	#GetTouchDevice,int	proc GetTouchDevice(index: int): TouchID		2361
+nim	GetTouchDeviceType	#GetTouchDeviceType,TouchID	proc GetTouchDeviceType(touch_id: TouchID): TouchDeviceType		2369
+nim	GetTouchFinger	#GetTouchFinger,TouchID,int	proc GetTouchFinger(touch_id: TouchID; index: int): ptr Finger		2381
+nim	GetTouchName	#GetTouchName,int	proc GetTouchName(index: int): string		2389
+nim	GetRevision	#GetRevision	proc GetRevision(): string		2405
+nim	GetVersion	#GetVersion	proc GetVersion(): tuple[major, minor, patch: int]		2413
+nim	CreateWindow	#CreateWindow,string,int,int,int,int	proc CreateWindow(title: string; x: int; y: int; w: int; h: int;\n             flags = WindowFlags 0): Window		2427
+nim	CreateWindow	#CreateWindow,string,int,int	proc CreateWindow(title: string; w: int; h: int; flags = WindowFlags 0): Window		2438
+nim	DestroyWindow	#DestroyWindow,Window	proc DestroyWindow(window: Window)		2450
+nim	DisableScreenSaver	#DisableScreenSaver	proc DisableScreenSaver()		2460
+nim	EnableScreenSaver	#EnableScreenSaver	proc EnableScreenSaver()		2468
+nim	FlashWindow	#FlashWindow,Window,FlashOperation	proc FlashWindow(window: Window; operation: FlashOperation): bool		2476
+nim	GetCurrentDisplayMode	#GetCurrentDisplayMode,Natural,DisplayMode	proc GetCurrentDisplayMode(display_index: Natural; mode: var DisplayMode): bool		2507
+nim	GetCurrentVideoDriver	#GetCurrentVideoDriver	proc GetCurrentVideoDriver(): string		2520
+nim	GetDesktopDisplayMode	#GetDesktopDisplayMode,Natural,DisplayMode	proc GetDesktopDisplayMode(display_index: Natural; mode: var DisplayMode): bool		2531
+nim	GetDisplayBounds	#GetDisplayBounds,Natural,Rect	proc GetDisplayBounds(display_index: Natural; rect: var Rect): bool		2541
+nim	GetDisplayBounds	#GetDisplayBounds,Natural,int,int,int,int	proc GetDisplayBounds(display_index: Natural; x: var int; y: var int; width: var int;\n                 height: var int): bool		2550
+nim	GetDisplayDPI	#GetDisplayDPI,int,float,float,float	proc GetDisplayDPI(display_index: int; ddpi: var float; hdpi: var float;\n              vdpi: var float): bool		2563
+nim	GetDisplayMode	#GetDisplayMode,Natural,int,DisplayMode	proc GetDisplayMode(display_index: Natural; mode_index: int; mode: var DisplayMode): bool		2582
+nim	GetDisplayName	#GetDisplayName,Natural	proc GetDisplayName(display_index: Natural): string		2593
+nim	GetDisplayOrientation	#GetDisplayOrientation,Natural	proc GetDisplayOrientation(display_index: Natural): DisplayOrientation		2605
+nim	GetDisplayUsableBounds	#GetDisplayUsableBounds,Natural,Rect	proc GetDisplayUsableBounds(display_index: Natural; rect: var Rect): bool		2621
+nim	GetDisplayUsableBounds	#GetDisplayUsableBounds,Natural,int,int,int,int	proc GetDisplayUsableBounds(display_index: Natural; x: var int; y: var int;\n                       width: var int; height: var int): bool		2637
+nim	GetGrabbedWindow	#GetGrabbedWindow	proc GetGrabbedWindow(): Window		2657
+nim	GetNumDisplayModes	#GetNumDisplayModes,Natural	proc GetNumDisplayModes(display_index: Natural): int		2666
+nim	GetNumVideoDisplays	#GetNumVideoDisplays	proc GetNumVideoDisplays(): int		2675
+nim	GetNumVideoDrivers	#GetNumVideoDrivers	proc GetNumVideoDrivers(): int		2684
+nim	GetVideoDriver	#GetVideoDriver,int	proc GetVideoDriver(index: int): string		2696
+nim	GetWindowBordersSize	#GetWindowBordersSize,Window,int,int,int,int	proc GetWindowBordersSize(window: Window; top: var int; left: var int;\n                     bottom: var int; right: var int): bool		2704
+nim	GetWindowDisplayIndex	#GetWindowDisplayIndex,Window	proc GetWindowDisplayIndex(window: Window): int		2726
+nim	GetWindowDisplayMode	#GetWindowDisplayMode,Window,DisplayMode	proc GetWindowDisplayMode(window: Window; mode: var DisplayMode): bool		2735
+nim	GetWindowFlags	#GetWindowFlags,Window	proc GetWindowFlags(window: Window): WindowFlags		2744
+nim	GetWindowFromID	#GetWindowFromID,uint32	proc GetWindowFromID(id: uint32): Window		2752
+nim	GetWindowGrab	#GetWindowGrab,Window	proc GetWindowGrab(window: Window): bool		2763
+nim	GetWindowID	#GetWindowID,Window	proc GetWindowID(window: Window): uint32		2773
+nim	GetWindowKeyboardGrab	#GetWindowKeyboardGrab,Window	proc GetWindowKeyboardGrab(window: Window): bool		2782
+nim	GetWindowMaximumSize	#GetWindowMaximumSize,Window	proc GetWindowMaximumSize(window: Window): tuple[w, h: int]		2793
+nim	GetWindowMinimumSize	#GetWindowMinimumSize,Window	proc GetWindowMinimumSize(window: Window): tuple[w, h: int]		2803
+nim	GetWindowMouseGrab	#GetWindowMouseGrab,Window	proc GetWindowMouseGrab(window: Window): bool		2813
+nim	GetWindowMouseRect	#GetWindowMouseRect,Window	proc GetWindowMouseRect(window: Window): Rect		2824
+nim	GetWindowOpacity	#GetWindowOpacity,Window,float	proc GetWindowOpacity(window: Window; opacity: var float): bool		2838
+nim	GetWindowPixelFormat	#GetWindowPixelFormat,Window	proc GetWindowPixelFormat(window: Window): PixelFormatEnum		2857
+nim	GetWindowPosition	#GetWindowPosition,Window	proc GetWindowPosition(window: Window): tuple[x, y: int]		2869
+nim	GetWindowSize	#GetWindowSize,Window	proc GetWindowSize(window: Window): tuple[w, h: int]		2879
+nim	GetWindowSizeInPixels	#GetWindowSizeInPixels,Window	proc GetWindowSizeInPixels(window: Window): tuple[w, h: int]		2889
+nim	GetWindowSurface	#GetWindowSurface,Window	proc GetWindowSurface(window: Window): SurfacePtr		2903
+nim	GetWindowTitle	#GetWindowTitle,Window	proc GetWindowTitle(window: Window): string		2912
+nim	HasWindowSurface	#HasWindowSurface,Window	proc HasWindowSurface(window: Window): bool		2924
+nim	HideWindow	#HideWindow,Window	proc HideWindow(window: Window)		2935
+nim	MaximizeWindow	#MaximizeWindow,Window	proc MaximizeWindow(window: Window)		2946
+nim	MinimizeWindow	#MinimizeWindow,Window	proc MinimizeWindow(window: Window)		2954
+nim	RaiseWindow	#RaiseWindow,Window	proc RaiseWindow(window: Window)		2962
+nim	RestoreWindow	#RestoreWindow,Window	proc RestoreWindow(window: Window)		2970
+nim	SetWindowAlwaysOnTop	#SetWindowAlwaysOnTop,Window,bool	proc SetWindowAlwaysOnTop(window: Window; on_top: bool): bool		2978
+nim	SetWindowBordered	#SetWindowBordered,Window,bool	proc SetWindowBordered(window: Window; bordered: bool)		2992
+nim	SetWindowDisplayMode	#SetWindowDisplayMode,Window,DisplayMode	proc SetWindowDisplayMode(window: Window; mode: DisplayMode): bool		3003
+nim	SetWindowFullscreen	#SetWindowFullscreen,Window	proc SetWindowFullscreen(window: Window; flags = WindowFlags 0): bool		3014
+nim	SetWindowGrab	#SetWindowGrab,Window,bool	proc SetWindowGrab(window: Window; grabbed: bool)		3026
+nim	SetWindowHitTest	#SetWindowHitTest,Window,HitTest,pointer	proc SetWindowHitTest(window: Window; callback: HitTest; callback_data: pointer): bool		3034
+nim	SetWindowIcon	#SetWindowIcon,Window,SurfacePtr	proc SetWindowIcon(window: Window; surface: SurfacePtr)		3048
+nim	SetWindowInputFocus	#SetWindowInputFocus,Window	proc SetWindowInputFocus(window: Window): bool		3056
+nim	SetWindowKeyboardGrab	#SetWindowKeyboardGrab,Window,bool	proc SetWindowKeyboardGrab(window: Window; grabbed: bool): bool		3065
+nim	SetWindowMaximumSize	#SetWindowMaximumSize,Window,int,int	proc SetWindowMaximumSize(window: Window; max_w: int; max_h: int)		3077
+nim	SetWindowMinimumSize	#SetWindowMinimumSize,Window,int,int	proc SetWindowMinimumSize(window: Window; min_w: int; min_h: int)		3085
+nim	SetWindowModalFor	#SetWindowModalFor,Window,Window	proc SetWindowModalFor(modal_window: Window; parent_window: Window): bool		3093
+nim	SetWindowMouseGrab	#SetWindowMouseGrab,Window,bool	proc SetWindowMouseGrab(window: Window; grabbed: bool): bool		3106
+nim	SetWindowMouseRect	#SetWindowMouseRect,Window,Rect	proc SetWindowMouseRect(window: Window; rect: Rect): bool		3118
+nim	SetWindowOpacity	#SetWindowOpacity,Window,float	proc SetWindowOpacity(window: Window; opacity: float): bool		3132
+nim	SetWindowPosition	#SetWindowPosition,Window,int,int	proc SetWindowPosition(window: Window; x: int; y: int)		3144
+nim	SetWindowResizable	#SetWindowResizable,Window,bool	proc SetWindowResizable(window: Window; ontop: bool): bool		3156
+nim	SetWindowSize	#SetWindowSize,Window,int,int	proc SetWindowSize(window: Window; x: int; y: int)		3168
+nim	SetWindowTitle	#SetWindowTitle,Window,string	proc SetWindowTitle(window: Window; title: string)		3176
+nim	ShowWindow	#ShowWindow,Window	proc ShowWindow(window: Window)		3188
+nim	UpdateWindowSurface	#UpdateWindowSurface,Window	proc UpdateWindowSurface(window: Window): bool		3197
+nim	VideoInit	#VideoInit,string	proc VideoInit(driver_name: string): bool		3209
+nim	VideoQuit	#VideoQuit	proc VideoQuit()		3218
+nim	LoadWAV	#LoadWAV,string,AudioSpec,ptr.UncheckedArray[byte],uint32	proc LoadWAV(file: string; spec: var AudioSpec;\n        audio_buf: var ptr UncheckedArray[byte]; audio_len: var uint32): ptr AudioSpec		3243
+nim	QuitRequested	#QuitRequested	proc QuitRequested(): bool		3257
+nim	LoadBMP	#LoadBMP,string	proc LoadBMP(file: string): SurfacePtr		3271
+nim	sdl2_avail	#sdl2_avail	proc sdl2_avail(flags = INIT_VIDEO): bool		3281
+nimgrp	Renderfillrect	#RenderFillRect-procs-all	proc		1720
+nimgrp	Rendersetcliprect	#RenderSetClipRect-procs-all	proc		1856
+nimgrp	Pollevent	#PollEvent-procs-all	proc		587
+nimgrp	Openaudiodevice	#OpenAudioDevice-procs-all	proc		402
+nimgrp	Rendergeometry	#RenderGeometry-procs-all	proc		1748
+nimgrp	Renderreadpixels	#RenderReadPixels-procs-all	proc		1836
+nimgrp	Rendersetviewport	#RenderSetViewport-procs-all	proc		1898
+nimgrp	Createrenderer	#CreateRenderer-procs-all	proc		1432
+nimgrp	Getdisplaybounds	#GetDisplayBounds-procs-all	proc		2541
+nimgrp	Joystickgetguidstring	#JoystickGetGUIDString-procs-all	proc		773
+nimgrp	Renderdrawrect	#RenderDrawRect-procs-all	proc		1700
+nimgrp	Getdisplayusablebounds	#GetDisplayUsableBounds-procs-all	proc		2621
+nimgrp	Waiteventtimeout	#WaitEventTimeout-procs-all	proc		626
+nimgrp	Openaudio	#OpenAudio-procs-all	proc		386
+nimgrp	Peepevents	#PeepEvents-procs-all	proc		569
+nimgrp	Createwindow	#CreateWindow-procs-all	proc		2427
+nimgrp	Waitevent	#WaitEvent-procs-all	proc		614
+nimgrp	Creatergbsurface	#CreateRGBSurface-procs-all	proc		2085
+nimgrp	Updatetexture	#UpdateTexture-procs-all	proc		1994
+nimgrp	Rendercopy	#RenderCopy-procs-all	proc		1602
+nimgrp	Fillrect	#FillRect-procs-all	proc		2136
+heading	Usage	#usage	 Usage		0
+heading	Configuration	#configuration	 Configuration		0

@@ -1,0 +1,4 @@
+nimTitle	properties	nsdl3/sdl3inc/properties.html	module nsdl3/sdl3inc/properties		0
+nim	PropertiesID	nsdl3/sdl3inc/properties.html#PropertiesID	type PropertiesID		9
+nim	PropertyType	nsdl3/sdl3inc/properties.html#PropertyType	enum PropertyType		12
+nim	EnumeratePropertiesCallback	nsdl3/sdl3inc/properties.html#EnumeratePropertiesCallback	type EnumeratePropertiesCallback		21

@@ -1,0 +1,6 @@
+nimTitle	timer	nsdl1/sdl1inc/timer.html	module nsdl1/sdl1inc/timer		0
+nim	TIMESLICE	nsdl1/sdl1inc/timer.html#TIMESLICE	const TIMESLICE		9
+nim	TIMER_RESOLUTION	nsdl1/sdl1inc/timer.html#TIMER_RESOLUTION	const TIMER_RESOLUTION		12
+nim	TimerCallback	nsdl1/sdl1inc/timer.html#TimerCallback	type TimerCallback		16
+nim	NewTimerCallback	nsdl1/sdl1inc/timer.html#NewTimerCallback	type NewTimerCallback		18
+nim	TimerID	nsdl1/sdl1inc/timer.html#TimerID	type TimerID		22

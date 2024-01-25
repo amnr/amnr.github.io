@@ -1,0 +1,17 @@
+nimTitle	messagebox	nsdl3/sdl3inc/messagebox.html	module nsdl3/sdl3inc/messagebox		0
+nim	MessageBoxFlags	nsdl3/sdl3inc/messagebox.html#MessageBoxFlags	type MessageBoxFlags		11
+nim	`+`	nsdl3/sdl3inc/messagebox.html#+,MessageBoxFlags,MessageBoxFlags	proc `+`(a, b: MessageBoxFlags): MessageBoxFlags		13
+nim	`or`	nsdl3/sdl3inc/messagebox.html#or,MessageBoxFlags,MessageBoxFlags	proc `or`(a, b: MessageBoxFlags): MessageBoxFlags		14
+nim	MESSAGEBOX_ERROR	nsdl3/sdl3inc/messagebox.html#MESSAGEBOX_ERROR	const MESSAGEBOX_ERROR		17
+nim	MESSAGEBOX_WARNING	nsdl3/sdl3inc/messagebox.html#MESSAGEBOX_WARNING	const MESSAGEBOX_WARNING		18
+nim	MESSAGEBOX_INFORMATION	nsdl3/sdl3inc/messagebox.html#MESSAGEBOX_INFORMATION	const MESSAGEBOX_INFORMATION		19
+nim	MESSAGEBOX_BUTTONS_LEFT_TO_RIGHT	nsdl3/sdl3inc/messagebox.html#MESSAGEBOX_BUTTONS_LEFT_TO_RIGHT	const MESSAGEBOX_BUTTONS_LEFT_TO_RIGHT		20
+nim	MESSAGEBOX_BUTTONS_RIGHT_TO_LEFT	nsdl3/sdl3inc/messagebox.html#MESSAGEBOX_BUTTONS_RIGHT_TO_LEFT	const MESSAGEBOX_BUTTONS_RIGHT_TO_LEFT		21
+nim	MessageBoxButtonFlags	nsdl3/sdl3inc/messagebox.html#MessageBoxButtonFlags	type MessageBoxButtonFlags		24
+nim	MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT	nsdl3/sdl3inc/messagebox.html#MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT	const MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT		27
+nim	MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT	nsdl3/sdl3inc/messagebox.html#MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT	const MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT		28
+nim	MessageBoxButtonData	nsdl3/sdl3inc/messagebox.html#MessageBoxButtonData	object MessageBoxButtonData		31
+nim	MessageBoxColor	nsdl3/sdl3inc/messagebox.html#MessageBoxColor	object MessageBoxColor		37
+nim	MessageBoxColorType	nsdl3/sdl3inc/messagebox.html#MessageBoxColorType	enum MessageBoxColorType		43
+nim	MessageBoxColorScheme	nsdl3/sdl3inc/messagebox.html#MessageBoxColorScheme	object MessageBoxColorScheme		54
+nim	MessageBoxData	nsdl3/sdl3inc/messagebox.html#MessageBoxData	object MessageBoxData		58

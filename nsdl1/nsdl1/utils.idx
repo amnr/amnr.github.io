@@ -1,0 +1,6 @@
+nimTitle	utils	nsdl1/utils.html	module nsdl1/utils		0
+nim	log_error	nsdl1/utils.html#log_error.t,varargs[typed,]	template log_error(args: varargs[typed, `$`])		22
+nim	available_since	nsdl1/utils.html#available_since.m,typed,string	macro available_since(procvar: typed; minver: string)		25
+nim	ensure_not_nil	nsdl1/utils.html#ensure_not_nil.t,string,untyped	template ensure_not_nil(procname: string; body: untyped)		36
+nim	ensure_non_zero	nsdl1/utils.html#ensure_non_zero.t,string,untyped	template ensure_non_zero(procname: string; body: untyped)		44
+nim	ensure_zero	nsdl1/utils.html#ensure_zero.t,string,untyped	template ensure_zero(procname: string; body: untyped)		52

@@ -1,6 +1,0 @@
-nimTitle	utils	dynlibsdl3/utils.html	module dynlibsdl3/utils		0
-nim	show_error	dynlibsdl3/utils.html#show_error.t,varargs[typed,]	template show_error(args: varargs[typed, `$`])		11
-nim	available_since	dynlibsdl3/utils.html#available_since.m,string,string	macro available_since(procname: string; minver: string)		14
-nim	ensure_not_nil	dynlibsdl3/utils.html#ensure_not_nil.t,string,untyped	template ensure_not_nil(procname: string; body: untyped)		24
-nim	ensure_positive	dynlibsdl3/utils.html#ensure_positive.t,string,untyped	template ensure_positive(procname: string; body: untyped)		37
-nim	ensure_zero	dynlibsdl3/utils.html#ensure_zero.t,string,untyped	template ensure_zero(procname: string; body: untyped)		49

@@ -1,0 +1,6 @@
+nimTitle	config	nsdl1/config.html	module nsdl1/config		0
+nim	enable_audio	nsdl1/config.html#enable_audio	const enable_audio		12
+nim	enable_clipboard	nsdl1/config.html#enable_clipboard	const enable_clipboard		15
+nim	enable_joystick	nsdl1/config.html#enable_joystick	const enable_joystick		18
+nim	enable_keyboard	nsdl1/config.html#enable_keyboard	const enable_keyboard		21
+nim	enable_mouse	nsdl1/config.html#enable_mouse	const enable_mouse		24

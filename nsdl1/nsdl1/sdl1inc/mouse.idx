@@ -1,0 +1,15 @@
+nimTitle	mouse	nsdl1/sdl1inc/mouse.html	module nsdl1/sdl1inc/mouse		0
+nim	Cursor	nsdl1/sdl1inc/mouse.html#Cursor	object Cursor		14
+nim	MouseButton	nsdl1/sdl1inc/mouse.html#MouseButton	type MouseButton		24
+nim	BUTTON_LEFT	nsdl1/sdl1inc/mouse.html#BUTTON_LEFT	const BUTTON_LEFT		30
+nim	BUTTON_MIDDLE	nsdl1/sdl1inc/mouse.html#BUTTON_MIDDLE	const BUTTON_MIDDLE		31
+nim	BUTTON_RIGHT	nsdl1/sdl1inc/mouse.html#BUTTON_RIGHT	const BUTTON_RIGHT		32
+nim	BUTTON_WHEELUP	nsdl1/sdl1inc/mouse.html#BUTTON_WHEELUP	const BUTTON_WHEELUP		33
+nim	BUTTON_WHEELDOWN	nsdl1/sdl1inc/mouse.html#BUTTON_WHEELDOWN	const BUTTON_WHEELDOWN		34
+nim	BUTTON_X1	nsdl1/sdl1inc/mouse.html#BUTTON_X1	const BUTTON_X1		35
+nim	BUTTON_X2	nsdl1/sdl1inc/mouse.html#BUTTON_X2	const BUTTON_X2		36
+nim	BUTTON_LMASK	nsdl1/sdl1inc/mouse.html#BUTTON_LMASK	const BUTTON_LMASK		39
+nim	BUTTON_MMASK	nsdl1/sdl1inc/mouse.html#BUTTON_MMASK	const BUTTON_MMASK		40
+nim	BUTTON_RMASK	nsdl1/sdl1inc/mouse.html#BUTTON_RMASK	const BUTTON_RMASK		41
+nim	BUTTON_X1MASK	nsdl1/sdl1inc/mouse.html#BUTTON_X1MASK	const BUTTON_X1MASK		42
+nim	BUTTON_X2MASK	nsdl1/sdl1inc/mouse.html#BUTTON_X2MASK	const BUTTON_X2MASK		43

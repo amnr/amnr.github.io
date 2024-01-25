@@ -1,5 +1,0 @@
-nimTitle	sensor	dynlibsdl2/sdl2inc/sensor.html	module dynlibsdl2/sdl2inc/sensor		0
-nim	SensorPtr	dynlibsdl2/sdl2inc/sensor.html#SensorPtr	type SensorPtr		12
-nim	SensorID	dynlibsdl2/sdl2inc/sensor.html#SensorID	type SensorID		15
-nim	SensorType	dynlibsdl2/sdl2inc/sensor.html#SensorType	enum SensorType		20
-nim	STANDARD_GRAVITY	dynlibsdl2/sdl2inc/sensor.html#STANDARD_GRAVITY	const STANDARD_GRAVITY		28

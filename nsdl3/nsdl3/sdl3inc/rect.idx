@@ -1,0 +1,20 @@
+nimTitle	rect	nsdl3/sdl3inc/rect.html	module nsdl3/sdl3inc/rect		0
+nim	Point	nsdl3/sdl3inc/rect.html#Point	object Point		13
+nim	FPoint	nsdl3/sdl3inc/rect.html#FPoint	object FPoint		18
+nim	init	nsdl3/sdl3inc/rect.html#init,typedesc[FPoint],float,float	proc init(T: typedesc[FPoint]; x: float; y: float): T:type		23
+nim	init	nsdl3/sdl3inc/rect.html#init,typedesc[FPoint],int,int	proc init(T: typedesc[FPoint]; x: int; y: int): T:type		26
+nim	Rect	nsdl3/sdl3inc/rect.html#Rect	object Rect		30
+nim	init	nsdl3/sdl3inc/rect.html#init,typedesc[Rect],int,int,int,int	proc init(T: typedesc[Rect]; x, y: int; w, h: int): T:type		37
+nim	FRect	nsdl3/sdl3inc/rect.html#FRect	object FRect		41
+nim	init	nsdl3/sdl3inc/rect.html#init,typedesc[FRect],float,float,float,float	proc init(T: typedesc[FRect]; x, y, w, h: float): T:type		48
+nim	init	nsdl3/sdl3inc/rect.html#init,typedesc[FRect],int,int,int,int	proc init(T: typedesc[FRect]; x, y, w, h: int): T:type		51
+nim	point_in_rect	nsdl3/sdl3inc/rect.html#point_in_rect,Point,Rect	proc point_in_rect(p: Point; r: Rect): bool		54
+nim	rect_empty	nsdl3/sdl3inc/rect.html#rect_empty,ptr.Rect	proc rect_empty(r: ptr Rect): bool		59
+nim	rect_empty	nsdl3/sdl3inc/rect.html#rect_empty,Rect	proc rect_empty(r: Rect): bool		63
+nim	rect_equals	nsdl3/sdl3inc/rect.html#rect_equals,ptr.Rect,ptr.Rect	proc rect_equals(a, b: ptr Rect): bool		67
+nim	point_in_rect_float	nsdl3/sdl3inc/rect.html#point_in_rect_float,ptr.FPoint,ptr.FRect	proc point_in_rect_float(p: ptr FPoint; r: ptr FRect): bool		73
+nim	rect_empty_float	nsdl3/sdl3inc/rect.html#rect_empty_float,ptr.FRect	proc rect_empty_float(r: ptr FRect): bool		77
+nim	rects_equal_epsilon	nsdl3/sdl3inc/rect.html#rects_equal_epsilon,ptr.FRect,ptr.FRect,cfloat	proc rects_equal_epsilon(a, b: ptr FRect; epsilon: cfloat): bool		81
+nim	rects_equal_float	nsdl3/sdl3inc/rect.html#rects_equal_float,ptr.FRect,ptr.FRect	proc rects_equal_float(a, b: ptr FRect): bool		88
+nimgrp	init	nsdl3/sdl3inc/rect.html#init-procs-all	proc		23
+nimgrp	rectempty	nsdl3/sdl3inc/rect.html#rect_empty-procs-all	proc		59

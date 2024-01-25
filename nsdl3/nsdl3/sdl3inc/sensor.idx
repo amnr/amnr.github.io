@@ -1,0 +1,5 @@
+nimTitle	sensor	nsdl3/sdl3inc/sensor.html	module nsdl3/sdl3inc/sensor		0
+nim	Sensor	nsdl3/sdl3inc/sensor.html#Sensor	type Sensor		9
+nim	SensorID	nsdl3/sdl3inc/sensor.html#SensorID	type SensorID		12
+nim	SensorType	nsdl3/sdl3inc/sensor.html#SensorType	enum SensorType		17
+nim	STANDARD_GRAVITY	nsdl3/sdl3inc/sensor.html#STANDARD_GRAVITY	const STANDARD_GRAVITY		30

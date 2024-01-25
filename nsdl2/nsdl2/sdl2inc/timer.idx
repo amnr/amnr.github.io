@@ -1,0 +1,4 @@
+nimTitle	timer	nsdl2/sdl2inc/timer.html	module nsdl2/sdl2inc/timer		0
+nim	ticks_passed	nsdl2/sdl2inc/timer.html#ticks_passed,uint32,uint32	proc ticks_passed(a, b: uint32): bool		8
+nim	TimerCallback	nsdl2/sdl2inc/timer.html#TimerCallback	type TimerCallback		13
+nim	TimerID	nsdl2/sdl2inc/timer.html#TimerID	type TimerID		17

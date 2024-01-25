@@ -1,0 +1,26 @@
+nimTitle	joystick	nsdl3/sdl3inc/joystick.html	module nsdl3/sdl3inc/joystick		0
+nim	Joystick	nsdl3/sdl3inc/joystick.html#Joystick	type Joystick		9
+nim	JoystickGUID	nsdl3/sdl3inc/joystick.html#JoystickGUID	object JoystickGUID		12
+nim	JoystickID	nsdl3/sdl3inc/joystick.html#JoystickID	type JoystickID		16
+nim	`==`	nsdl3/sdl3inc/joystick.html#==,JoystickID,uint32	proc `==`(a: JoystickID; b: uint32): bool		21
+nim	JoystickType	nsdl3/sdl3inc/joystick.html#JoystickType	enum JoystickType		24
+nim	JoystickCaps	nsdl3/sdl3inc/joystick.html#JoystickCaps	enum JoystickCaps		36
+nim	JoystickPowerLevel	nsdl3/sdl3inc/joystick.html#JoystickPowerLevel	enum JoystickPowerLevel		43
+nim	JOYSTICK_AXIS_MAX	nsdl3/sdl3inc/joystick.html#JOYSTICK_AXIS_MAX	const JOYSTICK_AXIS_MAX		53
+nim	JOYSTICK_AXIS_MIN	nsdl3/sdl3inc/joystick.html#JOYSTICK_AXIS_MIN	const JOYSTICK_AXIS_MIN		54
+nim	IPHONE_MAX_GFORCE	nsdl3/sdl3inc/joystick.html#IPHONE_MAX_GFORCE	const IPHONE_MAX_GFORCE		56
+nim	VirtualJoystickDesc	nsdl3/sdl3inc/joystick.html#VirtualJoystickDesc	object VirtualJoystickDesc		59
+nim	VIRTUAL_JOYSTICK_DESC_VERSION	nsdl3/sdl3inc/joystick.html#VIRTUAL_JOYSTICK_DESC_VERSION	const VIRTUAL_JOYSTICK_DESC_VERSION		82
+nim	Hat	nsdl3/sdl3inc/joystick.html#Hat	type Hat		85
+nim	`==`	nsdl3/sdl3inc/joystick.html#==,Hat,Hat	proc `==`(a, b: Hat): bool		88
+nim	`and`	nsdl3/sdl3inc/joystick.html#and,Hat,Hat	proc `and`(a, b: Hat): Hat		89
+nim	HAT_CENTERED	nsdl3/sdl3inc/joystick.html#HAT_CENTERED	const HAT_CENTERED		93
+nim	HAT_UP	nsdl3/sdl3inc/joystick.html#HAT_UP	const HAT_UP		94
+nim	HAT_RIGHT	nsdl3/sdl3inc/joystick.html#HAT_RIGHT	const HAT_RIGHT		95
+nim	HAT_DOWN	nsdl3/sdl3inc/joystick.html#HAT_DOWN	const HAT_DOWN		96
+nim	HAT_LEFT	nsdl3/sdl3inc/joystick.html#HAT_LEFT	const HAT_LEFT		97
+nim	HAT_RIGHTUP	nsdl3/sdl3inc/joystick.html#HAT_RIGHTUP	const HAT_RIGHTUP		98
+nim	HAT_RIGHTDOWN	nsdl3/sdl3inc/joystick.html#HAT_RIGHTDOWN	const HAT_RIGHTDOWN		99
+nim	HAT_LEFTUP	nsdl3/sdl3inc/joystick.html#HAT_LEFTUP	const HAT_LEFTUP		100
+nim	HAT_LEFTDOWN	nsdl3/sdl3inc/joystick.html#HAT_LEFTDOWN	const HAT_LEFTDOWN		101
+nimgrp	==	nsdl3/sdl3inc/joystick.html#==-procs-all	proc		21

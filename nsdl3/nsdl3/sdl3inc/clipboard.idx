@@ -1,0 +1,3 @@
+nimTitle	clipboard	nsdl3/sdl3inc/clipboard.html	module nsdl3/sdl3inc/clipboard		0
+nim	ClipboardDataCallback	nsdl3/sdl3inc/clipboard.html#ClipboardDataCallback	type ClipboardDataCallback		6
+nim	ClipboardCleanupCallback	nsdl3/sdl3inc/clipboard.html#ClipboardCleanupCallback	type ClipboardCleanupCallback		17

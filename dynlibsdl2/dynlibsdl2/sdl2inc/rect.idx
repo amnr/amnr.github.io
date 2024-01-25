@@ -1,9 +1,0 @@
-nimTitle	rect	dynlibsdl2/sdl2inc/rect.html	module dynlibsdl2/sdl2inc/rect		0
-nim	Point	dynlibsdl2/sdl2inc/rect.html#Point	object Point		9
-nim	FPoint	dynlibsdl2/sdl2inc/rect.html#FPoint	object FPoint		14
-nim	Rect	dynlibsdl2/sdl2inc/rect.html#Rect	object Rect		20
-nim	init	dynlibsdl2/sdl2inc/rect.html#init,typedesc[Rect],int,int,int,int	proc init(T: typedesc[Rect]; x, y: int; w, h: int): T:type		27
-nim	FRect	dynlibsdl2/sdl2inc/rect.html#FRect	object FRect		31
-nim	point_in_rect	dynlibsdl2/sdl2inc/rect.html#point_in_rect,Point,Rect	proc point_in_rect(p: Point; r: Rect): bool		38
-nim	contains	dynlibsdl2/sdl2inc/rect.html#contains,Rect,Point	proc contains(r: Rect; p: Point): bool		43
-nim	rect_empty	dynlibsdl2/sdl2inc/rect.html#rect_empty,Rect	proc rect_empty(r: Rect): bool		52

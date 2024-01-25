@@ -1,0 +1,6 @@
+nimTitle	sensor	nsdl2/sdl2inc/sensor.html	module nsdl2/sdl2inc/sensor		0
+nim	Sensor	nsdl2/sdl2inc/sensor.html#Sensor	type Sensor		9
+nim	SensorID	nsdl2/sdl2inc/sensor.html#SensorID	type SensorID		12
+nim	`==`	nsdl2/sdl2inc/sensor.html#==,SensorID,int32	proc `==`(a: SensorID; b: int32): bool		17
+nim	SensorType	nsdl2/sdl2inc/sensor.html#SensorType	enum SensorType		20
+nim	STANDARD_GRAVITY	nsdl2/sdl2inc/sensor.html#STANDARD_GRAVITY	const STANDARD_GRAVITY		33

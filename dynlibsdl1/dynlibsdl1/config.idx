@@ -1,6 +1,0 @@
-nimTitle	config	dynlibsdl1/config.html	module dynlibsdl1/config		0
-nim	use_audio	dynlibsdl1/config.html#use_audio	const use_audio		7
-nim	use_clipboard	dynlibsdl1/config.html#use_clipboard	const use_clipboard		10
-nim	use_joystick	dynlibsdl1/config.html#use_joystick	const use_joystick		13
-nim	use_keyboard	dynlibsdl1/config.html#use_keyboard	const use_keyboard		16
-nim	use_mouse	dynlibsdl1/config.html#use_mouse	const use_mouse		19

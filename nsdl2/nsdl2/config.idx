@@ -1,0 +1,15 @@
+nimTitle	config	nsdl2/config.html	module nsdl2/config		0
+nim	use_audio	nsdl2/config.html#use_audio	const use_audio		12
+nim	use_blendmode	nsdl2/config.html#use_blendmode	const use_blendmode		14
+nim	use_clipboard	nsdl2/config.html#use_clipboard	const use_clipboard		16
+nim	use_gamecontroller	nsdl2/config.html#use_gamecontroller	const use_gamecontroller		18
+nim	use_gesture	nsdl2/config.html#use_gesture	const use_gesture		20
+nim	use_haptic	nsdl2/config.html#use_haptic	const use_haptic		22
+nim	use_hints	nsdl2/config.html#use_hints	const use_hints		24
+nim	use_joystick	nsdl2/config.html#use_joystick	const use_joystick		26
+nim	use_keyboard	nsdl2/config.html#use_keyboard	const use_keyboard		28
+nim	use_messagebox	nsdl2/config.html#use_messagebox	const use_messagebox		30
+nim	use_mouse	nsdl2/config.html#use_mouse	const use_mouse		32
+nim	use_sensor	nsdl2/config.html#use_sensor	const use_sensor		34
+nim	use_shape	nsdl2/config.html#use_shape	const use_shape		36
+nim	use_touch	nsdl2/config.html#use_touch	const use_touch		38

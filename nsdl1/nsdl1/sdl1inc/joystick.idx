@@ -1,0 +1,13 @@
+nimTitle	joystick	nsdl1/sdl1inc/joystick.html	module nsdl1/sdl1inc/joystick		0
+nim	Joystick	nsdl1/sdl1inc/joystick.html#Joystick	type Joystick		9
+nim	HatPosition	nsdl1/sdl1inc/joystick.html#HatPosition	type HatPosition		13
+nim	`or`	nsdl1/sdl1inc/joystick.html#or,HatPosition,HatPosition	proc `or`(a, b: HatPosition): HatPosition		16
+nim	HAT_CENTERED	nsdl1/sdl1inc/joystick.html#HAT_CENTERED	const HAT_CENTERED		19
+nim	HAT_UP	nsdl1/sdl1inc/joystick.html#HAT_UP	const HAT_UP		20
+nim	HAT_RIGHT	nsdl1/sdl1inc/joystick.html#HAT_RIGHT	const HAT_RIGHT		21
+nim	HAT_DOWN	nsdl1/sdl1inc/joystick.html#HAT_DOWN	const HAT_DOWN		22
+nim	HAT_LEFT	nsdl1/sdl1inc/joystick.html#HAT_LEFT	const HAT_LEFT		23
+nim	HAT_RIGHTUP	nsdl1/sdl1inc/joystick.html#HAT_RIGHTUP	const HAT_RIGHTUP		24
+nim	HAT_RIGHTDOWN	nsdl1/sdl1inc/joystick.html#HAT_RIGHTDOWN	const HAT_RIGHTDOWN		25
+nim	HAT_LEFTUP	nsdl1/sdl1inc/joystick.html#HAT_LEFTUP	const HAT_LEFTUP		26
+nim	HAT_LEFTDOWN	nsdl1/sdl1inc/joystick.html#HAT_LEFTDOWN	const HAT_LEFTDOWN		27

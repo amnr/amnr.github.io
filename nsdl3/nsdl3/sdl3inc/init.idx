@@ -1,0 +1,13 @@
+nimTitle	init	nsdl3/sdl3inc/init.html	module nsdl3/sdl3inc/init		0
+nim	SdlBool	nsdl3/sdl3inc/init.html#SdlBool	type SdlBool		9
+nim	InitFlags	nsdl3/sdl3inc/init.html#InitFlags	type InitFlags		12
+nim	`or`	nsdl3/sdl3inc/init.html#or,InitFlags,InitFlags	proc `or`(a, b: InitFlags): InitFlags		15
+nim	INIT_NONE	nsdl3/sdl3inc/init.html#INIT_NONE	const INIT_NONE		18
+nim	INIT_TIMER	nsdl3/sdl3inc/init.html#INIT_TIMER	const INIT_TIMER		19
+nim	INIT_AUDIO	nsdl3/sdl3inc/init.html#INIT_AUDIO	const INIT_AUDIO		20
+nim	INIT_VIDEO	nsdl3/sdl3inc/init.html#INIT_VIDEO	const INIT_VIDEO		21
+nim	INIT_JOYSTICK	nsdl3/sdl3inc/init.html#INIT_JOYSTICK	const INIT_JOYSTICK		22
+nim	INIT_HAPTIC	nsdl3/sdl3inc/init.html#INIT_HAPTIC	const INIT_HAPTIC		23
+nim	INIT_GAMEPAD	nsdl3/sdl3inc/init.html#INIT_GAMEPAD	const INIT_GAMEPAD		24
+nim	INIT_EVENTS	nsdl3/sdl3inc/init.html#INIT_EVENTS	const INIT_EVENTS		25
+nim	INIT_SENSOR	nsdl3/sdl3inc/init.html#INIT_SENSOR	const INIT_SENSOR		26

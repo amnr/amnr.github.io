@@ -1,0 +1,19 @@
+nimTitle	surface	nsdl2/sdl2inc/surface.html	module nsdl2/sdl2inc/surface		0
+nim	SurfaceFlags	nsdl2/sdl2inc/surface.html#SurfaceFlags	type SurfaceFlags		12
+nim	`or`	nsdl2/sdl2inc/surface.html#or,SurfaceFlags,SurfaceFlags	proc `or`(a, b: SurfaceFlags): SurfaceFlags		16
+nim	`==`	nsdl2/sdl2inc/surface.html#==,SurfaceFlags,uint32	proc `==`(a: SurfaceFlags; b: uint32): bool		18
+nim	SWSURFACE	nsdl2/sdl2inc/surface.html#SWSURFACE	const SWSURFACE		21
+nim	PREALLOC	nsdl2/sdl2inc/surface.html#PREALLOC	const PREALLOC		22
+nim	RLEACCEL	nsdl2/sdl2inc/surface.html#RLEACCEL	const RLEACCEL		23
+nim	DONTFREE	nsdl2/sdl2inc/surface.html#DONTFREE	const DONTFREE		24
+nim	SIMD_ALIGNED	nsdl2/sdl2inc/surface.html#SIMD_ALIGNED	const SIMD_ALIGNED		25
+nim	SurfacePtr	nsdl2/sdl2inc/surface.html#SurfacePtr	type SurfacePtr		43
+nim	format	nsdl2/sdl2inc/surface.html#format,SurfacePtr	proc format(self: SurfacePtr): ptr PixelFormat		46
+nim	w	nsdl2/sdl2inc/surface.html#w,SurfacePtr	proc w(self: SurfacePtr): int		49
+nim	h	nsdl2/sdl2inc/surface.html#h,SurfacePtr	proc h(self: SurfacePtr): int		53
+nim	pitch	nsdl2/sdl2inc/surface.html#pitch,SurfacePtr	proc pitch(self: SurfacePtr): cint		57
+nim	pixels	nsdl2/sdl2inc/surface.html#pixels,SurfacePtr	proc pixels(self: SurfacePtr): ptr UncheckedArray[byte]		61
+nim	pixels16	nsdl2/sdl2inc/surface.html#pixels16,SurfacePtr	proc pixels16(self: SurfacePtr): ptr UncheckedArray[uint16]		65
+nim	pixels32	nsdl2/sdl2inc/surface.html#pixels32,SurfacePtr	proc pixels32(self: SurfacePtr): ptr UncheckedArray[uint32]		69
+nim	mustlock	nsdl2/sdl2inc/surface.html#mustlock,SurfacePtr	proc mustlock(self: SurfacePtr): bool		73
+nim	YuvConversionMode	nsdl2/sdl2inc/surface.html#YuvConversionMode	enum YuvConversionMode		78
